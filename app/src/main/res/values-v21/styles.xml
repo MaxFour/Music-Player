@@ -1,0 +1,30 @@
+<resources>
+
+    <style name="Theme.Music" parent="Theme.Music.Base">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowSharedElementsUseOverlay">false</item>
+    </style>
+
+    <style name="Theme.Music.Light" parent="Theme.Music.Base.Light">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowSharedElementsUseOverlay">false</item>
+    </style>
+
+    <style name="Theme.Music.Black" parent="Theme.Music.Base.Black">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowSharedElementsUseOverlay">false</item>
+    </style>
+
+    <style name="Theme.Music.Notification" parent="@android:style/TextAppearance.Material.Notification" />
+
+    <style name="Theme.Music.Notification.Title" parent="@android:style/TextAppearance.Material.Notification.Title" />
+
+    <style name="Fab" parent="FabParent">
+        <item name="android:transitionName">@string/transition_fab</item>
+    </style>
+
+    <style name="MusicProgressSlider" parent="MusicProgressSliderParent">
+        <item name="android:padding">0dp</item>
+    </style>
+
+</resources>
