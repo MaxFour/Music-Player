@@ -1,14 +1,15 @@
-# built application files
+### Android ###
+# Built application files
 *.apk
 *.ap_
 
-# files for the dex VM
+# Files for the ART/Dalvik VM
 *.dex
 
 # Java class files
 *.class
 
-# generated files
+# Generated files
 bin/
 gen/
 target/
@@ -16,7 +17,7 @@ target/
 # external libraries
 #libs/
 
-# gradle files
+# Gradle files
 .gradle/
 build/
 
