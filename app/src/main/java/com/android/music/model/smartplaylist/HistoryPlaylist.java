@@ -5,7 +5,7 @@ import android.os.Parcel;
 import android.support.annotation.NonNull;
 
 import com.android.music.R;
-import com.android.music.loader.TopAndRecentlyPlayedTracksLoader;
+import com.android.music.loader.TopAndRecentlyPlayedSongsLoader;
 import com.android.music.model.Song;
 import com.android.music.provider.HistoryStore;
 
@@ -20,7 +20,7 @@ public class HistoryPlaylist extends AbsSmartPlaylist {
     @NonNull
     @Override
     public ArrayList<Song> getSongs(@NonNull Context context) {
-        return TopAndRecentlyPlayedTracksLoader.getRecentlyPlayedTracks(context);
+        return TopAndRecentlyPlayedSongsLoader.getRecentlyPlayedSongs(context);
     }
 
     @Override

@@ -320,10 +320,10 @@ public class MultiPlayer implements Playback, MediaPlayer.OnErrorListener, Media
             mIsInitialized = true;
             mNextMediaPlayer = null;
             if (callbacks != null)
-                callbacks.onTrackWentToNext();
+                callbacks.onSongWentToNext();
         } else {
             if (callbacks != null)
-                callbacks.onTrackEnded();
+                callbacks.onSongEnded();
         }
     }
 }

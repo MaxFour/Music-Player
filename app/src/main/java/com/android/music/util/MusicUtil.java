@@ -157,10 +157,10 @@ public class MusicUtil {
         }
     }
 
-    //iTunes uses for example 1002 for track 2 CD1 or 3011 for track 11 CD3.
-    //this method converts those values to normal tracknumbers
-    public static int getFixedTrackNumber(int trackNumberToFix) {
-        return trackNumberToFix % 1000;
+    //iTunes uses for example 1002 for song 2 CD1 or 3011 for song 11 CD3.
+    //this method converts those values to normal songnumbers
+    public static int getFixedSongNumber(int songNumberToFix) {
+        return songNumberToFix % 1000;
     }
 
     public static void insertAlbumArt(@NonNull Context context, int albumId, String path) {
@@ -202,7 +202,7 @@ public class MusicUtil {
         return albumArtDir;
     }
 
-    public static void deleteTracks(@NonNull final Context context, @NonNull final List<Song> songs) {
+    public static void deleteSongs(@NonNull final Context context, @NonNull final List<Song> songs) {
         final String[] projection = new String[]{
                 BaseColumns._ID, MediaStore.MediaColumns.DATA
         };
@@ -221,7 +221,7 @@ public class MusicUtil {
                     MediaStore.Audio.Media.EXTERNAL_CONTENT_URI, projection, selection.toString(),
                     null, null);
             if (cursor != null) {
-                // Step 1: Remove selected tracks from the current playlist, as well
+                // Step 1: Remove selected songs from the current playlist, as well
                 // as from the album art cache
                 cursor.moveToFirst();
                 while (!cursor.isAfterLast()) {
@@ -231,7 +231,7 @@ public class MusicUtil {
                     cursor.moveToNext();
                 }
 
-                // Step 2: Remove selected tracks from the database
+                // Step 2: Remove selected songs from the database
                 context.getContentResolver().delete(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI,
                         selection.toString(), null);
 

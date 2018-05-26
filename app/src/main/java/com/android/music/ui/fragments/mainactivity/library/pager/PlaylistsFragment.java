@@ -15,7 +15,7 @@ import com.android.music.misc.WrappedAsyncTaskLoader;
 import com.android.music.model.Playlist;
 import com.android.music.model.smartplaylist.HistoryPlaylist;
 import com.android.music.model.smartplaylist.LastAddedPlaylist;
-import com.android.music.model.smartplaylist.MyTopTracksPlaylist;
+import com.android.music.model.smartplaylist.MyTopSongsPlaylist;
 
 import java.util.ArrayList;
 
@@ -79,7 +79,7 @@ public class PlaylistsFragment extends AbsLibraryPagerRecyclerViewFragment<Playl
 
             playlists.add(new LastAddedPlaylist(context));
             playlists.add(new HistoryPlaylist(context));
-            playlists.add(new MyTopTracksPlaylist(context));
+            playlists.add(new MyTopSongsPlaylist(context));
 
             playlists.addAll(PlaylistLoader.getAllPlaylists(context));
 

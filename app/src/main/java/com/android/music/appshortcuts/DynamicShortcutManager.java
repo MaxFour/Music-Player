@@ -10,7 +10,7 @@ import android.os.Build;
 
 import com.android.music.appshortcuts.shortcuttype.LastAddedShortcutType;
 import com.android.music.appshortcuts.shortcuttype.ShuffleAllShortcutType;
-import com.android.music.appshortcuts.shortcuttype.TopTracksShortcutType;
+import com.android.music.appshortcuts.shortcuttype.TopSongsShortcutType;
 
 import java.util.Arrays;
 import java.util.List;
@@ -48,7 +48,7 @@ public class DynamicShortcutManager {
     public List<ShortcutInfo> getDefaultShortcuts() {
         return (Arrays.asList(
                 new ShuffleAllShortcutType(context).getShortcutInfo(),
-                new TopTracksShortcutType(context).getShortcutInfo(),
+                new TopSongsShortcutType(context).getShortcutInfo(),
                 new LastAddedShortcutType(context).getShortcutInfo()
         ));
     }

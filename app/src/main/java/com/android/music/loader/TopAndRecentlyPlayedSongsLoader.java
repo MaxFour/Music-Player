@@ -28,22 +28,22 @@ import com.android.music.provider.SongPlayCountStore;
 
 import java.util.ArrayList;
 
-public class TopAndRecentlyPlayedTracksLoader {
-    public static final int NUMBER_OF_TOP_TRACKS = 99;
+public class TopAndRecentlyPlayedSongsLoader {
+    public static final int NUMBER_OF_TOP_SONGS = 99;
 
     @NonNull
-    public static ArrayList<Song> getRecentlyPlayedTracks(@NonNull Context context) {
-        return SongLoader.getSongs(makeRecentTracksCursorAndClearUpDatabase(context));
+    public static ArrayList<Song> getRecentlyPlayedSongs(@NonNull Context context) {
+        return SongLoader.getSongs(makeRecentSongsCursorAndClearUpDatabase(context));
     }
 
     @NonNull
-    public static ArrayList<Song> getTopTracks(@NonNull Context context) {
-        return SongLoader.getSongs(makeTopTracksCursorAndClearUpDatabase(context));
+    public static ArrayList<Song> getTopSongs(@NonNull Context context) {
+        return SongLoader.getSongs(makeTopSongsCursorAndClearUpDatabase(context));
     }
 
     @Nullable
-    public static Cursor makeRecentTracksCursorAndClearUpDatabase(@NonNull final Context context) {
-        SortedLongCursor retCursor = makeRecentTracksCursorImpl(context);
+    public static Cursor makeRecentSongsCursorAndClearUpDatabase(@NonNull final Context context) {
+        SortedLongCursor retCursor = makeRecentSongsCursorImpl(context);
 
         // clean up the databases with any ids not found
         if (retCursor != null) {
@@ -58,8 +58,8 @@ public class TopAndRecentlyPlayedTracksLoader {
     }
 
     @Nullable
-    public static Cursor makeTopTracksCursorAndClearUpDatabase(@NonNull final Context context) {
-        SortedLongCursor retCursor = makeTopTracksCursorImpl(context);
+    public static Cursor makeTopSongsCursorAndClearUpDatabase(@NonNull final Context context) {
+        SortedLongCursor retCursor = makeTopSongsCursorImpl(context);
 
         // clean up the databases with any ids not found
         if (retCursor != null) {
@@ -74,7 +74,7 @@ public class TopAndRecentlyPlayedTracksLoader {
     }
 
     @Nullable
-    private static SortedLongCursor makeRecentTracksCursorImpl(@NonNull final Context context) {
+    private static SortedLongCursor makeRecentSongsCursorImpl(@NonNull final Context context) {
         // first get the top results ids from the internal database
         Cursor songs = HistoryStore.getInstance(context).queryRecentIds();
 
@@ -89,9 +89,9 @@ public class TopAndRecentlyPlayedTracksLoader {
     }
 
     @Nullable
-    private static SortedLongCursor makeTopTracksCursorImpl(@NonNull final Context context) {
+    private static SortedLongCursor makeTopSongsCursorImpl(@NonNull final Context context) {
         // first get the top results ids from the internal database
-        Cursor songs = SongPlayCountStore.getInstance(context).getTopPlayedResults(NUMBER_OF_TOP_TRACKS);
+        Cursor songs = SongPlayCountStore.getInstance(context).getTopPlayedResults(NUMBER_OF_TOP_SONGS);
 
         try {
             return makeSortedCursor(context, songs,
@@ -111,7 +111,7 @@ public class TopAndRecentlyPlayedTracksLoader {
             selection.append(BaseColumns._ID);
             selection.append(" IN (");
 
-            // this tracks the order of the ids
+            // this songs the order of the ids
             long[] order = new long[cursor.getCount()];
 
             long id = cursor.getLong(idColumn);
@@ -131,7 +131,7 @@ public class TopAndRecentlyPlayedTracksLoader {
             // get a list of songs with the data given the selection statement
             Cursor songCursor = SongLoader.makeSongCursor(context, selection.toString(), null);
             if (songCursor != null) {
-                // now return the wrapped TopTracksCursor to handle sorting given order
+                // now return the wrapped TopSongsCursor to handle sorting given order
                 return new SortedLongCursor(songCursor, order, BaseColumns._ID);
             }
         }

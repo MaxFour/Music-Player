@@ -137,7 +137,7 @@ public class AppWidgetBig extends BaseAppWidget {
         pendingIntent = PendingIntent.getActivity(context, 0, action, 0);
         views.setOnClickPendingIntent(R.id.clickable_area, pendingIntent);
 
-        // Previous track
+        // Previous song
         pendingIntent = buildPendingIntent(context, MusicService.ACTION_REWIND, serviceName);
         views.setOnClickPendingIntent(R.id.button_prev, pendingIntent);
 
@@ -145,7 +145,7 @@ public class AppWidgetBig extends BaseAppWidget {
         pendingIntent = buildPendingIntent(context, MusicService.ACTION_TOGGLE_PAUSE, serviceName);
         views.setOnClickPendingIntent(R.id.button_toggle_play_pause, pendingIntent);
 
-        // Next track
+        // Next song
         pendingIntent = buildPendingIntent(context, MusicService.ACTION_SKIP, serviceName);
         views.setOnClickPendingIntent(R.id.button_next, pendingIntent);
     }

@@ -80,7 +80,7 @@ public class SongLoader {
     private static Song getSongFromCursorImpl(@NonNull Cursor cursor) {
         final int id = cursor.getInt(0);
         final String title = cursor.getString(1);
-        final int trackNumber = cursor.getInt(2);
+        final int songNumber = cursor.getInt(2);
         final int year = cursor.getInt(3);
         final long duration = cursor.getLong(4);
         final String data = cursor.getString(5);
@@ -90,7 +90,7 @@ public class SongLoader {
         final int artistId = cursor.getInt(9);
         final String artistName = cursor.getString(10);
 
-        return new Song(id, title, trackNumber, year, duration, data, dateModified, albumId, albumName, artistId, artistName);
+        return new Song(id, title, songNumber, year, duration, data, dateModified, albumId, albumName, artistId, artistName);
     }
 
     @Nullable

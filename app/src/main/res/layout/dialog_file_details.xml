@@ -42,7 +42,7 @@
         android:textSize="16sp" />
 
     <TextView
-        android:id="@+id/track_length"
+        android:id="@+id/song_length"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif"

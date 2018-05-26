@@ -28,8 +28,8 @@ import com.android.music.BuildConfig;
 /**
  * Used to control headset playback.
  * Single press: pause/resume
- * Double press: next track
- * Triple press: previous track
+ * Double press: next song
+ * Triple press: previous song
  */
 public class MediaButtonIntentReceiver extends BroadcastReceiver {
     private static final boolean DEBUG = BuildConfig.DEBUG;

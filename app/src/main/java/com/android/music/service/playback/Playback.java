@@ -35,8 +35,8 @@ public interface Playback {
     int getAudioSessionId();
 
     interface PlaybackCallbacks {
-        void onTrackWentToNext();
+        void onSongWentToNext();
 
-        void onTrackEnded();
+        void onSongEnded();
     }
 }

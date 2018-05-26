@@ -5,22 +5,22 @@ import android.os.Parcel;
 import android.support.annotation.NonNull;
 
 import com.android.music.R;
-import com.android.music.loader.TopAndRecentlyPlayedTracksLoader;
+import com.android.music.loader.TopAndRecentlyPlayedSongsLoader;
 import com.android.music.model.Song;
 import com.android.music.provider.SongPlayCountStore;
 
 import java.util.ArrayList;
 
-public class MyTopTracksPlaylist extends AbsSmartPlaylist {
+public class MyTopSongsPlaylist extends AbsSmartPlaylist {
 
-    public MyTopTracksPlaylist(@NonNull Context context) {
-        super(context.getString(R.string.my_top_tracks), R.drawable.ic_trending_up_white_24dp);
+    public MyTopSongsPlaylist(@NonNull Context context) {
+        super(context.getString(R.string.my_top_songs), R.drawable.ic_trending_up_white_24dp);
     }
 
     @NonNull
     @Override
     public ArrayList<Song> getSongs(@NonNull Context context) {
-        return TopAndRecentlyPlayedTracksLoader.getTopTracks(context);
+        return TopAndRecentlyPlayedSongsLoader.getTopSongs(context);
     }
 
     @Override
@@ -39,17 +39,17 @@ public class MyTopTracksPlaylist extends AbsSmartPlaylist {
         super.writeToParcel(dest, flags);
     }
 
-    protected MyTopTracksPlaylist(Parcel in) {
+    protected MyTopSongsPlaylist(Parcel in) {
         super(in);
     }
 
-    public static final Creator<MyTopTracksPlaylist> CREATOR = new Creator<MyTopTracksPlaylist>() {
-        public MyTopTracksPlaylist createFromParcel(Parcel source) {
-            return new MyTopTracksPlaylist(source);
+    public static final Creator<MyTopSongsPlaylist> CREATOR = new Creator<MyTopSongsPlaylist>() {
+        public MyTopSongsPlaylist createFromParcel(Parcel source) {
+            return new MyTopSongsPlaylist(source);
         }
 
-        public MyTopTracksPlaylist[] newArray(int size) {
-            return new MyTopTracksPlaylist[size];
+        public MyTopSongsPlaylist[] newArray(int size) {
+            return new MyTopSongsPlaylist[size];
         }
     };
 }

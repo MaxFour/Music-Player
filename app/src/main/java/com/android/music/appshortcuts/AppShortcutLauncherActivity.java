@@ -6,10 +6,10 @@ import android.os.Bundle;
 
 import com.android.music.appshortcuts.shortcuttype.LastAddedShortcutType;
 import com.android.music.appshortcuts.shortcuttype.ShuffleAllShortcutType;
-import com.android.music.appshortcuts.shortcuttype.TopTracksShortcutType;
+import com.android.music.appshortcuts.shortcuttype.TopSongsShortcutType;
 import com.android.music.model.Playlist;
 import com.android.music.model.smartplaylist.LastAddedPlaylist;
-import com.android.music.model.smartplaylist.MyTopTracksPlaylist;
+import com.android.music.model.smartplaylist.MyTopSongsPlaylist;
 import com.android.music.model.smartplaylist.ShuffleAllPlaylist;
 import com.android.music.service.MusicService;
 
@@ -17,7 +17,7 @@ public class AppShortcutLauncherActivity extends Activity {
     public static final String KEY_SHORTCUT_TYPE = "com.android.music.appshortcuts.ShortcutType";
 
     public static final int SHORTCUT_TYPE_SHUFFLE_ALL = 0;
-    public static final int SHORTCUT_TYPE_TOP_TRACKS = 1;
+    public static final int SHORTCUT_TYPE_TOP_SONGS = 1;
     public static final int SHORTCUT_TYPE_LAST_ADDED = 2;
     public static final int SHORTCUT_TYPE_NONE = 3;
 
@@ -40,10 +40,10 @@ public class AppShortcutLauncherActivity extends Activity {
                         new ShuffleAllPlaylist(getApplicationContext()));
                 DynamicShortcutManager.reportShortcutUsed(this, ShuffleAllShortcutType.getId());
                 break;
-            case SHORTCUT_TYPE_TOP_TRACKS:
+            case SHORTCUT_TYPE_TOP_SONGS:
                 startServiceWithPlaylist(MusicService.SHUFFLE_MODE_NONE,
-                        new MyTopTracksPlaylist(getApplicationContext()));
-                DynamicShortcutManager.reportShortcutUsed(this, TopTracksShortcutType.getId());
+                        new MyTopSongsPlaylist(getApplicationContext()));
+                DynamicShortcutManager.reportShortcutUsed(this, TopSongsShortcutType.getId());
                 break;
             case SHORTCUT_TYPE_LAST_ADDED:
                 startServiceWithPlaylist(MusicService.SHUFFLE_MODE_NONE,

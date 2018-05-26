@@ -10,8 +10,8 @@ import com.android.music.appshortcuts.AppShortcutIconGenerator;
 import com.android.music.appshortcuts.AppShortcutLauncherActivity;
 
 @TargetApi(Build.VERSION_CODES.N_MR1)
-public final class TopTracksShortcutType extends BaseShortcutType {
-    public TopTracksShortcutType(Context context) {
+public final class TopSongsShortcutType extends BaseShortcutType {
+    public TopSongsShortcutType(Context context) {
         super(context);
     }
 
@@ -21,10 +21,10 @@ public final class TopTracksShortcutType extends BaseShortcutType {
 
     public ShortcutInfo getShortcutInfo() {
         return new ShortcutInfo.Builder(context, getId())
-                .setShortLabel(context.getString(R.string.app_shortcut_top_tracks_short))
-                .setLongLabel(context.getString(R.string.my_top_tracks))
-                .setIcon(AppShortcutIconGenerator.generateThemedIcon(context, R.drawable.ic_app_shortcut_top_tracks))
-                .setIntent(getPlaySongsIntent(AppShortcutLauncherActivity.SHORTCUT_TYPE_TOP_TRACKS))
+                .setShortLabel(context.getString(R.string.app_shortcut_top_songs_short))
+                .setLongLabel(context.getString(R.string.my_top_songs))
+                .setIcon(AppShortcutIconGenerator.generateThemedIcon(context, R.drawable.ic_app_shortcut_top_songs))
+                .setIntent(getPlaySongsIntent(AppShortcutLauncherActivity.SHORTCUT_TYPE_TOP_SONGS))
                 .build();
     }
 }

@@ -8,7 +8,7 @@ public class Song implements Parcelable {
 
     public final int id;
     public final String title;
-    public final int trackNumber;
+    public final int songNumber;
     public final int year;
     public final long duration;
     public final String data;
@@ -18,10 +18,10 @@ public class Song implements Parcelable {
     public final int artistId;
     public final String artistName;
 
-    public Song(int id, String title, int trackNumber, int year, long duration, String data, long dateModified, int albumId, String albumName, int artistId, String artistName) {
+    public Song(int id, String title, int songNumber, int year, long duration, String data, long dateModified, int albumId, String albumName, int artistId, String artistName) {
         this.id = id;
         this.title = title;
-        this.trackNumber = trackNumber;
+        this.songNumber = songNumber;
         this.year = year;
         this.duration = duration;
         this.data = data;
@@ -40,7 +40,7 @@ public class Song implements Parcelable {
         Song song = (Song) o;
 
         if (id != song.id) return false;
-        if (trackNumber != song.trackNumber) return false;
+        if (songNumber != song.songNumber) return false;
         if (year != song.year) return false;
         if (duration != song.duration) return false;
         if (dateModified != song.dateModified) return false;
@@ -58,7 +58,7 @@ public class Song implements Parcelable {
     public int hashCode() {
         int result = id;
         result = 31 * result + (title != null ? title.hashCode() : 0);
-        result = 31 * result + trackNumber;
+        result = 31 * result + songNumber;
         result = 31 * result + year;
         result = 31 * result + (int) (duration ^ (duration >>> 32));
         result = 31 * result + (data != null ? data.hashCode() : 0);
@@ -75,7 +75,7 @@ public class Song implements Parcelable {
         return "Song{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
-                ", trackNumber=" + trackNumber +
+                ", songNumber=" + songNumber +
                 ", year=" + year +
                 ", duration=" + duration +
                 ", data='" + data + '\'' +
@@ -97,7 +97,7 @@ public class Song implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeInt(this.id);
         dest.writeString(this.title);
-        dest.writeInt(this.trackNumber);
+        dest.writeInt(this.songNumber);
         dest.writeInt(this.year);
         dest.writeLong(this.duration);
         dest.writeString(this.data);
@@ -111,7 +111,7 @@ public class Song implements Parcelable {
     protected Song(Parcel in) {
         this.id = in.readInt();
         this.title = in.readString();
-        this.trackNumber = in.readInt();
+        this.songNumber = in.readInt();
         this.year = in.readInt();
         this.duration = in.readLong();
         this.data = in.readString();

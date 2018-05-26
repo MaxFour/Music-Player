@@ -44,7 +44,7 @@ public class AlbumLoader {
     public static Album getAlbum(@NonNull final Context context, int albumId) {
         ArrayList<Song> songs = SongLoader.getSongs(SongLoader.makeSongCursor(context, AudioColumns.ALBUM_ID + "=?", new String[]{String.valueOf(albumId)}, getSongLoaderSortOrder(context)));
         Album album = new Album(songs);
-        sortSongsByTrackNumber(album);
+        sortSongsBySongNumber(album);
         return album;
     }
 
@@ -57,7 +57,7 @@ public class AlbumLoader {
             }
         }
         for (Album album : albums) {
-            sortSongsByTrackNumber(album);
+            sortSongsBySongNumber(album);
         }
         return albums;
     }
@@ -73,7 +73,7 @@ public class AlbumLoader {
         return album;
     }
 
-    private static void sortSongsByTrackNumber(Album album) {
-        Collections.sort(album.songs, (o1, o2) -> o1.trackNumber - o2.trackNumber);
+    private static void sortSongsBySongNumber(Album album) {
+        Collections.sort(album.songs, (o1, o2) -> o1.songNumber - o2.songNumber);
     }
 }

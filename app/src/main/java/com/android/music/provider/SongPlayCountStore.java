@@ -27,8 +27,8 @@ import android.view.animation.AccelerateInterpolator;
 import android.view.animation.Interpolator;
 
 /**
- * This database tracks the number of play counts for an individual song.  This is used to drive
- * the top played tracks as well as the playlist images
+ * This database songs the number of play counts for an individual song.  This is used to drive
+ * the top played songs as well as the playlist images
  */
 public class SongPlayCountStore extends SQLiteOpenHelper {
     @Nullable
@@ -41,7 +41,7 @@ public class SongPlayCountStore extends SQLiteOpenHelper {
     @NonNull
     private static Interpolator sInterpolator = new AccelerateInterpolator(1.5f);
 
-    // how many weeks worth of playback to track
+    // how many weeks worth of playback to song
     private static final int NUM_WEEKS = 52;
 
     // how high to multiply the interpolation curve
@@ -61,7 +61,7 @@ public class SongPlayCountStore extends SQLiteOpenHelper {
     // number of weeks since epoch time
     private int mNumberOfWeeksSinceEpoch;
 
-    // used to track if we've walked through the db and updated all the rows
+    // used to song if we've walked through the db and updated all the rows
     private boolean mDatabaseUpdated;
 
     public SongPlayCountStore(final Context context) {
@@ -142,7 +142,7 @@ public class SongPlayCountStore extends SQLiteOpenHelper {
      * This creates a new entry that indicates a song has been played once as well as its score
      *
      * @param database a write able database
-     * @param songId   the id of the track
+     * @param songId   the id of the song
      */
     private void createNewPlayedEntry(@NonNull final SQLiteDatabase database, final long songId) {
         // no row exists, create a new one
@@ -163,7 +163,7 @@ public class SongPlayCountStore extends SQLiteOpenHelper {
      * for the current week by 1 if necessary
      *
      * @param database  a writeable database
-     * @param id        the id of the track to bump
+     * @param id        the id of the song to bump
      * @param bumpCount whether to bump the current's week play count by 1 and adjust the score
      */
     private void updateExistingRow(@NonNull final SQLiteDatabase database, final long id, boolean bumpCount) {
@@ -183,7 +183,7 @@ public class SongPlayCountStore extends SQLiteOpenHelper {
             int lastUpdatedWeek = cursor.getInt(lastUpdatedIndex);
             int weekDiff = mNumberOfWeeksSinceEpoch - lastUpdatedWeek;
 
-            // if it's more than the number of weeks we track, delete it and create a new entry
+            // if it's more than the number of weeks we song, delete it and create a new entry
             if (Math.abs(weekDiff) >= NUM_WEEKS) {
                 // this entry needs to be dropped since it is too outdated
                 deleteEntry(database, stringId);
@@ -273,7 +273,7 @@ public class SongPlayCountStore extends SQLiteOpenHelper {
      * played at least once in the past NUM_WEEKS
      *
      * @param numResults number of results to limit by.  If <= 0 it returns all results
-     * @return the top tracks
+     * @return the top songs
      */
     public Cursor getTopPlayedResults(int numResults) {
         updateResults();

@@ -131,7 +131,7 @@ public class MusicPlaybackQueueStore extends SQLiteOpenHelper {
 
     /**
      * Clears the existing database and saves the queue into the db so that when the
-     * app is restarted, the tracks you were listening to is restored
+     * app is restarted, the songs you were listening to is restored
      *
      * @param queue the queue to save
      */
@@ -157,7 +157,7 @@ public class MusicPlaybackQueueStore extends SQLiteOpenHelper {
 
                     values.put(BaseColumns._ID, song.id);
                     values.put(AudioColumns.TITLE, song.title);
-                    values.put(AudioColumns.TRACK, song.trackNumber);
+                    values.put(AudioColumns.TRACK, song.songNumber);
                     values.put(AudioColumns.YEAR, song.year);
                     values.put(AudioColumns.DURATION, song.duration);
                     values.put(AudioColumns.DATA, song.data);

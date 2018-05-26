@@ -53,7 +53,7 @@ public class DeleteSongsDialog extends DialogFragment {
                 .onPositive((dialog, which) -> {
                     if (getActivity() == null)
                         return;
-                    MusicUtil.deleteTracks(getActivity(), songs);
+                    MusicUtil.deleteSongs(getActivity(), songs);
                 })
                 .build();
     }

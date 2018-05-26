@@ -62,7 +62,7 @@
     <string name="app_name">Music</string>
     <string name="app_shortcut_last_added_short">Last added</string>
     <string name="app_shortcut_shuffle_all_short">Shuffle</string>
-    <string name="app_shortcut_top_tracks_short">Top tracks</string>
+    <string name="app_shortcut_top_songs_short">Top songs</string>
     <string name="app_widget_big_name">Music - Big</string>
     <string name="app_widget_card_name">Music - Card</string>
     <string name="app_widget_classic_name">Music - Classic</string>
@@ -146,7 +146,7 @@
     <string name="label_view_playing_queue">View playing queue</string>
     <string name="label_edit_playing_queue">Editing playing queue</string>
     <string name="label_sampling_rate">Sampling rate</string>
-    <string name="label_track_length">Length</string>
+    <string name="label_song_length">Length</string>
     <string name="last_added">Last added</string>
     <string name="library">Library</string>
     <string name="library_categories">Library categories</string>
@@ -162,7 +162,7 @@
     <string name="md_presets_label">Presets</string>
     <string name="mi_label_button_cta">Get started</string>
     <string name="min">" min."</string>
-    <string name="my_top_tracks">My top tracks</string>
+    <string name="my_top_songs">My top songs</string>
     <string name="navoi_uzbekistan">Navoi, Uzbekistan</string>
     <string name="never">Never</string>
     <string name="new_playlist_title">New playlist</string>
@@ -228,7 +228,7 @@
     <string name="pref_title_synchronized_lyrics_show">Show synchronized lyrics</string>
     <string name="primary_color">Primary color</string>
     <string name="primary_color_desc">The primary theme color, defaults to blue</string>
-    <string name="rearrange_playing_queue_instruction">Rearrange the playing queue by dragging a song from its track number</string>
+    <string name="rearrange_playing_queue_instruction">Rearrange the playing queue by dragging a song from its song number</string>
     <string name="remove_action">Remove</string>
     <string name="remove_cover">Remove cover</string>
     <string name="remove_from_blacklist">Remove from blacklist</string>
@@ -257,6 +257,7 @@
     </plurals>
     <string name="some_files_are_not_listed_in_the_media_store">Some files are not listed in the media store</string>
     <string name="song">song</string>
+    <string name="song_hint">Song (2 for song 2 or 3004 for CD3 song 4)</string>
     <string name="song_tag_editor">Song</string>
     <string name="songs">Songs</string>
     <plurals name="songs_x">
@@ -274,7 +275,6 @@
     <string name="this_year">This year</string>
     <string name="title">Title</string>
     <string name="today">Today</string>
-    <string name="track_hint">Track (2 for track 2 or 3004 for CD3 track 4)</string>
     <string name="unplayable_file">Couldn’t play this song</string>
     <string name="up_next">Up next</string>
     <string name="update_image">Update image</string>

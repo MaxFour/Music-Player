@@ -160,7 +160,7 @@ public class PlayingNotificationImpl extends PlayingNotification {
 
         final ComponentName serviceName = new ComponentName(service, MusicService.class);
 
-        // Previous track
+        // Previous song
         pendingIntent = buildPendingIntent(service, MusicService.ACTION_REWIND, serviceName);
         notificationLayout.setOnClickPendingIntent(R.id.action_prev, pendingIntent);
         notificationLayoutBig.setOnClickPendingIntent(R.id.action_prev, pendingIntent);
@@ -170,7 +170,7 @@ public class PlayingNotificationImpl extends PlayingNotification {
         notificationLayout.setOnClickPendingIntent(R.id.action_play_pause, pendingIntent);
         notificationLayoutBig.setOnClickPendingIntent(R.id.action_play_pause, pendingIntent);
 
-        // Next track
+        // Next song
         pendingIntent = buildPendingIntent(service, MusicService.ACTION_SKIP, serviceName);
         notificationLayout.setOnClickPendingIntent(R.id.action_next, pendingIntent);
         notificationLayoutBig.setOnClickPendingIntent(R.id.action_next, pendingIntent);

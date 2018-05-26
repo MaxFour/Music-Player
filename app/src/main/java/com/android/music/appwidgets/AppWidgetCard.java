@@ -152,7 +152,7 @@ public class AppWidgetCard extends BaseAppWidget {
         views.setOnClickPendingIntent(R.id.image, pendingIntent);
         views.setOnClickPendingIntent(R.id.media_titles, pendingIntent);
 
-        // Previous track
+        // Previous song
         pendingIntent = buildPendingIntent(context, MusicService.ACTION_REWIND, serviceName);
         views.setOnClickPendingIntent(R.id.button_prev, pendingIntent);
 
@@ -160,7 +160,7 @@ public class AppWidgetCard extends BaseAppWidget {
         pendingIntent = buildPendingIntent(context, MusicService.ACTION_TOGGLE_PAUSE, serviceName);
         views.setOnClickPendingIntent(R.id.button_toggle_play_pause, pendingIntent);
 
-        // Next track
+        // Next song
         pendingIntent = buildPendingIntent(context, MusicService.ACTION_SKIP, serviceName);
         views.setOnClickPendingIntent(R.id.button_next, pendingIntent);
     }

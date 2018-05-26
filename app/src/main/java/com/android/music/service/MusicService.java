@@ -96,13 +96,13 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
     public static final String MEDIA_STORE_CHANGED = MUSIC_PACKAGE_NAME + ".mediastorechanged";
 
     public static final String SAVED_POSITION = "POSITION";
-    public static final String SAVED_POSITION_IN_TRACK = "POSITION_IN_TRACK";
+    public static final String SAVED_POSITION_IN_SONG = "POSITION_IN_SONG";
     public static final String SAVED_SHUFFLE_MODE = "SHUFFLE_MODE";
     public static final String SAVED_REPEAT_MODE = "REPEAT_MODE";
 
     public static final int RELEASE_WAKELOCK = 0;
-    public static final int TRACK_ENDED = 1;
-    public static final int TRACK_WENT_TO_NEXT = 2;
+    public static final int SONG_ENDED = 1;
+    public static final int SONG_WENT_TO_NEXT = 2;
     public static final int PLAY_SONG = 3;
     public static final int PREPARE_NEXT = 4;
     public static final int SET_POSITION = 5;
@@ -164,11 +164,11 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
         }
     };
     private ContentObserver mediaStoreObserver;
-    private boolean notHandledMetaChangedForCurrentTrack;
+    private boolean notHandledMetaChangedForCurrentSong;
 
     private Handler uiThreadHandler;
 
-    private static String getTrackUri(@NonNull Song song) {
+    private static String getSongUri(@NonNull Song song) {
         return MusicUtil.getSongFileUri(song.id).toString();
     }
 
@@ -391,14 +391,14 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
         PreferenceManager.getDefaultSharedPreferences(this).edit().putInt(SAVED_POSITION, getPosition()).apply();
     }
 
-    private void savePositionInTrack() {
-        PreferenceManager.getDefaultSharedPreferences(this).edit().putInt(SAVED_POSITION_IN_TRACK, getSongProgressMillis()).apply();
+    private void savePositionInSong() {
+        PreferenceManager.getDefaultSharedPreferences(this).edit().putInt(SAVED_POSITION_IN_SONG, getSongProgressMillis()).apply();
     }
 
     public void saveState() {
         saveQueues();
         savePosition();
-        savePositionInTrack();
+        savePositionInSong();
     }
 
     private void saveQueues() {
@@ -421,7 +421,7 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
             ArrayList<Song> restoredQueue = MusicPlaybackQueueStore.getInstance(this).getSavedPlayingQueue();
             ArrayList<Song> restoredOriginalQueue = MusicPlaybackQueueStore.getInstance(this).getSavedOriginalPlayingQueue();
             int restoredPosition = PreferenceManager.getDefaultSharedPreferences(this).getInt(SAVED_POSITION, -1);
-            int restoredPositionInTrack = PreferenceManager.getDefaultSharedPreferences(this).getInt(SAVED_POSITION_IN_TRACK, -1);
+            int restoredPositionInSong = PreferenceManager.getDefaultSharedPreferences(this).getInt(SAVED_POSITION_IN_SONG, -1);
 
             if (restoredQueue.size() > 0 && restoredQueue.size() == restoredOriginalQueue.size() && restoredPosition != -1) {
                 this.originalPlayingQueue = restoredOriginalQueue;
@@ -431,9 +431,9 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
                 openCurrent();
                 prepareNext();
 
-                if (restoredPositionInTrack > 0) seek(restoredPositionInTrack);
+                if (restoredPositionInSong > 0) seek(restoredPositionInSong);
 
-                notHandledMetaChangedForCurrentTrack = true;
+                notHandledMetaChangedForCurrentSong = true;
                 sendChangeInternal(META_CHANGED);
                 sendChangeInternal(QUEUE_CHANGED);
             }
@@ -480,13 +480,13 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
         playSongAt(getNextPosition(force));
     }
 
-    private boolean openTrackAndPrepareNextAt(int position) {
+    private boolean openSongAndPrepareNextAt(int position) {
         synchronized (this) {
             this.position = position;
             boolean prepared = openCurrent();
             if (prepared) prepareNextImpl();
             notifyChange(META_CHANGED);
-            notHandledMetaChangedForCurrentTrack = false;
+            notHandledMetaChangedForCurrentSong = false;
             return prepared;
         }
     }
@@ -494,7 +494,7 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
     private boolean openCurrent() {
         synchronized (this) {
             try {
-                return playback.setDataSource(getTrackUri(getCurrentSong()));
+                return playback.setDataSource(getSongUri(getCurrentSong()));
             } catch (Exception e) {
                 return false;
             }
@@ -510,7 +510,7 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
         synchronized (this) {
             try {
                 int nextPosition = getNextPosition(false);
-                playback.setNextDataSource(getTrackUri(getSongAt(nextPosition)));
+                playback.setNextDataSource(getSongUri(getSongAt(nextPosition)));
                 this.nextPosition = nextPosition;
                 return true;
             } catch (Exception e) {
@@ -640,13 +640,13 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
         int position = getPosition() + 1;
         switch (getRepeatMode()) {
             case REPEAT_MODE_ALL:
-                if (isLastTrack()) {
+                if (isLastSong()) {
                     position = 0;
                 }
                 break;
             case REPEAT_MODE_THIS:
                 if (force) {
-                    if (isLastTrack()) {
+                    if (isLastSong()) {
                         position = 0;
                     }
                 } else {
@@ -655,7 +655,7 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
                 break;
             default:
             case REPEAT_MODE_NONE:
-                if (isLastTrack()) {
+                if (isLastSong()) {
                     position -= 1;
                 }
                 break;
@@ -663,7 +663,7 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
         return position;
     }
 
-    private boolean isLastTrack() {
+    private boolean isLastSong() {
         return getPosition() == getPlayingQueue().size() - 1;
     }
 
@@ -815,7 +815,7 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
     }
 
     private void playSongAtImpl(int position) {
-        if (openTrackAndPrepareNextAt(position)) {
+        if (openSongAndPrepareNextAt(position)) {
             play();
         } else {
             Toast.makeText(this, getResources().getString(R.string.unplayable_file), Toast.LENGTH_SHORT).show();
@@ -842,9 +842,9 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
                             registerReceiver(becomingNoisyReceiver, becomingNoisyReceiverIntentFilter);
                             becomingNoisyReceiverRegistered = true;
                         }
-                        if (notHandledMetaChangedForCurrentTrack) {
+                        if (notHandledMetaChangedForCurrentSong) {
                             handleChangeInternal(META_CHANGED);
-                            notHandledMetaChangedForCurrentTrack = false;
+                            notHandledMetaChangedForCurrentSong = false;
                         }
                         notifyChange(PLAY_STATE_CHANGED);
 
@@ -1016,7 +1016,7 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
 
         intent.putExtra("artist", song.artistName);
         intent.putExtra("album", song.albumName);
-        intent.putExtra("track", song.title);
+        intent.putExtra("song", song.title);
 
         intent.putExtra("duration", song.duration);
         intent.putExtra("position", (long) getSongProgressMillis());
@@ -1051,7 +1051,7 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
                 updateMediaSessionPlaybackState();
                 final boolean isPlaying = isPlaying();
                 if (!isPlaying && getSongProgressMillis() > 0) {
-                    savePositionInTrack();
+                    savePositionInSong();
                 }
                 songPlayCountHelper.notifyPlayStateChanged(isPlaying);
                 break;
@@ -1059,7 +1059,7 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
                 updateNotification();
                 updateMediaSessionMetaData();
                 savePosition();
-                savePositionInTrack();
+                savePositionInSong();
                 final Song currentSong = getCurrentSong();
                 HistoryStore.getInstance(this).addSongId(currentSong.id);
                 if (songPlayCountHelper.shouldBumpPlayCount()) {
@@ -1122,14 +1122,14 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
     }
 
     @Override
-    public void onTrackWentToNext() {
-        playerHandler.sendEmptyMessage(TRACK_WENT_TO_NEXT);
+    public void onSongWentToNext() {
+        playerHandler.sendEmptyMessage(SONG_WENT_TO_NEXT);
     }
 
     @Override
-    public void onTrackEnded() {
+    public void onSongEnded() {
         acquireWakeLock(30000);
-        playerHandler.sendEmptyMessage(TRACK_ENDED);
+        playerHandler.sendEmptyMessage(SONG_ENDED);
     }
 
     private static final class PlaybackHandler extends Handler {
@@ -1178,8 +1178,8 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
                     service.playback.setVolume(currentDuckVolume);
                     break;
 
-                case TRACK_WENT_TO_NEXT:
-                    if (service.getRepeatMode() == REPEAT_MODE_NONE && service.isLastTrack()) {
+                case SONG_WENT_TO_NEXT:
+                    if (service.getRepeatMode() == REPEAT_MODE_NONE && service.isLastSong()) {
                         service.pause();
                         service.seek(0);
                     } else {
@@ -1189,8 +1189,8 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
                     }
                     break;
 
-                case TRACK_ENDED:
-                    if (service.getRepeatMode() == REPEAT_MODE_NONE && service.isLastTrack()) {
+                case SONG_ENDED:
+                    if (service.getRepeatMode() == REPEAT_MODE_NONE && service.isLastSong()) {
                         service.notifyChange(PLAY_STATE_CHANGED);
                         service.seek(0);
                     } else {
@@ -1208,7 +1208,7 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
                     break;
 
                 case SET_POSITION:
-                    service.openTrackAndPrepareNextAt(msg.arg1);
+                    service.openSongAndPrepareNextAt(msg.arg1);
                     service.notifyChange(PLAY_STATE_CHANGED);
                     break;
 
@@ -1328,7 +1328,7 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
 
         @Override
         public void run() {
-            savePositionInTrack();
+            savePositionInSong();
             sendPublicIntent(PLAY_STATE_CHANGED); // for musixmatch synced lyrics
         }
     }

@@ -64,7 +64,7 @@
     <string name="app_name">Музыка</string>
     <string name="app_shortcut_last_added_short">Последние добавленные</string>
     <string name="app_shortcut_shuffle_all_short">Перемешать</string>
-    <string name="app_shortcut_top_tracks_short">Популярные песни</string>
+    <string name="app_shortcut_top_songs_short">Популярные песни</string>
     <string name="app_widget_big_name">Музыка — Большой</string>
     <string name="app_widget_card_name">Музыка — Карточка</string>
     <string name="app_widget_classic_name">Музыка — Классический</string>
@@ -144,7 +144,7 @@
     <string name="label_view_playing_queue">Просмотр очереди воспроизведения</string>
     <string name="label_edit_playing_queue">Редактирование очереди воспроизведения</string>
     <string name="label_sampling_rate">Частота</string>
-    <string name="label_track_length">Продолжительность</string>
+    <string name="label_song_length">Длительность</string>
     <string name="last_added">Последние добавленные</string>
     <string name="library">Библиотека</string>
     <string name="library_categories">Категории библиотеки</string>
@@ -160,7 +160,7 @@
     <string name="md_presets_label">Палитра</string>
     <string name="mi_label_button_cta">Начать</string>
     <string name="min">" мин."</string>
-    <string name="my_top_tracks">Мои популярные песни</string>
+    <string name="my_top_songs">Мои популярные песни</string>
     <string name="navoi_uzbekistan">Навои, Узбекистан</string>
     <string name="never">Никогда</string>
     <string name="new_playlist_title">Новый плейлист</string>
@@ -257,6 +257,7 @@
     </plurals>
     <string name="some_files_are_not_listed_in_the_media_store">Некоторые файлы не указаны в медиа магазине</string>
     <string name="song">песня</string>
+    <string name="song_hint">Песня (2 для песни 2 или 3004 для песни 4 CD3)</string>
     <string name="song_tag_editor">Песня</string>
     <string name="songs">Песни</string>
     <plurals name="songs_x" tools:ignore="MissingQuantity">
@@ -275,7 +276,6 @@
     <string name="this_year">Этот год</string>
     <string name="title">Заголовок</string>
     <string name="today">Сегодня</string>
-    <string name="track_hint">Песня (2 для песни 2 или 3004 для песни 4 CD3)</string>
     <string name="unplayable_file">Невозможно воспроизвести эту песню</string>
     <string name="up_next">Очередь</string>
     <string name="update_image">Обновить изображение</string>

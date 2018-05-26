@@ -29,7 +29,7 @@ public abstract class BaseShortcutType {
     /**
      * Creates an Intent that will launch MainActivtiy and immediately play {@param songs} in either shuffle or normal mode
      *
-     * @param shortcutType Describes the type of shortcut to create (ShuffleAll, TopTracks, custom playlist, etc.)
+     * @param shortcutType Describes the type of shortcut to create (ShuffleAll, TopSongs, custom playlist, etc.)
      * @return
      */
     Intent getPlaySongsIntent(int shortcutType) {
