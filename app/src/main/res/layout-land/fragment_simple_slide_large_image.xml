@@ -39,7 +39,7 @@
             android:gravity="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Headline"
             tools:ignore="UnusedAttribute"
-            tools:text="Lorem ipsum" />
+            tools:text="@string/app_name" />
 
         <TextView
             android:id="@id/mi_description"
@@ -48,7 +48,7 @@
             android:layout_marginTop="@dimen/mi_baseline"
             android:gravity="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-            tools:text="Lorem ipsum dolor sit amet, consectetur, adipisci velit, …" />
+            tools:text="@string/welcome_to_music_app" />
 
     </LinearLayout>
 
