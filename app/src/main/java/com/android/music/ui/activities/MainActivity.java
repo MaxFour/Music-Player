@@ -52,7 +52,6 @@ public class MainActivity extends AbsSlidingMusicPanelActivity {
 
     public static final String TAG = MainActivity.class.getSimpleName();
     public static final int APP_INTRO_REQUEST = 100;
-    public static final int PURCHASE_REQUEST = 101;
 
     private static final int LIBRARY = 0;
     private static final int FOLDERS = 1;
