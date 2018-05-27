@@ -7,6 +7,10 @@
 
 --------
 
+![Screenshots](./images/Screenshots.png?raw=true)
+
+--------
+
 ### Music Player features
 
 - Auto download artist art (MediaStore)
