@@ -75,6 +75,7 @@
     <string name="biography_unavailable">Couldn’t find a biography entry for this artist</string>
     <string name="black_theme_name">Black (AMOLED)</string>
     <string name="blacklist">Blacklist</string>
+    <string name="cancel">Cancel</string>
     <string name="cancel_current_timer">Cancel current timer</string>
     <string name="card">Card</string>
     <string name="clear_action">Clear</string>
@@ -106,6 +107,8 @@
         <item quantity="one">Deleted <xliff:g id="count">%1$d</xliff:g> song</item>
         <item quantity="other">Deleted <xliff:g id="count">%1$d</xliff:g> songs</item>
     </plurals>
+    <string name="dialog_message_set_ringtone">\"Music\" application requires permission to \'write settings\' in order to set your ringtone. After granting permission, try setting your ringtone again.</string>
+    <string name="dialog_title_set_ringtone">Set ringtone</string>
     <string name="do_you_want_to_clear_the_blacklist">Do you want to clear the blacklist?</string>
     <string name="do_you_want_to_remove_from_the_blacklist"><![CDATA[Do you want to remove <b>%1$s</b> from the blacklist?]]></string>
     <string name="donate">Donate</string>
@@ -174,6 +177,7 @@
     <string name="no_songs">No songs</string>
     <string name="not_listed_in_media_store"><![CDATA[<b>%s</b> is not listed in the media store]]></string>
     <string name="nothing_to_scan">Nothing to scan</string>
+    <string name="ok">OK</string>
     <string name="only_on_wifi">Only on Wi-Fi</string>
     <string name="open_playing_queue_instruction">Swipe the card in the now playing screen up to reveal the full playing queue</string>
     <string name="past_three_months">Past 3 months</string>

@@ -77,6 +77,7 @@
     <string name="biography_unavailable">Невозможно найти биографию исполнителя</string>
     <string name="black_theme_name">Чёрная (для AMOLED-экранов)</string>
     <string name="blacklist">Чёрный список</string>
+    <string name="cancel">Отмена</string>
     <string name="cancel_current_timer">Отменить текущий таймер</string>
     <string name="card">Карточка</string>
     <string name="clear_action">Очистить</string>
@@ -111,6 +112,8 @@
         <item quantity="few"><xliff:g id="count">%1$d</xliff:g> песни удалены</item>
         <item quantity="many"><xliff:g id="count">%1$d</xliff:g> песен удалено</item>
     </plurals>
+    <string name="dialog_message_set_ringtone">Приложение \"Музыка\" требует разрешение на \'запись настроек\', чтобы установить рингтон. После предоставления разрешения, попробуйте установить рингтон снова.</string>
+    <string name="dialog_title_set_ringtone">Установка рингтона</string>
     <string name="do_you_want_to_clear_the_blacklist">Вы хотите очистить чёрный список?</string>
     <string name="do_you_want_to_remove_from_the_blacklist"><![CDATA[Убрать <b>%1$s</b> из чёрного списка?]]></string>
     <string name="donate">Пожертвовать</string>
@@ -172,6 +175,7 @@
     <string name="no_songs">Нет песен для отображения</string>
     <string name="not_listed_in_media_store"><![CDATA[<b>%s</b> не указано в медиа хранилище]]></string>
     <string name="nothing_to_scan">Нечего сканировать</string>
+    <string name="ok">OK</string>
     <string name="only_on_wifi">Только по Wi-Fi</string>
     <string name="open_playing_queue_instruction">Проведите по карточке на экране воспроизведения, чтобы просмотреть очередь</string>
     <string name="past_three_months">Последние 3 месяца</string>

@@ -1,6 +1,6 @@
 package com.android.music.util;
 
-import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.content.ContentResolver;
 import android.content.ContentUris;
 import android.content.ContentValues;
@@ -71,6 +71,23 @@ public class MusicUtil {
     }
 
     public static void setRingtone(@NonNull final Context context, final int id) {
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (!Settings.System.canWrite(context)) {
+
+                new AlertDialog.Builder(context)
+                        .setTitle(R.string.dialog_title_set_ringtone)
+                        .setMessage(R.string.dialog_message_set_ringtone)
+                        .setPositiveButton(R.string.ok, (dialog, which) -> {
+                            Intent intent = new Intent(Settings.ACTION_MANAGE_WRITE_SETTINGS);
+                            intent.setData(Uri.parse("package:" + App.getInstance().getPackageName()));
+                            context.startActivity(intent);
+                        }).setNegativeButton(R.string.cancel, null)
+                        .show();
+                return;
+            }
+        }
+
         final ContentResolver resolver = context.getContentResolver();
         final Uri uri = getSongFileUri(id);
         try {
