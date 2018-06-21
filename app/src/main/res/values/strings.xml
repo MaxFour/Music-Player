@@ -243,6 +243,8 @@
     <string name="reset_artist_image">Reset artist image</string>
     <string name="save_playlist_title">Save as file</string>
     <string name="saved_playlist_to">Saved playlist to %s</string>
+    <string name="saved_x_playlists_to_x">Saved %1$d playlists to %2$s</string>
+    <string name="saved_x_playlists_to_x_failed_to_save_x">Saved %1$d playlists to %2$s, failed to save %3$d</string>
     <string name="saving_changes">Saving changes</string>
     <string name="saving_to_file">Saving to file…</string>
     <string name="scan_media">Scan media</string>

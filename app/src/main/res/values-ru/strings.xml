@@ -242,6 +242,8 @@
     <string name="reset_artist_image">Сбросить картинку исполнителя</string>
     <string name="save_playlist_title">Сохранить как файл</string>
     <string name="saved_playlist_to">Плейлист сохранён в %s</string>
+    <string name="saved_x_playlists_to_x">Сохранено %1$d плейлистов в %2$s</string>
+    <string name="saved_x_playlists_to_x_failed_to_save_x">Сохранено %1$d плейлистов в %2$s, не удалось сохранить %3$d</string>
     <string name="saving_changes">Сохранение изменений</string>
     <string name="saving_to_file">Сохранение файла…</string>
     <string name="scan_media">Сканировать медиа</string>
