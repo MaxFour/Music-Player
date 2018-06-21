@@ -8,6 +8,7 @@ import android.support.v7.widget.CardView;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.android.music.util.MusicUtil;
 import com.bumptech.glide.Glide;
 import com.kabouzeid.appthemehelper.util.ColorUtil;
 import com.kabouzeid.appthemehelper.util.MaterialValueHelper;
@@ -73,11 +74,7 @@ public class HorizontalAlbumAdapter extends AlbumAdapter {
 
     @Override
     protected String getAlbumText(Album album) {
-		int year = album.getYear();
-		if(year > 0) {
-			return String.valueOf(year);
-		}
-		return "-";
+		return MusicUtil.getYearString(album.getYear());
     }
 
     @Override
