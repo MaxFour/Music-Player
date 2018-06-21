@@ -1,20 +1,20 @@
 package com.android.music.helper.menu;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
-import android.os.AsyncTask;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.android.music.App;
 import com.android.music.R;
 import com.android.music.dialogs.AddToPlaylistDialog;
 import com.android.music.dialogs.DeletePlaylistDialog;
 import com.android.music.dialogs.RenamePlaylistDialog;
 import com.android.music.helper.MusicPlayerRemote;
 import com.android.music.loader.PlaylistSongLoader;
+import com.android.music.misc.WeakContextAsyncTask;
 import com.android.music.model.AbsCustomPlaylist;
 import com.android.music.model.Playlist;
 import com.android.music.model.Song;
@@ -45,34 +45,7 @@ public class PlaylistMenuHelper {
                 DeletePlaylistDialog.create(playlist).show(activity.getSupportFragmentManager(), "DELETE_PLAYLIST");
                 return true;
             case R.id.action_save_playlist:
-                @SuppressLint("ShowToast")
-                final Toast toast = Toast.makeText(activity, R.string.saving_to_file, Toast.LENGTH_SHORT);
-                new AsyncTask<Context, Void, String>() {
-                    @Override
-                    protected void onPreExecute() {
-                        super.onPreExecute();
-                        toast.show();
-                    }
-
-                    @Override
-                    protected String doInBackground(Context... params) {
-                        try {
-                            return String.format(params[0].getString(R.string.saved_playlist_to), PlaylistsUtil.savePlaylist(params[0], playlist));
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                            return String.format(params[0].getString(R.string.failed_to_save_playlist), e);
-                        }
-                    }
-
-                    @Override
-                    protected void onPostExecute(String string) {
-                        super.onPostExecute(string);
-                        if (toast != null) {
-                            toast.setText(string);
-                            toast.show();
-                        }
-                    }
-                }.execute(activity.getApplicationContext());
+                new SavePlaylistAsyncTask(activity).execute(playlist);
                 return true;
         }
         return false;
@@ -83,5 +56,31 @@ public class PlaylistMenuHelper {
         return playlist instanceof AbsCustomPlaylist ?
                 ((AbsCustomPlaylist) playlist).getSongs(activity) :
                 PlaylistSongLoader.getPlaylistSongList(activity, playlist.id);
+    }
+
+
+    private static class SavePlaylistAsyncTask extends WeakContextAsyncTask<Playlist, String, String> {
+        public SavePlaylistAsyncTask(Context context){
+            super(context);
+        }
+
+        @Override
+        protected String doInBackground(Playlist... params) {
+            try {
+                return String.format(App.getInstance().getApplicationContext().getString(R.string.saved_playlist_to), PlaylistsUtil.savePlaylist(App.getInstance().getApplicationContext(), params[0]));
+            } catch (IOException e) {
+                e.printStackTrace();
+                return String.format(App.getInstance().getApplicationContext().getString(R.string.failed_to_save_playlist), e);
+            }
+        }
+
+        @Override
+        protected void onPostExecute(String string) {
+            super.onPostExecute(string);
+            Context context = getContext();
+            if (context != null) {
+                Toast.makeText(context,string,Toast.LENGTH_LONG).show();
+            }
+        }
     }
 }

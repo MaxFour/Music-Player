@@ -241,14 +241,15 @@
     <string name="reset_action">Сброс</string>
     <string name="reset_artist_image">Сбросить картинку исполнителя</string>
     <string name="save_playlist_title">Сохранить как файл</string>
+    <string name="save_playlists_title">Сохранить как файлы</string>
     <string name="saved_playlist_to">Плейлист сохранён в %s</string>
     <string name="saved_x_playlists_to_x">Сохранено %1$d плейлистов в %2$s</string>
     <string name="saved_x_playlists_to_x_failed_to_save_x">Сохранено %1$d плейлистов в %2$s, не удалось сохранить %3$d</string>
     <string name="saving_changes">Сохранение изменений</string>
-    <string name="saving_to_file">Сохранение файла…</string>
     <string name="scan_media">Сканировать медиа</string>
     <string name="scanned_files">Просканировано файлов: %1$d из %2$d</string>
     <string name="search_hint">Поиск в библиотеке…</string>
+    <string name="select_all">Выбрать все</string>
     <string name="set_artist_image">Установить картинку исполнителя</string>
     <string name="sleep_timer_canceled">Таймер сна отменен</string>
     <plurals name="sleep_timer_set">
