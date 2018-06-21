@@ -342,7 +342,7 @@ public class MusicPlayerRemote {
             } else {
                 openQueue(songs, 0, false);
             }
-            @SuppressLint("ResourceType") final String toast = songs.size() == 1 ? musicService.getResources().getString(R.string.added_title_to_playing_queue) : musicService.getResources().getQuantityString(R.plurals.added_x_titles_to_playing_queue, songs.size());
+            @SuppressLint("ResourceType") final String toast = songs.size() == 1 ? musicService.getResources().getString(R.string.added_title_to_playing_queue) : musicService.getResources().getQuantityString(R.plurals.added_x_titles_to_playing_queue, songs.size(), songs.size());
             Toast.makeText(musicService, toast, Toast.LENGTH_SHORT).show();
             return true;
         }
