@@ -18,13 +18,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
-import com.kabouzeid.appthemehelper.ThemeStore;
-import com.kabouzeid.appthemehelper.util.ATHUtil;
-import com.kabouzeid.appthemehelper.util.NavigationViewUtil;
-import com.android.music.App;
 import com.android.music.R;
 import com.android.music.dialogs.ScanMediaFolderChooserDialog;
 import com.android.music.glide.SongGlideRequest;
@@ -39,8 +33,13 @@ import com.android.music.ui.activities.base.AbsSlidingMusicPanelActivity;
 import com.android.music.ui.activities.intro.AppIntroActivity;
 import com.android.music.ui.fragments.mainactivity.folders.FoldersFragment;
 import com.android.music.ui.fragments.mainactivity.library.LibraryFragment;
+import com.android.music.util.NavigationUtil;
 import com.android.music.util.PreferenceUtil;
 import com.android.music.util.Util;
+import com.bumptech.glide.Glide;
+import com.kabouzeid.appthemehelper.ThemeStore;
+import com.kabouzeid.appthemehelper.util.ATHUtil;
+import com.kabouzeid.appthemehelper.util.NavigationViewUtil;
 import com.sothree.slidinguppanel.SlidingUpPanelLayout;
 
 import java.util.ArrayList;
@@ -169,6 +168,9 @@ public class MainActivity extends AbsSlidingMusicPanelActivity {
                         ScanMediaFolderChooserDialog dialog = ScanMediaFolderChooserDialog.create();
                         dialog.show(getSupportFragmentManager(), "SCAN_MEDIA_FOLDER_CHOOSER");
                     }, 200);
+                    break;
+                case R.id.nav_equalizer:
+                    NavigationUtil.openEqualizer(this);
                     break;
                 case R.id.nav_settings:
                     new Handler().postDelayed(() -> startActivity(new Intent(MainActivity.this, SettingsActivity.class)), 200);

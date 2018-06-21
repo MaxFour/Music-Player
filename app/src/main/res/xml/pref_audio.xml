@@ -15,10 +15,6 @@
             android:summary="@string/pref_summary_gapless_playback"
             android:title="@string/pref_title_gapless_playback" />
 
-        <com.kabouzeid.appthemehelper.common.prefs.supportv7.ATEPreference
-            android:key="equalizer"
-            android:title="@string/equalizer" />
-
     </com.kabouzeid.appthemehelper.common.prefs.supportv7.ATEPreferenceCategory>
 
 </android.support.v7.preference.PreferenceScreen>

@@ -1,10 +1,6 @@
 package com.android.music.ui.activities;
 
-import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.pm.PackageManager;
-import android.content.pm.ResolveInfo;
-import android.media.audiofx.AudioEffect;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.ColorInt;
@@ -18,14 +14,8 @@ import android.support.v7.preference.TwoStatePreference;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
 import com.afollestad.materialdialogs.color.ColorChooserDialog;
-import com.kabouzeid.appthemehelper.ThemeStore;
-import com.kabouzeid.appthemehelper.common.prefs.supportv7.ATEColorPreference;
-import com.kabouzeid.appthemehelper.common.prefs.supportv7.ATEPreferenceFragmentCompat;
-import com.kabouzeid.appthemehelper.util.ColorUtil;
-import com.android.music.App;
 import com.android.music.R;
 import com.android.music.appshortcuts.DynamicShortcutManager;
 import com.android.music.misc.NonProAllowedColors;
@@ -36,8 +26,11 @@ import com.android.music.preferences.LibraryPreferenceDialog;
 import com.android.music.preferences.NowPlayingScreenPreference;
 import com.android.music.preferences.NowPlayingScreenPreferenceDialog;
 import com.android.music.ui.activities.base.AbsBaseActivity;
-import com.android.music.util.NavigationUtil;
 import com.android.music.util.PreferenceUtil;
+import com.kabouzeid.appthemehelper.ThemeStore;
+import com.kabouzeid.appthemehelper.common.prefs.supportv7.ATEColorPreference;
+import com.kabouzeid.appthemehelper.common.prefs.supportv7.ATEPreferenceFragmentCompat;
+import com.kabouzeid.appthemehelper.util.ColorUtil;
 
 import java.util.Arrays;
 
@@ -287,24 +280,7 @@ public class SettingsActivity extends AbsBaseActivity implements ColorChooserDia
                 });
             }
 
-            final Preference equalizer = findPreference("equalizer");
-            if (!hasEqualizer()) {
-                equalizer.setEnabled(false);
-                equalizer.setSummary(getResources().getString(R.string.no_equalizer));
-            }
-            equalizer.setOnPreferenceClickListener(preference -> {
-                NavigationUtil.openEqualizer(getActivity());
-                return true;
-            });
-
             updateNowPlayingScreenSummary();
-        }
-
-        private boolean hasEqualizer() {
-            final Intent effects = new Intent(AudioEffect.ACTION_DISPLAY_AUDIO_EFFECT_CONTROL_PANEL);
-            PackageManager pm = getActivity().getPackageManager();
-            ResolveInfo ri = pm.resolveActivity(effects, 0);
-            return ri != null;
         }
 
         @Override
