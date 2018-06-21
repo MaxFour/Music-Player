@@ -32,7 +32,7 @@
     <string name="action_scan_directory">Сканировать папку</string>
     <string name="action_search">Поиск</string>
     <string name="action_set">Установить</string>
-    <string name="action_set_as_ringtone">Установить как мелодию звонка</string>
+    <string name="action_set_as_ringtone">Установить как рингтон</string>
     <string name="action_set_as_start_directory">Назначить как начальную папку</string>
     <string name="action_settings">Настройки</string>
     <string name="action_share">Поделиться</string>
@@ -84,7 +84,6 @@
     <string name="clear_playlist_title">Очистка плейлиста</string>
     <string name="clear_playlist_x"><![CDATA[Очистить плейлист \"<b>%1$s</b>\"?  Эта операция необратима!]]></string>
     <string name="colored_footers">Окрашенные нижние колонтитулы</string>
-    <string name="copied_device_info_to_clipboard">Информация об устройстве скопирована в буфер обмена</string>
     <string name="could_not_create_playlist">Невозможно создать плейлист</string>
     <string name="could_not_download_album_cover">Невозможно загрузить подходящую обложку альбома</string>
     <string name="could_not_scan_files">Не удалось просканировать %d файлов</string>
@@ -94,7 +93,7 @@
     <string name="dark_theme_name">Тёмная</string>
     <string name="delete_action">Удалить</string>
     <string name="delete_playlist_title">Удаление плейлиста</string>
-    <string name="delete_playlist_x"><![CDATA[Вы хотите удалить плейлист \"<b>%1$s</b>\"?]]></string>
+    <string name="delete_playlist_x"><![CDATA[Удалить плейлист \"<b>%1$s</b>\"?]]></string>
     <string name="delete_playlists_title">Удаление плейлистов</string>
     <string name="delete_song_title">Удаление песни</string>
     <string name="delete_song_x"><![CDATA[Удалить песню \"<b>%1$s</b>\"?]]></string>
@@ -112,8 +111,6 @@
         <item quantity="few"><xliff:g id="count">%1$d</xliff:g> песни удалены</item>
         <item quantity="many"><xliff:g id="count">%1$d</xliff:g> песен удалено</item>
     </plurals>
-    <string name="description">Описание</string>
-    <string name="device_info">Информация об устройстве</string>
     <string name="do_you_want_to_clear_the_blacklist">Вы хотите очистить чёрный список?</string>
     <string name="do_you_want_to_remove_from_the_blacklist"><![CDATA[Убрать <b>%1$s</b> из чёрного списка?]]></string>
     <string name="donate">Пожертвовать</string>
@@ -130,9 +127,9 @@
     <string name="genres">Жанры</string>
     <string name="history">История прослушивания</string>
     <plurals name="inserted_x_songs_into_playlist_x" tools:ignore="MissingQuantity">
-        <item quantity="one"><xliff:g id="count">%1$d</xliff:g> песня добавлена в плейлист %2$s</item>
-        <item quantity="few"><xliff:g id="count">%1$d</xliff:g> песни добавлены в плейлист %2$s</item>
-        <item quantity="many"><xliff:g id="count">%1$d</xliff:g> песен добавлено в плейлист %2$s</item>
+        <item quantity="one"><xliff:g id="count">%1$d</xliff:g> песня добавлена в плейлист \"%2$s\"</item>
+        <item quantity="few"><xliff:g id="count">%1$d</xliff:g> песни добавлены в плейлист \"%2$s\"</item>
+        <item quantity="many"><xliff:g id="count">%1$d</xliff:g> песен добавлено в плейлист \"%2$s\"</item>
     </plurals>
     <string name="intro_label">Вступление</string>
     <string name="label_bit_rate">Битрейт</string>
@@ -193,32 +190,32 @@
     <string name="pref_header_images">Изображения</string>
     <string name="pref_header_library">Библиотека</string>
     <string name="pref_header_lockscreen">Экран блокировки</string>
-    <string name="pref_header_notification">Уведомления</string>
+    <string name="pref_header_notification">Уведомление</string>
     <string name="pref_header_now_playing_screen">Экран воспроизведения</string>
     <string name="pref_header_playlists">Плейлисты</string>
-    <string name="pref_summary_album_art_on_lockscreen">Обложка альбома текущей песни используется как изображение экрана блокировки</string>
+    <string name="pref_summary_album_art_on_lockscreen">Обложка альбома текущей песни будет использоваться как изображение экрана блокировки</string>
     <string name="pref_summary_audio_ducking">Уведомления, навигация, т.д.</string>
-    <string name="pref_summary_blacklist">Занесённые в чёрный список папки скрыты из Вашей библиотеки</string>
+    <string name="pref_summary_blacklist">Занесённые в чёрный список папки, скрыты из Вашей библиотеки</string>
     <string name="pref_summary_blurred_album_art">Сделать размытую обложку фоном экрана блокировки. Могут быть проблемы с другими приложениями и виджетами.</string>
     <string name="pref_summary_classic_notification">Использовать классический дизайн уведомления</string>
     <string name="pref_summary_colored_app_shortcuts">Окрасить шорткаты в основной цвет</string>
     <string name="pref_summary_colored_navigation_bar">Окрасить панель навигации в основной цвет</string>
-    <string name="pref_summary_colored_notification">Окрасить уведомления в тон обложки альбома</string>
+    <string name="pref_summary_colored_notification">Окрасить уведомление в тон обложки альбома</string>
     <string name="pref_summary_gapless_playback">Может вызвать проблемы с воспроизведением на некоторых устройствах</string>
-    <string name="pref_summary_ignore_media_store_artwork">Может увеличиться качество обложки, но также увеличивается время её отрисовки. Влючайте только, если Вы имеете проблемы с низким разрешением обложек альбомов.</string>
+    <string name="pref_summary_ignore_media_store_artwork">Может увеличиться качество обложки, но также увеличивается время её отрисовки. Включайте только, если Вы имеете проблемы с низким разрешением обложек альбомов.</string>
     <string name="pref_summary_library_categories">Настроить видимость и порядок категорий библиотеки</string>
     <string name="pref_summary_remember_last_tab">Переходить на последнюю открытую вкладку при запуске</string>
     <string name="pref_summary_synchronized_lyrics_show">В настоящее время поддерживаются только синхронизированные тексты в формате LRC. Либо встроенные, либо как отдельный файл.</string>
     <string name="pref_title_album_art_on_lockscreen">Показывать обложку альбома</string>
     <string name="pref_title_app_shortcuts">Цветные шорткаты</string>
-    <string name="pref_title_audio_ducking">Уменьшить громкость при уведомлених</string>
+    <string name="pref_title_audio_ducking">Уменьшить громкость при уведомлении</string>
     <string name="pref_title_auto_download_metadata">Автозагрузка метаданных</string>
     <string name="pref_title_blurred_album_art">Размытая обложка альбома</string>
-    <string name="pref_title_classic_notification">Стандартный дизайн уведомления</string>
+    <string name="pref_title_classic_notification">Классический дизайн уведомления</string>
     <string name="pref_title_colored_notification">Окрашенное уведомление</string>
     <string name="pref_title_gapless_playback">Воспроизведение без переходов</string>
     <string name="pref_title_general_theme">Главная тема</string>
-    <string name="pref_title_ignore_media_store_artwork">Игнорировать хранилище обложек альбомов</string>
+    <string name="pref_title_ignore_media_store_artwork">Игнорировать хранилище обложек</string>
     <string name="pref_title_last_added_interval">Интервал последнего добавленного плейлиста</string>
     <string name="pref_title_navigation_bar">Цветная панель навигации</string>
     <string name="pref_title_now_playing_screen_appearance">Вид экрана воспроизведения</string>
@@ -274,7 +271,6 @@
     <string name="this_month">Этот месяц</string>
     <string name="this_week">Эта неделя</string>
     <string name="this_year">Этот год</string>
-    <string name="title">Заголовок</string>
     <string name="today">Сегодня</string>
     <string name="unplayable_file">Невозможно воспроизвести эту песню</string>
     <string name="up_next">Очередь</string>
@@ -287,7 +283,7 @@
     <string name="wiki">Википедия</string>
     <string name="wiki_unavailable">Невозможно найти информацию в википедии для этого альбома</string>
     <string name="write_an_email">Написать на электронную почту</string>
-    <string name="x_has_been_set_as_ringtone">\"%1$s\" был установлен на звонок</string>
+    <string name="x_has_been_set_as_ringtone">\"%1$s\" был установлен как рингтон</string>
     <string name="x_selected">%1$d выбрано</string>
     <string name="year">Год</string>
     <string name="you_have_to_select_at_least_one_category">Вы должны выбрать хотя бы одну категорию</string>

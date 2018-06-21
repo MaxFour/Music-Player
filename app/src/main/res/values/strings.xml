@@ -82,7 +82,6 @@
     <string name="clear_playlist_title">Clear playlist</string>
     <string name="clear_playlist_x"><![CDATA[Clear the playlist \"<b>%1$s</b>\"? This can’t be undone!]]></string>
     <string name="colored_footers">Colored footers</string>
-    <string name="copied_device_info_to_clipboard">Copied device info to clipboard</string>
     <string name="could_not_create_playlist">Couldn’t create playlist</string>
     <string name="could_not_download_album_cover">Couldn’t download a matching album cover</string>
     <string name="could_not_scan_files">Could not scan %d files</string>
@@ -107,8 +106,6 @@
         <item quantity="one">Deleted <xliff:g id="count">%1$d</xliff:g> song</item>
         <item quantity="other">Deleted <xliff:g id="count">%1$d</xliff:g> songs</item>
     </plurals>
-    <string name="description">Description</string>
-    <string name="device_info">Device info</string>
     <string name="do_you_want_to_clear_the_blacklist">Do you want to clear the blacklist?</string>
     <string name="do_you_want_to_remove_from_the_blacklist"><![CDATA[Do you want to remove <b>%1$s</b> from the blacklist?]]></string>
     <string name="donate">Donate</string>
@@ -133,8 +130,8 @@
     <string name="grid_size_8">8</string>
     <string name="history">History</string>
     <plurals name="inserted_x_songs_into_playlist_x">
-        <item quantity="one">Inserted <xliff:g id="count">%1$d</xliff:g> song into the playlist %2$s</item>
-        <item quantity="other">Inserted <xliff:g id="count">%1$d</xliff:g> songs into the playlist %2$s</item>
+        <item quantity="one">Inserted <xliff:g id="count">%1$d</xliff:g> song into the playlist \"%2$s\"</item>
+        <item quantity="other">Inserted <xliff:g id="count">%1$d</xliff:g> songs into the playlist \"%2$s\"</item>
     </plurals>
     <string name="intro_label">Introduction</string>
     <string name="label_bit_rate">Bitrate</string>
@@ -273,7 +270,6 @@
     <string name="this_month">This month</string>
     <string name="this_week">This week</string>
     <string name="this_year">This year</string>
-    <string name="title">Title</string>
     <string name="today">Today</string>
     <string name="unplayable_file">Couldn’t play this song</string>
     <string name="up_next">Up next</string>
@@ -281,7 +277,7 @@
     <string name="updating">Updating…</string>
     <string name="version">Version</string>
     <string name="web_search">Web search</string>
-    <string name="welcome_to_music_app">Welcome to Music, a beautiful and lightweight music player!</string>
+    <string name="welcome_to_music_app">Welcome to \"Music\" application, a beautiful and lightweight music player!</string>
     <string name="what_do_you_want_to_share">What do you want to share?</string>
     <string name="wiki">Wiki</string>
     <string name="wiki_unavailable">Couldn’t find a wiki entry for this album</string>
