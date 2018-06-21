@@ -116,8 +116,6 @@
     <string name="dialog_title_set_ringtone">Установка рингтона</string>
     <string name="do_you_want_to_clear_the_blacklist">Вы хотите очистить чёрный список?</string>
     <string name="do_you_want_to_remove_from_the_blacklist"><![CDATA[Убрать <b>%1$s</b> из чёрного списка?]]></string>
-    <string name="donate">Пожертвовать</string>
-    <string name="donate_summary">Ссылка на профиль в 4PDA</string>
     <string name="download_from_last_fm">Загрузить из Last.fm</string>
     <string name="empty">Пусто</string>
     <string name="equalizer">Эквалайзер</string>

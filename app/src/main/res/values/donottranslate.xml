@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="max_four" translatable="false">Max_Four</string>
+
+    <string name="webmoney" translatable="false">WebMoney</string>
+    <string name="qiwi" translatable="false">Qiwi</string>
+
+    <string name="webmoney_account" translatable="false">$: Z776114750889\n₽: R662315834876</string>
+    <string name="qiwi_account" translatable="false">+998 997524609</string>
 </resources>

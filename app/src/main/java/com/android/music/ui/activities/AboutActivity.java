@@ -6,16 +6,13 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.afollestad.materialdialogs.internal.ThemeSingleton;
 import com.kabouzeid.appthemehelper.ThemeStore;
-import com.android.music.App;
 import com.android.music.R;
 import com.android.music.ui.activities.base.AbsBaseActivity;
 import com.android.music.ui.activities.intro.AppIntroActivity;
@@ -28,8 +25,6 @@ public class AboutActivity extends AbsBaseActivity implements View.OnClickListen
 
     private static String GITHUB = "https://github.com/MaxFour/Music-Player";
 
-    private static String PROFILE_4PDA =  "http://4pda.ru/forum/index.php?showuser=5204816";
-
     @BindView(R.id.toolbar)
     Toolbar toolbar;
     @BindView(R.id.app_version)
@@ -40,8 +35,6 @@ public class AboutActivity extends AbsBaseActivity implements View.OnClickListen
     LinearLayout writeAnEmail;
     @BindView(R.id.fork_on_github)
     LinearLayout forkOnGitHub;
-    @BindView(R.id.donate)
-    LinearLayout donate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,7 +71,6 @@ public class AboutActivity extends AbsBaseActivity implements View.OnClickListen
         intro.setOnClickListener(this);
         forkOnGitHub.setOnClickListener(this);
         writeAnEmail.setOnClickListener(this);
-        donate.setOnClickListener(this);
     }
 
     @Override
@@ -111,8 +103,6 @@ public class AboutActivity extends AbsBaseActivity implements View.OnClickListen
             intent.putExtra(Intent.EXTRA_EMAIL, "mansurov.maksud@gmail.com");
             intent.putExtra(Intent.EXTRA_SUBJECT, "Music");
             startActivity(Intent.createChooser(intent, "E-Mail"));
-        } else if (v == donate) {
-            openUrl(PROFILE_4PDA);
         }
     }
 

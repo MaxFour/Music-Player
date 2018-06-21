@@ -111,8 +111,6 @@
     <string name="dialog_title_set_ringtone">Set ringtone</string>
     <string name="do_you_want_to_clear_the_blacklist">Do you want to clear the blacklist?</string>
     <string name="do_you_want_to_remove_from_the_blacklist"><![CDATA[Do you want to remove <b>%1$s</b> from the blacklist?]]></string>
-    <string name="donate">Donate</string>
-    <string name="donate_summary">Link to a profile in 4PDA</string>
     <string name="download_from_last_fm">Download from Last.fm</string>
     <string name="empty">Empty</string>
     <string name="equalizer">Equalizer</string>

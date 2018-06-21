@@ -27,7 +27,7 @@
             android:textColor="?android:textColorSecondary" />
 
         <LinearLayout
-            android:id="@+id/donate"
+            android:id="@+id/webmoney"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="?attr/rectSelector"
@@ -39,10 +39,10 @@
             android:paddingRight="16dp">
 
             <com.android.music.views.IconImageView
-                android:id="@+id/icon_donate"
+                android:id="@+id/icon_webmoney"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                app:srcCompat="@drawable/ic_card_giftcard_white_24dp"
+                app:srcCompat="@drawable/ic_webmoney_white_24dp"
                 tools:ignore="ContentDescription,UnusedAttribute" />
 
             <LinearLayout
@@ -57,13 +57,57 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/donate"
+                    android:text="@string/webmoney"
                     android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/donate_summary"
+                    android:text="@string/webmoney_account"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/qiwi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/rectSelector"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/md_listitem_height"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <com.android.music.views.IconImageView
+                android:id="@+id/icon_qiwi"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                app:srcCompat="@drawable/ic_qiwi_white_24dp"
+                tools:ignore="ContentDescription,UnusedAttribute" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginStart="32dp"
+                android:orientation="vertical"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/qiwi"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/qiwi_account"
                     android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
 
             </LinearLayout>
