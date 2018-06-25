@@ -25,6 +25,8 @@ public class AboutActivity extends AbsBaseActivity implements View.OnClickListen
 
     private static String GITHUB = "https://github.com/MaxFour/Music-Player";
 
+    private static String QIWI="https://qiwi.com/payment/form/99?extra%5B%E2%80%98account%E2%80%99%5D=998997524609";
+
     @BindView(R.id.toolbar)
     Toolbar toolbar;
     @BindView(R.id.app_version)
@@ -35,6 +37,9 @@ public class AboutActivity extends AbsBaseActivity implements View.OnClickListen
     LinearLayout writeAnEmail;
     @BindView(R.id.fork_on_github)
     LinearLayout forkOnGitHub;
+    @BindView(R.id.qiwi)
+    LinearLayout qiwi;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,6 +76,7 @@ public class AboutActivity extends AbsBaseActivity implements View.OnClickListen
         intro.setOnClickListener(this);
         forkOnGitHub.setOnClickListener(this);
         writeAnEmail.setOnClickListener(this);
+        qiwi.setOnClickListener(this);
     }
 
     @Override
@@ -103,6 +109,8 @@ public class AboutActivity extends AbsBaseActivity implements View.OnClickListen
             intent.putExtra(Intent.EXTRA_EMAIL, "mansurov.maksud@gmail.com");
             intent.putExtra(Intent.EXTRA_SUBJECT, "Music");
             startActivity(Intent.createChooser(intent, "E-Mail"));
+        } else if (v == qiwi) {
+            openUrl(QIWI);
         }
     }
 
