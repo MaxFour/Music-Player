@@ -6,14 +6,14 @@ import android.os.Bundle;
 import android.support.annotation.ColorInt;
 import android.view.View;
 
+import com.android.music.R;
+import com.android.music.util.PreferenceUtil;
+import com.android.music.util.Util;
 import com.kabouzeid.appthemehelper.ATH;
 import com.kabouzeid.appthemehelper.ThemeStore;
 import com.kabouzeid.appthemehelper.common.ATHToolbarActivity;
 import com.kabouzeid.appthemehelper.util.ColorUtil;
 import com.kabouzeid.appthemehelper.util.MaterialDialogsUtil;
-import com.android.music.R;
-import com.android.music.util.PreferenceUtil;
-import com.android.music.util.Util;
 
 public abstract class AbsThemeActivity extends ATHToolbarActivity {
 

@@ -34,10 +34,6 @@ import android.support.v4.media.session.MediaSessionCompat;
 import android.support.v4.media.session.PlaybackStateCompat;
 import android.widget.Toast;
 
-import com.bumptech.glide.BitmapRequestBuilder;
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.animation.GlideAnimation;
-import com.bumptech.glide.request.target.SimpleTarget;
 import com.android.music.R;
 import com.android.music.appwidgets.AppWidgetBig;
 import com.android.music.appwidgets.AppWidgetCard;
@@ -61,6 +57,10 @@ import com.android.music.service.playback.Playback;
 import com.android.music.util.MusicUtil;
 import com.android.music.util.PreferenceUtil;
 import com.android.music.util.Util;
+import com.bumptech.glide.BitmapRequestBuilder;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.animation.GlideAnimation;
+import com.bumptech.glide.request.target.SimpleTarget;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;

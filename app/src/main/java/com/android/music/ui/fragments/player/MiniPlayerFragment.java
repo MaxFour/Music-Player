@@ -13,14 +13,14 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.kabouzeid.appthemehelper.ThemeStore;
-import com.kabouzeid.appthemehelper.util.ATHUtil;
 import com.android.music.R;
 import com.android.music.helper.MusicPlayerRemote;
 import com.android.music.helper.MusicProgressViewUpdateHelper;
 import com.android.music.helper.PlayPauseButtonOnClickHandler;
 import com.android.music.ui.fragments.AbsMusicServiceFragment;
 import com.android.music.views.PlayPauseDrawable;
+import com.kabouzeid.appthemehelper.ThemeStore;
+import com.kabouzeid.appthemehelper.util.ATHUtil;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

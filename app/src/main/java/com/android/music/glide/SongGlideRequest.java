@@ -4,6 +4,13 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.support.annotation.NonNull;
 
+import com.android.music.R;
+import com.android.music.glide.audiocover.AudioFileCover;
+import com.android.music.glide.palette.BitmapPaletteTranscoder;
+import com.android.music.glide.palette.BitmapPaletteWrapper;
+import com.android.music.model.Song;
+import com.android.music.util.MusicUtil;
+import com.android.music.util.PreferenceUtil;
 import com.bumptech.glide.BitmapRequestBuilder;
 import com.bumptech.glide.DrawableRequestBuilder;
 import com.bumptech.glide.DrawableTypeRequest;
@@ -12,13 +19,6 @@ import com.bumptech.glide.load.Key;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.resource.drawable.GlideDrawable;
 import com.bumptech.glide.signature.MediaStoreSignature;
-import com.android.music.R;
-import com.android.music.glide.audiocover.AudioFileCover;
-import com.android.music.glide.palette.BitmapPaletteTranscoder;
-import com.android.music.glide.palette.BitmapPaletteWrapper;
-import com.android.music.model.Song;
-import com.android.music.util.MusicUtil;
-import com.android.music.util.PreferenceUtil;
 
 public class SongGlideRequest {
 

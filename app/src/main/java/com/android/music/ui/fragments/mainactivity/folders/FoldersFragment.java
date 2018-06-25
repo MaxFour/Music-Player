@@ -29,9 +29,6 @@ import android.widget.Toast;
 
 import com.afollestad.materialcab.MaterialCab;
 import com.afollestad.materialdialogs.MaterialDialog;
-import com.kabouzeid.appthemehelper.ThemeStore;
-import com.kabouzeid.appthemehelper.common.ATHToolbarActivity;
-import com.kabouzeid.appthemehelper.util.ToolbarContentTintHelper;
 import com.android.music.R;
 import com.android.music.adapter.SongFileAdapter;
 import com.android.music.helper.MusicPlayerRemote;
@@ -50,6 +47,9 @@ import com.android.music.util.MusicColorUtil;
 import com.android.music.util.PreferenceUtil;
 import com.android.music.util.ViewUtil;
 import com.android.music.views.BreadCrumbLayout;
+import com.kabouzeid.appthemehelper.ThemeStore;
+import com.kabouzeid.appthemehelper.common.ATHToolbarActivity;
+import com.kabouzeid.appthemehelper.util.ToolbarContentTintHelper;
 import com.simplecityapps.recyclerview_fastscroll.views.FastScrollRecyclerView;
 
 import java.io.File;

@@ -10,12 +10,12 @@ import android.os.AsyncTask;
 import android.support.annotation.NonNull;
 import android.widget.Toast;
 
+import com.android.music.App;
+import com.android.music.model.Artist;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.animation.GlideAnimation;
 import com.bumptech.glide.request.target.SimpleTarget;
-import com.android.music.App;
-import com.android.music.model.Artist;
 
 import java.io.BufferedOutputStream;
 import java.io.File;

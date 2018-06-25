@@ -8,12 +8,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.kabouzeid.appthemehelper.ThemeStore;
 import com.android.music.R;
 import com.android.music.interfaces.CabHolder;
 import com.android.music.model.Song;
 import com.android.music.util.MusicUtil;
 import com.android.music.util.NavigationUtil;
+import com.kabouzeid.appthemehelper.ThemeStore;
 
 import java.util.ArrayList;
 

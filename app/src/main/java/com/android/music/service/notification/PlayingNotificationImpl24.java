@@ -13,9 +13,6 @@ import android.support.v4.media.app.NotificationCompat.MediaStyle;
 import android.support.v7.graphics.Palette;
 import android.text.TextUtils;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.animation.GlideAnimation;
-import com.bumptech.glide.request.target.SimpleTarget;
 import com.android.music.R;
 import com.android.music.glide.SongGlideRequest;
 import com.android.music.glide.palette.BitmapPaletteWrapper;
@@ -23,6 +20,9 @@ import com.android.music.model.Song;
 import com.android.music.service.MusicService;
 import com.android.music.ui.activities.MainActivity;
 import com.android.music.util.PreferenceUtil;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.animation.GlideAnimation;
+import com.bumptech.glide.request.target.SimpleTarget;
 
 import static com.android.music.service.MusicService.ACTION_REWIND;
 import static com.android.music.service.MusicService.ACTION_SKIP;

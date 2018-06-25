@@ -2,13 +2,13 @@ package com.android.music.glide;
 
 import android.content.Context;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.GlideBuilder;
-import com.bumptech.glide.module.GlideModule;
 import com.android.music.glide.artistimage.ArtistImage;
 import com.android.music.glide.artistimage.ArtistImageLoader;
 import com.android.music.glide.audiocover.AudioFileCover;
 import com.android.music.glide.audiocover.AudioFileCoverLoader;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.GlideBuilder;
+import com.bumptech.glide.module.GlideModule;
 
 import java.io.InputStream;
 

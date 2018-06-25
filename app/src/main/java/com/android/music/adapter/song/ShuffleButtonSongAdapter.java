@@ -7,11 +7,11 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.kabouzeid.appthemehelper.ThemeStore;
 import com.android.music.R;
 import com.android.music.helper.MusicPlayerRemote;
 import com.android.music.interfaces.CabHolder;
 import com.android.music.model.Song;
+import com.kabouzeid.appthemehelper.ThemeStore;
 
 import java.util.ArrayList;
 

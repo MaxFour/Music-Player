@@ -13,12 +13,6 @@ import android.text.TextWatcher;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.bumptech.glide.request.animation.GlideAnimation;
-import com.bumptech.glide.request.target.SimpleTarget;
-import com.kabouzeid.appthemehelper.util.ATHUtil;
-import com.kabouzeid.appthemehelper.util.ToolbarContentTintHelper;
 import com.android.music.R;
 import com.android.music.glide.palette.BitmapPaletteTranscoder;
 import com.android.music.glide.palette.BitmapPaletteWrapper;
@@ -29,6 +23,12 @@ import com.android.music.model.Song;
 import com.android.music.util.ImageUtil;
 import com.android.music.util.LastFMUtil;
 import com.android.music.util.MusicColorUtil;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.request.animation.GlideAnimation;
+import com.bumptech.glide.request.target.SimpleTarget;
+import com.kabouzeid.appthemehelper.util.ATHUtil;
+import com.kabouzeid.appthemehelper.util.ToolbarContentTintHelper;
 
 import org.jaudiotagger.tag.FieldKey;
 

@@ -9,8 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.bumptech.glide.Glide;
-import com.kabouzeid.appthemehelper.util.ATHUtil;
 import com.android.music.R;
 import com.android.music.adapter.base.MediaEntryViewHolder;
 import com.android.music.glide.ArtistGlideRequest;
@@ -22,6 +20,8 @@ import com.android.music.model.Artist;
 import com.android.music.model.Song;
 import com.android.music.util.MusicUtil;
 import com.android.music.util.NavigationUtil;
+import com.bumptech.glide.Glide;
+import com.kabouzeid.appthemehelper.util.ATHUtil;
 
 import java.util.ArrayList;
 import java.util.List;

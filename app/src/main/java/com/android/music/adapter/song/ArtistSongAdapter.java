@@ -15,7 +15,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.afollestad.materialcab.MaterialCab;
-import com.bumptech.glide.Glide;
 import com.android.music.R;
 import com.android.music.glide.SongGlideRequest;
 import com.android.music.helper.MusicPlayerRemote;
@@ -24,6 +23,7 @@ import com.android.music.helper.menu.SongsMenuHelper;
 import com.android.music.interfaces.CabHolder;
 import com.android.music.model.Song;
 import com.android.music.util.NavigationUtil;
+import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 

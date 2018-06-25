@@ -16,7 +16,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-import com.kabouzeid.appthemehelper.ThemeStore;
 import com.android.music.R;
 import com.android.music.adapter.SearchAdapter;
 import com.android.music.interfaces.LoaderIds;
@@ -26,6 +25,7 @@ import com.android.music.loader.SongLoader;
 import com.android.music.misc.WrappedAsyncTaskLoader;
 import com.android.music.ui.activities.base.AbsMusicServiceActivity;
 import com.android.music.util.Util;
+import com.kabouzeid.appthemehelper.ThemeStore;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -8,15 +8,15 @@ import android.support.v7.widget.CardView;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.android.music.util.MusicUtil;
-import com.bumptech.glide.Glide;
-import com.kabouzeid.appthemehelper.util.ColorUtil;
-import com.kabouzeid.appthemehelper.util.MaterialValueHelper;
 import com.android.music.glide.MusicColoredTarget;
 import com.android.music.glide.SongGlideRequest;
 import com.android.music.helper.HorizontalAdapterHelper;
 import com.android.music.interfaces.CabHolder;
 import com.android.music.model.Album;
+import com.android.music.util.MusicUtil;
+import com.bumptech.glide.Glide;
+import com.kabouzeid.appthemehelper.util.ColorUtil;
+import com.kabouzeid.appthemehelper.util.MaterialValueHelper;
 
 import java.util.ArrayList;
 

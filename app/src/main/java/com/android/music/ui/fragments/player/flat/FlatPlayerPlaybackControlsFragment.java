@@ -15,7 +15,6 @@ import android.widget.ImageButton;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import com.kabouzeid.appthemehelper.util.MaterialValueHelper;
 import com.android.music.R;
 import com.android.music.helper.MusicPlayerRemote;
 import com.android.music.helper.MusicProgressViewUpdateHelper;
@@ -25,6 +24,7 @@ import com.android.music.service.MusicService;
 import com.android.music.ui.fragments.AbsMusicServiceFragment;
 import com.android.music.util.MusicUtil;
 import com.android.music.views.PlayPauseDrawable;
+import com.kabouzeid.appthemehelper.util.MaterialValueHelper;
 
 import java.util.Collection;
 import java.util.LinkedList;

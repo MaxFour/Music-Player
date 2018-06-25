@@ -9,13 +9,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.bumptech.glide.Glide;
 import com.android.music.R;
 import com.android.music.glide.MusicColoredTarget;
 import com.android.music.glide.SongGlideRequest;
 import com.android.music.misc.CustomFragmentStatePagerAdapter;
 import com.android.music.model.Song;
 import com.android.music.util.PreferenceUtil;
+import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 

@@ -3,12 +3,12 @@ package com.android.music.glide;
 import android.graphics.drawable.Drawable;
 import android.widget.ImageView;
 
-import com.bumptech.glide.request.animation.GlideAnimation;
-import com.kabouzeid.appthemehelper.util.ATHUtil;
 import com.android.music.R;
 import com.android.music.glide.palette.BitmapPaletteTarget;
 import com.android.music.glide.palette.BitmapPaletteWrapper;
 import com.android.music.util.MusicColorUtil;
+import com.bumptech.glide.request.animation.GlideAnimation;
+import com.kabouzeid.appthemehelper.util.ATHUtil;
 
 public abstract class MusicColoredTarget extends BitmapPaletteTarget {
     public MusicColoredTarget(ImageView view) {

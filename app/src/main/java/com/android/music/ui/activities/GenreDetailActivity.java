@@ -14,8 +14,6 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.afollestad.materialcab.MaterialCab;
-import com.h6ah4i.android.widget.advrecyclerview.utils.WrapperAdapterUtils;
-import com.kabouzeid.appthemehelper.ThemeStore;
 import com.android.music.R;
 import com.android.music.adapter.song.SongAdapter;
 import com.android.music.helper.MusicPlayerRemote;
@@ -28,6 +26,8 @@ import com.android.music.model.Song;
 import com.android.music.ui.activities.base.AbsSlidingMusicPanelActivity;
 import com.android.music.util.MusicColorUtil;
 import com.android.music.util.ViewUtil;
+import com.h6ah4i.android.widget.advrecyclerview.utils.WrapperAdapterUtils;
+import com.kabouzeid.appthemehelper.ThemeStore;
 import com.simplecityapps.recyclerview_fastscroll.views.FastScrollRecyclerView;
 
 import java.util.ArrayList;

@@ -15,8 +15,6 @@ import android.widget.PopupMenu;
 import android.widget.Toast;
 
 import com.android.music.App;
-import com.android.music.util.PlaylistsUtil;
-import com.kabouzeid.appthemehelper.util.ATHUtil;
 import com.android.music.R;
 import com.android.music.adapter.base.AbsMultiSelectAdapter;
 import com.android.music.adapter.base.MediaEntryViewHolder;
@@ -35,6 +33,7 @@ import com.android.music.model.smartplaylist.LastAddedPlaylist;
 import com.android.music.util.MusicUtil;
 import com.android.music.util.NavigationUtil;
 import com.android.music.util.PlaylistsUtil;
+import com.kabouzeid.appthemehelper.util.ATHUtil;
 
 import java.io.IOException;
 import java.util.ArrayList;

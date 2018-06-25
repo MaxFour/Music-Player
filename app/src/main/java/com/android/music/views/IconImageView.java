@@ -5,8 +5,8 @@ import android.graphics.PorterDuff;
 import android.support.v7.widget.AppCompatImageView;
 import android.util.AttributeSet;
 
-import com.kabouzeid.appthemehelper.util.ATHUtil;
 import com.android.music.R;
+import com.kabouzeid.appthemehelper.util.ATHUtil;
 
 public class IconImageView extends AppCompatImageView {
     public IconImageView(Context context) {

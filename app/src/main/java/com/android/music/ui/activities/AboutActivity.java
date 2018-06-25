@@ -12,10 +12,10 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.kabouzeid.appthemehelper.ThemeStore;
 import com.android.music.R;
 import com.android.music.ui.activities.base.AbsBaseActivity;
 import com.android.music.ui.activities.intro.AppIntroActivity;
+import com.kabouzeid.appthemehelper.ThemeStore;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

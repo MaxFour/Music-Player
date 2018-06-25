@@ -24,8 +24,8 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 
-import com.kabouzeid.appthemehelper.util.TintHelper;
 import com.android.music.R;
+import com.kabouzeid.appthemehelper.util.TintHelper;
 
 public class Util {
 

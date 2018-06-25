@@ -12,11 +12,6 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.RemoteViews;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.animation.GlideAnimation;
-import com.bumptech.glide.request.target.SimpleTarget;
-import com.bumptech.glide.request.target.Target;
-import com.kabouzeid.appthemehelper.util.MaterialValueHelper;
 import com.android.music.R;
 import com.android.music.appwidgets.base.BaseAppWidget;
 import com.android.music.glide.SongGlideRequest;
@@ -25,6 +20,11 @@ import com.android.music.model.Song;
 import com.android.music.service.MusicService;
 import com.android.music.ui.activities.MainActivity;
 import com.android.music.util.Util;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.animation.GlideAnimation;
+import com.bumptech.glide.request.target.SimpleTarget;
+import com.bumptech.glide.request.target.Target;
+import com.kabouzeid.appthemehelper.util.MaterialValueHelper;
 
 public class AppWidgetClassic extends BaseAppWidget {
     public static final String NAME = "app_widget_classic";

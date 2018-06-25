@@ -2,9 +2,9 @@ package com.android.music.ui.activities.intro;
 
 import android.os.Bundle;
 
+import com.android.music.R;
 import com.heinrichreimersoftware.materialintro.app.IntroActivity;
 import com.heinrichreimersoftware.materialintro.slide.SimpleSlide;
-import com.android.music.R;
 
 public class AppIntroActivity extends IntroActivity {
 

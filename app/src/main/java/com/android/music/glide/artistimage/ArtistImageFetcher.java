@@ -2,15 +2,15 @@ package com.android.music.glide.artistimage;
 
 import android.content.Context;
 
-import com.bumptech.glide.Priority;
-import com.bumptech.glide.load.data.DataFetcher;
-import com.bumptech.glide.load.model.GlideUrl;
-import com.bumptech.glide.load.model.ModelLoader;
 import com.android.music.lastfm.rest.LastFMRestClient;
 import com.android.music.lastfm.rest.model.LastFmArtist;
 import com.android.music.util.LastFMUtil;
 import com.android.music.util.MusicUtil;
 import com.android.music.util.Util;
+import com.bumptech.glide.Priority;
+import com.bumptech.glide.load.data.DataFetcher;
+import com.bumptech.glide.load.model.GlideUrl;
+import com.bumptech.glide.load.model.ModelLoader;
 
 import java.io.IOException;
 import java.io.InputStream;

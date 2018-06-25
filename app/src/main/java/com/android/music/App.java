@@ -3,8 +3,8 @@ package com.android.music;
 import android.app.Application;
 import android.os.Build;
 
-import com.kabouzeid.appthemehelper.ThemeStore;
 import com.android.music.appshortcuts.DynamicShortcutManager;
+import com.kabouzeid.appthemehelper.ThemeStore;
 
 
 public class App extends Application {

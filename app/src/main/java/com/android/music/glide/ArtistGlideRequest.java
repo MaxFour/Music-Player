@@ -4,6 +4,14 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.support.annotation.NonNull;
 
+import com.android.music.App;
+import com.android.music.R;
+import com.android.music.glide.artistimage.ArtistImage;
+import com.android.music.glide.palette.BitmapPaletteTranscoder;
+import com.android.music.glide.palette.BitmapPaletteWrapper;
+import com.android.music.model.Artist;
+import com.android.music.util.ArtistSignatureUtil;
+import com.android.music.util.CustomArtistImageUtil;
 import com.bumptech.glide.BitmapRequestBuilder;
 import com.bumptech.glide.DrawableRequestBuilder;
 import com.bumptech.glide.DrawableTypeRequest;
@@ -13,14 +21,6 @@ import com.bumptech.glide.load.Key;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.resource.drawable.GlideDrawable;
 import com.bumptech.glide.request.target.Target;
-import com.android.music.App;
-import com.android.music.R;
-import com.android.music.glide.artistimage.ArtistImage;
-import com.android.music.glide.palette.BitmapPaletteTranscoder;
-import com.android.music.glide.palette.BitmapPaletteWrapper;
-import com.android.music.model.Artist;
-import com.android.music.util.ArtistSignatureUtil;
-import com.android.music.util.CustomArtistImageUtil;
 
 public class ArtistGlideRequest {
 

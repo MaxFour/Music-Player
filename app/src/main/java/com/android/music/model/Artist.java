@@ -4,7 +4,6 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import android.support.annotation.NonNull;
 
-import com.android.music.R;
 import com.android.music.util.MusicUtil;
 
 import java.util.ArrayList;

@@ -17,11 +17,11 @@ import android.widget.TextView;
 
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
-import com.heinrichreimersoftware.materialintro.view.InkPageIndicator;
 import com.android.music.R;
 import com.android.music.ui.fragments.player.NowPlayingScreen;
 import com.android.music.util.PreferenceUtil;
 import com.android.music.util.ViewUtil;
+import com.heinrichreimersoftware.materialintro.view.InkPageIndicator;
 
 import butterknife.ButterKnife;
 

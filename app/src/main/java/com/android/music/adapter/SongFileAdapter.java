@@ -11,16 +11,16 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.bumptech.glide.signature.MediaStoreSignature;
-import com.kabouzeid.appthemehelper.util.ATHUtil;
 import com.android.music.R;
 import com.android.music.adapter.base.AbsMultiSelectAdapter;
 import com.android.music.adapter.base.MediaEntryViewHolder;
 import com.android.music.glide.audiocover.AudioFileCover;
 import com.android.music.interfaces.CabHolder;
 import com.android.music.util.Util;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.signature.MediaStoreSignature;
+import com.kabouzeid.appthemehelper.util.ATHUtil;
 import com.simplecityapps.recyclerview_fastscroll.views.FastScrollRecyclerView;
 
 import java.io.File;

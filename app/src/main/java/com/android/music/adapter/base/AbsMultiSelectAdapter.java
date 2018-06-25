@@ -2,7 +2,6 @@ package com.android.music.adapter.base;
 
 import android.content.Context;
 import android.support.annotation.MenuRes;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;

@@ -22,10 +22,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.afollestad.materialdialogs.MaterialDialog;
-import com.github.ksoichiro.android.observablescrollview.ObservableScrollView;
-import com.kabouzeid.appthemehelper.ThemeStore;
-import com.kabouzeid.appthemehelper.util.ColorUtil;
-import com.kabouzeid.appthemehelper.util.TintHelper;
 import com.android.music.R;
 import com.android.music.misc.DialogAsyncTask;
 import com.android.music.misc.SimpleObservableScrollViewCallbacks;
@@ -33,6 +29,10 @@ import com.android.music.misc.UpdateToastMediaScannerCompletionListener;
 import com.android.music.ui.activities.base.AbsBaseActivity;
 import com.android.music.util.MusicUtil;
 import com.android.music.util.Util;
+import com.github.ksoichiro.android.observablescrollview.ObservableScrollView;
+import com.kabouzeid.appthemehelper.ThemeStore;
+import com.kabouzeid.appthemehelper.util.ColorUtil;
+import com.kabouzeid.appthemehelper.util.TintHelper;
 
 import org.jaudiotagger.audio.AudioFile;
 import org.jaudiotagger.audio.AudioFileIO;

@@ -15,8 +15,8 @@ import android.support.v4.app.ActivityCompat;
 import android.view.KeyEvent;
 import android.view.View;
 
-import com.kabouzeid.appthemehelper.ThemeStore;
 import com.android.music.R;
+import com.kabouzeid.appthemehelper.ThemeStore;
 
 public abstract class AbsBaseActivity extends AbsThemeActivity {
     public static final int PERMISSION_REQUEST = 100;

@@ -16,8 +16,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.kabouzeid.appthemehelper.ThemeStore;
 import com.android.music.R;
+import com.kabouzeid.appthemehelper.ThemeStore;
 
 import java.io.File;
 import java.util.ArrayList;

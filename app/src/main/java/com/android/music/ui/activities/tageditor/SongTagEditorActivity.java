@@ -7,9 +7,9 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.EditText;
 
-import com.kabouzeid.appthemehelper.util.ToolbarContentTintHelper;
 import com.android.music.R;
 import com.android.music.loader.SongLoader;
+import com.kabouzeid.appthemehelper.util.ToolbarContentTintHelper;
 
 import org.jaudiotagger.tag.FieldKey;
 

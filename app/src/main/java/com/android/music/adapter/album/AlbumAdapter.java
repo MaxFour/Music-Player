@@ -11,9 +11,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.bumptech.glide.Glide;
-import com.kabouzeid.appthemehelper.util.ColorUtil;
-import com.kabouzeid.appthemehelper.util.MaterialValueHelper;
 import com.android.music.R;
 import com.android.music.adapter.base.AbsMultiSelectAdapter;
 import com.android.music.adapter.base.MediaEntryViewHolder;
@@ -27,6 +24,9 @@ import com.android.music.model.Song;
 import com.android.music.util.MusicUtil;
 import com.android.music.util.NavigationUtil;
 import com.android.music.util.PreferenceUtil;
+import com.bumptech.glide.Glide;
+import com.kabouzeid.appthemehelper.util.ColorUtil;
+import com.kabouzeid.appthemehelper.util.MaterialValueHelper;
 import com.simplecityapps.recyclerview_fastscroll.views.FastScrollRecyclerView;
 
 import java.util.ArrayList;

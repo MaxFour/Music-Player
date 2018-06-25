@@ -12,10 +12,10 @@ import android.support.annotation.RequiresApi;
 import android.support.v4.graphics.drawable.IconCompat;
 import android.util.TypedValue;
 
-import com.kabouzeid.appthemehelper.ThemeStore;
 import com.android.music.R;
 import com.android.music.util.PreferenceUtil;
 import com.android.music.util.Util;
+import com.kabouzeid.appthemehelper.ThemeStore;
 
 @RequiresApi(Build.VERSION_CODES.N_MR1)
 public final class AppShortcutIconGenerator {

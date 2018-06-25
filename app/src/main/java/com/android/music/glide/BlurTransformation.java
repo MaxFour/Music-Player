@@ -13,11 +13,11 @@ import android.renderscript.ScriptIntrinsicBlur;
 import android.support.annotation.FloatRange;
 import android.support.annotation.NonNull;
 
-import com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool;
-import com.bumptech.glide.load.resource.bitmap.BitmapTransformation;
 import com.android.music.BuildConfig;
 import com.android.music.helper.StackBlur;
 import com.android.music.util.ImageUtil;
+import com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool;
+import com.bumptech.glide.load.resource.bitmap.BitmapTransformation;
 
 public class BlurTransformation extends BitmapTransformation {
     public static final float DEFAULT_BLUR_RADIUS = 5f;
