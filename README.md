@@ -19,7 +19,6 @@
 - Now playing themes
 - Sleep timer
 - Show internal lyric
-- Tag editor
 - Theming (Light, Dark, Black (for AMOLED))
 - Widgets
 
@@ -30,8 +29,8 @@
 ### Donation
 
 WebMoney:
-$: Z776114750889
-₽: R662315834876
+- Z776114750889
+- R662315834876
 
-Qiwi:
-- +998 997524609
+QIWI:
+- +998997524609
