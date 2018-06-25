@@ -3,7 +3,7 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://github.com/MaxFour/Music-Player/blob/master/LICENSE)
 [![API](https://img.shields.io/badge/API-16%2B-orange.svg?style=flat-square)](https://android-arsenal.com/api?level=16)
 
-**Beautiful and material Music Player** <p align="center"><img width="128" height="128" src="images/Icon.png" /></p>
+**Lightweight and Material Music Player** <p align="center"><img width="128" height="128" src="images/Icon.png" /></p>
 
 --------
 
@@ -19,6 +19,7 @@
 - Now playing themes
 - Sleep timer
 - Show internal lyric
+- Tag editor
 - Theming (Light, Dark, Black (for AMOLED))
 - Widgets
 
@@ -29,8 +30,8 @@
 ### Donation
 
 WebMoney:
-- Z776114750889
-- R662315834876
+$: Z776114750889<br>
+₽: R662315834876
 
 QIWI:
-- +998997524609
+- +998 997524609
