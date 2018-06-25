@@ -29,7 +29,7 @@
 
 ### Donation
 
-WebMoney:
+WebMoney:<br>
 $: Z776114750889<br>
 ₽: R662315834876
 
