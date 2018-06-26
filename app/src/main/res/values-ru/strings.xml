@@ -251,7 +251,7 @@
     <string name="scanned_files">Просканировано файлов: %1$d из %2$d</string>
     <string name="search_hint">Поиск в библиотеке…</string>
     <string name="select_all">Выбрать все</string>
-    <string name="set_artist_image">Установить картинку исполнителя</string>
+    <string name="set_artist_image">Установить изображение исполнителя</string>
     <string name="sleep_timer_canceled">Таймер сна отменен</string>
     <plurals name="sleep_timer_set">
         <item quantity="one">Таймер сна установлен на <xliff:g id="count">%1$d</xliff:g> минуту с текущего момента</item>
@@ -284,7 +284,7 @@
     <string name="updating">Обновление…</string>
     <string name="version">Версия</string>
     <string name="web_search">Поиск в интернете</string>
-    <string name="welcome_to_music_app">Добро пожаловать в приложение \"Музыка\", красивый и лёгкий плеер!</string>
+    <string name="welcome_to_music_app">Добро пожаловать в приложение \"Музыка\", красивый и лёгкий музыкальный плеер!</string>
     <string name="what_do_you_want_to_share">Чем Вы хотите поделиться?</string>
     <string name="wiki">Википедия</string>
     <string name="wiki_unavailable">Невозможно найти информацию в википедии для этого альбома</string>

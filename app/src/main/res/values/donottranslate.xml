@@ -7,4 +7,13 @@
 
     <string name="webmoney_account" translatable="false">$: Z776114750889\n₽: R662315834876</string>
     <string name="qiwi_account" translatable="false">+998 997524609</string>
+
+    <string name="grid_size_1" translatable="false">1</string>
+    <string name="grid_size_2" translatable="false">2</string>
+    <string name="grid_size_3" translatable="false">3</string>
+    <string name="grid_size_4" translatable="false">4</string>
+    <string name="grid_size_5" translatable="false">5</string>
+    <string name="grid_size_6" translatable="false">6</string>
+    <string name="grid_size_7" translatable="false">7</string>
+    <string name="grid_size_8" translatable="false">8</string>
 </resources>

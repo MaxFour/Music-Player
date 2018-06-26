@@ -122,14 +122,6 @@
     <string name="fork_on_github">Fork on GitHub</string>
     <string name="genre">Genre</string>
     <string name="genres">Genres</string>
-    <string name="grid_size_1">1</string>
-    <string name="grid_size_2">2</string>
-    <string name="grid_size_3">3</string>
-    <string name="grid_size_4">4</string>
-    <string name="grid_size_5">5</string>
-    <string name="grid_size_6">6</string>
-    <string name="grid_size_7">7</string>
-    <string name="grid_size_8">8</string>
     <string name="history">History</string>
     <plurals name="inserted_x_songs_into_playlist_x">
         <item quantity="one">Inserted <xliff:g id="count">%1$d</xliff:g> song into the playlist \"%2$s\"</item>
