@@ -10,6 +10,7 @@
     <string name="action_clear_playlist">Очистить плейлист</string>
     <string name="action_delete">Удалить</string>
     <string name="action_delete_from_device">Удалить с устройства</string>
+    <string name="action_delete_playlist">Удалить плейлист</string>
     <string name="action_details">Свойства</string>
     <string name="action_go_to_album">Перейти к альбому</string>
     <string name="action_go_to_artist">Перейти к исполнителю</string>
