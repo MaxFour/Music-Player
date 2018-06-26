@@ -13,6 +13,14 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.jakewharton.hugo'
 
 android {
+    signingConfigs {
+        release {
+            keyAlias 'keyAlias'
+            keyPassword 'keyPassword'
+            storeFile file('storeFile')
+            storePassword 'storePassword'
+        }
+    }
     compileSdkVersion 27
     buildToolsVersion '27.0.3'
     dataBinding {
