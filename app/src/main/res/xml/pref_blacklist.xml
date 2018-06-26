@@ -2,7 +2,7 @@
 
     <com.kabouzeid.appthemehelper.common.prefs.supportv7.ATEPreferenceCategory android:title="@string/blacklist">
 
-        <com.android.music.preferences.BlacklistPreference
+        <com.maxfour.music.preferences.BlacklistPreference
             android:key="blacklist"
             android:summary="@string/pref_summary_blacklist"
             android:title="@string/blacklist" />

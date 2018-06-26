@@ -25,7 +25,7 @@ android {
         renderscriptTargetApi 27
         vectorDrawables.useSupportLibrary = true
 
-        applicationId 'com.android.music'
+        applicationId 'com.maxfour.music'
         versionCode 1
         versionName '1.1.0'
     }

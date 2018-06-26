@@ -38,7 +38,7 @@
             android:paddingLeft="16dp"
             android:paddingRight="16dp">
 
-            <com.android.music.views.IconImageView
+            <com.maxfour.music.views.IconImageView
                 android:id="@+id/icon_webmoney"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
@@ -82,7 +82,7 @@
             android:paddingLeft="16dp"
             android:paddingRight="16dp">
 
-            <com.android.music.views.IconImageView
+            <com.maxfour.music.views.IconImageView
                 android:id="@+id/icon_qiwi"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
