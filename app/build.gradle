@@ -34,7 +34,7 @@ android {
         vectorDrawables.useSupportLibrary = true
 
         applicationId 'com.maxfour.music'
-        versionCode 1
+        versionCode 4
         versionName '1.1.2'
     }
     buildTypes {
