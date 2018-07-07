@@ -53,12 +53,6 @@
         <license>Apache Software License 2.0</license>
     </notice>
     <notice>
-        <name>Android In-App Billing v3 Library</name>
-        <url>https://github.com/anjlab/android-inapp-billing-v3</url>
-        <copyright>Copyright 2014 AnjLab</copyright>
-        <license>Apache Software License 2.0</license>
-    </notice>
-    <notice>
         <name>Butter Knife</name>
         <url>https://github.com/JakeWharton/butterknife</url>
         <copyright>Copyright 2013 Jake Wharton</copyright>
