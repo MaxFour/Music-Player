@@ -99,10 +99,6 @@ public class MainActivity extends AbsSlidingMusicPanelActivity {
     }
 
     private void setMusicChooser(int key) {
-        if (key == FOLDERS) {
-            key = LIBRARY;
-        }
-
         PreferenceUtil.getInstance(this).setLastMusicChooser(key);
         switch (key) {
             case LIBRARY:
@@ -163,6 +159,7 @@ public class MainActivity extends AbsSlidingMusicPanelActivity {
                     break;
                 case R.id.nav_folders:
                     new Handler().postDelayed(() -> setMusicChooser(FOLDERS), 200);
+                    break;
                 case R.id.action_scan:
                     new Handler().postDelayed(() -> {
                         ScanMediaFolderChooserDialog dialog = ScanMediaFolderChooserDialog.create();
