@@ -5,7 +5,7 @@
 
 **Lightweight and Material Music Player**<br>
 
-Based on [Phonograph] <p align="center"><img width="128" height="128" src="images/Icon.png" /></p>
+Based on [Phonograph](https://github.com/kabouzeid/Phonograph) <p align="center"><img width="128" height="128" src="images/Icon.png" /></p>
 
 --------
 
