@@ -25,7 +25,7 @@ Based on [Phonograph](https://github.com/kabouzeid/Phonograph) <p align="center"
 - Theming (Light, Dark, Black (for AMOLED))
 - Widgets
 
-**Only English and Russian languages!**
+**Help me translate into your language via [OneSky](https://music-player.oneskyapp.com/)**
 
 --------
 
