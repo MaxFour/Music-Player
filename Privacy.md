@@ -97,15 +97,11 @@ Music-Player project needs help in translations to local languages thereby foste
 
 Donations are also welcomed for further development of this project.
 
-WebMoney:
+WebMoney: <br>
 $: Z776114750889 <br>
 ₽: R662315834876
 
 QIWI: +998 997524609 <hr>
-
-
-
-
 
 ## Contact Us
 
