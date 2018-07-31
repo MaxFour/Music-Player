@@ -12,19 +12,20 @@ The permissions are;
 
 - Storage
 - Internet access
+- Write settings (to set as ringtone only)
 
 Some other capabilities of the software include;
 - Ability to prevent phone from sleeping while in use
-- have full network access
-- view network connections
-- send sticky broadcasts
-- ability to run at device startup
+- Have full network access
+- View network connections
+- Send sticky broadcasts
+- Ability to run at device startup
 
 The information that may be collected with the enablement of these permissions are stored locally on the device and the developer has no access to that information.
 
 These permissions can be revoked when they are not needed, this is privy to only devices running Android 6.0 upward.
 
-The Data and information collected when using this software are used to make improvements to the efficiency of the software thereby enabling the developer to create a better user experience(UX).
+The Data and information collected when using this software are used to make improvements to the efficiency of the software thereby enabling the developer to create a better user experience (UX).
 
 ## Types of Data Collected
 
@@ -78,7 +79,7 @@ Music-Player app is developed to be used basically for playing and listening to 
 
 Music-Player is a simple player with useful features based on Phonograph, without Google Services and without data collection. This project is developed by Max_Four from Navoi, Uzbekistan.
 
-This project is inspired from an open source project "Phonograph" hence this software was forked from the original phonograph music player
+This project is inspired from an open source project "Phonograph" hence this software was forked from the original Phonograph Music Player
 
 Music-Player contain these features
 
@@ -97,10 +98,10 @@ Music-Player project needs help in translations to local languages thereby foste
 Donations are also welcomed for further development of this project.
 
 WebMoney:
-$: Z776114750889
+$: Z776114750889 <br>
 ₽: R662315834876
 
-QIWI: +998 997524609   <hR>
+QIWI: +998 997524609 <hr>
 
 
 
