@@ -2,6 +2,7 @@
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://github.com/MaxFour/Music-Player/blob/master/LICENSE)
 [![API](https://img.shields.io/badge/API-16%2B-orange.svg?style=flat-square)](https://android-arsenal.com/api?level=16)
+[![Liberapay Donate](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/MaxFour/donate "Donate using Liberapay")
 
 **Lightweight and Material Music Player**<br>
 
