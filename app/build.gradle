@@ -13,6 +13,17 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.jakewharton.hugo'
 
 android {
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 27
+
+        applicationId 'com.maxfour.music'
+        versionCode 5
+        versionName '1.2.0'
+
+        renderscriptTargetApi 27
+        vectorDrawables.useSupportLibrary = true
+    }
     signingConfigs {
         release {
             keyAlias 'keyAlias'
@@ -25,17 +36,6 @@ android {
     buildToolsVersion '27.0.3'
     dataBinding {
         enabled = true
-    }
-    defaultConfig {
-        minSdkVersion 16
-        targetSdkVersion 27
-
-        renderscriptTargetApi 27
-        vectorDrawables.useSupportLibrary = true
-
-        applicationId 'com.maxfour.music'
-        versionCode 4
-        versionName '1.1.2.1'
     }
     buildTypes {
         release {
