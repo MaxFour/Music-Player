@@ -68,7 +68,6 @@ import java.util.List;
 import java.util.Random;
 
 public class MusicService extends Service implements SharedPreferences.OnSharedPreferenceChangeListener, Playback.PlaybackCallbacks {
-    public static final String TAG = MusicService.class.getSimpleName();
 
     public static final String MUSIC_PACKAGE_NAME = "com.maxfour.music";
 
@@ -1269,18 +1268,24 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
         public void onReceive(final Context context, final Intent intent) {
             final String command = intent.getStringExtra(EXTRA_APP_WIDGET_NAME);
 
-            if (AppWidgetClassic.NAME.equals(command)) {
-                final int[] ids = intent.getIntArrayExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS);
-                appWidgetClassic.performUpdate(MusicService.this, ids);
-            } else if (AppWidgetSmall.NAME.equals(command)) {
-                final int[] ids = intent.getIntArrayExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS);
-                appWidgetSmall.performUpdate(MusicService.this, ids);
-            } else if (AppWidgetBig.NAME.equals(command)) {
-                final int[] ids = intent.getIntArrayExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS);
-                appWidgetBig.performUpdate(MusicService.this, ids);
-            } else if (AppWidgetCard.NAME.equals(command)) {
-                final int[] ids = intent.getIntArrayExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS);
-                appWidgetCard.performUpdate(MusicService.this, ids);
+            final int[] ids = intent.getIntArrayExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS);
+            switch (command) {
+                case AppWidgetClassic.NAME: {
+                    appWidgetClassic.performUpdate(MusicService.this, ids);
+                    break;
+                }
+                case AppWidgetSmall.NAME: {
+                    appWidgetSmall.performUpdate(MusicService.this, ids);
+                    break;
+                }
+                case AppWidgetBig.NAME: {
+                    appWidgetBig.performUpdate(MusicService.this, ids);
+                    break;
+                }
+                case AppWidgetCard.NAME: {
+                    appWidgetCard.performUpdate(MusicService.this, ids);
+                    break;
+                }
             }
         }
     };
@@ -1334,7 +1339,6 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
     }
 
     private static class SongPlayCountHelper {
-        public static final String TAG = SongPlayCountHelper.class.getSimpleName();
 
         private StopWatch stopWatch = new StopWatch();
         private Song song = Song.EMPTY_SONG;

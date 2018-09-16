@@ -18,7 +18,6 @@ import java.io.InputStream;
 import retrofit2.Response;
 
 public class ArtistImageFetcher implements DataFetcher<InputStream> {
-    public static final String TAG = ArtistImageFetcher.class.getSimpleName();
     private Context context;
     private final LastFMRestClient lastFMRestClient;
     private final ArtistImage model;

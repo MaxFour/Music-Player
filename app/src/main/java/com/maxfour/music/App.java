@@ -8,7 +8,6 @@ import com.maxfour.music.appshortcuts.DynamicShortcutManager;
 
 
 public class App extends Application {
-    public static final String TAG = App.class.getSimpleName();
 
     private static App app;
 
@@ -20,7 +19,7 @@ public class App extends Application {
         // default theme
         if (!ThemeStore.isConfigured(this, 1)) {
             ThemeStore.editTheme(this)
-                    .primaryColorRes(R.color.blue)
+                    .primaryColorRes(R.color.mariner_blue)
                     .accentColorRes(R.color.red)
                     .commit();
         }

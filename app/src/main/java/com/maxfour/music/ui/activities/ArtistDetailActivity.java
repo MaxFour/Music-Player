@@ -68,7 +68,6 @@ import retrofit2.Response;
  */
 public class ArtistDetailActivity extends AbsSlidingMusicPanelActivity implements PaletteColorHolder, CabHolder, LoaderManager.LoaderCallbacks<Artist> {
 
-    public static final String TAG = ArtistDetailActivity.class.getSimpleName();
     private static final int LOADER_ID = LoaderIds.ARTIST_DETAIL_ACTIVITY;
     private static final int REQUEST_CODE_SELECT_IMAGE = 1000;
 
@@ -134,7 +133,7 @@ public class ArtistDetailActivity extends AbsSlidingMusicPanelActivity implement
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setDrawUnderStatusbar(true);
+        setDrawUnderStatusbar();
         ButterKnife.bind(this);
 
         lastFMRestClient = new LastFMRestClient(this);
@@ -161,7 +160,7 @@ public class ArtistDetailActivity extends AbsSlidingMusicPanelActivity implement
 
     private void initViews() {
         songListHeader = LayoutInflater.from(this).inflate(R.layout.artist_detail_header, songListView, false);
-        albumRecyclerView = ButterKnife.findById(songListHeader, R.id.recycler_view);
+        albumRecyclerView = songListHeader.findViewById(R.id.recycler_view);
     }
 
     private void setUpViews() {

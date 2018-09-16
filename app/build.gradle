@@ -1,3 +1,5 @@
+import javax.annotation.Nullable
+
 buildscript {
     repositories {
         mavenCentral()
@@ -14,12 +16,11 @@ apply plugin: 'com.jakewharton.hugo'
 
 android {
     defaultConfig {
-        minSdkVersion 16
-        targetSdkVersion 27
-
         applicationId 'com.maxfour.music'
         versionCode 5
         versionName '1.2.0'
+        minSdkVersion 16
+        targetSdkVersion 27
 
         renderscriptTargetApi 27
         vectorDrawables.useSupportLibrary = true

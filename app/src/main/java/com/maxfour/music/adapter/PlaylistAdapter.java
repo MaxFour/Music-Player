@@ -41,8 +41,6 @@ import java.util.List;
 
 public class PlaylistAdapter extends AbsMultiSelectAdapter<PlaylistAdapter.ViewHolder, Playlist> {
 
-    public static final String TAG = PlaylistAdapter.class.getSimpleName();
-
     private static final int SMART_PLAYLIST = 0;
     private static final int DEFAULT_PLAYLIST = 1;
 
@@ -72,9 +70,9 @@ public class PlaylistAdapter extends AbsMultiSelectAdapter<PlaylistAdapter.ViewH
         return dataSet.get(position).id;
     }
 
-    @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    @NonNull
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(activity).inflate(itemLayoutRes, parent, false);
         return createViewHolder(view, viewType);
     }

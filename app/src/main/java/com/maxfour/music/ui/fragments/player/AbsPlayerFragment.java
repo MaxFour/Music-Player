@@ -23,7 +23,6 @@ import com.maxfour.music.util.MusicUtil;
 import com.maxfour.music.util.NavigationUtil;
 
 public abstract class AbsPlayerFragment extends AbsMusicServiceFragment implements Toolbar.OnMenuItemClickListener, PaletteColorHolder {
-    public static final String TAG = AbsPlayerFragment.class.getSimpleName();
 
     private Callbacks callbacks;
     private static boolean isToolbarShown = true;

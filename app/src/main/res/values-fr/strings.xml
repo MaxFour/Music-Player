@@ -5,7 +5,7 @@
     <string name="action_about">A propos</string>
     <string name="action_add_to_favorites">Ajouter aux favoris</string>
     <string name="action_add_to_playing_queue">Ajouter à la liste d\'attente</string>
-    <string name="action_add_to_playlist">Ajouter à la liste de lecture...</string>
+    <string name="action_add_to_playlist">Ajouter à la liste de lecture…</string>
     <string name="action_clear_playing_queue">Vider la liste d\'attente</string>
     <string name="action_clear_playlist">Vider la liste de lecture</string>
     <string name="action_delete">Supprimer</string>
@@ -18,7 +18,7 @@
     <string name="action_grant">Accorder</string>
     <string name="action_grid_size">Taille de la grille</string>
     <string name="action_grid_size_land">Taille de la grille</string>
-    <string name="action_new_playlist">Nouvelle liste de lecture</string>
+    <string name="action_new_playlist">Nouvelle liste de lecture…</string>
     <string name="action_next">Suivant</string>
     <string name="action_play">Jouer</string>
     <string name="action_play_next">Jouer ensuite</string>
@@ -83,7 +83,7 @@
     <string name="clear_action">Vider</string>
     <string name="clear_blacklist">Vider la liste noire</string>
     <string name="clear_playlist_title">Vider la liste de lecture</string>
-    <string name="clear_playlist_x"><![CDATA[Vider la liste de lecture \"<b>%1$s</b>\" ? Cela ne peut pas être annulé !]]></string>
+    <string name="clear_playlist_x"><![CDATA[Vider la liste de lecture \"<b>%1$s</b>\"? Cela ne peut pas être annulé!]]></string>
     <string name="colored_footers">Pieds de page colorés</string>
     <string name="could_not_create_playlist">Impossible de créer la liste de lecture</string>
     <string name="could_not_download_album_cover">Impossible de télécharger une couverture d\'album correspondante</string>
@@ -94,18 +94,18 @@
     <string name="dark_theme_name">Sombre</string>
     <string name="delete_action">Supprimer</string>
     <string name="delete_playlist_title">Supprimer la liste de lecture</string>
-    <string name="delete_playlist_x"><![CDATA[Supprimer la liste de lecture \"<b>%1$s</b>\" ?]]></string>
+    <string name="delete_playlist_x"><![CDATA[Supprimer la liste de lecture \"<b>%1$s</b>\"?]]></string>
     <string name="delete_playlists_title">Supprimer les listes de lecture</string>
     <string name="delete_song_title">Supprimer la chanson</string>
-    <string name="delete_song_x"><![CDATA[Supprimer la chanson  \"<b>%1$s</b>\" ?]]></string>
+    <string name="delete_song_x"><![CDATA[Supprimer la chanson  \"<b>%1$s</b>\"?]]></string>
     <string name="delete_songs_title">Supprimer les chansons</string>
     <plurals name="delete_x_playlists">
-        <item quantity="other"><![CDATA[Supprimer <b>%1$d</b> listes de lecture ?]]></item>
-        <item quantity="one"><![CDATA[Supprimer <b>%1$d</b> liste de lecture ?]]></item>
+        <item quantity="other"><![CDATA[Supprimer <b>%1$d</b> listes de lecture?]]></item>
+        <item quantity="one"><![CDATA[Supprimer <b>%1$d</b> liste de lecture?]]></item>
     </plurals>
     <plurals name="delete_x_songs">
-        <item quantity="other"><![CDATA[Supprimer <b><xliff:g id="count">%1$d</xliff:g></b> chansons ?]]></item>
-        <item quantity="one"><![CDATA[Supprimer <b><xliff:g id="count">%1$d</xliff:g></b> chanson ?]]></item>
+        <item quantity="other"><![CDATA[Supprimer <b><xliff:g id="count">%1$d</xliff:g></b> chansons?]]></item>
+        <item quantity="one"><![CDATA[Supprimer <b><xliff:g id="count">%1$d</xliff:g></b> chanson?]]></item>
     </plurals>
     <plurals name="deleted_x_songs">
         <item quantity="one"><xliff:g id="count">%1$d</xliff:g> chanson supprimée</item>
@@ -113,8 +113,8 @@
     </plurals>
     <string name="dialog_message_set_ringtone">L\'application \"Music\" a besoin de l\'autorisation pour modifier les paramètres afin de régler votre sonnerie. Après avoir accoder la permission, essayer de régler votre sonnerie à nouveau.</string>
     <string name="dialog_title_set_ringtone">Définir sonnerie</string>
-    <string name="do_you_want_to_clear_the_blacklist">Voulez-vous vider la liste noire ?</string>
-    <string name="do_you_want_to_remove_from_the_blacklist"><![CDATA[Voulez-vous supprimer <b>%1$s</b> de la liste noire ?]]></string>
+    <string name="do_you_want_to_clear_the_blacklist">Voulez-vous vider la liste noire?</string>
+    <string name="do_you_want_to_remove_from_the_blacklist"><![CDATA[Voulez-vous supprimer <b>%1$s</b> de la liste noire?]]></string>
     <string name="download_from_last_fm">Télécharger depuis Last.fm</string>
     <string name="empty">Vide</string>
     <string name="equalizer">Egaliseur</string>
@@ -228,11 +228,11 @@
     <string name="remove_cover">Enlever la pochette</string>
     <string name="remove_from_blacklist">Enlever de la liste noire</string>
     <string name="remove_song_from_playlist_title">Enlever la chanson de la liste de lecture</string>
-    <string name="remove_song_x_from_playlist"><![CDATA[Enelver la chanson \"<b>%1$s</b>\" de la liste de lecture ?]]></string>
+    <string name="remove_song_x_from_playlist"><![CDATA[Enelver la chanson \"<b>%1$s</b>\" de la liste de lecture?]]></string>
     <string name="remove_songs_from_playlist_title">Enlever les chansons de la liste de lecture</string>
     <plurals name="remove_x_songs_from_playlist">
-        <item quantity="other"><![CDATA[Enlever <b><xliff:g id="count">%1$d</xliff:g></b> chansons de la liste de lecture ?]]></item>
-        <item quantity="one"><![CDATA[Enlever <b><xliff:g id="count">%1$d</xliff:g></b> chanson de la liste de lecture ?]]></item>
+        <item quantity="other"><![CDATA[Enlever <b><xliff:g id="count">%1$d</xliff:g></b> chansons de la liste de lecture?]]></item>
+        <item quantity="one"><![CDATA[Enlever <b><xliff:g id="count">%1$d</xliff:g></b> chanson de la liste de lecture?]]></item>
     </plurals>
     <string name="rename_action">Renommer</string>
     <string name="rename_playlist_title">Renommer la liste de lecture</string>
@@ -247,7 +247,7 @@
     <string name="scan_media">Scanner bibliothèque</string>
     <string name="scanned_files">Fichiers scannés : %1$d sur %2$d</string>
     <string name="search_hint">Rechercher dans votre bibliothèque…</string>
-    <string name="select_all">Sélectionner tout</string>
+    <string name="select_all_title">Sélectionner tout</string>
     <string name="set_artist_image">Définir l\'image de l\'artiste</string>
     <string name="sleep_timer_canceled">Minuterie de sommeil annulée</string>
     <plurals name="sleep_timer_set">
@@ -276,11 +276,11 @@
     <string name="unplayable_file">Impossible de jouer cette chanson</string>
     <string name="up_next">Suivant</string>
     <string name="update_image">Mettre à jour l\'image</string>
-    <string name="updating">Mise à jour</string>
+    <string name="updating">Mise à jour…</string>
     <string name="version">Version</string>
     <string name="web_search">Recherche Internet</string>
-    <string name="welcome_to_music_app">Bienvenue dans l\'application \"Music\", un lecteur de musique beau et léger !</string>
-    <string name="what_do_you_want_to_share">Que souhaitez-vous partager ?</string>
+    <string name="welcome_to_music_app">Bienvenue dans l\'application Music, un lecteur de musique beau et léger!</string>
+    <string name="what_do_you_want_to_share">Que souhaitez-vous partager?</string>
     <string name="wiki">Wiki</string>
     <string name="wiki_unavailable">Impossible de trouver une entrée Wiki pour cet album</string>
     <string name="write_an_email">Ecrire un courriel</string>

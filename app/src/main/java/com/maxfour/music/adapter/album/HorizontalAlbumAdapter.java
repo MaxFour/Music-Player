@@ -21,7 +21,6 @@ import com.maxfour.music.util.MusicUtil;
 import java.util.ArrayList;
 
 public class HorizontalAlbumAdapter extends AlbumAdapter {
-    public static final String TAG = AlbumAdapter.class.getSimpleName();
 
     public HorizontalAlbumAdapter(@NonNull AppCompatActivity activity, ArrayList<Album> dataSet, boolean usePalette, @Nullable CabHolder cabHolder) {
         super(activity, dataSet, HorizontalAdapterHelper.LAYOUT_RES, usePalette, cabHolder);

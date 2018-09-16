@@ -18,7 +18,6 @@ import com.maxfour.music.util.PreferenceUtil;
 import java.util.ArrayList;
 
 public class AlbumsFragment extends AbsLibraryPagerRecyclerViewCustomGridSizeFragment<AlbumAdapter, GridLayoutManager> implements LoaderManager.LoaderCallbacks<ArrayList<Album>> {
-    public static final String TAG = AlbumsFragment.class.getSimpleName();
 
     private static final int LOADER_ID = LoaderIds.ALBUMS_FRAGMENT;
 
@@ -38,7 +37,7 @@ public class AlbumsFragment extends AbsLibraryPagerRecyclerViewCustomGridSizeFra
     protected AlbumAdapter createAdapter() {
         int itemLayoutRes = getItemLayoutRes();
         notifyLayoutResChanged(itemLayoutRes);
-        ArrayList<Album> dataSet = getAdapter() == null ? new ArrayList<Album>() : getAdapter().getDataSet();
+        ArrayList<Album> dataSet = getAdapter() == null ? new ArrayList<>() : getAdapter().getDataSet();
         return new AlbumAdapter(
                 getLibraryFragment().getMainActivity(),
                 dataSet,
@@ -125,7 +124,7 @@ public class AlbumsFragment extends AbsLibraryPagerRecyclerViewCustomGridSizeFra
 
     @Override
     public void onLoaderReset(Loader<ArrayList<Album>> loader) {
-        getAdapter().swapDataSet(new ArrayList<Album>());
+        getAdapter().swapDataSet(new ArrayList<>());
     }
 
     private static class AsyncAlbumLoader extends WrappedAsyncTaskLoader<ArrayList<Album>> {

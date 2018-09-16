@@ -2,6 +2,7 @@ package com.maxfour.music.ui.fragments;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.view.View;
 
@@ -28,7 +29,7 @@ public class AbsMusicServiceFragment extends Fragment implements MusicServiceEve
     }
 
     @Override
-    public void onViewCreated(View view, Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         activity.addMusicServiceEventListener(this);
     }

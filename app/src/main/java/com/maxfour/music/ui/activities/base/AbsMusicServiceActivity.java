@@ -21,14 +21,12 @@ import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 
 public abstract class AbsMusicServiceActivity extends AbsBaseActivity implements MusicServiceEventListener {
-    public static final String TAG = AbsMusicServiceActivity.class.getSimpleName();
 
     private final ArrayList<MusicServiceEventListener> mMusicServiceEventListeners = new ArrayList<>();
 
     private MusicPlayerRemote.ServiceToken serviceToken;
     private MusicStateReceiver musicStateReceiver;
     private boolean receiverRegistered;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

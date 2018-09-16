@@ -16,7 +16,7 @@
 
         <com.maxfour.music.views.StatusBarView
             android:layout_width="match_parent"
-            android:layout_height="?actionBarSize" />
+            android:layout_height="?android:attr/actionBarSize" />
 
     </LinearLayout>
 

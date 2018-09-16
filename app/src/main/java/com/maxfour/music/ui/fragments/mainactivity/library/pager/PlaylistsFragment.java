@@ -21,8 +21,6 @@ import java.util.ArrayList;
 
 public class PlaylistsFragment extends AbsLibraryPagerRecyclerViewFragment<PlaylistAdapter, LinearLayoutManager> implements LoaderManager.LoaderCallbacks<ArrayList<Playlist>> {
 
-    public static final String TAG = PlaylistsFragment.class.getSimpleName();
-
     private static final int LOADER_ID = LoaderIds.PLAYLISTS_FRAGMENT;
 
     @Override
@@ -40,7 +38,7 @@ public class PlaylistsFragment extends AbsLibraryPagerRecyclerViewFragment<Playl
     @NonNull
     @Override
     protected PlaylistAdapter createAdapter() {
-        ArrayList<Playlist> dataSet = getAdapter() == null ? new ArrayList<Playlist>() : getAdapter().getDataSet();
+        ArrayList<Playlist> dataSet = getAdapter() == null ? new ArrayList<>() : getAdapter().getDataSet();
         return new PlaylistAdapter(getLibraryFragment().getMainActivity(), dataSet, R.layout.item_list_single_row, getLibraryFragment());
     }
 
@@ -66,7 +64,7 @@ public class PlaylistsFragment extends AbsLibraryPagerRecyclerViewFragment<Playl
 
     @Override
     public void onLoaderReset(Loader<ArrayList<Playlist>> loader) {
-        getAdapter().swapDataSet(new ArrayList<Playlist>());
+        getAdapter().swapDataSet(new ArrayList<>());
     }
 
     private static class AsyncPlaylistLoader extends WrappedAsyncTaskLoader<ArrayList<Playlist>> {
