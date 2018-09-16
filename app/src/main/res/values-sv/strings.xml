@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources xmlns:tools="http://schemas.android.com/tools" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="accent_color">Accentfärg</string>
+    <string name="accent_color_desc">Färgen för accenttema, är röd som standard</string>
+    <string name="action_about">Om</string>
+    <string name="action_add_to_favorites">Lägg till i favoriter</string>
+    <string name="action_add_to_playing_queue">Lägg till i spelkön</string>
+    <string name="action_add_to_playlist">Lägg till i spellistan…</string>
+    <string name="action_clear_playing_queue">Rensa spelkön</string>
+    <string name="action_clear_playlist">Rensa spellistan</string>
+    <string name="action_delete">Ta bort</string>
+    <string name="action_delete_from_device">Ta bort från enheten</string>
+    <string name="action_delete_playlist">Ta bort spellistan</string>
+    <string name="action_details">Detaljer</string>
+    <string name="action_go_to_album">Gå till album</string>
+    <string name="action_go_to_artist">Gå till artist</string>
+    <string name="action_go_to_start_directory">Gå till startkatalogen</string>
+    <string name="action_grant">Bevilja</string>
+    <string name="action_grid_size">Rutnätstorlek</string>
+    <string name="action_grid_size_land">Rutnätstorlek (land)</string>
+    <string name="action_new_playlist">Ny spellista…</string>
+    <string name="action_next">Nästa</string>
+    <string name="action_play">Spela</string>
+    <string name="action_play_next">Spela nästa</string>
+    <string name="action_play_pause">Spela/Pausa</string>
+    <string name="action_previous">Föregående</string>
+    <string name="action_remove_from_favorites">Ta bort från favoriter</string>
+    <string name="action_remove_from_playing_queue">Ta bort från spelkön</string>
+    <string name="action_remove_from_playlist">Ta bort från spellistan</string>
+    <string name="action_rename">Byt namn</string>
+    <string name="action_save_playing_queue">Spara spelkön</string>
+    <string name="action_scan">Skanna</string>
+    <string name="action_scan_directory">Skanna katalog</string>
+    <string name="action_search">Sök</string>
+    <string name="action_set">Ställ in</string>
+    <string name="action_set_as_ringtone">Ställ in som rington</string>
+    <string name="action_set_as_start_directory">Ställ in som startkatalog</string>
+    <string name="action_settings">Inställningar</string>
+    <string name="action_share">Dela</string>
+    <string name="action_show_lyrics">Visa låttexter</string>
+    <string name="action_shuffle_album">Blanda album</string>
+    <string name="action_shuffle_all">Blanda alla</string>
+    <string name="action_shuffle_artist">Blanda artist</string>
+    <string name="action_shuffle_playlist">Blanda spellistan</string>
+    <string name="action_sleep_timer">Sovtimer</string>
+    <string name="action_sort_order">Sorteringsordning</string>
+    <string name="action_tag_editor">Taggredigerare</string>
+    <string name="add_action">Lägg till</string>
+    <string name="add_playlist_title">Lägg till spellista</string>
+    <string name="added_title_to_playing_queue">Tillagt 1 låt till spelkön</string>
+    <plurals name="added_x_titles_to_playing_queue" tools:ignore="MissingQuantity">
+        <item quantity="other">Lade till <xliff:g id="count">%1$d</xliff:g> låtar till spelkön</item>
+    </plurals>
+    <string name="album">album</string>
+    <string name="album_artist">Albumartist</string>
+    <string name="album_or_artist_empty">Titeln eller artisten är tom</string>
+    <string name="album_tag_editor">Album</string>
+    <string name="albums">Album</string>
+    <plurals name="albums_x" tools:ignore="MissingQuantity">
+        <item quantity="other">album</item>
+    </plurals>
+    <string name="always">Alltid</string>
+    <string name="app_name">Musik</string>
+    <string name="app_shortcut_last_added_short">Senast tillagd</string>
+    <string name="app_shortcut_shuffle_all_short">Blanda</string>
+    <string name="app_shortcut_top_songs_short">Favorit låtar</string>
+    <string name="app_widget_big_name">Musik - Stor</string>
+    <string name="app_widget_card_name">Musik - Kort</string>
+    <string name="app_widget_classic_name">Musik - Klassisk</string>
+    <string name="app_widget_small_name">Musik - Liten</string>
+    <string name="artist">Artist</string>
+    <string name="artists">Artister</string>
+    <string name="audio_focus_denied">Ljudfokus nekad</string>
+    <string name="author">Författare</string>
+    <string name="biography">Biografi</string>
+    <string name="biography_unavailable">Det gick inte att hitta en biografipost för den här artisten</string>
+    <string name="black_theme_name">Svart (AMOLED)</string>
+    <string name="blacklist">Svartlista</string>
+    <string name="cancel">Avbryt</string>
+    <string name="cancel_current_timer">Avbryt nuvarande timer</string>
+    <string name="card">Kort</string>
+    <string name="clear_action">Rensa</string>
+    <string name="clear_blacklist">Rensa svartlistan</string>
+    <string name="clear_playlist_title">Rensa spellistan</string>
+    <string name="clear_playlist_x"><![CDATA[Rensa spellistan \"<b>%1$s</b>\"? Detta går inte att ångra!]]></string>
+    <string name="colored_footers">Färgad sidfot</string>
+    <string name="could_not_create_playlist">Det gick inte att skapa en spellista</string>
+    <string name="could_not_download_album_cover">Det gick inte att hämta ett matchande albumomslag</string>
+    <string name="could_not_scan_files">Det gick inte att skanna %d filer</string>
+    <string name="create_action">Skapa</string>
+    <string name="created_playlist_x">Skapade spellistan %1$s</string>
+    <string name="currently_listening_to_x_by_x">Lyssnar nu på %1$s av %2$s</string>
+    <string name="dark_theme_name">Mörk</string>
+    <string name="delete_action">Ta bort</string>
+    <string name="delete_playlist_title">Ta bort spellistan</string>
+    <string name="delete_playlist_x"><![CDATA[Ta bort spellistan \"<b>%1$s</b>\"?]]></string>
+    <string name="delete_playlists_title">Ta bort spellistor</string>
+    <string name="delete_song_title">Ta bort låten</string>
+    <string name="delete_song_x"><![CDATA[Ta bort låten \"<b>%1$s</b>\"?]]></string>
+    <string name="delete_songs_title">Ta bort låtar</string>
+    <plurals name="delete_x_playlists" tools:ignore="MissingQuantity">
+        <item quantity="other"><![CDATA[Ta bort <b>%1$d</b> spellistor?]]></item>
+    </plurals>
+    <plurals name="delete_x_songs" tools:ignore="MissingQuantity">
+        <item quantity="other"><![CDATA[Ta bort <b><xliff:g id="count">%1$d</xliff:g></b> låtar?]]></item>
+    </plurals>
+    <plurals name="deleted_x_songs">
+        <item quantity="one">Tog bort <xliff:g id="count">%1$d</xliff:g> låt</item>
+        <item quantity="other">Tog bort <xliff:g id="count">%1$d</xliff:g> låtar</item>
+    </plurals>
+    <string name="dialog_message_set_ringtone">Appen \"Musik\" kräver tillstånd att \"skriva inställningar\" för att ställa in din ringsignal. Efter att ha beviljat tillstånd, försök att ställa in din ringsignal igen.</string>
+    <string name="dialog_title_set_ringtone">Ställ in rington</string>
+    <string name="do_you_want_to_clear_the_blacklist">Vill du rensa svartlistan?</string>
+    <string name="do_you_want_to_remove_from_the_blacklist"><![CDATA[Vill du ta bort <b>%1$s</b> från svartlistan?]]></string>
+    <string name="download_from_last_fm">Hämta från Last.fm</string>
+    <string name="empty">Tom</string>
+    <string name="equalizer">Utjämnare</string>
+    <string name="failed_to_save_playlist">Misslyckades med att spara spellistan (%s)</string>
+    <string name="favorites">Favoriter</string>
+    <string name="flat">Platt</string>
+    <string name="folders">Mappar</string>
+    <string name="fork_on_github">Gaffel på github</string>
+    <string name="genre">Genre</string>
+    <string name="genres">Genrer</string>
+    <string name="history">Historik</string>
+    <plurals name="inserted_x_songs_into_playlist_x">
+        <item quantity="one">Lade till <xliff:g id="count">%1$d</xliff:g> låt i spellistan \"%2$s\"</item>
+        <item quantity="other">Lade till <xliff:g id="count">%1$d</xliff:g> låtar i spellistan \"%2$s\"</item>
+    </plurals>
+    <string name="intro_label">Introduktion</string>
+    <string name="label_bit_rate">Överföringskapacitet</string>
+    <string name="label_details">Detaljer</string>
+    <string name="label_edit_playing_queue">Redigering av spelkön</string>
+    <string name="label_file_format">Formatera</string>
+    <string name="label_file_name">Filnamn</string>
+    <string name="label_file_path">Filsökväg</string>
+    <string name="label_file_size">Storlek</string>
+    <string name="label_sampling_rate">Samplingsfrekvens</string>
+    <string name="label_song_length">Varaktighet</string>
+    <string name="label_view_playing_queue">Visa spelkön</string>
+    <string name="last_added">Senast tillagda</string>
+    <string name="library">Bibliotek</string>
+    <string name="library_categories">Bibliotekskategorier</string>
+    <string name="light_theme_name">Ljus</string>
+    <string name="listing_files">Listar filer</string>
+    <string name="lyrics">Låttexter</string>
+    <string name="md_back_label">Bakåt</string>
+    <string name="md_cancel_label">Avbryt</string>
+    <string name="md_choose_label">Välj</string>
+    <string name="md_custom_label">Anpassad</string>
+    <string name="md_done_label">Färdig</string>
+    <string name="md_error_label">Fel</string>
+    <string name="md_presets_label">Förinställningar</string>
+    <string name="mi_label_button_cta">Kom igång</string>
+    <string name="min">" min."</string>
+    <string name="my_top_songs">Mina favorit låtar</string>
+    <string name="navoi_uzbekistan">Navoi, Uzbekistan</string>
+    <string name="never">Aldrig</string>
+    <string name="new_playlist_title">Ny spellista</string>
+    <string name="new_start_directory">%s är den nya startkatalogen</string>
+    <string name="no_albums">Inga album</string>
+    <string name="no_artists">Inga artister</string>
+    <string name="no_audio_ID">Spela en låt först och försök igen</string>
+    <string name="no_equalizer">Ingen utjämnare hittades</string>
+    <string name="no_genres">Inga genrer</string>
+    <string name="no_playlists">Inga spellistor</string>
+    <string name="no_results">Inga resultat</string>
+    <string name="no_songs">Inga låtar</string>
+    <string name="not_listed_in_media_store"><![CDATA[<b>%s</b> är inte listad i medieaffären]]></string>
+    <string name="nothing_to_scan">Inget att skanna</string>
+    <string name="ok">OK</string>
+    <string name="only_on_wifi">Endast på Wi-Fi</string>
+    <string name="open_playing_queue_instruction">Dra kortet i den nu spelande skärmen för att avslöja hela spelkön</string>
+    <string name="past_three_months">Senaste 3 månaderna</string>
+    <string name="permission_external_storage_denied">Tillstånd att få tillgång till externt lagringsutrymme nekas</string>
+    <string name="permissions_denied">Tillstånd nekade</string>
+    <string name="pick_from_local_storage">Välj från lokal lagring</string>
+    <string name="playing_notification_description">Spelningsaviseringen ger åtgärder för uppspelning/paus o.s.v.</string>
+    <string name="playing_notification_name">Spelningsavisering</string>
+    <string name="playlist_empty_text">Tom spellista</string>
+    <string name="playlist_exists">Spellistan \"%1$s\" finns redan</string>
+    <string name="playlist_is_empty">Spellistan är tom</string>
+    <string name="playlist_name_empty">Spellistans namn</string>
+    <string name="playlists">Spellista</string>
+    <string name="pref_header_audio">Ljud</string>
+    <string name="pref_header_colors">Färger</string>
+    <string name="pref_header_images">Bilder</string>
+    <string name="pref_header_library">Bibliotek</string>
+    <string name="pref_header_lockscreen">Låsskärm</string>
+    <string name="pref_header_notification">Avisering</string>
+    <string name="pref_header_now_playing_screen">Spelas nu</string>
+    <string name="pref_header_playlists">Spellistor</string>
+    <string name="pref_summary_album_art_on_lockscreen">Använder den aktuella låtomslagbilden som låsskärmsbild</string>
+    <string name="pref_summary_audio_ducking">Aviseringar, navigering o.s.v.</string>
+    <string name="pref_summary_blacklist">Innehållet i svartlistade mappar är dolt från ditt bibliotek</string>
+    <string name="pref_summary_blurred_album_art">Suddar albumsomslaget på låsskärmen. Kan orsaka problem med tredjeparts appar och gränssnittskomponenter.</string>
+    <string name="pref_summary_classic_notification">Använd den klassiska aviseringsdesignen</string>
+    <string name="pref_summary_colored_app_shortcuts">Färger appgenvägarna i primärfärgen</string>
+    <string name="pref_summary_colored_navigation_bar">Färger navigeringsfältet i primärfärgen</string>
+    <string name="pref_summary_colored_notification">Färger aviseringen i albumsomslagets färg</string>
+    <string name="pref_summary_gapless_playback">Kan orsaka uppspelningsproblem på vissa enheter</string>
+    <string name="pref_summary_ignore_media_store_artwork">Kan öka kvaliteten på albumsomslaget men orsakar långsammare bildladdningstider. Aktivera bara detta om du har problem med bilder med låg upplösning.</string>
+    <string name="pref_summary_library_categories">Konfigurera synlighet och ordning för bibliotekskategorier</string>
+    <string name="pref_summary_remember_last_tab">Gå till den senaste öppnade fliken vid uppstart</string>
+    <string name="pref_summary_synchronized_lyrics_show">För närvarande stöds endast synkroniserade låttexter i LRC-format. Antingen inbäddade eller som en separat fil.</string>
+    <string name="pref_title_album_art_on_lockscreen">Visa albumomslaget</string>
+    <string name="pref_title_app_shortcuts">Färgade appgenvägar</string>
+    <string name="pref_title_audio_ducking">Sänk volymen på fokusförlust</string>
+    <string name="pref_title_auto_download_metadata">Hämta metadata automatiskt</string>
+    <string name="pref_title_blurred_album_art">Sudda albumomslag</string>
+    <string name="pref_title_classic_notification">Klassisk aviseringsdesign</string>
+    <string name="pref_title_colored_notification">Färgad avisering</string>
+    <string name="pref_title_gapless_playback">Uppspelning utan mellanrum</string>
+    <string name="pref_title_general_theme">Allmänt tema</string>
+    <string name="pref_title_ignore_media_store_artwork">Ignorera medieaffär-omslag</string>
+    <string name="pref_title_last_added_interval">Intervall för senast lagt till spellista</string>
+    <string name="pref_title_navigation_bar">Färgat navigeringsfält</string>
+    <string name="pref_title_now_playing_screen_appearance">Utseende</string>
+    <string name="pref_title_remember_last_tab">Kom ihåg senaste fliken</string>
+    <string name="pref_title_synchronized_lyrics_show">Visa synkroniserade låttexter</string>
+    <string name="primary_color">Primärfärg</string>
+    <string name="primary_color_desc">Den primära temafärgen, är blå som standard</string>
+    <string name="rearrange_playing_queue_instruction">Omordna spelkön genom att dra en låt från dess låtnummer</string>
+    <string name="remove_action">Ta bort</string>
+    <string name="remove_cover">Ta bort omslag</string>
+    <string name="remove_from_blacklist">Ta bort från svartlistan</string>
+    <string name="remove_song_from_playlist_title">Ta bort låt från spellistan</string>
+    <string name="remove_song_x_from_playlist"><![CDATA[Ta bort låten \"<b>%1$s</b>\" från spellistan?]]></string>
+    <string name="remove_songs_from_playlist_title">Ta bort låtar från spellistan</string>
+    <plurals name="remove_x_songs_from_playlist" tools:ignore="MissingQuantity">
+        <item quantity="other"><![CDATA[Ta bort  <b><xliff:g id="count">%1$d</xliff:g></b> låtar från spellistan?]]></item>
+    </plurals>
+    <string name="rename_action">Byt namn</string>
+    <string name="rename_playlist_title">Byt namn på spellistan</string>
+    <string name="reset_action">Återställ</string>
+    <string name="reset_artist_image">Återställ artistbild</string>
+    <string name="save_playlist_title">Spara som fil</string>
+    <string name="save_playlists_title">Spara som filer</string>
+    <string name="saved_playlist_to">Sparade spellistan till %s</string>
+    <string name="saved_x_playlists_to_x">Sparade %1$d spellistor till %2$s</string>
+    <string name="saved_x_playlists_to_x_failed_to_save_x">Sparade %1$d spellistor till %2$s, misslyckades att spara %3$d</string>
+    <string name="saving_changes">Sparar ändringar</string>
+    <string name="scan_media">Skanna media</string>
+    <string name="scanned_files">Skannade filer: %1$d av %2$d</string>
+    <string name="search_hint">Sök i ditt bibliotek…</string>
+    <string name="select_all_title">"Välj alla "</string>
+    <string name="set_artist_image">Ställ in artistbild</string>
+    <string name="sleep_timer_canceled">Sovtimer avbruten</string>
+    <plurals name="sleep_timer_set">
+        <item quantity="one">Ställ in timer för <xliff:g id="count">%1$d</xliff:g> minut från nu</item>
+        <item quantity="other">Ställ in timer för <xliff:g id="count">%1$d</xliff:g> minuter från nu</item>
+    </plurals>
+    <string name="some_files_are_not_listed_in_the_media_store">Vissa filer är inte listade i medieaffären</string>
+    <string name="song">låt</string>
+    <string name="song_hint">Låt (2 för låt 2 eller 3004 för CD3-låt 4)</string>
+    <string name="song_tag_editor">Låt</string>
+    <string name="songs">Låtar</string>
+    <plurals name="songs_x" tools:ignore="MissingQuantity">
+        <item quantity="other">låtar</item>
+    </plurals>
+    <string name="sort_order_a_z">Stigande</string>
+    <string name="sort_order_album">Album</string>
+    <string name="sort_order_artist">Artist</string>
+    <string name="sort_order_year">År</string>
+    <string name="sort_order_z_a">Fallande</string>
+    <string name="support_development">Stöd utvecklingen</string>
+    <string name="the_audio_file">Ljudfilen</string>
+    <string name="this_month">Denna månad</string>
+    <string name="this_week">Denna vecka</string>
+    <string name="this_year">Detta år</string>
+    <string name="today">Idag</string>
+    <string name="unplayable_file">Det gick inte att spela den här låten</string>
+    <string name="up_next">Nästa</string>
+    <string name="update_image">Uppdatera bild</string>
+    <string name="updating">Uppdaterar…</string>
+    <string name="version">Version</string>
+    <string name="web_search">Webbsökning</string>
+    <string name="welcome_to_music_app">Välkommen till \"Music\"-appen, en vacker och lättviktig musikspelare!</string>
+    <string name="what_do_you_want_to_share">Vad vill du dela?</string>
+    <string name="wiki">Wiki</string>
+    <string name="wiki_unavailable">Det gick inte att hitta en wiki-post för det här albumet</string>
+    <string name="write_an_email">Skriv ett e-postmeddelande</string>
+    <string name="x_has_been_set_as_ringtone">Ställ in \"%1$s\" som din rington</string>
+    <string name="x_selected">%1$d valda</string>
+    <string name="year">År</string>
+    <string name="you_have_to_select_at_least_one_category">Du måste välja minst en kategori</string>
+</resources>
