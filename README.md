@@ -30,7 +30,39 @@ Based on [Phonograph](https://github.com/kabouzeid/Phonograph)
 - Theming (Light, Dark, Black (for AMOLED))
 - Widgets
 
-**Help me translate into your language via [OneSky](https://music-player.oneskyapp.com/)**
+--------
+### How to contribute
+
+If you want to contribute to Music-Player, you are very welcome:
+
+- Help me translate into your language via [OneSky](https://music-player.oneskyapp.com/)**
+- opening issues and PRs (including a corresponding issue)
+
+--------
+
+### Contribution Guidelines and License
+
+--------
+
+All contributions to this repository are considered to be licensed under the [GPLv3](https://github.com/MaxFour/Music-Player/blob/master/LICENSE)
+
+Music-Player doesn't require a CLA (Contributor License Agreement). The copyright belongs to all the individual contributors. Therefore we recommend that every contributor adds following line to the header of a file, if they changed it substantially:
+
+```
+@copyright Copyright (c) <year>, <your name> (<your email address>)
+```
+
+Please read the [Code of Conduct](https://github.com/MaxFour/Music-Player/blob/master/CODE_OF_CONDUCT.md). This document offers some guidance to ensure Music-Player participants can cooperate effectively in a positive and inspiring atmosphere, and to explain how together we can strengthen and support each other.
+
+Please review the [guidelines for contributing](https://github.com/MaxFour/Music-Player/blob/master/CONTRIBUTING.md) to this repository.
+
+--------
+
+### Start contributing
+
+--------
+Make sure you read [SETUP.md](https://github.com/MaxFour/Music-Player/blob/master/SETUP.md) and [CONTRIBUTING.md](https://github.com/MaxFour/Music-Player/blob/master/CONTRIBUTING.md) before you start working on this project. But basically: fork this repository and contribute back using pull requests to the master branch.
+Easy starting points are also reviewing [pull requests](https://github.com/MaxFour/Music-Player/pulls) and working on [starter issues](https://github.com/MaxFour/Music-Player/issues/new).
 
 --------
 
