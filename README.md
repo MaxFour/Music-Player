@@ -52,16 +52,16 @@ Music-Player doesn't require a CLA (Contributor License Agreement). The copyrigh
 @copyright Copyright (c) <year>, <your name> (<your email address>)
 ```
 
-Please read the [Code of Conduct](https://github.com/MaxFour/Music-Player/blob/master/CODE_OF_CONDUCT.md). This document offers some guidance to ensure Music-Player participants can cooperate effectively in a positive and inspiring atmosphere, and to explain how together we can strengthen and support each other.
+Please read the [Code of Conduct](https://github.com/MaxFour/Music-Player/blob/master/docs/CODE_OF_CONDUCT.md). This document offers some guidance to ensure Music-Player participants can cooperate effectively in a positive and inspiring atmosphere, and to explain how together we can strengthen and support each other.
 
-Please review the [guidelines for contributing](https://github.com/MaxFour/Music-Player/blob/master/CONTRIBUTING.md) to this repository.
+Please review the [guidelines for contributing](https://github.com/MaxFour/Music-Player/blob/master/docs/CONTRIBUTING.md) to this repository.
 
 --------
 
 ### Start contributing
 
 --------
-Make sure you read [SETUP.md](https://github.com/MaxFour/Music-Player/blob/master/SETUP.md) and [CONTRIBUTING.md](https://github.com/MaxFour/Music-Player/blob/master/CONTRIBUTING.md) before you start working on this project. But basically: fork this repository and contribute back using pull requests to the master branch.
+Make sure you read [SETUP.md](https://github.com/MaxFour/Music-Player/blob/master/docs/SETUP.md) and [CONTRIBUTING.md](https://github.com/MaxFour/Music-Player/blob/master/docs/CONTRIBUTING.md) before you start working on this project. But basically: fork this repository and contribute back using pull requests to the master branch.
 Easy starting points are also reviewing [pull requests](https://github.com/MaxFour/Music-Player/pulls) and working on [starter issues](https://github.com/MaxFour/Music-Player/issues/new).
 
 --------
