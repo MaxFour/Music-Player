@@ -9,7 +9,7 @@
 **Lightweight and Material Music Player**<br>
 
 Based on [Phonograph](https://github.com/kabouzeid/Phonograph)
-#### [Privacy Policy](Privacy.md)
+#### [Privacy Policy](https://github.com/MaxFour/Music-Player/blob/master/docs/PRIVACY.md)
 <p align="center"><img width="128" height="128" src="images/Icon.png" /></p>
 
 --------

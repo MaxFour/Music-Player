@@ -30,7 +30,7 @@
 # Guidelines
 
 ## Issue reporting
-* [Report the issue](https://github.com/MaxFour/Music-Player/issues/new) using our [template](https://github.com/MaxFour/Music-Player/blob/master/issue_template.md), it includes all the information we need to track down the issue.
+* [Report the issue](https://github.com/MaxFour/Music-Player/issues/new) using our [template](https://github.com/MaxFour/Music-Player/blob/master//docs/ISSUE_TEMPLATE.md), it includes all the information we need to track down the issue.
 * This repository is *only* for issues within the Music-Player Android app code. Issues in other components should be reported in their own repositories, e.g. [Music-Player core](https://github.com/MaxFour/Music-Player/issues)
 * Search the [existing issues](https://github.com/MaxFour/Music-Player/issues) first, it's likely that your issue was already reported.
 If your issue appears to be a bug, and hasn't been reported, open a new issue.
@@ -76,7 +76,7 @@ We are all about quality while not sacrificing speed so we use a very pragmatic 
 
 
 ### Branching model
-![branching model](/doc/branching.png "Branching Model")
+![branching model](/images/Branching.png "Branching Model")
 * All contributions bug fix or feature PRs target the ```master``` branch
 * Feature releases will always be based on ```master```
 * Bug fix releases will always be based on their respective feature-release-bug-fix-branches
@@ -102,7 +102,7 @@ There are three build variants
 
 
 ### 1. Fork and download android/master repository:
-* Please follow [SETUP.md](https://github.com/MaxFour/Music-Player/blob/master/SETUP.md) to setup Music-Player Android app work environment.
+* Please follow [SETUP.md](https://github.com/MaxFour/Music-Player/blob/master/docs/SETUP.md) to setup Music-Player Android app work environment.
 
 
 ### 2. Create pull request:

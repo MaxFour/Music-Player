@@ -70,7 +70,7 @@ The app is currently equipped to be built with three flavours:
 * generic - the regular build, released as Music-Player Android app on FDroid
 * versionDev - based on master and library master, available as direct download and FDroid
 
-[0]: https://github.com/MaxFour/Music-Player/blob/master/CONTRIBUTING.md
+[0]: https://github.com/MaxFour/Music-Player/blob/master/docs/CONTRIBUTING.md
 [1]: https://git-scm.com/
 [2]: https://git-scm.com/downloads
 [3]: https://developer.android.com/sdk/index.html
