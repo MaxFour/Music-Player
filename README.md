@@ -35,7 +35,7 @@ Based on [Phonograph](https://github.com/kabouzeid/Phonograph)
 
 If you want to contribute to Music-Player, you are very welcome:
 
-- Help me translate into your language via [OneSky](https://music-player.oneskyapp.com/)**
+- Help me translate into your language via [OneSky](https://maxfour.oneskyapp.com/)
 - opening issues and PRs (including a corresponding issue)
 
 --------

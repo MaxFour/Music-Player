@@ -130,7 +130,7 @@ If some pull request is worth to backport to a dot release, label it as "backpor
 * remove label "backport-request" from origin pull request
 
 ## Translations
-We manage translations via [OpenSky](https://music-player.oneskyapp.com/). So just request joining the translation team for Android on the site and start translating. All translations will then be automatically pushed to this repository, there is no need for any pull request for translations.
+We manage translations via [OneSky](https://maxfour.oneskyapp.com/). So just request joining the translation team for Android on the site and start translating. All translations will then be automatically pushed to this repository, there is no need for any pull request for translations.
 
 # Releases
 At the moment we are releasing the app in two app stores:

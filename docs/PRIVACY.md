@@ -93,7 +93,7 @@ Music-Player contain these features
 - Theming (Light, Dark, Black (for AMOLED))
 - Widgets
 
-Music-Player project needs help in translations to local languages thereby fostering massive adoption all over the world. Help translate this project to your local language via [OneSky](https://music-player.oneskyapp.com/)
+Music-Player project needs help in translations to local languages thereby fostering massive adoption all over the world. Help translate this project to your local language via [OneSky](https://maxfour.oneskyapp.com/)
 
 Donations are also welcomed for further development of this project.
 
