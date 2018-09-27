@@ -22,7 +22,7 @@
     <string name="action_next">Suivant</string>
     <string name="action_play">Jouer</string>
     <string name="action_play_next">Jouer ensuite</string>
-    <string name="action_play_pause">Jour / Pause</string>
+    <string name="action_play_pause">Jouer / Pause</string>
     <string name="action_previous">Précédent</string>
     <string name="action_remove_from_favorites">Enlever des favoris</string>
     <string name="action_remove_from_playing_queue">Enlever de la liste d\'attente</string>
@@ -64,8 +64,8 @@
     <string name="app_name">Music</string>
     <string name="app_shortcut_last_added_short">Derniers ajouts</string>
     <string name="app_shortcut_shuffle_all_short">Mélanger</string>
-    <string name="app_shortcut_top_songs_short">Meilleurs chansons</string>
-    <string name="app_widget_big_name">Musix - Grand</string>
+    <string name="app_shortcut_top_songs_short">Chansons préférées</string>
+    <string name="app_widget_big_name">Music - Grand</string>
     <string name="app_widget_card_name">Music - Carte</string>
     <string name="app_widget_classic_name">Music - Classique</string>
     <string name="app_widget_small_name">Music - Petit</string>
@@ -111,7 +111,7 @@
         <item quantity="one"><xliff:g id="count">%1$d</xliff:g> chanson supprimée</item>
         <item quantity="other"><xliff:g id="count">%1$d</xliff:g> chansons supprimées</item>
     </plurals>
-    <string name="dialog_message_set_ringtone">L\'application \"Music\" a besoin de l\'autorisation pour modifier les paramètres afin de régler votre sonnerie. Après avoir accoder la permission, essayer de régler votre sonnerie à nouveau.</string>
+    <string name="dialog_message_set_ringtone">L\'application \"Music\" a besoin de l\'autorisation \"modifier les paramètres\" afin de régler votre sonnerie. Après avoir accordé la permission, essayez de régler votre sonnerie à nouveau.</string>
     <string name="dialog_title_set_ringtone">Définir sonnerie</string>
     <string name="do_you_want_to_clear_the_blacklist">Voulez-vous vider la liste noire?</string>
     <string name="do_you_want_to_remove_from_the_blacklist"><![CDATA[Voulez-vous supprimer <b>%1$s</b> de la liste noire?]]></string>
@@ -143,7 +143,7 @@
     <string name="label_view_playing_queue">Afficher la liste d\'attente</string>
     <string name="last_added">Derniers ajouts</string>
     <string name="library">Bibliothèque</string>
-    <string name="library_categories">Catégories de bibliothèque</string>
+    <string name="library_categories">Catégories de la bibliothèque</string>
     <string name="light_theme_name">Clair</string>
     <string name="listing_files">Liste des fichiers</string>
     <string name="lyrics">Paroles</string>
@@ -156,7 +156,7 @@
     <string name="md_presets_label">Présélections</string>
     <string name="mi_label_button_cta">Commencer</string>
     <string name="min">" min."</string>
-    <string name="my_top_songs">Mes meilleures chansons</string>
+    <string name="my_top_songs">Mes chansons préférées</string>
     <string name="navoi_uzbekistan">Navoi, Uzbekistan</string>
     <string name="never">Jamais</string>
     <string name="new_playlist_title">Nouvelle liste de lecture</string>
@@ -173,7 +173,7 @@
     <string name="nothing_to_scan">Rien à scanner</string>
     <string name="ok">OK</string>
     <string name="only_on_wifi">Uniquement en WiFi</string>
-    <string name="open_playing_queue_instruction">Glissez la carte dans l\'écran en cours de lecture pour afficher la file d\'attente complète</string>
+    <string name="open_playing_queue_instruction">Glissez la carte dans l\'écran de lecture pour afficher la file d\'attente complète</string>
     <string name="past_three_months">Trois derniers mois</string>
     <string name="permission_external_storage_denied">Permission d\'accès à l\'espace de stockage externe refusée</string>
     <string name="permissions_denied">Permissions refusées</string>
@@ -202,7 +202,7 @@
     <string name="pref_summary_colored_navigation_bar">Colore la barre de navigation dans la couleur primaire</string>
     <string name="pref_summary_colored_notification">Colore la notification dans la couleur de la pochette de l\'album</string>
     <string name="pref_summary_gapless_playback">Peut causer des problèmes de lecture sur certains appareils</string>
-    <string name="pref_summary_ignore_media_store_artwork">Peut augmenter la qualité de la pochette de l\'album mais ralentit le chargement des images. Activez uniquement cette option si vous rencontrez des problèmes avec les pochettes en faible résolution.</string>
+    <string name="pref_summary_ignore_media_store_artwork">Peut augmenter la qualité de la pochette de l\'album mais ralentit le chargement des images. Activez cette option uniquement si vous rencontrez des problèmes avec les pochettes en faible résolution.</string>
     <string name="pref_summary_library_categories">Configurer la visibilité et l\'ordre des catégories de la bibliothèque</string>
     <string name="pref_summary_remember_last_tab">Aller à la dernière catégorie ouverte au lancement</string>
     <string name="pref_summary_synchronized_lyrics_show">Actuellement, seules les paroles synchronisées au format LRC sont prises en charge. Intégrées ou en tant que fichier séparé.</string>
@@ -215,7 +215,7 @@
     <string name="pref_title_colored_notification">Notification colorée</string>
     <string name="pref_title_gapless_playback">Lecture sans coupure</string>
     <string name="pref_title_general_theme">Thème général</string>
-    <string name="pref_title_ignore_media_store_artwork">Ignorer le stocckage des pochettes</string>
+    <string name="pref_title_ignore_media_store_artwork">Ignorer le stockage des pochettes</string>
     <string name="pref_title_last_added_interval">Intervalle de la liste de lecture \"Derniers ajouts\"</string>
     <string name="pref_title_navigation_bar">Barre de navigation colorée</string>
     <string name="pref_title_now_playing_screen_appearance">Apparence</string>
@@ -223,7 +223,7 @@
     <string name="pref_title_synchronized_lyrics_show">Afficher les paroles synchronisées</string>
     <string name="primary_color">Couleur principale</string>
     <string name="primary_color_desc">La couleur principale du thème, bleu par défaut</string>
-    <string name="rearrange_playing_queue_instruction">Réorganiser la file d\'attente en faisant glisser une chanson de son numéro de chanson</string>
+    <string name="rearrange_playing_queue_instruction">Réorganiser la file d\'attente en faisant glisser une chanson à partir de son numéro</string>
     <string name="remove_action">Enlever</string>
     <string name="remove_cover">Enlever la pochette</string>
     <string name="remove_from_blacklist">Enlever de la liste noire</string>
