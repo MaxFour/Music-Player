@@ -279,7 +279,7 @@
     <string name="updating">Mise à jour…</string>
     <string name="version">Version</string>
     <string name="web_search">Recherche Internet</string>
-    <string name="welcome_to_music_app">Bienvenue dans l\'application Music, un lecteur de musique beau et léger!</string>
+    <string name="welcome_to_music_app">Bienvenue dans l\'application \"Music\", un lecteur de musique beau et léger!</string>
     <string name="what_do_you_want_to_share">Que souhaitez-vous partager?</string>
     <string name="wiki">Wiki</string>
     <string name="wiki_unavailable">Impossible de trouver une entrée Wiki pour cet album</string>
