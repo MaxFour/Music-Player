@@ -57,7 +57,7 @@
     <string name="album_tag_editor">Albüm</string>
     <string name="albums">Albümler</string>
     <plurals name="albums_x">
-        <item quantity="other">albümler</item>
+        <item quantity="other">albüm</item>
     </plurals>
     <string name="always">Her zaman</string>
     <string name="app_name">Müzik</string>
