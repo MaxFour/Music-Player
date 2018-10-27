@@ -6,13 +6,13 @@
     android:viewportWidth="176">
 
     <group
-        android:scaleX="0.45"
-        android:scaleY="0.45"
-        android:translateX="45"
-        android:translateY="45">
+        android:scaleX="0.25"
+        android:scaleY="0.25"
+        android:translateX="66.5"
+        android:translateY="66.5">
         <path
             android:name="ic_app_shortcut_last_added_ic"
             android:fillColor="#000"
-            android:pathData="M124.35,92h-16.2v16.2h-8.1V92H83.85v-8.1h16.2V67.65h8.1v16.2h16.2M128.4,55.5H79.8a8.1,8.1,0,0,0-8.1,8.1v48.6a8.1,8.1,0,0,0,8.1,8.1h48.6a8.1,8.1,0,0,0,8.1-8.1V63.6a8.1,8.1,0,0,0-8.1-8.1M63.6,71.7H55.5v56.7a8.1,8.1,0,0,0,8.1,8.1h56.7v-8.1H63.6Z" />
+            android:pathData="m29.333,44h-14.667v102.67c0,8.067 6.6,14.667 14.667,14.667h102.67v-14.667h-102.67zM146.663,14.667h-88c-8.067,0 -14.667,6.6 -14.667,14.667v88c0,8.067 6.6,14.667 14.667,14.667h88c8.067,0 14.667,-6.6 14.667,-14.667v-88c0,-8.067 -6.6,-14.667 -14.667,-14.667zM146.663,117.337h-88v-88h88zM95.33,102.67h14.667v-22h22v-14.667h-22v-22h-14.667v22h-22v14.667h22z" />
     </group>
 </vector>

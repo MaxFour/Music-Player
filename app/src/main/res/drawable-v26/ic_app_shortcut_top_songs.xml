@@ -6,13 +6,13 @@
     android:viewportWidth="176">
 
     <group
-        android:scaleX="0.45"
-        android:scaleY="0.45"
-        android:translateX="45"
-        android:translateY="45">
+        android:scaleX="0.28"
+        android:scaleY="0.28"
+        android:translateX="63"
+        android:translateY="63">
         <path
             android:name="ic_app_shortcut_top_songs_ic"
             android:fillColor="#000"
-            android:pathData="M113.7,69.45l10.13,10.13-21.59,21.59-17.7-17.7L51.75,116.31,58,122.55,84.54,96l17.7,17.7,27.88-27.83L140.25,96V69.45Z" />
+            android:pathData="m123.57,50.233 l10.56,10.56 -35.787,35.787 -24.127,-24.127c-2.86,-2.86 -7.48,-2.86 -10.34,0l-44,44.073c-2.86,2.86 -2.86,7.48 0,10.34s7.48,2.86 10.34,0l38.793,-38.867 24.127,24.127c2.86,2.86 7.48,2.86 10.34,0l40.993,-40.92 10.56,10.56c2.273,2.273 6.233,0.66 6.233,-2.567v-31.533c0.073,-2.053 -1.54,-3.667 -3.593,-3.667h-31.46c-3.3,0 -4.913,3.96 -2.64,6.233z" />
     </group>
 </vector>
