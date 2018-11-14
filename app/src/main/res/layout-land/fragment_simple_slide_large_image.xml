@@ -35,7 +35,7 @@
             android:id="@id/mi_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-medium"
+            android:fontFamily="@font/product_sans"
             android:gravity="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Headline"
             tools:ignore="UnusedAttribute"
