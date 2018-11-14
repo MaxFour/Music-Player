@@ -24,7 +24,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 
-import com.kabouzeid.appthemehelper.util.TintHelper;
+import com.maxfour.appthemehelper.util.TintHelper;
 import com.maxfour.music.R;
 
 public class Util {

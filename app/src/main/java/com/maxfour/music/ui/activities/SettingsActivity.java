@@ -16,10 +16,10 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.afollestad.materialdialogs.color.ColorChooserDialog;
-import com.kabouzeid.appthemehelper.ThemeStore;
-import com.kabouzeid.appthemehelper.common.prefs.supportv7.ATEColorPreference;
-import com.kabouzeid.appthemehelper.common.prefs.supportv7.ATEPreferenceFragmentCompat;
-import com.kabouzeid.appthemehelper.util.ColorUtil;
+import com.maxfour.appthemehelper.ThemeStore;
+import com.maxfour.appthemehelper.common.prefs.supportv7.ATEColorPreference;
+import com.maxfour.appthemehelper.common.prefs.supportv7.ATEPreferenceFragmentCompat;
+import com.maxfour.appthemehelper.util.ColorUtil;
 import com.maxfour.music.R;
 import com.maxfour.music.appshortcuts.DynamicShortcutManager;
 import com.maxfour.music.misc.NonProAllowedColors;

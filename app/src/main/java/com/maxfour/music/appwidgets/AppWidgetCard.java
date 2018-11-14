@@ -16,7 +16,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.animation.GlideAnimation;
 import com.bumptech.glide.request.target.SimpleTarget;
 import com.bumptech.glide.request.target.Target;
-import com.kabouzeid.appthemehelper.util.MaterialValueHelper;
+import com.maxfour.appthemehelper.util.MaterialValueHelper;
 import com.maxfour.music.R;
 import com.maxfour.music.appwidgets.base.BaseAppWidget;
 import com.maxfour.music.glide.SongGlideRequest;

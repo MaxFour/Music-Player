@@ -12,7 +12,7 @@ import android.support.annotation.RequiresApi;
 import android.support.v4.graphics.drawable.IconCompat;
 import android.util.TypedValue;
 
-import com.kabouzeid.appthemehelper.ThemeStore;
+import com.maxfour.appthemehelper.ThemeStore;
 import com.maxfour.music.R;
 import com.maxfour.music.util.PreferenceUtil;
 import com.maxfour.music.util.Util;

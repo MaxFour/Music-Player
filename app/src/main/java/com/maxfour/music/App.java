@@ -3,7 +3,7 @@ package com.maxfour.music;
 import android.app.Application;
 import android.os.Build;
 
-import com.kabouzeid.appthemehelper.ThemeStore;
+import com.maxfour.appthemehelper.ThemeStore;
 import com.maxfour.music.appshortcuts.DynamicShortcutManager;
 
 

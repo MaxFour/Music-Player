@@ -6,11 +6,11 @@ import android.os.Bundle;
 import android.support.annotation.ColorInt;
 import android.view.View;
 
-import com.kabouzeid.appthemehelper.ATH;
-import com.kabouzeid.appthemehelper.ThemeStore;
-import com.kabouzeid.appthemehelper.common.ATHToolbarActivity;
-import com.kabouzeid.appthemehelper.util.ColorUtil;
-import com.kabouzeid.appthemehelper.util.MaterialDialogsUtil;
+import com.maxfour.appthemehelper.ATH;
+import com.maxfour.appthemehelper.ThemeStore;
+import com.maxfour.appthemehelper.common.ATHToolbarActivity;
+import com.maxfour.appthemehelper.util.ColorUtil;
+import com.maxfour.appthemehelper.util.MaterialDialogsUtil;
 import com.maxfour.music.R;
 import com.maxfour.music.util.PreferenceUtil;
 import com.maxfour.music.util.Util;

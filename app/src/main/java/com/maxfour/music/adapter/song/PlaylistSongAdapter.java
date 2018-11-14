@@ -8,7 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.kabouzeid.appthemehelper.ThemeStore;
+import com.maxfour.appthemehelper.ThemeStore;
 import com.maxfour.music.R;
 import com.maxfour.music.interfaces.CabHolder;
 import com.maxfour.music.model.Song;

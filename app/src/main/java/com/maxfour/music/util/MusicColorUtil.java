@@ -5,7 +5,7 @@ import android.support.annotation.ColorInt;
 import android.support.annotation.Nullable;
 import android.support.v7.graphics.Palette;
 
-import com.kabouzeid.appthemehelper.util.ColorUtil;
+import com.maxfour.appthemehelper.util.ColorUtil;
 
 import java.util.Collections;
 import java.util.Comparator;
