@@ -114,7 +114,7 @@
     <string name="do_you_want_to_remove_from_the_blacklist"><![CDATA[Vill du ta bort <b>%1$s</b> från svartlistan?]]></string>
     <string name="download_from_last_fm">Hämta från Last.fm</string>
     <string name="empty">Tom</string>
-    <string name="equalizer">Utjämnare</string>
+    <string name="equalizer">Equalizer</string>
     <string name="failed_to_save_playlist">Misslyckades med att spara spellistan (%s)</string>
     <string name="favorites">Favoriter</string>
     <string name="flat">Platt</string>
@@ -161,7 +161,7 @@
     <string name="no_albums">Inga album</string>
     <string name="no_artists">Inga artister</string>
     <string name="no_audio_ID">Spela en låt först och försök igen</string>
-    <string name="no_equalizer">Ingen utjämnare hittades</string>
+    <string name="no_equalizer">Ingen equalizer hittades</string>
     <string name="no_genres">Inga genrer</string>
     <string name="no_playlists">Inga spellistor</string>
     <string name="no_results">Inga resultat</string>
