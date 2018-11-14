@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="accent_color">Accent color</string>
-    <string name="accent_color_desc">The accent theme color, defaults to red</string>
+    <string name="accent_color_desc">The accent theme color</string>
     <string name="action_about">About</string>
     <string name="action_add_to_favorites">Add to favorites</string>
     <string name="action_add_to_playing_queue">Add to playing queue</string>
@@ -219,7 +219,7 @@
     <string name="pref_title_remember_last_tab">Remember last tab</string>
     <string name="pref_title_synchronized_lyrics_show">Show synchronized lyrics</string>
     <string name="primary_color">Primary color</string>
-    <string name="primary_color_desc">The primary theme color, defaults to blue</string>
+    <string name="primary_color_desc">The primary theme color</string>
     <string name="rearrange_playing_queue_instruction">Rearrange the playing queue by dragging a song from its song number</string>
     <string name="remove_action">Remove</string>
     <string name="remove_cover">Remove cover</string>

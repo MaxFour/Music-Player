@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources xmlns:tools="http://schemas.android.com/tools" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="accent_color">Accentfärg</string>
-    <string name="accent_color_desc">Färgen för accenttema, är röd som standard</string>
+    <string name="accent_color_desc">Färgen för accenttema</string>
     <string name="action_about">Om</string>
     <string name="action_add_to_favorites">Lägg till i favoriter</string>
     <string name="action_add_to_playing_queue">Lägg till i spelkön</string>
@@ -88,7 +88,7 @@
     <string name="could_not_download_album_cover">Det gick inte att hämta ett matchande albumomslag</string>
     <string name="could_not_scan_files">Det gick inte att skanna %d filer</string>
     <string name="create_action">Skapa</string>
-    <string name="created_playlist_x">Skapade spellistan %1$s</string>
+    <string name="created_playlist_x">Skapade spellistan \"%1$s\"</string>
     <string name="currently_listening_to_x_by_x">Lyssnar nu på %1$s av %2$s</string>
     <string name="dark_theme_name">Mörk</string>
     <string name="delete_action">Ta bort</string>
@@ -219,7 +219,7 @@
     <string name="pref_title_remember_last_tab">Kom ihåg senaste fliken</string>
     <string name="pref_title_synchronized_lyrics_show">Visa synkroniserade låttexter</string>
     <string name="primary_color">Primärfärg</string>
-    <string name="primary_color_desc">Den primära temafärgen, är blå som standard</string>
+    <string name="primary_color_desc">Den primära temafärgen</string>
     <string name="rearrange_playing_queue_instruction">Omordna spelkön genom att dra en låt från dess låtnummer</string>
     <string name="remove_action">Ta bort</string>
     <string name="remove_cover">Ta bort omslag</string>
