@@ -19,8 +19,8 @@ public class App extends Application {
         // default theme
         if (!ThemeStore.isConfigured(this, 1)) {
             ThemeStore.editTheme(this)
-                    .primaryColorRes(R.color.mariner_blue)
-                    .accentColorRes(R.color.red)
+                    .primaryColorRes(R.color.md_blue_grey_700)
+                    .accentColorRes(R.color.md_teal_A700)
                     .commit();
         }
 
