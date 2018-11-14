@@ -1,6 +1,5 @@
 package com.maxfour.music.ui.fragments.mainactivity.library;
 
-
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;

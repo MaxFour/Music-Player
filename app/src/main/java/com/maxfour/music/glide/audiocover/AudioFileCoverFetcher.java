@@ -59,8 +59,8 @@ public class AudioFileCoverFetcher implements DataFetcher<InputStream> {
                 if (art != null) {
                     byte[] imageData = art.getBinaryData();
                     return new ByteArrayInputStream(imageData);
-                    }
                 }
+            }
             // If there are any exceptions, we ignore them and continue to the other fallback method
         } catch (ReadOnlyFileException ignored) {
         } catch (InvalidAudioFrameException ignored) {

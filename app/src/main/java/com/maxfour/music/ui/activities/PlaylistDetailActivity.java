@@ -32,7 +32,6 @@ import com.maxfour.music.loader.PlaylistSongLoader;
 import com.maxfour.music.misc.WrappedAsyncTaskLoader;
 import com.maxfour.music.model.AbsCustomPlaylist;
 import com.maxfour.music.model.Playlist;
-import com.maxfour.music.model.PlaylistSong;
 import com.maxfour.music.model.Song;
 import com.maxfour.music.ui.activities.base.AbsSlidingMusicPanelActivity;
 import com.maxfour.music.util.MusicColorUtil;

@@ -112,7 +112,7 @@ public final class PreferenceUtil {
     public void setGeneralTheme(String theme) {
         final SharedPreferences.Editor editor = mPreferences.edit();
         editor.putString(GENERAL_THEME, theme);
-        editor.commit();
+        editor.apply();
     }
 
     @StyleRes
