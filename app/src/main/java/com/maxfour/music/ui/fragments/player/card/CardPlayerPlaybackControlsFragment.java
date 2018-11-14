@@ -13,6 +13,7 @@ import android.widget.ImageButton;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import com.maxfour.appthemehelper.ThemeStore;
 import com.maxfour.appthemehelper.util.ColorUtil;
 import com.maxfour.appthemehelper.util.MaterialValueHelper;
 import com.maxfour.appthemehelper.util.TintHelper;
@@ -134,7 +135,7 @@ public class CardPlayerPlaybackControlsFragment extends AbsMusicServiceFragment 
     }
 
     private void setUpPlayPauseFab() {
-        final int fabColor = Color.WHITE;
+        final int fabColor = ThemeStore.accentColor(getActivity());
         TintHelper.setTintAuto(playPauseFab, fabColor, true);
 
         playerFabPlayPauseDrawable = new PlayPauseDrawable(getActivity());
