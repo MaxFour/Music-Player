@@ -484,7 +484,7 @@ public final class PreferenceUtil {
         defaultCategoryInfos.add(new CategoryInfo(CategoryInfo.Category.ARTISTS, true));
         defaultCategoryInfos.add(new CategoryInfo(CategoryInfo.Category.SONGS, true));
         defaultCategoryInfos.add(new CategoryInfo(CategoryInfo.Category.GENRES, false));
-        defaultCategoryInfos.add(new CategoryInfo(CategoryInfo.Category.PLAYLISTS, false));
+        defaultCategoryInfos.add(new CategoryInfo(CategoryInfo.Category.PLAYLISTS, true));
         return defaultCategoryInfos;
     }
 }
