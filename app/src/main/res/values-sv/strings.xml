@@ -235,7 +235,6 @@
     <string name="reset_action">Återställ</string>
     <string name="reset_artist_image">Återställ artistbild</string>
     <string name="save_playlist_title">Spara som fil</string>
-    <string name="save_playlists_title">Spara som filer</string>
     <string name="saved_playlist_to">Sparade spellistan till %s</string>
     <string name="saved_x_playlists_to_x">Sparade %1$d spellistor till %2$s</string>
     <string name="saved_x_playlists_to_x_failed_to_save_x">Sparade %1$d spellistor till %2$s, misslyckades att spara %3$d</string>

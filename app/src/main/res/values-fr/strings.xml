@@ -239,7 +239,6 @@
     <string name="reset_action">Réinitialiser</string>
     <string name="reset_artist_image">Réinitialiser l\'image de l\'artiste</string>
     <string name="save_playlist_title">Enregistrer sous forme de fichier</string>
-    <string name="save_playlists_title">Enregistrer sous forme de fichiers</string>
     <string name="saved_playlist_to">Liste de lecture enregistrée vers %s</string>
     <string name="saved_x_playlists_to_x">%1$d listes de lecture enregistrées vers %2$s</string>
     <string name="saved_x_playlists_to_x_failed_to_save_x">%1$d listes de lecture enregistrées vers %2$s, échec de la sauvegarde de %3$d</string>

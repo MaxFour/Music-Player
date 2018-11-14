@@ -235,7 +235,6 @@
     <string name="reset_action">Sıfırla</string>
     <string name="reset_artist_image">Sanatçı görüntüsünü sıfırla</string>
     <string name="save_playlist_title">Dosya olarak kaydet</string>
-    <string name="save_playlists_title">Dosyalar olarak kaydet</string>
     <string name="saved_playlist_to">Oynatma listesi %s dizinine kaydedildi</string>
     <string name="saved_x_playlists_to_x">%1$d oynatma listesi %2$s dizinine kaydedildi</string>
     <string name="saved_x_playlists_to_x_failed_to_save_x">%1$d oynatma listesi %2$s dizinine kaydedildi, %3$d oynatma listesi kaydedilemedi</string>
