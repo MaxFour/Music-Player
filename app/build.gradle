@@ -17,8 +17,8 @@ apply plugin: 'com.jakewharton.hugo'
 android {
     defaultConfig {
         applicationId 'com.maxfour.music'
-        versionCode 7
-        versionName '1.2.0'
+        versionCode 8
+        versionName '1.2.1'
         minSdkVersion 16
         targetSdkVersion 27
 
