@@ -4,6 +4,8 @@
 [![API](https://img.shields.io/badge/API-16%2B-orange.svg?logo=android&style=flat-square)](https://android-arsenal.com/api?level=16)
 [![Patreon Donate](https://img.shields.io/badge/Donate-Patreon-red.svg?logo=patreon&style=flat-square)](https://www.patreon.com/max_four "Donate using Patreon")
 [![Liberapay Donate](https://img.shields.io/badge/Donate-Liberapay-yellow.svg?logo=liberapay&style=flat-square)](https://liberapay.com/MaxFour/donate "Donate using Liberapay")
+[![Telegram](https://img.shields.io/badge/Telegram-2CA5E0.svg?logo=telegram&style=flat-square)](https://t.me/max_four "Contact me in Telegram")
+[![Gmail](https://img.shields.io/badge/Gmail-666666.svg?logo=gmail&logoColor=D14836&style=flat-square)](mailto:mansurov.maksud@gmail.com "Write an email")
 
 <p><a href="https://f-droid.org/packages/com.maxfour.music/"><img style="display: block; margin-left: auto; margin-right: auto;" src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="90" /></a></p>
 
@@ -36,8 +38,8 @@ Based on [Phonograph](https://github.com/kabouzeid/Phonograph)
 
 If you want to contribute to Music-Player, you are very welcome:
 
-- Help me translate into your language via [OneSky](https://maxfour.oneskyapp.com/)
-- opening issues and PRs (including a corresponding issue)
+- translate into your language via [OneSky](https://maxfour.oneskyapp.com/)
+- open issues and PRs (including a corresponding issue)
 
 --------
 
@@ -50,7 +52,7 @@ All contributions to this repository are considered to be licensed under the [GP
 Music-Player doesn't require a CLA (Contributor License Agreement). The copyright belongs to all the individual contributors. Therefore we recommend that every contributor adds following line to the header of a file, if they changed it substantially:
 
 ```
-@copyright Copyright (c) <year>, <your name> (<your email address>)
+© 2018, Max_Four (mansurov.maksud@gmail.com)
 ```
 
 Please read the [Code of Conduct](https://github.com/MaxFour/Music-Player/blob/master/docs/CODE_OF_CONDUCT.md). This document offers some guidance to ensure Music-Player participants can cooperate effectively in a positive and inspiring atmosphere, and to explain how together we can strengthen and support each other.
