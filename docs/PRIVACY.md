@@ -113,5 +113,5 @@ QIWI Visa Card:
 
 ## Contact Me
 
-This project would certainly improve with your contributions. Feel free to make contributions and suggestions to this project either by opening an issue or implementing opening pull requests of those suggestions and improvements. For further inquiry regarding this privacy policy or any other issue, please contact the developer directly via [email](mansurov.maksud@gmail.com) or by opening an issue on the app's official repository [here](https://github.com/MaxFour/Music-Player) on Github.
+This project would certainly improve with your contributions. Feel free to make contributions and suggestions to this project either by opening an issue or implementing opening pull requests of those suggestions and improvements. For further inquiry regarding this privacy policy or any other issue, please contact the developer directly via [email](mailto:mansurov.maksud@gmail.com) or by opening an issue on the app's official repository [here](https://github.com/MaxFour/Music-Player/issues/new) on Github.
 
