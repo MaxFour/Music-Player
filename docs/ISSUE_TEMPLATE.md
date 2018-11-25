@@ -1,8 +1,8 @@
 ### Actual behaviour
-- Tell us what happens
+- Tell me what happens
 
 ### Expected behaviour
-- Tell us what should happen
+- Tell me what should happen
  
 ### Steps to reproduce
 1. 
@@ -18,10 +18,3 @@ Device model:
 Stock or customized system:
 
 Music-Player app version:
-
-
-### Logs
-
-```
-Insert your Music-Player log here
-```
