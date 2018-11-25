@@ -75,7 +75,7 @@ This privacy policy may be updated from time to time as the functionalities of t
 
 Music-Player app is developed to be used basically for playing and listening to music stored on your device storage. The developer will not be held accountable for how you decide to use this software and will not be liable for any losses and/or damages in connection with the use of the software. <hr>
 
-## About Us
+## About Me
 
 Music-Player is a simple player with useful features based on Phonograph, without Google Services and without data collection. This project is developed by Max_Four from Navoi, Uzbekistan.
 
@@ -101,9 +101,17 @@ WebMoney: <br>
 $: Z776114750889 <br>
 ₽: R662315834876
 
-QIWI: +998 997524609 <hr>
+QIWI:
+- +998 997524609
 
-## Contact Us
+QIWI Visa Card:
+- 4890 4944 1177 0837 
+
+[Liberapay](https://liberapay.com/MaxFour/donate)
+
+[Patreon](https://www.patreon.com/max_four) <hr>
+
+## Contact Me
 
 This project would certainly improve with your contributions. Feel free to make contributions and suggestions to this project either by opening an issue or implementing opening pull requests of those suggestions and improvements. For further inquiry regarding this privacy policy or any other issue, please contact the developer directly via [email](mansurov.maksud@gmail.com) or by opening an issue on the app's official repository [here](https://github.com/MaxFour/Music-Player) on Github.
 
