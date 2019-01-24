@@ -48,7 +48,7 @@ public class AudioFileCoverFetcher implements DataFetcher<InputStream> {
         }
     }
 
-    private static final String[] FALLBACKS = {"cover.jpg", "album.jpg", "folder.jpg", "cover.png", "album.png", "folder.png"};
+    private static final String[] FALLBACKS = {"cover.jpg", "album.jpg", "folder.jpg", "cover.png", "album.png", "folder.png", "albumart.jpg", "albumart.png"};
 
     private InputStream fallback(String path) throws FileNotFoundException {
         // Method 1: use embedded high resolution album art if there is any
