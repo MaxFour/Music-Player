@@ -262,7 +262,8 @@
     <string name="song_hint">Песня (2 для песни 2 или 3004 для песни 4 CD3)</string>
     <string name="song_tag_editor">Песня</string>
     <string name="songs">Песни</string>
-    <plurals name="songs_x" tools:ignore="MissingQuantity">
+    <plurals name="songs_x">
+        <item quantity="one">песня</item>
         <item quantity="few">песни</item>
         <item quantity="many">песен</item>
     </plurals>
