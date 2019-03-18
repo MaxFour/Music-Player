@@ -52,7 +52,7 @@ All contributions to this repository are considered to be licensed under the [GP
 Music-Player doesn't require a CLA (Contributor License Agreement). The copyright belongs to all the individual contributors. Therefore we recommend that every contributor adds following line to the header of a file, if they changed it substantially:
 
 ```
-© 2018, Max_Four (mansurov.maksud@gmail.com)
+© 2019, Max_Four (mansurov.maksud@gmail.com)
 ```
 
 Please read the [Code of Conduct](https://github.com/MaxFour/Music-Player/blob/master/docs/CODE_OF_CONDUCT.md). This document offers some guidance to ensure Music-Player participants can cooperate effectively in a positive and inspiring atmosphere, and to explain how together we can strengthen and support each other.
@@ -75,8 +75,5 @@ WebMoney:<br>
 $: Z776114750889<br>
 ₽: R662315834876
 
-QIWI:
-- +998 997524609
-
-QIWI Visa Card:
-- 4890 4944 1177 0837
+Yandex.Money:
+- 4100 1537 2205 898
