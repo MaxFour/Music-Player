@@ -63,7 +63,7 @@ Links to other websites in Music-Player software are located in the About sectio
 The links are;
 - Fork on Github. When clicked, it redirects the user to the app's repository on Github.
 - Write an Email. When clicked this connects to you to your mail service available on your device.
-- Qiwi. This link leads to Qiwi payment service if you wish to make donations to this project.
+- Yandex.Money. This link leads to Yandex.Money payment service if you wish to make donations to this project.
 
 The developer has no control over and assumes no responsibility for the content, privacy policies or practices of any third party sites or services. <hr>
 
@@ -101,11 +101,8 @@ WebMoney: <br>
 $: Z776114750889 <br>
 ₽: R662315834876
 
-QIWI:
-- +998 997524609
-
-QIWI Visa Card:
-- 4890 4944 1177 0837 
+Yandex.Money:
+- 4100 1537 2205 898
 
 [Liberapay](https://liberapay.com/MaxFour/donate)
 
