@@ -104,9 +104,7 @@ $: Z776114750889 <br>
 Yandex.Money:
 - 4100 1537 2205 898
 
-[Liberapay](https://liberapay.com/MaxFour/donate)
-
-[Patreon](https://www.patreon.com/max_four) <hr>
+<hr>
 
 ## Contact Me
 
