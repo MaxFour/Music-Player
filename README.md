@@ -2,8 +2,6 @@
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg?style=flat-square)](https://github.com/MaxFour/Music-Player/blob/master/LICENSE)
 [![API](https://img.shields.io/badge/API-16%2B-orange.svg?logo=android&style=flat-square)](https://android-arsenal.com/api?level=16)
-[![Patreon Donate](https://img.shields.io/badge/Donate-Patreon-red.svg?logo=patreon&style=flat-square)](https://www.patreon.com/max_four "Donate using Patreon")
-[![Liberapay Donate](https://img.shields.io/badge/Donate-Liberapay-yellow.svg?logo=liberapay&style=flat-square)](https://liberapay.com/MaxFour/donate "Donate using Liberapay")
 [![Telegram](https://img.shields.io/badge/Telegram-2CA5E0.svg?logo=telegram&style=flat-square)](https://t.me/max_four "Contact me in Telegram")
 [![Gmail](https://img.shields.io/badge/Gmail-666666.svg?logo=gmail&logoColor=D14836&style=flat-square)](mailto:mansurov.maksud@gmail.com "Write an email")
 
