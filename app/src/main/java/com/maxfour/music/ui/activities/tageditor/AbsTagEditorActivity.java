@@ -112,6 +112,7 @@ public abstract class AbsTagEditorActivity extends AbsBaseActivity {
         setUpViews();
 
         setSupportActionBar(toolbar);
+        toolbar.setTitleTextAppearance(this, R.style.ProductSansTextAppearace);
         //noinspection ConstantConditions
         getSupportActionBar().setTitle(null);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

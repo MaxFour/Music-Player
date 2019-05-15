@@ -55,6 +55,7 @@ public class SettingsActivity extends AbsBaseActivity implements ColorChooserDia
         setTaskDescriptionColorAuto();
 
         toolbar.setBackgroundColor(ThemeStore.primaryColor(this));
+        toolbar.setTitleTextAppearance(this, R.style.ProductSansTextAppearace);
         setSupportActionBar(toolbar);
         //noinspection ConstantConditions
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

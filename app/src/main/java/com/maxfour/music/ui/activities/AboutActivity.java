@@ -63,6 +63,7 @@ public class AboutActivity extends AbsBaseActivity implements View.OnClickListen
 
     private void setUpToolbar() {
         toolbar.setBackgroundColor(ThemeStore.primaryColor(this));
+        toolbar.setTitleTextAppearance(this, R.style.ProductSansTextAppearace);
         setSupportActionBar(toolbar);
         //noinspection ConstantConditions
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

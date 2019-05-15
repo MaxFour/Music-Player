@@ -310,6 +310,7 @@ public class ArtistDetailActivity extends AbsSlidingMusicPanelActivity implement
     }
 
     private void setUpToolbar() {
+        toolbar.setTitleTextAppearance(this, R.style.ProductSansTextAppearace);
         setSupportActionBar(toolbar);
         //noinspection ConstantConditions
         getSupportActionBar().setTitle(null);
