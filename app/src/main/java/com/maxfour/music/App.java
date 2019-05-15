@@ -6,7 +6,6 @@ import android.os.Build;
 import com.kabouzeid.appthemehelper.ThemeStore;
 import com.maxfour.music.appshortcuts.DynamicShortcutManager;
 
-
 public class App extends Application {
 
     private static App app;
@@ -30,9 +29,7 @@ public class App extends Application {
         }
     }
 
-
     public static App getInstance() {
         return app;
     }
-
 }

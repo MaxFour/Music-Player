@@ -51,21 +51,21 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <com.simplecityapps.recyclerview_fastscroll.views.FastScrollRecyclerView
-        android:id="@+id/recycler_view"
+            android:id="@+id/recycler_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:clipToPadding="false"
             android:scrollbars="none" />
 
-    <TextView
-        android:id="@android:id/empty"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:fontFamily="sans-serif-light"
-        android:text="@string/empty"
-        android:textColor="?android:textColorSecondary"
-        android:textSize="@dimen/empty_text_size" />
+        <TextView
+            android:id="@android:id/empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/empty"
+            android:textColor="?android:textColorSecondary"
+            android:textSize="@dimen/empty_text_size" />
 
     </FrameLayout>
 

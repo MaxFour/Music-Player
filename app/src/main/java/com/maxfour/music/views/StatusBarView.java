@@ -30,4 +30,5 @@ public class StatusBarView extends View {
         }
         return super.onApplyWindowInsets(insets);
     }
+
 }

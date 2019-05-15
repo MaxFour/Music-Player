@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" xmlns:tools="http://schemas.android.com/tools">
+<resources xmlns:tools="http://schemas.android.com/tools" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="accent_color">Цвет акцента</string>
     <string name="accent_color_desc">Цвет акцента темы</string>
     <string name="action_about">О программе</string>
@@ -10,7 +10,6 @@
     <string name="action_clear_playlist">Очистить плейлист</string>
     <string name="action_delete">Удалить</string>
     <string name="action_delete_from_device">Удалить с устройства</string>
-    <string name="action_delete_playlist">Удалить плейлист</string>
     <string name="action_details">Свойства</string>
     <string name="action_go_to_album">Перейти к альбому</string>
     <string name="action_go_to_artist">Перейти к исполнителю</string>
@@ -43,7 +42,7 @@
     <string name="action_shuffle_artist">Перемешать исполнителя</string>
     <string name="action_shuffle_playlist">Перемешать плейлист</string>
     <string name="action_sleep_timer">Таймер сна</string>
-    <string name="action_sort_order">Порядок сортировки</string>
+    <string name="action_sort_order">Сортировка</string>
     <string name="action_tag_editor">Редактор тэгов</string>
     <string name="add_action">Добавить</string>
     <string name="add_playlist_title">Добавление в плейлист</string>
@@ -216,7 +215,7 @@
     <string name="pref_title_blurred_album_art">Размытая обложка альбома</string>
     <string name="pref_title_classic_notification">Классический дизайн уведомления</string>
     <string name="pref_title_colored_notification">Окрашенное уведомление</string>
-    <string name="pref_title_gapless_playback">Воспроизведение без переходов</string>
+    <string name="pref_title_gapless_playback">Воспроизведение без пауз</string>
     <string name="pref_title_general_theme">Главная тема</string>
     <string name="pref_title_ignore_media_store_artwork">Игнорировать хранилище обложек</string>
     <string name="pref_title_last_added_interval">Интервал последнего добавленного плейлиста</string>

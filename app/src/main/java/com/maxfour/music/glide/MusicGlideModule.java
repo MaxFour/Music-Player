@@ -13,14 +13,14 @@ import com.maxfour.music.glide.audiocover.AudioFileCoverLoader;
 import java.io.InputStream;
 
 public class MusicGlideModule implements GlideModule {
-  @Override
-  public void applyOptions(Context context, GlideBuilder builder) {
 
-  }
+  	@Override
+  	public void applyOptions(Context context, GlideBuilder builder) {
+    }
 
-  @Override
-  public void registerComponents(Context context, Glide glide) {
-    glide.register(AudioFileCover.class, InputStream.class, new AudioFileCoverLoader.Factory());
-    glide.register(ArtistImage.class, InputStream.class, new ArtistImageLoader.Factory(context));
-  }
+    @Override
+    public void registerComponents(Context context, Glide glide) {
+        glide.register(AudioFileCover.class, InputStream.class, new AudioFileCoverLoader.Factory());
+        glide.register(ArtistImage.class, InputStream.class, new ArtistImageLoader.Factory(context));
+    }
 }

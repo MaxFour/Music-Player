@@ -1,22 +1,9 @@
 import javax.annotation.Nullable
 
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-
-    dependencies {
-        //noinspection GradleDynamicVersion
-        classpath 'com.jakewharton.hugo:hugo-plugin:1.2.1'
-    }
-}
-
 apply plugin: 'com.android.application'
-apply plugin: 'com.jakewharton.hugo'
 
 android {
     defaultConfig {
-        applicationId 'com.maxfour.music'
         versionCode 8
         versionName '1.2.1'
         minSdkVersion 16
@@ -24,6 +11,7 @@ android {
 
         renderscriptTargetApi 27
         vectorDrawables.useSupportLibrary = true
+        applicationId 'com.maxfour.music'
     }
     signingConfigs {
         release {
@@ -35,9 +23,6 @@ android {
     }
     compileSdkVersion 27
     buildToolsVersion '27.0.3'
-    dataBinding {
-        enabled = true
-    }
     buildTypes {
         release {
             minifyEnabled true
@@ -62,6 +47,10 @@ android {
 
 ext {
     supportLibVersion = '27.1.1'
+    // Required for IntroActivity
+    dataBinding {
+        enabled = true
+    }
 }
 
 dependencies {
@@ -91,19 +80,22 @@ dependencies {
     implementation 'com.afollestad.material-dialogs:commons:0.9.6.0'
     implementation 'com.afollestad:material-cab:0.1.12'
     implementation 'com.github.ksoichiro:android-observablescrollview:1.6.0'
-    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
-    implementation 'de.psdev.licensesdialog:licensesdialog:1.8.3'
-    implementation 'com.github.bumptech.glide:glide:3.8.0'
-    implementation 'com.github.bumptech.glide:okhttp3-integration:1.5.0'
-    implementation 'com.heinrichreimersoftware:material-intro:1.6.2'
+    implementation 'com.heinrichreimersoftware:material-intro:1.6'
     implementation 'me.zhanghai.android.materialprogressbar:library:1.4.2'
-    implementation 'org.eclipse.mylyn.github:org.eclipse.egit.github.core:2.1.5'
-    implementation 'com.jakewharton:butterknife:8.8.1'
-    implementation 'com.github.AdrienPoupa:jaudiotagger:2.2.3'
     implementation('com.h6ah4i.android.widget.advrecyclerview:advrecyclerview:0.11.0@aar') {
         transitive = true
     }
-    implementation 'com.google.code.gson:gson:2.8.2'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+    implementation 'com.jakewharton:butterknife:10.1.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+
+    implementation 'com.github.bumptech.glide:glide:3.8.0'
+    implementation 'com.github.bumptech.glide:okhttp3-integration:1.5.0'
+    implementation 'org.eclipse.mylyn.github:org.eclipse.egit.github.core:2.1.5'
+
+    implementation 'com.github.AdrienPoupa:jaudiotagger:2.2.3'
 }

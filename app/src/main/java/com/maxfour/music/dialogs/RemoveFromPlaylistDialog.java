@@ -1,6 +1,5 @@
 package com.maxfour.music.dialogs;
 
-import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.os.Bundle;
 import android.text.Html;
@@ -33,7 +32,6 @@ public class RemoveFromPlaylistDialog extends DialogFragment {
         return dialog;
     }
 
-    @SuppressLint("ResourceType")
     @NonNull
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {

@@ -18,50 +18,50 @@ import okhttp3.OkHttpClient;
 
 
 public class ArtistImageLoader implements StreamModelLoader<ArtistImage> {
-  // we need these very low values to make sure our artist image loading calls doesn't block the image loading queue
-  private static final int TIMEOUT = 500;
+    // we need these very low values to make sure our artist image loading calls doesn't block the image loading queue
+    private static final int TIMEOUT = 700;
 
-  private Context context;
-  private LastFMRestClient lastFMClient;
-  private ModelLoader<GlideUrl, InputStream> urlLoader;
-
-  public ArtistImageLoader(Context context, LastFMRestClient lastFMRestClient, ModelLoader<GlideUrl, InputStream> urlLoader) {
-    this.context = context;
-    this.lastFMClient = lastFMRestClient;
-    this.urlLoader = urlLoader;
-  }
-
-  @Override
-  public DataFetcher<InputStream> getResourceFetcher(ArtistImage model, int width, int height) {
-    return new ArtistImageFetcher(context, lastFMClient, model, urlLoader, width, height);
-  }
-
-  public static class Factory implements ModelLoaderFactory<ArtistImage, InputStream> {
+    private Context context;
     private LastFMRestClient lastFMClient;
-    private OkHttpUrlLoader.Factory okHttpFactory;
+    private ModelLoader<GlideUrl, InputStream> urlLoader;
 
-    public Factory(Context context) {
-      okHttpFactory = new OkHttpUrlLoader.Factory(new OkHttpClient.Builder()
-              .connectTimeout(TIMEOUT, TimeUnit.MILLISECONDS)
-              .readTimeout(TIMEOUT, TimeUnit.MILLISECONDS)
-              .writeTimeout(TIMEOUT, TimeUnit.MILLISECONDS)
-              .build());
-      lastFMClient = new LastFMRestClient(LastFMRestClient.createDefaultOkHttpClientBuilder(context)
-              .connectTimeout(TIMEOUT, TimeUnit.MILLISECONDS)
-              .readTimeout(TIMEOUT, TimeUnit.MILLISECONDS)
-              .writeTimeout(TIMEOUT, TimeUnit.MILLISECONDS)
-              .build());
+    public ArtistImageLoader(Context context, LastFMRestClient lastFMRestClient, ModelLoader<GlideUrl, InputStream> urlLoader) {
+        this.context = context;
+        this.lastFMClient = lastFMRestClient;
+        this.urlLoader = urlLoader;
     }
 
     @Override
-    public ModelLoader<ArtistImage, InputStream> build(Context context, GenericLoaderFactory factories) {
-      return new ArtistImageLoader(context, lastFMClient, okHttpFactory.build(context, factories));
+    public DataFetcher<InputStream> getResourceFetcher(ArtistImage model, int width, int height) {
+        return new ArtistImageFetcher(context, lastFMClient, model, urlLoader, width, height);
     }
 
-    @Override
-    public void teardown() {
-      okHttpFactory.teardown();
+    public static class Factory implements ModelLoaderFactory<ArtistImage, InputStream> {
+        private LastFMRestClient lastFMClient;
+        private OkHttpUrlLoader.Factory okHttpFactory;
+
+        public Factory(Context context) {
+            okHttpFactory = new OkHttpUrlLoader.Factory(new OkHttpClient.Builder()
+                    .connectTimeout(TIMEOUT, TimeUnit.MILLISECONDS)
+                    .readTimeout(TIMEOUT, TimeUnit.MILLISECONDS)
+                    .writeTimeout(TIMEOUT, TimeUnit.MILLISECONDS)
+                    .build());
+            lastFMClient = new LastFMRestClient(LastFMRestClient.createDefaultOkHttpClientBuilder(context)
+                    .connectTimeout(TIMEOUT, TimeUnit.MILLISECONDS)
+                    .readTimeout(TIMEOUT, TimeUnit.MILLISECONDS)
+                    .writeTimeout(TIMEOUT, TimeUnit.MILLISECONDS)
+                    .build());
+        }
+
+        @Override
+        public ModelLoader<ArtistImage, InputStream> build(Context context, GenericLoaderFactory factories) {
+            return new ArtistImageLoader(context, lastFMClient, okHttpFactory.build(context, factories));
+        }
+
+        @Override
+        public void teardown() {
+            okHttpFactory.teardown();
+        }
     }
-  }
 }
 

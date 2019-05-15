@@ -10,11 +10,11 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <View
+        <com.maxfour.music.views.StatusBarView
             android:layout_width="match_parent"
             android:layout_height="@dimen/status_bar_padding" />
 
-        <com.maxfour.music.views.StatusBarView
+        <View
             android:layout_width="match_parent"
             android:layout_height="?android:attr/actionBarSize" />
 

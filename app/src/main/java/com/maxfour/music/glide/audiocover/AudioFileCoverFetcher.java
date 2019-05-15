@@ -61,12 +61,13 @@ public class AudioFileCoverFetcher implements DataFetcher<InputStream> {
                     return new ByteArrayInputStream(imageData);
                 }
             }
-            // If there are any exceptions, we ignore them and continue to the other fallback method
+        // If there are any exceptions, we ignore them and continue to the other fallback method
         } catch (ReadOnlyFileException ignored) {
         } catch (InvalidAudioFrameException ignored) {
         } catch (TagException ignored) {
         } catch (IOException ignored) {
         }
+
         // Method 2: look for album art in external files
         File parent = new File(path).getParentFile();
         for (String fallback : FALLBACKS) {

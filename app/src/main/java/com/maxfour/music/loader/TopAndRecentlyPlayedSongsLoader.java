@@ -30,7 +30,7 @@ import com.maxfour.music.provider.SongPlayCountStore;
 import java.util.ArrayList;
 
 public class TopAndRecentlyPlayedSongsLoader {
-    public static final int NUMBER_OF_TOP_SONGS = 99;
+    public static final int NUMBER_OF_TOP_SONGS = 100;
 
     @NonNull
     public static ArrayList<Song> getRecentlyPlayedSongs(@NonNull Context context) {

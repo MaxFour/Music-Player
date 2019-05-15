@@ -47,8 +47,8 @@ public class AlbumCoverPagerAdapter extends CustomFragmentStatePagerAdapter {
         return dataSet.size();
     }
 
-    @NonNull
     @Override
+    @NonNull
     public Object instantiateItem(ViewGroup container, int position) {
         Object o = super.instantiateItem(container, position);
         if (currentColorReceiver != null && currentColorReceiverPosition == position) {

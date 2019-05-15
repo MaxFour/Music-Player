@@ -4,11 +4,13 @@
     <com.kabouzeid.appthemehelper.common.prefs.supportv7.ATEPreferenceCategory android:title="@string/pref_header_library">
 
         <com.maxfour.music.preferences.LibraryPreference
+            app:iconSpaceReserved="false"
             android:key="library_categories"
             android:summary="@string/pref_summary_library_categories"
             android:title="@string/library_categories" />
 
         <com.kabouzeid.appthemehelper.common.prefs.supportv7.ATESwitchPreference
+            app:iconSpaceReserved="false"
             android:defaultValue="false"
             android:key="remember_last_tab"
             android:summary="@string/pref_summary_remember_last_tab"
