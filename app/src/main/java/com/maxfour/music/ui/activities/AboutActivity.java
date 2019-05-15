@@ -1,5 +1,7 @@
 package com.maxfour.music.ui.activities;
 
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -9,6 +11,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.Toolbar;
 
@@ -39,6 +43,8 @@ public class AboutActivity extends AbsBaseActivity implements View.OnClickListen
     LinearLayout forkOnGitHub;
     @BindView(R.id.qiwi)
     LinearLayout qiwi;
+    @BindView(R.id.webmoney)
+    LinearLayout wm;
 
 
     @Override
@@ -77,7 +83,7 @@ public class AboutActivity extends AbsBaseActivity implements View.OnClickListen
         intro.setOnClickListener(this);
         forkOnGitHub.setOnClickListener(this);
         writeAnEmail.setOnClickListener(this);
-        qiwi.setOnClickListener(this);
+        wm.setOnClickListener(this);
     }
 
     @Override
@@ -110,8 +116,11 @@ public class AboutActivity extends AbsBaseActivity implements View.OnClickListen
             intent.putExtra(Intent.EXTRA_EMAIL, "mansurov.maksud@gmail.com");
             intent.putExtra(Intent.EXTRA_SUBJECT, "Music");
             startActivity(Intent.createChooser(intent, "E-Mail"));
-        } else if (v == qiwi) {
-            openUrl(QIWI);
+        } else if (v == wm) {
+            ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+            ClipData clipData = ClipData.newPlainText("WMZ&WMR", "Z776114750889 R662315834876");
+            clipboard.setPrimaryClip(clipData);
+            Toast.makeText(getApplicationContext(), R.string.clipboard_wallets_numbers_copied, Toast.LENGTH_LONG).show();
         }
     }
 
