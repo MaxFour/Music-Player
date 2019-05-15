@@ -3,9 +3,10 @@ package com.maxfour.music.util;
 import android.content.Context;
 import android.database.Cursor;
 import android.provider.MediaStore;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.webkit.MimeTypeMap;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import com.maxfour.music.loader.SongLoader;
 import com.maxfour.music.loader.SortedCursor;

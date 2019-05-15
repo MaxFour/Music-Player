@@ -1,7 +1,8 @@
 package com.maxfour.music.ui.fragments.mainactivity.library.pager;
 
 import android.os.Bundle;
-import android.support.v4.app.LoaderManager;
+
+import androidx.loader.app.LoaderManager;
 
 import com.maxfour.music.ui.fragments.AbsMusicServiceFragment;
 import com.maxfour.music.ui.fragments.mainactivity.library.LibraryFragment;

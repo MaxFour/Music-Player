@@ -1,6 +1,6 @@
 package com.maxfour.music.lastfm.rest.service;
 
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import com.maxfour.music.lastfm.rest.model.LastFmAlbum;
 import com.maxfour.music.lastfm.rest.model.LastFmArtist;

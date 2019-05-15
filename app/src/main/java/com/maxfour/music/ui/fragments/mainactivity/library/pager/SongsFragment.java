@@ -2,10 +2,11 @@ package com.maxfour.music.ui.fragments.mainactivity.library.pager;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v4.app.LoaderManager;
-import android.support.v4.content.Loader;
-import android.support.v7.widget.GridLayoutManager;
+
+import androidx.annotation.NonNull;
+import androidx.loader.app.LoaderManager;
+import androidx.loader.content.Loader;
+import androidx.recyclerview.widget.GridLayoutManager;
 
 import com.maxfour.music.R;
 import com.maxfour.music.adapter.song.ShuffleButtonSongAdapter;

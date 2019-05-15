@@ -1,7 +1,8 @@
 package com.maxfour.music.glide.palette;
 
 import android.graphics.Bitmap;
-import android.support.v7.graphics.Palette;
+
+import androidx.palette.graphics.Palette;
 
 public class BitmapPaletteWrapper {
   private final Bitmap mBitmap;

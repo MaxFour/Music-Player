@@ -4,8 +4,9 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
-import android.support.annotation.NonNull;
-import android.support.annotation.StyleRes;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.StyleRes;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;

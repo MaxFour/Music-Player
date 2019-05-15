@@ -1,6 +1,6 @@
 package com.maxfour.music.interfaces;
 
-import android.support.annotation.ColorInt;
+import androidx.annotation.ColorInt;
 
 public interface PaletteColorHolder {
 

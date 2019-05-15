@@ -2,8 +2,6 @@ package com.maxfour.music.ui.fragments.player;
 
 import android.animation.Animator;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v4.view.ViewPager;
 import android.view.GestureDetector;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -14,6 +12,9 @@ import android.view.animation.DecelerateInterpolator;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.viewpager.widget.ViewPager;
 
 import com.maxfour.music.R;
 import com.maxfour.music.adapter.AlbumCoverPagerAdapter;

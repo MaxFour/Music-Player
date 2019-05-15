@@ -3,7 +3,8 @@ package com.maxfour.music.loader;
 import android.content.Context;
 import android.database.Cursor;
 import android.provider.MediaStore;
-import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
 
 import com.maxfour.music.model.Song;
 import com.maxfour.music.util.PreferenceUtil;

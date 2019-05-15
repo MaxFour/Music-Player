@@ -2,10 +2,11 @@ package com.maxfour.music.ui.fragments.player;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.Toolbar;
 
 import com.maxfour.music.R;
 import com.maxfour.music.dialogs.AddToPlaylistDialog;

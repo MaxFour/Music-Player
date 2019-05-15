@@ -3,8 +3,9 @@ package com.maxfour.music.ui.activities.base;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.ColorInt;
 import android.view.View;
+
+import androidx.annotation.ColorInt;
 
 import com.kabouzeid.appthemehelper.ATH;
 import com.kabouzeid.appthemehelper.ThemeStore;

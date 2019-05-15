@@ -1,6 +1,6 @@
 package com.maxfour.music.interfaces;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.afollestad.materialcab.MaterialCab;
 

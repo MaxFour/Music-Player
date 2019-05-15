@@ -180,7 +180,7 @@
 
     </com.github.ksoichiro.android.observablescrollview.ObservableScrollView>
 
-    <android.support.v7.widget.Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         style="@style/Toolbar"
         android:layout_gravity="start|left"

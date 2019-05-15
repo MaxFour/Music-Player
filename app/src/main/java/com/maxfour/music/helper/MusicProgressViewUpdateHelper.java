@@ -2,7 +2,8 @@ package com.maxfour.music.helper;
 
 import android.os.Handler;
 import android.os.Message;
-import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
 
 public class MusicProgressViewUpdateHelper extends Handler {
   private static final int CMD_REFRESH_PROGRESS_VIEWS = 1;

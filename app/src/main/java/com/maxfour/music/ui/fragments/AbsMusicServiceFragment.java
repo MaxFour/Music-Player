@@ -2,9 +2,10 @@ package com.maxfour.music.ui.fragments;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v4.app.Fragment;
 import android.view.View;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
 
 import com.maxfour.music.interfaces.MusicServiceEventListener;
 import com.maxfour.music.ui.activities.base.AbsMusicServiceActivity;

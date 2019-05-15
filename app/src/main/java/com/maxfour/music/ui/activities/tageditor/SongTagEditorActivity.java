@@ -2,10 +2,11 @@ package com.maxfour.music.ui.activities.tageditor;
 
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.EditText;
+
+import androidx.annotation.NonNull;
 
 import com.kabouzeid.appthemehelper.util.ToolbarContentTintHelper;
 import com.maxfour.music.R;

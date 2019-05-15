@@ -1,8 +1,9 @@
 package com.maxfour.music.util;
 
 import android.graphics.Canvas;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.helper.ItemTouchHelper;
+
+import androidx.recyclerview.widget.ItemTouchHelper;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class SwipeAndDragHelper extends ItemTouchHelper.Callback {
 

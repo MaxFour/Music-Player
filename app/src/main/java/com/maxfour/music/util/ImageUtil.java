@@ -1,7 +1,13 @@
 package com.maxfour.music.util;
 
 import android.graphics.Bitmap;
-import android.support.annotation.NonNull;
+import androidx.annotation.AttrRes;
+import androidx.annotation.ColorInt;
+import androidx.annotation.DrawableRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.vectordrawable.graphics.drawable.VectorDrawableCompat;
+
 import com.kabouzeid.appthemehelper.util.TintHelper;
 
 public class ImageUtil {

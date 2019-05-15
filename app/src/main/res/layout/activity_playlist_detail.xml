@@ -15,7 +15,6 @@
         android:background="?colorPrimary"
         android:elevation="@dimen/toolbar_elevation"
         tools:ignore="UnusedAttribute">
-    <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         style="@style/Toolbar"
         android:background="@android:color/transparent" />
@@ -23,6 +22,8 @@
         android:id="@+id/cab_stub"
         android:layout_width="match_parent"
         android:layout_height="?android:attr/actionBarSize" />
+
+        <androidx.appcompat.widget.Toolbar
 
     </FrameLayout>
 

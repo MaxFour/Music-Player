@@ -2,8 +2,9 @@ package com.maxfour.music.views;
 
 import android.content.Context;
 import android.graphics.PorterDuff;
-import android.support.v7.widget.AppCompatImageView;
 import android.util.AttributeSet;
+
+import androidx.appcompat.widget.AppCompatImageView;
 
 import com.kabouzeid.appthemehelper.util.ATHUtil;
 import com.maxfour.music.R;

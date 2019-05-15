@@ -1,7 +1,8 @@
 package com.maxfour.music.ui.fragments.mainactivity;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+
+import androidx.fragment.app.Fragment;
 
 import com.maxfour.music.ui.activities.MainActivity;
 

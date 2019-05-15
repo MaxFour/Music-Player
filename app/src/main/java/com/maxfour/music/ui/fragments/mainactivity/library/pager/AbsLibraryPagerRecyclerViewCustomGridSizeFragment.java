@@ -1,10 +1,11 @@
 package com.maxfour.music.ui.fragments.mainactivity.library.pager;
 
 import android.os.Bundle;
-import android.support.annotation.LayoutRes;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
+
+import androidx.annotation.LayoutRes;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.maxfour.music.R;
 import com.maxfour.music.util.Util;

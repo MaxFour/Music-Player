@@ -2,7 +2,8 @@ package com.maxfour.music.misc;
 
 import android.content.Context;
 import android.os.AsyncTask;
-import android.support.annotation.Nullable;
+
+import androidx.annotation.Nullable;
 
 import java.lang.ref.WeakReference;
 

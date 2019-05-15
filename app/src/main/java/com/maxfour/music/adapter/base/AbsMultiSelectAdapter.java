@@ -1,11 +1,12 @@
 package com.maxfour.music.adapter.base;
 
 import android.content.Context;
-import android.support.annotation.MenuRes;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import androidx.annotation.MenuRes;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.afollestad.materialcab.MaterialCab;
 import com.maxfour.music.R;
