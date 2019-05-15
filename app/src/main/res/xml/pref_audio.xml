@@ -18,6 +18,13 @@
             android:summary="@string/pref_summary_gapless_playback"
             android:title="@string/pref_title_gapless_playback" />
 
-    </com.maxfour.appthemehelper.common.prefs.supportv7.ATEPreferenceCategory>
+        <com.kabouzeid.appthemehelper.common.prefs.supportv7.ATESwitchPreference
+            app:iconSpaceReserved="false"
+            android:defaultValue="true"
+            android:key="remember_shuffle"
+            android:summary="@string/pref_summary_remember_shuffle"
+            android:title="@string/pref_title_remember_shuffle" />
+
+    </com.kabouzeid.appthemehelper.common.prefs.supportv7.ATEPreferenceCategory>
 
 </androidx.preference.PreferenceScreen>

@@ -207,6 +207,7 @@
     <string name="pref_summary_ignore_media_store_artwork">Может увеличиться качество обложки, но также увеличивается время её отрисовки. Включайте только, если Вы имеете проблемы с низким разрешением обложек альбомов.</string>
     <string name="pref_summary_library_categories">Настроить видимость и порядок категорий библиотеки</string>
     <string name="pref_summary_remember_last_tab">Переходить на последнюю открытую вкладку при запуске</string>
+    <string name="pref_summary_remember_shuffle">Режим перемешивания останется включенным при выборе нового списка песен</string>
     <string name="pref_summary_synchronized_lyrics_show">В настоящее время поддерживаются только синхронизированные тексты в формате LRC. Либо встроенные, либо как отдельный файл.</string>
     <string name="pref_title_album_art_on_lockscreen">Показывать обложку альбома</string>
     <string name="pref_title_app_shortcuts">Цветные шорткаты</string>
@@ -222,6 +223,7 @@
     <string name="pref_title_navigation_bar">Цветная панель навигации</string>
     <string name="pref_title_now_playing_screen_appearance">Вид экрана воспроизведения</string>
     <string name="pref_title_remember_last_tab">Запомнить последнюю вкладку</string>
+    <string name="pref_title_remember_shuffle">Запомнить перемешивание</string>
     <string name="pref_title_synchronized_lyrics_show">Показать синхронизированные тексты</string>
     <string name="primary_color">Основной цвет</string>
     <string name="primary_color_desc">Основной цвет темы</string>
