@@ -14,8 +14,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.maxfour.appthemehelper.ThemeStore;
-import com.maxfour.appthemehelper.util.ATHUtil;
+import com.kabouzeid.appthemehelper.ThemeStore;
+import com.kabouzeid.appthemehelper.util.ATHUtil;
 import com.maxfour.music.R;
 import com.maxfour.music.helper.MusicPlayerRemote;
 import com.maxfour.music.helper.MusicProgressViewUpdateHelper;

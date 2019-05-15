@@ -12,7 +12,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.maxfour.appthemehelper.ThemeStore;
+import com.kabouzeid.appthemehelper.ThemeStore;
 import com.maxfour.music.R;
 import com.maxfour.music.ui.activities.base.AbsBaseActivity;
 import com.maxfour.music.ui.activities.intro.AppIntroActivity;

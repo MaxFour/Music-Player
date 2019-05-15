@@ -13,8 +13,8 @@ import android.view.ViewGroup;
 
 import com.afollestad.materialcab.MaterialCab;
 import com.bumptech.glide.Glide;
-import com.maxfour.appthemehelper.util.ColorUtil;
-import com.maxfour.appthemehelper.util.MaterialValueHelper;
+import com.kabouzeid.appthemehelper.util.ColorUtil;
+import com.kabouzeid.appthemehelper.util.MaterialValueHelper;
 import com.maxfour.music.R;
 import com.maxfour.music.adapter.base.AbsMultiSelectAdapter;
 import com.maxfour.music.adapter.base.MediaEntryViewHolder;

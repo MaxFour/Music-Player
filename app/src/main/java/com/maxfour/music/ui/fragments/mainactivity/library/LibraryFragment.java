@@ -20,10 +20,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.afollestad.materialcab.MaterialCab;
-import com.maxfour.appthemehelper.ThemeStore;
-import com.maxfour.appthemehelper.common.ATHToolbarActivity;
-import com.maxfour.appthemehelper.util.TabLayoutUtil;
-import com.maxfour.appthemehelper.util.ToolbarContentTintHelper;
+import com.kabouzeid.appthemehelper.ThemeStore;
+import com.kabouzeid.appthemehelper.common.ATHToolbarActivity;
+import com.kabouzeid.appthemehelper.util.TabLayoutUtil;
+import com.kabouzeid.appthemehelper.util.ToolbarContentTintHelper;
 import com.maxfour.music.R;
 import com.maxfour.music.adapter.MusicLibraryPagerAdapter;
 import com.maxfour.music.dialogs.CreatePlaylistDialog;

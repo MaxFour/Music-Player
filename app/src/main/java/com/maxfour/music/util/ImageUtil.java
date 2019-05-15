@@ -2,6 +2,7 @@ package com.maxfour.music.util;
 
 import android.graphics.Bitmap;
 import android.support.annotation.NonNull;
+import com.kabouzeid.appthemehelper.util.TintHelper;
 
 public class ImageUtil {
 

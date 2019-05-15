@@ -9,8 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.bumptech.glide.Glide;
-import com.maxfour.appthemehelper.util.ColorUtil;
-import com.maxfour.appthemehelper.util.MaterialValueHelper;
+import com.kabouzeid.appthemehelper.util.ColorUtil;
+import com.kabouzeid.appthemehelper.util.MaterialValueHelper;
 import com.maxfour.music.glide.MusicColoredTarget;
 import com.maxfour.music.glide.SongGlideRequest;
 import com.maxfour.music.helper.HorizontalAdapterHelper;

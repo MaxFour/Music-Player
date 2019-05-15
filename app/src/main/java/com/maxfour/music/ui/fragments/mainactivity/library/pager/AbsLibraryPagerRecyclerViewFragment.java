@@ -13,7 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.maxfour.appthemehelper.ThemeStore;
+import com.kabouzeid.appthemehelper.ThemeStore;
 import com.maxfour.music.R;
 import com.maxfour.music.util.ViewUtil;
 import com.simplecityapps.recyclerview_fastscroll.views.FastScrollRecyclerView;

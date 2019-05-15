@@ -13,10 +13,10 @@ import android.widget.ImageButton;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import com.maxfour.appthemehelper.ThemeStore;
-import com.maxfour.appthemehelper.util.ColorUtil;
-import com.maxfour.appthemehelper.util.MaterialValueHelper;
-import com.maxfour.appthemehelper.util.TintHelper;
+import com.kabouzeid.appthemehelper.ThemeStore;
+import com.kabouzeid.appthemehelper.util.ColorUtil;
+import com.kabouzeid.appthemehelper.util.MaterialValueHelper;
+import com.kabouzeid.appthemehelper.util.TintHelper;
 import com.maxfour.music.R;
 import com.maxfour.music.helper.MusicPlayerRemote;
 import com.maxfour.music.helper.MusicProgressViewUpdateHelper;

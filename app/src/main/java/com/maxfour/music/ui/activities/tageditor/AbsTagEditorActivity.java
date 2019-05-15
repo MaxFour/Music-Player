@@ -23,9 +23,9 @@ import android.widget.LinearLayout;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.github.ksoichiro.android.observablescrollview.ObservableScrollView;
-import com.maxfour.appthemehelper.ThemeStore;
-import com.maxfour.appthemehelper.util.ColorUtil;
-import com.maxfour.appthemehelper.util.TintHelper;
+import com.kabouzeid.appthemehelper.ThemeStore;
+import com.kabouzeid.appthemehelper.util.ColorUtil;
+import com.kabouzeid.appthemehelper.util.TintHelper;
 import com.maxfour.music.R;
 import com.maxfour.music.misc.DialogAsyncTask;
 import com.maxfour.music.misc.SimpleObservableScrollViewCallbacks;

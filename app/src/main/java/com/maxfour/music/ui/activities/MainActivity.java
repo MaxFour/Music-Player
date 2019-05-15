@@ -20,9 +20,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.maxfour.appthemehelper.ThemeStore;
-import com.maxfour.appthemehelper.util.ATHUtil;
-import com.maxfour.appthemehelper.util.NavigationViewUtil;
+import com.kabouzeid.appthemehelper.ThemeStore;
+import com.kabouzeid.appthemehelper.util.ATHUtil;
+import com.kabouzeid.appthemehelper.util.NavigationViewUtil;
 import com.maxfour.music.R;
 import com.maxfour.music.dialogs.ScanMediaFolderChooserDialog;
 import com.maxfour.music.glide.SongGlideRequest;

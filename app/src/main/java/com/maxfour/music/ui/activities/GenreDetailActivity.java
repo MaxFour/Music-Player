@@ -15,7 +15,7 @@ import android.widget.TextView;
 
 import com.afollestad.materialcab.MaterialCab;
 import com.h6ah4i.android.widget.advrecyclerview.utils.WrapperAdapterUtils;
-import com.maxfour.appthemehelper.ThemeStore;
+import com.kabouzeid.appthemehelper.ThemeStore;
 import com.maxfour.music.R;
 import com.maxfour.music.adapter.song.SongAdapter;
 import com.maxfour.music.helper.MusicPlayerRemote;

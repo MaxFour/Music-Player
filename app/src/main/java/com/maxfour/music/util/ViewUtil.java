@@ -18,9 +18,9 @@ import android.view.View;
 import android.view.animation.PathInterpolator;
 import android.widget.TextView;
 
-import com.maxfour.appthemehelper.util.ATHUtil;
-import com.maxfour.appthemehelper.util.ColorUtil;
-import com.maxfour.appthemehelper.util.MaterialValueHelper;
+import com.kabouzeid.appthemehelper.util.ATHUtil;
+import com.kabouzeid.appthemehelper.util.ColorUtil;
+import com.kabouzeid.appthemehelper.util.MaterialValueHelper;
 import com.maxfour.music.R;
 import com.simplecityapps.recyclerview_fastscroll.views.FastScrollRecyclerView;
 

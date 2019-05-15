@@ -15,7 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-import com.maxfour.appthemehelper.ThemeStore;
+import com.kabouzeid.appthemehelper.ThemeStore;
 import com.maxfour.music.R;
 import com.maxfour.music.adapter.SearchAdapter;
 import com.maxfour.music.interfaces.LoaderIds;

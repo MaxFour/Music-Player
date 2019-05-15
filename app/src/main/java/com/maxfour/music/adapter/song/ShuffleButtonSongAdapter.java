@@ -7,7 +7,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.maxfour.appthemehelper.ThemeStore;
+import com.kabouzeid.appthemehelper.ThemeStore;
 import com.maxfour.music.R;
 import com.maxfour.music.helper.MusicPlayerRemote;
 import com.maxfour.music.interfaces.CabHolder;

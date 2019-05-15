@@ -29,9 +29,9 @@ import android.widget.Toast;
 
 import com.afollestad.materialcab.MaterialCab;
 import com.afollestad.materialdialogs.MaterialDialog;
-import com.maxfour.appthemehelper.ThemeStore;
-import com.maxfour.appthemehelper.common.ATHToolbarActivity;
-import com.maxfour.appthemehelper.util.ToolbarContentTintHelper;
+import com.kabouzeid.appthemehelper.ThemeStore;
+import com.kabouzeid.appthemehelper.common.ATHToolbarActivity;
+import com.kabouzeid.appthemehelper.util.ToolbarContentTintHelper;
 import com.maxfour.music.R;
 import com.maxfour.music.adapter.SongFileAdapter;
 import com.maxfour.music.helper.MusicPlayerRemote;

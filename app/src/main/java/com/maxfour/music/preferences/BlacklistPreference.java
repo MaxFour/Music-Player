@@ -3,7 +3,7 @@ package com.maxfour.music.preferences;
 import android.content.Context;
 import android.util.AttributeSet;
 
-import com.maxfour.appthemehelper.common.prefs.supportv7.ATEDialogPreference;
+import com.kabouzeid.appthemehelper.common.prefs.supportv7.ATEDialogPreference;
 
 public class BlacklistPreference extends ATEDialogPreference {
     public BlacklistPreference(Context context) {

@@ -7,7 +7,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.EditText;
 
-import com.maxfour.appthemehelper.util.ToolbarContentTintHelper;
+import com.kabouzeid.appthemehelper.util.ToolbarContentTintHelper;
 import com.maxfour.music.R;
 import com.maxfour.music.loader.SongLoader;
 

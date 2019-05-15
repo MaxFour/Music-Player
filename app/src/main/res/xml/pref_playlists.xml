@@ -1,8 +1,8 @@
 <android.support.v7.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <com.maxfour.appthemehelper.common.prefs.supportv7.ATEPreferenceCategory android:title="@string/pref_header_playlists">
+    <com.kabouzeid.appthemehelper.common.prefs.supportv7.ATEPreferenceCategory android:title="@string/pref_header_playlists">
 
-        <com.maxfour.appthemehelper.common.prefs.supportv7.ATEListPreference
+        <com.kabouzeid.appthemehelper.common.prefs.supportv7.ATEListPreference
             android:defaultValue="this_month"
             android:entries="@array/pref_playlists_last_added_interval_titles"
             android:entryValues="@array/pref_playlists_last_added_interval_values"
@@ -11,6 +11,6 @@
             android:positiveButtonText="@null"
             android:title="@string/pref_title_last_added_interval" />
 
-    </com.maxfour.appthemehelper.common.prefs.supportv7.ATEPreferenceCategory>
+    </com.kabouzeid.appthemehelper.common.prefs.supportv7.ATEPreferenceCategory>
 
 </android.support.v7.preference.PreferenceScreen>
