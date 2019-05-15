@@ -3,13 +3,15 @@ import javax.annotation.Nullable
 apply plugin: 'com.android.application'
 
 android {
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
     defaultConfig {
         versionCode 8
         versionName '1.2.1'
         minSdkVersion 16
-        targetSdkVersion 27
+        targetSdkVersion 28
 
-        renderscriptTargetApi 27
+        renderscriptTargetApi 28
         vectorDrawables.useSupportLibrary = true
         applicationId 'com.maxfour.music'
     }
@@ -21,8 +23,6 @@ android {
             storePassword 'storePassword'
         }
     }
-    compileSdkVersion 27
-    buildToolsVersion '27.0.3'
     buildTypes {
         release {
             minifyEnabled true
