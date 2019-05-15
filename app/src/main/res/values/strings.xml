@@ -284,6 +284,7 @@
     <string name="write_an_email">Write an email</string>
     <string name="x_has_been_set_as_ringtone">Set \"%1$s\" as your ringtone</string>
     <string name="x_selected">%1$d selected</string>
+    <string name="yandex_money">Yandex.Money</string>
     <string name="year">Year</string>
     <string name="you_have_to_select_at_least_one_category">You have to select at least one category</string>
 </resources>

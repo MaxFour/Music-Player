@@ -73,7 +73,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/qiwi"
+            android:id="@+id/ym"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="?attr/rectSelector"
@@ -85,10 +85,10 @@
             android:paddingRight="16dp">
 
             <com.maxfour.music.views.IconImageView
-                android:id="@+id/icon_qiwi"
+                android:id="@+id/icon_ym"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                app:srcCompat="@drawable/ic_qiwi_white_24dp"
+                app:srcCompat="@drawable/ic_ym_white_24dp"
                 tools:ignore="ContentDescription,UnusedAttribute" />
 
             <LinearLayout
@@ -103,13 +103,13 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/qiwi"
+                    android:text="@string/yandex_money"
                     android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/qiwi_account"
+                    android:text="@string/ym_account"
                     android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
 
             </LinearLayout>

@@ -29,7 +29,7 @@ public class AboutActivity extends AbsBaseActivity implements View.OnClickListen
 
     private static String GITHUB = "https://github.com/MaxFour/Music-Player";
 
-    private static String QIWI= "https://qiwi.com/payment/form/99?extra%5B%E2%80%98account%E2%80%99%5D=998997524609";
+    private static String YM= "https://money.yandex.ru/to/410015372205898";
 
     @BindView(R.id.toolbar)
     Toolbar toolbar;
@@ -41,10 +41,10 @@ public class AboutActivity extends AbsBaseActivity implements View.OnClickListen
     LinearLayout writeAnEmail;
     @BindView(R.id.fork_on_github)
     LinearLayout forkOnGitHub;
-    @BindView(R.id.qiwi)
-    LinearLayout qiwi;
     @BindView(R.id.webmoney)
     LinearLayout wm;
+    @BindView(R.id.ym)
+    LinearLayout ym;
 
 
     @Override
@@ -84,6 +84,7 @@ public class AboutActivity extends AbsBaseActivity implements View.OnClickListen
         forkOnGitHub.setOnClickListener(this);
         writeAnEmail.setOnClickListener(this);
         wm.setOnClickListener(this);
+        ym.setOnClickListener(this);
     }
 
     @Override
@@ -121,6 +122,8 @@ public class AboutActivity extends AbsBaseActivity implements View.OnClickListen
             ClipData clipData = ClipData.newPlainText("WMZ&WMR", "Z776114750889 R662315834876");
             clipboard.setPrimaryClip(clipData);
             Toast.makeText(getApplicationContext(), R.string.clipboard_wallets_numbers_copied, Toast.LENGTH_LONG).show();
+        } else if (v == ym) {
+            openUrl(YM);
         }
     }
 

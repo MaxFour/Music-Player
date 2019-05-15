@@ -293,6 +293,7 @@
     <string name="write_an_email">Написать на электронную почту</string>
     <string name="x_has_been_set_as_ringtone">\"%1$s\" был установлен как рингтон</string>
     <string name="x_selected">%1$d выбрано</string>
+    <string name="yandex_money">Яндекс.Деньги</string>
     <string name="year">Год</string>
     <string name="you_have_to_select_at_least_one_category">Вы должны выбрать хотя бы одну категорию</string>
 </resources>

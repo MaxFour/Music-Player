@@ -3,10 +3,9 @@
     <string name="max_four" translatable="false">Max_Four</string>
 
     <string name="webmoney" translatable="false">WebMoney</string>
-    <string name="qiwi" translatable="false">Qiwi</string>
 
     <string name="webmoney_account" translatable="false">$: Z776114750889\n₽: R662315834876</string>
-    <string name="qiwi_account" translatable="false">+998 997524609</string>
+    <string name="ym_account" translatable="false">4100 1537 2205 898</string>
 
     <string name="grid_size_1" translatable="false">1</string>
     <string name="grid_size_2" translatable="false">2</string>
