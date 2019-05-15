@@ -121,7 +121,6 @@
     <string name="fork_on_github">Fork on GitHub</string>
     <string name="genre">Genre</string>
     <string name="genres">Genres</string>
-    <string name="history">History</string>
     <plurals name="inserted_x_songs_into_playlist_x">
         <item quantity="one">Inserted <xliff:g id="count">%1$d</xliff:g> song into the playlist \"%2$s\"</item>
         <item quantity="other">Inserted <xliff:g id="count">%1$d</xliff:g> songs into the playlist \"%2$s\"</item>
@@ -170,6 +169,7 @@
     <string name="ok">OK</string>
     <string name="only_on_wifi">Only on Wi-Fi</string>
     <string name="open_playing_queue_instruction">Swipe the card in the now playing screen up to reveal the full playing queue</string>
+    <string name="past_seven_days">Past 7 days</string>
     <string name="past_three_months">Past 3 months</string>
     <string name="permission_external_storage_denied">Permission to access external storage denied</string>
     <string name="permissions_denied">Permissions denied</string>
@@ -222,6 +222,7 @@
     <string name="primary_color">Primary color</string>
     <string name="primary_color_desc">The primary theme color</string>
     <string name="rearrange_playing_queue_instruction">Rearrange the playing queue by dragging a song from its song number</string>
+    <string name="recently_played">Recently played</string>
     <string name="remove_action">Remove</string>
     <string name="remove_cover">Remove cover</string>
     <string name="remove_from_blacklist">Remove from blacklist</string>

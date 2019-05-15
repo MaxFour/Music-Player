@@ -126,7 +126,6 @@
     <string name="fork_on_github">Ветка на GitHub</string>
     <string name="genre">Жанр</string>
     <string name="genres">Жанры</string>
-    <string name="history">История прослушивания</string>
     <plurals name="inserted_x_songs_into_playlist_x" tools:ignore="MissingQuantity">
         <item quantity="one"><xliff:g id="count">%1$d</xliff:g> песня добавлена в плейлист \"%2$s\"</item>
         <item quantity="few"><xliff:g id="count">%1$d</xliff:g> песни добавлены в плейлист \"%2$s\"</item>
@@ -176,6 +175,7 @@
     <string name="ok">OK</string>
     <string name="only_on_wifi">Только по Wi-Fi</string>
     <string name="open_playing_queue_instruction">Проведите по карточке на экране воспроизведения, чтобы просмотреть очередь</string>
+    <string name="past_seven_days">Последние 7 дней</string>
     <string name="past_three_months">Последние 3 месяца</string>
     <string name="permission_external_storage_denied">В разрешении на доступ к внешнему хранилищу отказано</string>
     <string name="permissions_denied">В разрешениях отказано</string>
@@ -228,6 +228,7 @@
     <string name="primary_color">Основной цвет</string>
     <string name="primary_color_desc">Основной цвет темы</string>
     <string name="rearrange_playing_queue_instruction">Редактируйте очередь воспроизведения, перетаскивая песни за их номер</string>
+    <string name="recently_played">Недавно воспроизведённые</string>
     <string name="remove_action">Убрать</string>
     <string name="remove_cover">Удалить обложку</string>
     <string name="remove_from_blacklist">Убрать из чёрного списка</string>
