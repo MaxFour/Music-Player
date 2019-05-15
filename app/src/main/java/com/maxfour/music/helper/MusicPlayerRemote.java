@@ -26,6 +26,7 @@ import com.maxfour.music.R;
 import com.maxfour.music.loader.SongLoader;
 import com.maxfour.music.model.Song;
 import com.maxfour.music.service.MusicService;
+import com.maxfour.music.util.PreferenceUtil;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -175,6 +176,9 @@ public class MusicPlayerRemote {
     public static void openQueue(final ArrayList<Song> queue, final int startPosition, final boolean startPlaying) {
         if (!tryToHandleOpenPlayingQueue(queue, startPosition, startPlaying) && musicService != null) {
             musicService.openQueue(queue, startPosition, startPlaying);
+            if (!PreferenceUtil.getInstance(musicService).rememberShuffle()){
+                setShuffleMode(MusicService.SHUFFLE_MODE_NONE);
+            }
         }
     }
 

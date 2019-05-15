@@ -8,7 +8,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
-import android.text.TextUtils;
+
 import androidx.core.app.NotificationCompat;
 import androidx.media.app.NotificationCompat.MediaStyle;
 import androidx.palette.graphics.Palette;
@@ -22,6 +22,7 @@ import com.maxfour.music.glide.palette.BitmapPaletteWrapper;
 import com.maxfour.music.model.Song;
 import com.maxfour.music.service.MusicService;
 import com.maxfour.music.ui.activities.MainActivity;
+import com.maxfour.music.util.MusicUtil;
 import com.maxfour.music.util.PreferenceUtil;
 
 import static com.maxfour.music.service.MusicService.ACTION_REWIND;
@@ -36,11 +37,8 @@ public class PlayingNotificationImpl24 extends PlayingNotification {
 
         final Song song = service.getCurrentSong();
 
-        final String albumName = song.albumName;
-        final String artistName = song.artistName;
         final boolean isPlaying = service.isPlaying();
-        final String text = TextUtils.isEmpty(albumName)
-                ? artistName : artistName + " - " + albumName;
+        final String text = MusicUtil.getSongInfoString(song);
 
         final int playButtonResId = isPlaying
                 ? R.drawable.ic_pause_white_24dp : R.drawable.ic_play_arrow_white_24dp;

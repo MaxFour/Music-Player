@@ -61,20 +61,6 @@ public abstract class AbsMultiSelectAdapter<VH extends RecyclerView.ViewHolder, 
         }
     }
 
-    protected void openCabIfNecessary() {
-        if (cabHolder != null) {
-            checked.clear();
-            for (int i = 0; i < getItemCount(); i++) {
-                I identifier = getIdentifier(i);
-                if (identifier != null) {
-                    checked.add(identifier);
-                }
-            }
-            notifyDataSetChanged();
-            updateCab();
-        }
-    }
-
     private void updateCab() {
         if (cabHolder != null) {
             if (cab == null || !cab.isActive()) {

@@ -21,7 +21,7 @@ import com.maxfour.music.adapter.base.AbsMultiSelectAdapter;
 import com.maxfour.music.adapter.base.MediaEntryViewHolder;
 import com.maxfour.music.glide.audiocover.AudioFileCover;
 import com.maxfour.music.interfaces.CabHolder;
-import com.maxfour.music.util.Util;
+import com.maxfour.music.util.ImageUtil;
 import com.simplecityapps.recyclerview_fastscroll.views.FastScrollRecyclerView;
 
 import java.io.File;
@@ -117,7 +117,7 @@ public class SongFileAdapter extends AbsMultiSelectAdapter<SongFileAdapter.ViewH
             holder.image.setColorFilter(iconColor, PorterDuff.Mode.SRC_IN);
             holder.image.setImageResource(R.drawable.ic_folder_white_24dp);
         } else {
-            Drawable error = Util.getTintedVectorDrawable(activity, R.drawable.ic_file_music_white_24dp, iconColor);
+            Drawable error = ImageUtil.getTintedVectorDrawable(activity, R.drawable.ic_file_music_white_24dp, iconColor);
             Glide.with(activity)
                     .load(new AudioFileCover(file.getPath()))
                     .diskCacheStrategy(DiskCacheStrategy.NONE)

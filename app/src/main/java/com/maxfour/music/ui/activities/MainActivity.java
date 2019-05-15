@@ -7,7 +7,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.provider.MediaStore;
-import android.support.design.widget.NavigationView;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -21,6 +20,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
 import com.bumptech.glide.Glide;
+import com.google.android.material.navigation.NavigationView;
 import com.kabouzeid.appthemehelper.ThemeStore;
 import com.kabouzeid.appthemehelper.util.ATHUtil;
 import com.kabouzeid.appthemehelper.util.NavigationViewUtil;
@@ -38,6 +38,7 @@ import com.maxfour.music.ui.activities.base.AbsSlidingMusicPanelActivity;
 import com.maxfour.music.ui.activities.intro.AppIntroActivity;
 import com.maxfour.music.ui.fragments.mainactivity.folders.FoldersFragment;
 import com.maxfour.music.ui.fragments.mainactivity.library.LibraryFragment;
+import com.maxfour.music.util.MusicUtil;
 import com.maxfour.music.util.NavigationUtil;
 import com.maxfour.music.util.PreferenceUtil;
 import com.sothree.slidinguppanel.SlidingUpPanelLayout;
@@ -191,7 +192,7 @@ public class MainActivity extends AbsSlidingMusicPanelActivity {
                 });
             }
             ((TextView) navigationDrawerHeader.findViewById(R.id.title)).setText(song.title);
-            ((TextView) navigationDrawerHeader.findViewById(R.id.text)).setText(song.artistName);
+            ((TextView) navigationDrawerHeader.findViewById(R.id.text)).setText(MusicUtil.getSongInfoString(song));
             SongGlideRequest.Builder.from(Glide.with(this), song)
                     .checkIgnoreMediaStore(this).build()
                     .into(((ImageView) navigationDrawerHeader.findViewById(R.id.image)));

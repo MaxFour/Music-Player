@@ -70,7 +70,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder
             case ALBUM:
                 final Album album = (Album) dataSet.get(position);
                 holder.title.setText(album.getTitle());
-                holder.text.setText(album.getArtistName());
+                holder.text.setText(MusicUtil.getAlbumInfoString(activity, album));
                 SongGlideRequest.Builder.from(Glide.with(activity), album.safeGetFirstSong())
                         .checkIgnoreMediaStore(activity).build()
                         .into(holder.image);
@@ -85,7 +85,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder
             case SONG:
                 final Song song = (Song) dataSet.get(position);
                 holder.title.setText(song.title);
-                holder.text.setText(song.albumName);
+                holder.text.setText(MusicUtil.getSongInfoString(song));
                 break;
             default:
                 holder.title.setText(dataSet.get(position).toString());

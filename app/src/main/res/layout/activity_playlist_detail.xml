@@ -39,6 +39,7 @@
         android:textColor="?android:textColorSecondary"
         android:textSize="@dimen/empty_text_size"
         android:visibility="gone" />
+
     <com.simplecityapps.recyclerview_fastscroll.views.FastScrollRecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"

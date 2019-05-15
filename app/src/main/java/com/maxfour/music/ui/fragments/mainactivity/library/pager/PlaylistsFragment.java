@@ -14,7 +14,7 @@ import com.maxfour.music.interfaces.LoaderIds;
 import com.maxfour.music.loader.PlaylistLoader;
 import com.maxfour.music.misc.WrappedAsyncTaskLoader;
 import com.maxfour.music.model.Playlist;
-import com.maxfour.music.model.smartplaylist.HistoryPlaylist;
+import com.maxfour.music.model.smartplaylist.RecentlyPlayedPlaylist;
 import com.maxfour.music.model.smartplaylist.LastAddedPlaylist;
 import com.maxfour.music.model.smartplaylist.MyTopSongsPlaylist;
 
@@ -77,7 +77,7 @@ public class PlaylistsFragment extends AbsLibraryPagerRecyclerViewFragment<Playl
             ArrayList<Playlist> playlists = new ArrayList<>();
 
             playlists.add(new LastAddedPlaylist(context));
-            playlists.add(new HistoryPlaylist(context));
+            playlists.add(new RecentlyPlayedPlaylist(context));
             playlists.add(new MyTopSongsPlaylist(context));
 
             playlists.addAll(PlaylistLoader.getAllPlaylists(context));

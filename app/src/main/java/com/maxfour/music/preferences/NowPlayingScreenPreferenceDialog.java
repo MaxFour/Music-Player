@@ -101,7 +101,7 @@ public class NowPlayingScreenPreferenceDialog extends DialogFragment implements 
             ViewGroup layout = (ViewGroup) inflater.inflate(R.layout.preference_now_playing_screen_item, collection, false);
             collection.addView(layout);
 
-            ImageView image = layout.findViewById( R.id.image);
+            ImageView image = layout.findViewById(R.id.image);
             TextView title = layout.findViewById(R.id.title);
             image.setImageResource(nowPlayingScreen.drawableResId);
             title.setText(nowPlayingScreen.titleRes);

@@ -43,10 +43,6 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-}
-
-ext {
-    supportLibVersion = '27.1.1'
     // Required for IntroActivity
     dataBinding {
         enabled = true
@@ -54,7 +50,6 @@ ext {
 }
 
 dependencies {
-    implementation "com.android.support:design:$supportLibVersion"
     implementation 'androidx.core:core:1.0.1'
     implementation 'androidx.legacy:legacy-support-core-utils:1.0.0'
     implementation 'androidx.legacy:legacy-support-core-ui:1.0.0'
@@ -66,6 +61,7 @@ dependencies {
     implementation 'androidx.gridlayout:gridlayout:1.0.0'
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'androidx.palette:palette:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
     implementation 'androidx.annotation:annotation:1.0.2'
     implementation 'androidx.percentlayout:percentlayout:1.0.0'
     implementation 'androidx.preference:preference:1.0.0'

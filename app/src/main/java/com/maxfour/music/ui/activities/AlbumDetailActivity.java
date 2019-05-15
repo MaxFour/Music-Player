@@ -52,7 +52,7 @@ import com.maxfour.music.ui.activities.tageditor.AlbumTagEditorActivity;
 import com.maxfour.music.util.MusicColorUtil;
 import com.maxfour.music.util.MusicUtil;
 import com.maxfour.music.util.NavigationUtil;
-import com.maxfour.music.util.Util;
+import com.maxfour.music.util.PreferenceUtil;
 
 import java.util.ArrayList;
 import java.util.Locale;
@@ -273,7 +273,7 @@ public class AlbumDetailActivity extends AbsSlidingMusicPanelActivity implements
                             return;
                         }
 
-                        if (!Util.isAllowedToDownloadMetadata(AlbumDetailActivity.this)) {
+                        if (!PreferenceUtil.isAllowedToDownloadMetadata(AlbumDetailActivity.this)) {
                             if (wiki != null) {
                                 wikiDialog.setContent(wiki);
                             } else {
@@ -334,7 +334,7 @@ public class AlbumDetailActivity extends AbsSlidingMusicPanelActivity implements
                             .positiveText(android.R.string.ok)
                             .build();
                 }
-                if (Util.isAllowedToDownloadMetadata(this)) {
+                if (PreferenceUtil.isAllowedToDownloadMetadata(this)) {
                     if (wiki != null) {
                         wikiDialog.setContent(wiki);
                         wikiDialog.show();
@@ -411,7 +411,7 @@ public class AlbumDetailActivity extends AbsSlidingMusicPanelActivity implements
         this.album = album;
         loadAlbumCover();
 
-        if (Util.isAllowedToDownloadMetadata(this)) {
+        if (PreferenceUtil.isAllowedToDownloadMetadata(this)) {
             loadWiki();
         }
 

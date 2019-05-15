@@ -47,6 +47,7 @@ import com.maxfour.music.model.lyrics.Lyrics;
 import com.maxfour.music.ui.activities.base.AbsSlidingMusicPanelActivity;
 import com.maxfour.music.ui.fragments.player.AbsPlayerFragment;
 import com.maxfour.music.ui.fragments.player.PlayerAlbumCoverFragment;
+import com.maxfour.music.util.ImageUtil;
 import com.maxfour.music.util.MusicUtil;
 import com.maxfour.music.util.Util;
 import com.maxfour.music.util.ViewUtil;
@@ -289,7 +290,7 @@ public class FlatPlayerFragment extends AbsPlayerFragment implements PlayerAlbum
                 if (activity != null) {
                     int res = isFavorite ? R.drawable.ic_favorite_white_24dp : R.drawable.ic_favorite_border_white_24dp;
                     int color = ToolbarContentTintHelper.toolbarContentColor(activity, Color.TRANSPARENT);
-                    Drawable drawable = Util.getTintedVectorDrawable(activity, res, color);
+                    Drawable drawable = ImageUtil.getTintedVectorDrawable(activity, res, color);
                     toolbar.getMenu().findItem(R.id.action_toggle_favorite)
                             .setIcon(drawable)
                             .setTitle(isFavorite ? getString(R.string.action_remove_from_favorites) : getString(R.string.action_add_to_favorites));
@@ -332,7 +333,7 @@ public class FlatPlayerFragment extends AbsPlayerFragment implements PlayerAlbum
                     if (toolbar != null && activity != null)
                         if (toolbar.getMenu().findItem(R.id.action_show_lyrics) == null) {
                             int color = ToolbarContentTintHelper.toolbarContentColor(activity, Color.TRANSPARENT);
-                            Drawable drawable = Util.getTintedVectorDrawable(activity, R.drawable.ic_comment_text_outline_white_24dp, color);
+                            Drawable drawable = ImageUtil.getTintedVectorDrawable(activity, R.drawable.ic_comment_text_outline_white_24dp, color);
                             toolbar.getMenu()
                                     .add(Menu.NONE, R.id.action_show_lyrics, Menu.NONE, R.string.action_show_lyrics)
                                     .setIcon(drawable)
@@ -548,7 +549,7 @@ public class FlatPlayerFragment extends AbsPlayerFragment implements PlayerAlbum
         public void updateCurrentSong(Song song) {
             currentSong = song;
             currentSongViewHolder.title.setText(song.title);
-            currentSongViewHolder.text.setText(song.artistName);
+            currentSongViewHolder.text.setText(MusicUtil.getSongInfoString(song));
         }
 
         @Override
@@ -576,7 +577,7 @@ public class FlatPlayerFragment extends AbsPlayerFragment implements PlayerAlbum
         @Override
         public void updateCurrentSong(Song song) {
             fragment.toolbar.setTitle(song.title);
-            fragment.toolbar.setSubtitle(song.artistName);
+            fragment.toolbar.setSubtitle(MusicUtil.getSongInfoString(song));
         }
 
         @Override
