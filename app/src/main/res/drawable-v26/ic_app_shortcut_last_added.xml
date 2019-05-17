@@ -1,9 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="108dp"
     android:height="108dp"
-    android:viewportHeight="176"
-    android:viewportWidth="176">
+    android:viewportHeight="176.0"
+    android:viewportWidth="176.0">
 
     <group
         android:scaleX="0.25"
@@ -11,8 +10,8 @@
         android:translateX="66.5"
         android:translateY="66.5">
         <path
-            android:name="ic_app_shortcut_last_added_ic"
-            android:fillColor="#000"
-            android:pathData="m29.333,44h-14.667v102.67c0,8.067 6.6,14.667 14.667,14.667h102.67v-14.667h-102.67zM146.663,14.667h-88c-8.067,0 -14.667,6.6 -14.667,14.667v88c0,8.067 6.6,14.667 14.667,14.667h88c8.067,0 14.667,-6.6 14.667,-14.667v-88c0,-8.067 -6.6,-14.667 -14.667,-14.667zM146.663,117.337h-88v-88h88zM95.33,102.67h14.667v-22h22v-14.667h-22v-22h-14.667v22h-22v14.667h22z" />
+          android:name="ic_app_shortcut_last_added_ic"
+          android:fillColor="#000000"
+          android:pathData="m29.333,44h-14.667v102.67c0,8.067 6.6,14.667 14.667,14.667h102.67v-14.667h-102.67zM146.663,14.667h-88c-8.067,0 -14.667,6.6 -14.667,14.667v88c0,8.067 6.6,14.667 14.667,14.667h88c8.067,0 14.667,-6.6 14.667,-14.667v-88c0,-8.067 -6.6,-14.667 -14.667,-14.667zM146.663,117.337h-88v-88h88zM95.33,102.67h14.667v-22h22v-14.667h-22v-22h-14.667v22h-22v14.667h22z" />
     </group>
 </vector>

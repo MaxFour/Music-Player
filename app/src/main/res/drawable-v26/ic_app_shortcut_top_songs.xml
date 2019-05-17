@@ -1,9 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="108dp"
     android:height="108dp"
-    android:viewportHeight="176"
-    android:viewportWidth="176">
+    android:viewportHeight="176.0"
+    android:viewportWidth="176.0">
 
     <group
         android:scaleX="0.28"
@@ -11,8 +10,8 @@
         android:translateX="63"
         android:translateY="63">
         <path
-            android:name="ic_app_shortcut_top_songs_ic"
-            android:fillColor="#000"
-            android:pathData="m123.57,50.233 l10.56,10.56 -35.787,35.787 -24.127,-24.127c-2.86,-2.86 -7.48,-2.86 -10.34,0l-44,44.073c-2.86,2.86 -2.86,7.48 0,10.34s7.48,2.86 10.34,0l38.793,-38.867 24.127,24.127c2.86,2.86 7.48,2.86 10.34,0l40.993,-40.92 10.56,10.56c2.273,2.273 6.233,0.66 6.233,-2.567v-31.533c0.073,-2.053 -1.54,-3.667 -3.593,-3.667h-31.46c-3.3,0 -4.913,3.96 -2.64,6.233z" />
+          android:name="ic_app_shortcut_top_songs_ic"
+          android:fillColor="#000000"
+          android:pathData="m123.57,50.233 l10.56,10.56 -35.787,35.787 -24.127,-24.127c-2.86,-2.86 -7.48,-2.86 -10.34,0l-44,44.073c-2.86,2.86 -2.86,7.48 0,10.34s7.48,2.86 10.34,0l38.793,-38.867 24.127,24.127c2.86,2.86 7.48,2.86 10.34,0l40.993,-40.92 10.56,10.56c2.273,2.273 6.233,0.66 6.233,-2.567v-31.533c0.073,-2.053 -1.54,-3.667 -3.593,-3.667h-31.46c-3.3,0 -4.913,3.96 -2.64,6.233z" />
     </group>
 </vector>
