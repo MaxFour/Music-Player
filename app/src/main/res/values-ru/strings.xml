@@ -47,7 +47,8 @@
     <string name="add_action">Добавить</string>
     <string name="add_playlist_title">Добавление в плейлист</string>
     <string name="added_title_to_playing_queue">1 песня добавлена в очередь воспроизведения</string>
-    <plurals name="added_x_titles_to_playing_queue" tools:ignore="MissingQuantity">
+    <plurals name="added_x_titles_to_playing_queue">
+        <item quantity="one"><xliff:g id="count">%1$d</xliff:g> песня добавлена в очередь воспроизведения</item>
         <item quantity="few"><xliff:g id="count">%1$d</xliff:g> песни добавлено в очередь воспроизведения</item>
         <item quantity="many"><xliff:g id="count">%1$d</xliff:g> песен добавлено в очередь воспроизведения</item>
     </plurals>
@@ -56,7 +57,8 @@
     <string name="album_or_artist_empty">Поля названия альбома или исполнителя пусты</string>
     <string name="album_tag_editor">Альбом</string>
     <string name="albums">Альбомы</string>
-    <plurals name="albums_x" tools:ignore="MissingQuantity">
+    <plurals name="albums_x">
+        <item quantity="one" tools:ignore="ImpliedQuantity">альбом</item>
         <item quantity="few">альбома</item>
         <item quantity="many">альбомов</item>
     </plurals>
@@ -101,11 +103,13 @@
     <string name="delete_song_title">Удаление песни</string>
     <string name="delete_song_x"><![CDATA[Удалить песню \"<b>%1$s</b>\"?]]></string>
     <string name="delete_songs_title">Удаление песен</string>
-    <plurals name="delete_x_playlists" tools:ignore="MissingQuantity">
+    <plurals name="delete_x_playlists">
+        <item quantity="one"><![CDATA[Удалить <b>%1$d</b> плейлист?]]></item>
         <item quantity="few"><![CDATA[Удалить <b>%1$d</b> плейлиста?]]></item>
         <item quantity="many"><![CDATA[Удалить <b>%1$d</b> плейлистов?]]></item>
     </plurals>
-    <plurals name="delete_x_songs" tools:ignore="MissingQuantity">
+    <plurals name="delete_x_songs">
+        <item quantity="one"><![CDATA[Удалить <b><xliff:g id="count">%1$d</xliff:g></b> песню?]]></item>
         <item quantity="few"><![CDATA[Удалить <b><xliff:g id="count">%1$d</xliff:g></b> песни?]]></item>
         <item quantity="many"><![CDATA[Удалить <b><xliff:g id="count">%1$d</xliff:g></b> песен?]]></item>
     </plurals>
@@ -129,7 +133,7 @@
     <string name="fork_on_github">Ветка на GitHub</string>
     <string name="genre">Жанр</string>
     <string name="genres">Жанры</string>
-    <plurals name="inserted_x_songs_into_playlist_x" tools:ignore="MissingQuantity">
+    <plurals name="inserted_x_songs_into_playlist_x">
         <item quantity="one"><xliff:g id="count">%1$d</xliff:g> песня добавлена в плейлист \"%2$s\"</item>
         <item quantity="few"><xliff:g id="count">%1$d</xliff:g> песни добавлены в плейлист \"%2$s\"</item>
         <item quantity="many"><xliff:g id="count">%1$d</xliff:g> песен добавлено в плейлист \"%2$s\"</item>
@@ -238,7 +242,8 @@
     <string name="remove_song_from_playlist_title">Удаление песни из плейлиста</string>
     <string name="remove_song_x_from_playlist"><![CDATA[Удалить песню \"<b>%1$s</b>\" из плейлиста?]]></string>
     <string name="remove_songs_from_playlist_title">Удаление песен из плейлиста</string>
-    <plurals name="remove_x_songs_from_playlist" tools:ignore="MissingQuantity">
+    <plurals name="remove_x_songs_from_playlist">
+        <item quantity="one"><![CDATA[Удалить <b><xliff:g id="count">%1$d</xliff:g></b> песню из плейлиста?]]></item>
         <item quantity="few"><![CDATA[Удалить <b><xliff:g id="count">%1$d</xliff:g></b> песни из плейлиста?]]></item>
         <item quantity="many"><![CDATA[Удалить <b><xliff:g id="count">%1$d</xliff:g></b> песен из плейлиста?]]></item>
     </plurals>
@@ -268,7 +273,8 @@
     <string name="song_hint">Песня (2 для песни 2 или 3004 для песни 4 CD3)</string>
     <string name="song_tag_editor">Песня</string>
     <string name="songs">Песни</string>
-    <plurals name="songs_x" tools:ignore="MissingQuantity">
+    <plurals name="songs_x">
+        <item quantity="one" tools:ignore="ImpliedQuantity">песня</item>
         <item quantity="few">песни</item>
         <item quantity="many">песен</item>
     </plurals>
