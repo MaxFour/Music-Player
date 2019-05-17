@@ -54,7 +54,7 @@
                 android:id="@+id/icon_info"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                app:srcCompat="@drawable/ic_info_outline_white_24dp"
+                app:srcCompat="@drawable/ic_info_white_24dp"
                 tools:ignore="ContentDescription,UnusedAttribute" />
 
             <LinearLayout
