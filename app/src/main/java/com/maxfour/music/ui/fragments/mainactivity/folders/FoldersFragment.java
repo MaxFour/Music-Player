@@ -3,6 +3,7 @@ package com.maxfour.music.ui.fragments.mainactivity.folders;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.media.MediaScannerConnection;
 import android.os.Bundle;
 import android.os.Environment;
@@ -44,6 +45,7 @@ import com.maxfour.music.misc.UpdateToastMediaScannerCompletionListener;
 import com.maxfour.music.misc.WrappedAsyncTaskLoader;
 import com.maxfour.music.model.Song;
 import com.maxfour.music.ui.activities.MainActivity;
+import com.maxfour.music.ui.activities.SearchActivity;
 import com.maxfour.music.ui.fragments.mainactivity.AbsMainActivityFragment;
 import com.maxfour.music.util.FileUtil;
 import com.maxfour.music.util.MusicColorUtil;
@@ -289,11 +291,8 @@ public class FoldersFragment extends AbsMainActivityFragment implements MainActi
             case R.id.action_go_to_start_directory:
                 setCrumb(new BreadCrumbLayout.Crumb(FileUtil.safeGetCanonicalFile(PreferenceUtil.getInstance(getActivity()).getStartDirectory())), true);
                 return true;
-            case R.id.action_scan:
-                BreadCrumbLayout.Crumb crumb = getActiveCrumb();
-                if (crumb != null) {
-                    new ListPathsAsyncTask(getActivity(), this::scanPaths).execute(new ListPathsAsyncTask.LoadingInfo(crumb.getFile(), AUDIO_FILE_FILTER));
-                }
+            case R.id.action_search:
+                startActivity(new Intent(getActivity(), SearchActivity.class));
                 return true;
         }
         return super.onOptionsItemSelected(item);
