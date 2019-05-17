@@ -41,10 +41,10 @@ public class DeletePlaylistDialog extends DialogFragment {
         CharSequence content;
         //noinspection ConstantConditions
         if (playlists.size() > 1) {
-            title = R.string.delete_playlists_title;
+            title = R.string.delete_playlists_dialog_title;
             content = Html.fromHtml(getResources().getQuantityString(R.plurals.delete_x_playlists, playlists.size(), playlists.size()));
         } else {
-            title = R.string.delete_playlist_title;
+            title = R.string.delete_playlist_dialog_title;
             content = Html.fromHtml(getString(R.string.delete_playlist_x, playlists.get(0).name));
         }
         return new MaterialDialog.Builder(getActivity())

@@ -94,9 +94,10 @@
     <string name="currently_listening_to_x_by_x">Сейчас воспроизводится %1$s от исполнителя %2$s</string>
     <string name="dark_theme_name">Тёмная</string>
     <string name="delete_action">Удалить</string>
-    <string name="delete_playlist_title">Удаление плейлиста</string>
+    <string name="delete_playlist_dialog_title">Удаление плейлиста</string>
+    <string name="delete_playlist_s_title">Удалить плейлист(ы)</string>
     <string name="delete_playlist_x"><![CDATA[Удалить плейлист \"<b>%1$s</b>\"?]]></string>
-    <string name="delete_playlists_title">Удаление плейлистов</string>
+    <string name="delete_playlists_dialog_title">Удаление плейлистов</string>
     <string name="delete_song_title">Удаление песни</string>
     <string name="delete_song_x"><![CDATA[Удалить песню \"<b>%1$s</b>\"?]]></string>
     <string name="delete_songs_title">Удаление песен</string>
