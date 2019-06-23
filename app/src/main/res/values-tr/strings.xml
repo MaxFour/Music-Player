@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" xmlns:tools="http://schemas.android.com/tools">
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="accent_color">Ara renk</string>
     <string name="accent_color_desc">Ara tema rengi</string>
     <string name="action_about">Hakkında</string>
@@ -10,7 +10,6 @@
     <string name="action_clear_playlist">Oynatma listesini temizle</string>
     <string name="action_delete">Sil</string>
     <string name="action_delete_from_device">Cihazdan sil</string>
-    <string name="action_delete_playlist">Oynatma listesini sil</string>
     <string name="action_details">Detaylar</string>
     <string name="action_go_to_album">Albüm\'e git</string>
     <string name="action_go_to_artist">Sanatçı\'ya git</string>
@@ -48,7 +47,8 @@
     <string name="add_action">Ekle</string>
     <string name="add_playlist_title">Oynatma listesine ekle</string>
     <string name="added_title_to_playing_queue">Oynatma sırasına 1 şarkı eklendi</string>
-    <plurals name="added_x_titles_to_playing_queue" tools:ignore="MissingQuantity">
+    <plurals name="added_x_titles_to_playing_queue">
+        <item quantity="one"></item>
         <item quantity="other">Oynatma sırasına <xliff:g id="count">%1$d</xliff:g> şarkı eklendi</item>
     </plurals>
     <string name="album">Albüm</string>
@@ -56,7 +56,8 @@
     <string name="album_or_artist_empty">Başlık veya sanatçı boş</string>
     <string name="album_tag_editor">Albüm</string>
     <string name="albums">Albümler</string>
-    <plurals name="albums_x" tools:ignore="MissingQuantity">
+    <plurals name="albums_x">
+        <item quantity="one"></item>
         <item quantity="other">albüm</item>
     </plurals>
     <string name="always">Her zaman</string>
@@ -92,16 +93,16 @@
     <string name="currently_listening_to_x_by_x">Şu anda %2$s sanatçısından %1$s şarkısını dinliyorsunuz</string>
     <string name="dark_theme_name">Karanlık</string>
     <string name="delete_action">Sil</string>
-    <string name="delete_playlist_title">Oynatma listesini sil</string>
     <string name="delete_playlist_x"><![CDATA[\"<b>%1$s</b>\" oynatma listesini sil?]]></string>
-    <string name="delete_playlists_title">Oynatma listelerini sil</string>
     <string name="delete_song_title">Şarkıyı sil</string>
     <string name="delete_song_x"><![CDATA[\"<b>%1$s</b>\" şarkısını sil?]]></string>
     <string name="delete_songs_title">Şarkıları sil</string>
-    <plurals name="delete_x_playlists" tools:ignore="MissingQuantity">
+    <plurals name="delete_x_playlists">
+        <item quantity="one"></item>
         <item quantity="other"><![CDATA[<b>%1$d</b> oynatma listesini sil?]]></item>
     </plurals>
-    <plurals name="delete_x_songs" tools:ignore="MissingQuantity">
+    <plurals name="delete_x_songs">
+        <item quantity="one"></item>
         <item quantity="other"><![CDATA[<b><xliff:g id="count">%1$d</xliff:g></b> şarkıyı sil?]]></item>
     </plurals>
     <plurals name="deleted_x_songs">
@@ -122,7 +123,6 @@
     <string name="fork_on_github">GitHub\'da Fork\'layın</string>
     <string name="genre">Tür</string>
     <string name="genres">Türler</string>
-    <string name="history">Geçmiş</string>
     <plurals name="inserted_x_songs_into_playlist_x">
         <item quantity="one"><xliff:g id="count">%1$d</xliff:g> şarkı \"%2$s\" oynatma listesine eklendi</item>
         <item quantity="other"><xliff:g id="count">%1$d</xliff:g> şarkı \"%2$s\" oynatma listesine eklendi</item>
@@ -171,6 +171,7 @@
     <string name="ok">Tamam</string>
     <string name="only_on_wifi">Yalnızca Wi-Fi üzerinden</string>
     <string name="open_playing_queue_instruction">Oynatma ekranında ekranında kartı yukarı kaydırarak oynatma sırasını görüntüleyin</string>
+    <string name="past_seven_days">Son 7 günde</string>
     <string name="past_three_months">Geçen 3 ay</string>
     <string name="permission_external_storage_denied">Harici depolama erişimi reddedildi</string>
     <string name="permissions_denied">İzinler reddedildi</string>
@@ -227,7 +228,8 @@
     <string name="remove_song_from_playlist_title">Şarkıyı oynatma listesinden kaldır</string>
     <string name="remove_song_x_from_playlist"><![CDATA[\"<b>%1$s</b>\" şarkısını listeden kaldır?]]></string>
     <string name="remove_songs_from_playlist_title">Oynatma listesinden şarkıları kaldır</string>
-    <plurals name="remove_x_songs_from_playlist" tools:ignore="MissingQuantity">
+    <plurals name="remove_x_songs_from_playlist">
+        <item quantity="one"></item>
         <item quantity="other"><![CDATA[Oynatma listesinden <b><xliff:g id="count">%1$d</xliff:g></b> şarkıyı kaldır?]]></item>
     </plurals>
     <string name="rename_action">Yeniden adlandır</string>
@@ -254,7 +256,8 @@
     <string name="song_hint">Şarkı (2. şarkı için 2 veya CD3\'teki 4. şarkı için 3004)</string>
     <string name="song_tag_editor">Şarkı</string>
     <string name="songs">Şarkı</string>
-    <plurals name="songs_x" tools:ignore="MissingQuantity">
+    <plurals name="songs_x">
+        <item quantity="one"></item>
         <item quantity="other">şarkı</item>
     </plurals>
     <string name="sort_order_a_z">Artan</string>

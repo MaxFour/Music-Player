@@ -10,7 +10,6 @@
     <string name="action_clear_playlist">Rensa spellistan</string>
     <string name="action_delete">Ta bort</string>
     <string name="action_delete_from_device">Ta bort från enheten</string>
-    <string name="action_delete_playlist">Ta bort spellistan</string>
     <string name="action_details">Detaljer</string>
     <string name="action_go_to_album">Gå till album</string>
     <string name="action_go_to_artist">Gå till artist</string>
@@ -92,9 +91,7 @@
     <string name="currently_listening_to_x_by_x">Lyssnar nu på %1$s av %2$s</string>
     <string name="dark_theme_name">Mörk</string>
     <string name="delete_action">Ta bort</string>
-    <string name="delete_playlist_title">Ta bort spellistan</string>
     <string name="delete_playlist_x"><![CDATA[Ta bort spellistan \"<b>%1$s</b>\"?]]></string>
-    <string name="delete_playlists_title">Ta bort spellistor</string>
     <string name="delete_song_title">Ta bort låten</string>
     <string name="delete_song_x"><![CDATA[Ta bort låten \"<b>%1$s</b>\"?]]></string>
     <string name="delete_songs_title">Ta bort låtar</string>
@@ -122,7 +119,6 @@
     <string name="fork_on_github">Gaffel på github</string>
     <string name="genre">Genre</string>
     <string name="genres">Genrer</string>
-    <string name="history">Historik</string>
     <plurals name="inserted_x_songs_into_playlist_x">
         <item quantity="one">Lade till <xliff:g id="count">%1$d</xliff:g> låt i spellistan \"%2$s\"</item>
         <item quantity="other">Lade till <xliff:g id="count">%1$d</xliff:g> låtar i spellistan \"%2$s\"</item>
