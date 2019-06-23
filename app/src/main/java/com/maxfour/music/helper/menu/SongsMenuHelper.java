@@ -10,9 +10,10 @@ import com.maxfour.music.helper.MusicPlayerRemote;
 import com.maxfour.music.model.Song;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class SongsMenuHelper {
-    public static boolean handleMenuClick(@NonNull FragmentActivity activity, @NonNull ArrayList<Song> songs, int menuItemId) {
+    public static boolean handleMenuClick(@NonNull FragmentActivity activity, @NonNull List<Song> songs, int menuItemId) {
         switch (menuItemId) {
             case R.id.action_play_next:
                 MusicPlayerRemote.playNext(songs);
