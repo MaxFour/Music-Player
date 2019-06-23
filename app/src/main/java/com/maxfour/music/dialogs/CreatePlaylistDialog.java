@@ -15,6 +15,7 @@ import com.maxfour.music.model.Song;
 import com.maxfour.music.util.PlaylistsUtil;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class CreatePlaylistDialog extends DialogFragment {
 
@@ -27,17 +28,17 @@ public class CreatePlaylistDialog extends DialogFragment {
 
     @NonNull
     public static CreatePlaylistDialog create(@Nullable Song song) {
-        ArrayList<Song> list = new ArrayList<>();
+        List<Song> list = new ArrayList<>();
         if (song != null)
             list.add(song);
         return create(list);
     }
 
     @NonNull
-    public static CreatePlaylistDialog create(ArrayList<Song> songs) {
+    public static CreatePlaylistDialog create(List<Song> songs) {
         CreatePlaylistDialog dialog = new CreatePlaylistDialog();
         Bundle args = new Bundle();
-        args.putParcelableArrayList(SONGS, songs);
+        args.putParcelableArrayList(SONGS, new ArrayList<>(songs));
         dialog.setArguments(args);
         return dialog;
     }
@@ -61,7 +62,7 @@ public class CreatePlaylistDialog extends DialogFragment {
                             final int playlistId = PlaylistsUtil.createPlaylist(getActivity(), name);
                             if (getActivity() != null) {
                                 //noinspection unchecked
-                                ArrayList<Song> songs = getArguments().getParcelableArrayList(SONGS);
+                                List<Song> songs = getArguments().getParcelableArrayList(SONGS);
                                 if (songs != null && !songs.isEmpty()) {
                                     PlaylistsUtil.addToPlaylist(getActivity(), songs, playlistId, true);
                                 }

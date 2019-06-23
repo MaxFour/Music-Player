@@ -19,8 +19,9 @@ import com.maxfour.music.model.smartplaylist.LastAddedPlaylist;
 import com.maxfour.music.model.smartplaylist.MyTopSongsPlaylist;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class PlaylistsFragment extends AbsLibraryPagerRecyclerViewFragment<PlaylistAdapter, LinearLayoutManager> implements LoaderManager.LoaderCallbacks<ArrayList<Playlist>> {
+public class PlaylistsFragment extends AbsLibraryPagerRecyclerViewFragment<PlaylistAdapter, LinearLayoutManager> implements LoaderManager.LoaderCallbacks<List<Playlist>> {
 
     private static final int LOADER_ID = LoaderIds.PLAYLISTS_FRAGMENT;
 
@@ -39,7 +40,7 @@ public class PlaylistsFragment extends AbsLibraryPagerRecyclerViewFragment<Playl
     @NonNull
     @Override
     protected PlaylistAdapter createAdapter() {
-        ArrayList<Playlist> dataSet = getAdapter() == null ? new ArrayList<>() : getAdapter().getDataSet();
+        List<Playlist> dataSet = getAdapter() == null ? new ArrayList<>() : getAdapter().getDataSet();
         return new PlaylistAdapter(getLibraryFragment().getMainActivity(), dataSet, R.layout.item_list_single_row, getLibraryFragment());
     }
 
@@ -54,27 +55,27 @@ public class PlaylistsFragment extends AbsLibraryPagerRecyclerViewFragment<Playl
     }
 
     @Override
-    public Loader<ArrayList<Playlist>> onCreateLoader(int id, Bundle args) {
+    public Loader<List<Playlist>> onCreateLoader(int id, Bundle args) {
         return new AsyncPlaylistLoader(getActivity());
     }
 
     @Override
-    public void onLoadFinished(Loader<ArrayList<Playlist>> loader, ArrayList<Playlist> data) {
+    public void onLoadFinished(Loader<List<Playlist>> loader, List<Playlist> data) {
         getAdapter().swapDataSet(data);
     }
 
     @Override
-    public void onLoaderReset(Loader<ArrayList<Playlist>> loader) {
+    public void onLoaderReset(Loader<List<Playlist>> loader) {
         getAdapter().swapDataSet(new ArrayList<>());
     }
 
-    private static class AsyncPlaylistLoader extends WrappedAsyncTaskLoader<ArrayList<Playlist>> {
+    private static class AsyncPlaylistLoader extends WrappedAsyncTaskLoader<List<Playlist>> {
         public AsyncPlaylistLoader(Context context) {
             super(context);
         }
 
-        private static ArrayList<Playlist> getAllPlaylists(Context context) {
-            ArrayList<Playlist> playlists = new ArrayList<>();
+        private static List<Playlist> getAllPlaylists(Context context) {
+            List<Playlist> playlists = new ArrayList<>();
 
             playlists.add(new LastAddedPlaylist(context));
             playlists.add(new RecentlyPlayedPlaylist(context));
@@ -86,7 +87,7 @@ public class PlaylistsFragment extends AbsLibraryPagerRecyclerViewFragment<Playl
         }
 
         @Override
-        public ArrayList<Playlist> loadInBackground() {
+        public List<Playlist> loadInBackground() {
             return getAllPlaylists(getContext());
         }
     }

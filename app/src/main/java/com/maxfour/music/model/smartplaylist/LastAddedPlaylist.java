@@ -10,6 +10,7 @@ import com.maxfour.music.loader.LastAddedLoader;
 import com.maxfour.music.model.Song;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class LastAddedPlaylist extends AbsSmartPlaylist {
 
@@ -19,7 +20,7 @@ public class LastAddedPlaylist extends AbsSmartPlaylist {
 
     @NonNull
     @Override
-    public ArrayList<Song> getSongs(@NonNull Context context) {
+    public List<Song> getSongs(@NonNull Context context) {
         return LastAddedLoader.getLastAddedSongs(context);
     }
 

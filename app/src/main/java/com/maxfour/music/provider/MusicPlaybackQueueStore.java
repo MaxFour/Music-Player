@@ -30,6 +30,7 @@ import com.maxfour.music.loader.SongLoader;
 import com.maxfour.music.model.Song;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MusicPlaybackQueueStore extends SQLiteOpenHelper {
     @Nullable
@@ -125,7 +126,7 @@ public class MusicPlaybackQueueStore extends SQLiteOpenHelper {
         return sInstance;
     }
 
-    public synchronized void saveQueues(@NonNull final ArrayList<Song> playingQueue, @NonNull final ArrayList<Song> originalPlayingQueue) {
+    public synchronized void saveQueues(@NonNull final List<Song> playingQueue, @NonNull final List<Song> originalPlayingQueue) {
         saveQueue(PLAYING_QUEUE_TABLE_NAME, playingQueue);
         saveQueue(ORIGINAL_PLAYING_QUEUE_TABLE_NAME, originalPlayingQueue);
     }
@@ -136,7 +137,7 @@ public class MusicPlaybackQueueStore extends SQLiteOpenHelper {
      *
      * @param queue the queue to save
      */
-    private synchronized void saveQueue(final String tableName, @NonNull final ArrayList<Song> queue) {
+    private synchronized void saveQueue(final String tableName, @NonNull final List<Song> queue) {
         final SQLiteDatabase database = getWritableDatabase();
         database.beginTransaction();
 
@@ -179,17 +180,17 @@ public class MusicPlaybackQueueStore extends SQLiteOpenHelper {
     }
 
     @NonNull
-    public ArrayList<Song> getSavedPlayingQueue() {
+    public List<Song> getSavedPlayingQueue() {
         return getQueue(PLAYING_QUEUE_TABLE_NAME);
     }
 
     @NonNull
-    public ArrayList<Song> getSavedOriginalPlayingQueue() {
+    public List<Song> getSavedOriginalPlayingQueue() {
         return getQueue(ORIGINAL_PLAYING_QUEUE_TABLE_NAME);
     }
 
     @NonNull
-    private ArrayList<Song> getQueue(@NonNull final String tableName) {
+    private List<Song> getQueue(@NonNull final String tableName) {
         Cursor cursor = getReadableDatabase().query(tableName, null,
                 null, null, null, null, null);
         return SongLoader.getSongs(cursor);

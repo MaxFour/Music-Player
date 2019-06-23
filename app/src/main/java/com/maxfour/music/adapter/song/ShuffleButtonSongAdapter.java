@@ -15,10 +15,11 @@ import com.maxfour.music.interfaces.CabHolder;
 import com.maxfour.music.model.Song;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ShuffleButtonSongAdapter extends AbsOffsetSongAdapter {
 
-    public ShuffleButtonSongAdapter(AppCompatActivity activity, ArrayList<Song> dataSet, @LayoutRes int itemLayoutRes, boolean usePalette, @Nullable CabHolder cabHolder) {
+    public ShuffleButtonSongAdapter(AppCompatActivity activity, List<Song> dataSet, @LayoutRes int itemLayoutRes, boolean usePalette, @Nullable CabHolder cabHolder) {
         super(activity, dataSet, itemLayoutRes, usePalette, cabHolder);
     }
 

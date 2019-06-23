@@ -326,7 +326,7 @@ public class FoldersFragment extends AbsMainActivityFragment implements MainActi
     }
 
     @Override
-    public void onMultipleItemAction(MenuItem item, ArrayList<File> files) {
+    public void onMultipleItemAction(MenuItem item, List<File> files) {
         final int itemId = item.getItemId();
         new ListSongsAsyncTask(getActivity(), null, (songs, extra) -> {
             if (!songs.isEmpty()) {
@@ -347,8 +347,8 @@ public class FoldersFragment extends AbsMainActivityFragment implements MainActi
         }).execute(new ListSongsAsyncTask.LoadingInfo(files, AUDIO_FILE_FILTER, getFileComparator()));
     }
 
-    private ArrayList<File> toList(File file) {
-        ArrayList<File> files = new ArrayList<>(1);
+    private List<File> toList(File file) {
+        List<File> files = new ArrayList<>(1);
         files.add(file);
         return files;
     }
@@ -391,7 +391,7 @@ public class FoldersFragment extends AbsMainActivityFragment implements MainActi
                         Toast.makeText(getActivity(), String.format(getString(R.string.new_start_directory), file.getPath()), Toast.LENGTH_SHORT).show();
                         return true;
                     case R.id.action_scan:
-                        new ListPathsAsyncTask(getActivity(), this::scanPaths).execute(new ListPathsAsyncTask.LoadingInfo(file, AUDIO_FILE_FILTER));
+                        new ArrayListPathsAsyncTask(getActivity(), this::scanPaths).execute(new ArrayListPathsAsyncTask.LoadingInfo(file, AUDIO_FILE_FILTER));
                         return true;
                 }
                 return false;
@@ -503,7 +503,7 @@ public class FoldersFragment extends AbsMainActivityFragment implements MainActi
         }
     }
 
-    private static class ListSongsAsyncTask extends ListingFilesDialogAsyncTask<ListSongsAsyncTask.LoadingInfo, Void, ArrayList<Song>> {
+    private static class ListSongsAsyncTask extends ListingFilesDialogAsyncTask<ListSongsAsyncTask.LoadingInfo, Void, List<Song>> {
         private WeakReference<Context> contextWeakReference;
         private WeakReference<OnSongsListedCallback> callbackWeakReference;
         private final Object extra;
@@ -523,7 +523,7 @@ public class FoldersFragment extends AbsMainActivityFragment implements MainActi
         }
 
         @Override
-        protected ArrayList<Song> doInBackground(LoadingInfo... params) {
+        protected List<Song> doInBackground(LoadingInfo... params) {
             try {
                 LoadingInfo info = params[0];
                 List<File> files = FileUtil.listFilesDeep(info.files, info.fileFilter);
@@ -546,7 +546,7 @@ public class FoldersFragment extends AbsMainActivityFragment implements MainActi
         }
 
         @Override
-        protected void onPostExecute(ArrayList<Song> songs) {
+        protected void onPostExecute(List<Song> songs) {
             super.onPostExecute(songs);
             OnSongsListedCallback callback = checkCallbackReference();
             if (songs != null && callback != null)
@@ -582,14 +582,14 @@ public class FoldersFragment extends AbsMainActivityFragment implements MainActi
         }
 
         public interface OnSongsListedCallback {
-            void onSongsListed(@NonNull ArrayList<Song> songs, Object extra);
+            void onSongsListed(@NonNull List<Song> songs, Object extra);
         }
     }
 
-    public static class ListPathsAsyncTask extends ListingFilesDialogAsyncTask<ListPathsAsyncTask.LoadingInfo, String, String[]> {
+    public static class ArrayListPathsAsyncTask  extends ListingFilesDialogAsyncTask<ArrayListPathsAsyncTask .LoadingInfo, String, String[]> {
         private WeakReference<OnPathsListedCallback> onPathsListedCallbackWeakReference;
 
-        public ListPathsAsyncTask(Context context, OnPathsListedCallback callback) {
+        public ArrayListPathsAsyncTask(Context context, OnPathsListedCallback callback) {
             super(context, 500);
             onPathsListedCallbackWeakReference = new WeakReference<>(callback);
         }

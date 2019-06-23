@@ -10,11 +10,12 @@ import com.maxfour.music.model.Song;
 import com.maxfour.music.util.PreferenceUtil;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class LastAddedLoader {
 
     @NonNull
-    public static ArrayList<Song> getLastAddedSongs(@NonNull Context context) {
+    public static List<Song> getLastAddedSongs(@NonNull Context context) {
         return SongLoader.getSongs(makeLastAddedCursor(context));
     }
 

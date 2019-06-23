@@ -17,10 +17,11 @@ import com.maxfour.music.util.MusicUtil;
 import com.maxfour.music.util.NavigationUtil;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class PlaylistSongAdapter extends AbsOffsetSongAdapter {
 
-    public PlaylistSongAdapter(AppCompatActivity activity, @NonNull ArrayList<Song> dataSet, @LayoutRes int itemLayoutRes, boolean usePalette, @Nullable CabHolder cabHolder) {
+    public PlaylistSongAdapter(AppCompatActivity activity, @NonNull List<Song> dataSet, @LayoutRes int itemLayoutRes, boolean usePalette, @Nullable CabHolder cabHolder) {
         super(activity, dataSet, itemLayoutRes, usePalette, cabHolder, false);
         setMultiSelectMenuRes(R.menu.menu_cannot_delete_single_songs_playlist_songs_selection);
     }

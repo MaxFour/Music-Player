@@ -14,6 +14,7 @@ import com.maxfour.music.provider.BlacklistStore;
 import com.maxfour.music.util.PreferenceUtil;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class SongLoader {
     protected static final String BASE_SELECTION = AudioColumns.IS_MUSIC + "=1" + " AND " + AudioColumns.TITLE + " != ''";
@@ -32,13 +33,13 @@ public class SongLoader {
     };
 
     @NonNull
-    public static ArrayList<Song> getAllSongs(@NonNull Context context) {
+    public static List<Song> getAllSongs(@NonNull Context context) {
         Cursor cursor = makeSongCursor(context, null, null);
         return getSongs(cursor);
     }
 
     @NonNull
-    public static ArrayList<Song> getSongs(@NonNull final Context context, final String query) {
+    public static List<Song> getSongs(@NonNull final Context context, final String query) {
         Cursor cursor = makeSongCursor(context, AudioColumns.TITLE + " LIKE ?", new String[]{"%" + query + "%"});
         return getSongs(cursor);
     }
@@ -50,8 +51,8 @@ public class SongLoader {
     }
 
     @NonNull
-    public static ArrayList<Song> getSongs(@Nullable final Cursor cursor) {
-        ArrayList<Song> songs = new ArrayList<>();
+    public static List<Song> getSongs(@Nullable final Cursor cursor) {
+        List<Song> songs = new ArrayList<>();
         if (cursor != null && cursor.moveToFirst()) {
             do {
                 songs.add(getSongFromCursorImpl(cursor));
@@ -108,7 +109,7 @@ public class SongLoader {
         }
 
         // Blacklist
-        ArrayList<String> paths = BlacklistStore.getInstance(context).getPaths();
+        List<String> paths = BlacklistStore.getInstance(context).getPaths();
         if (!paths.isEmpty()) {
             selection = generateBlacklistSelection(selection, paths.size());
             selectionValues = addBlacklistSelectionValues(selectionValues, paths);
@@ -131,7 +132,7 @@ public class SongLoader {
         return newSelection;
     }
 
-    private static String[] addBlacklistSelectionValues(String[] selectionValues, ArrayList<String> paths) {
+    private static String[] addBlacklistSelectionValues(String[] selectionValues, List<String> paths) {
         if (selectionValues == null) selectionValues = new String[0];
         String[] newSelectionValues = new String[selectionValues.length + paths.size()];
         System.arraycopy(selectionValues, 0, newSelectionValues, 0, selectionValues.length);

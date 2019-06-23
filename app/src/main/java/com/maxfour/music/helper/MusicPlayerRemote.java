@@ -30,6 +30,7 @@ import com.maxfour.music.util.PreferenceUtil;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 import java.util.WeakHashMap;
 
@@ -173,7 +174,7 @@ public class MusicPlayerRemote {
     /**
      * Async
      */
-    public static void openQueue(final ArrayList<Song> queue, final int startPosition, final boolean startPlaying) {
+    public static void openQueue(final List<Song> queue, final int startPosition, final boolean startPlaying) {
         if (!tryToHandleOpenPlayingQueue(queue, startPosition, startPlaying) && musicService != null) {
             musicService.openQueue(queue, startPosition, startPlaying);
             if (!PreferenceUtil.getInstance(musicService).rememberShuffle()){
@@ -185,7 +186,7 @@ public class MusicPlayerRemote {
     /**
      * Async
      */
-    public static void openAndShuffleQueue(final ArrayList<Song> queue, boolean startPlaying) {
+    public static void openAndShuffleQueue(final List<Song> queue, boolean startPlaying) {
         int startPosition = 0;
         if (!queue.isEmpty()) {
             startPosition = new Random().nextInt(queue.size());
@@ -197,7 +198,7 @@ public class MusicPlayerRemote {
         }
     }
 
-    private static boolean tryToHandleOpenPlayingQueue(final ArrayList<Song> queue, final int startPosition, final boolean startPlaying) {
+    private static boolean tryToHandleOpenPlayingQueue(final List<Song> queue, final int startPosition, final boolean startPlaying) {
         if (getPlayingQueue() == queue) {
             if (startPlaying) {
                 playSongAt(startPosition);
@@ -223,7 +224,7 @@ public class MusicPlayerRemote {
         return -1;
     }
 
-    public static ArrayList<Song> getPlayingQueue() {
+    public static List<Song> getPlayingQueue() {
         if (musicService != null) {
             return musicService.getPlayingQueue();
         }
@@ -301,7 +302,7 @@ public class MusicPlayerRemote {
             if (getPlayingQueue().size() > 0) {
                 musicService.addSong(getPosition() + 1, song);
             } else {
-                ArrayList<Song> queue = new ArrayList<>();
+                List<Song> queue = new ArrayList<>();
                 queue.add(song);
                 openQueue(queue, 0, false);
             }
@@ -311,7 +312,7 @@ public class MusicPlayerRemote {
         return false;
     }
 
-    public static boolean playNext(@NonNull ArrayList<Song> songs) {
+    public static boolean playNext(@NonNull List<Song> songs) {
         if (musicService != null) {
             if (getPlayingQueue().size() > 0) {
                 musicService.addSongs(getPosition() + 1, songs);
@@ -330,7 +331,7 @@ public class MusicPlayerRemote {
             if (getPlayingQueue().size() > 0) {
                 musicService.addSong(song);
             } else {
-                ArrayList<Song> queue = new ArrayList<>();
+                List<Song> queue = new ArrayList<>();
                 queue.add(song);
                 openQueue(queue, 0, false);
             }
@@ -340,7 +341,7 @@ public class MusicPlayerRemote {
         return false;
     }
 
-    public static boolean enqueue(@NonNull ArrayList<Song> songs) {
+    public static boolean enqueue(@NonNull List<Song> songs) {
         if (musicService != null) {
             if (getPlayingQueue().size() > 0) {
                 musicService.addSongs(songs);
@@ -395,7 +396,7 @@ public class MusicPlayerRemote {
 
     public static void playFromUri(Uri uri) {
         if (musicService != null) {
-            ArrayList<Song> songs = null;
+            List<Song> songs = null;
             if (uri.getScheme() != null && uri.getAuthority() != null) {
                 if (uri.getScheme().equals(ContentResolver.SCHEME_CONTENT)) {
                     String songId = null;

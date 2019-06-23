@@ -32,11 +32,12 @@ import com.maxfour.music.util.ViewUtil;
 import com.simplecityapps.recyclerview_fastscroll.views.FastScrollRecyclerView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class GenreDetailActivity extends AbsSlidingMusicPanelActivity implements CabHolder, LoaderManager.LoaderCallbacks<ArrayList<Song>> {
+public class GenreDetailActivity extends AbsSlidingMusicPanelActivity implements CabHolder, LoaderManager.LoaderCallbacks<List<Song>> {
 
     private static final int LOADER_ID = LoaderIds.GENRE_DETAIL_ACTIVITY;
 
@@ -176,23 +177,23 @@ public class GenreDetailActivity extends AbsSlidingMusicPanelActivity implements
 
     @Override
     @NonNull
-    public Loader<ArrayList<Song>> onCreateLoader(int id, Bundle args) {
+    public Loader<List<Song>> onCreateLoader(int id, Bundle args) {
         return new GenreDetailActivity.AsyncGenreSongLoader(this, genre);
     }
 
     @Override
-    public void onLoadFinished(@NonNull Loader<ArrayList<Song>> loader, ArrayList<Song> data) {
+    public void onLoadFinished(@NonNull Loader<List<Song>> loader, List<Song> data) {
         if (adapter != null)
             adapter.swapDataSet(data);
     }
 
     @Override
-    public void onLoaderReset(@NonNull Loader<ArrayList<Song>> loader) {
+    public void onLoaderReset(@NonNull Loader<List<Song>> loader) {
         if (adapter != null)
             adapter.swapDataSet(new ArrayList<>());
     }
 
-    private static class AsyncGenreSongLoader extends WrappedAsyncTaskLoader<ArrayList<Song>> {
+    private static class AsyncGenreSongLoader extends WrappedAsyncTaskLoader<List<Song>> {
         private final Genre genre;
 
         public AsyncGenreSongLoader(Context context, Genre genre) {
@@ -201,7 +202,7 @@ public class GenreDetailActivity extends AbsSlidingMusicPanelActivity implements
         }
 
         @Override
-        public ArrayList<Song> loadInBackground() {
+        public List<Song> loadInBackground() {
             return GenreLoader.getSongs(getContext(), genre.id);
         }
     }

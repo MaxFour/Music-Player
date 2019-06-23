@@ -12,22 +12,23 @@ import com.maxfour.music.model.Song;
 import com.maxfour.music.util.PreferenceUtil;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class GenreLoader {
 
     @NonNull
-    public static ArrayList<Genre> getAllGenres(@NonNull final Context context) {
+    public static List<Genre> getAllGenres(@NonNull final Context context) {
         return getGenresFromCursor(context, makeGenreCursor(context));
     }
 
     @NonNull
-    public static ArrayList<Song> getSongs(@NonNull final Context context, final int genreId) {
+    public static List<Song> getSongs(@NonNull final Context context, final int genreId) {
         return SongLoader.getSongs(makeGenreSongCursor(context, genreId));
     }
 
     @NonNull
-    private static ArrayList<Genre> getGenresFromCursor(@NonNull final Context context, @Nullable final Cursor cursor) {
-        final ArrayList<Genre> genres = new ArrayList<>();
+    private static List<Genre> getGenresFromCursor(@NonNull final Context context, @Nullable final Cursor cursor) {
+        final List<Genre> genres = new ArrayList<>();
         if (cursor != null) {
             if (cursor.moveToFirst()) {
                 do {

@@ -23,6 +23,7 @@ import com.maxfour.music.util.PlaylistsUtil;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class PlaylistMenuHelper {
     public static boolean handleMenuClick(@NonNull AppCompatActivity activity, @NonNull final Playlist playlist, @NonNull MenuItem item) {
@@ -53,7 +54,7 @@ public class PlaylistMenuHelper {
     }
 
     @NonNull
-    private static ArrayList<? extends Song> getPlaylistSongs(@NonNull Activity activity, Playlist playlist) {
+    private static List<? extends Song> getPlaylistSongs(@NonNull Activity activity, Playlist playlist) {
         return playlist instanceof AbsCustomPlaylist ?
                 ((AbsCustomPlaylist) playlist).getSongs(activity) :
                 PlaylistSongLoader.getPlaylistSongList(activity, playlist.id);

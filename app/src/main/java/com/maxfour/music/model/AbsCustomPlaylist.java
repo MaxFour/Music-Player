@@ -6,6 +6,7 @@ import android.os.Parcel;
 import androidx.annotation.NonNull;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public abstract class AbsCustomPlaylist extends Playlist {
     public AbsCustomPlaylist(int id, String name) {
@@ -20,5 +21,5 @@ public abstract class AbsCustomPlaylist extends Playlist {
     }
 
     @NonNull
-    public abstract ArrayList<Song> getSongs(Context context);
+    public abstract List<Song> getSongs(Context context);
 }

@@ -6,11 +6,12 @@ import android.os.Parcelable;
 import androidx.annotation.NonNull;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Album implements Parcelable {
-    public final ArrayList<Song> songs;
+    public final List<Song> songs;
 
-    public Album(ArrayList<Song> songs) {
+    public Album(List<Song> songs) {
         this.songs = songs;
     }
 

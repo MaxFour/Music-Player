@@ -12,10 +12,11 @@ import com.maxfour.music.model.Song;
 import com.maxfour.music.util.MusicUtil;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class AlbumSongAdapter extends SongAdapter {
 
-    public AlbumSongAdapter(AppCompatActivity activity, ArrayList<Song> dataSet, @LayoutRes int itemLayoutRes, boolean usePalette, @Nullable CabHolder cabHolder) {
+    public AlbumSongAdapter(AppCompatActivity activity, List<Song> dataSet, @LayoutRes int itemLayoutRes, boolean usePalette, @Nullable CabHolder cabHolder) {
         super(activity, dataSet, itemLayoutRes, usePalette, cabHolder);
     }
 

@@ -11,6 +11,7 @@ import com.maxfour.music.model.Song;
 import com.maxfour.music.provider.HistoryStore;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class RecentlyPlayedPlaylist extends AbsSmartPlaylist {
 
@@ -20,7 +21,7 @@ public class RecentlyPlayedPlaylist extends AbsSmartPlaylist {
 
     @NonNull
     @Override
-    public ArrayList<Song> getSongs(@NonNull Context context) {
+    public List<Song> getSongs(@NonNull Context context) {
         return TopAndRecentlyPlayedSongsLoader.getRecentlyPlayedSongs(context);
     }
 

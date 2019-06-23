@@ -20,10 +20,11 @@ import com.maxfour.music.model.Album;
 import com.maxfour.music.util.MusicUtil;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class HorizontalAlbumAdapter extends AlbumAdapter {
 
-    public HorizontalAlbumAdapter(@NonNull AppCompatActivity activity, ArrayList<Album> dataSet, boolean usePalette, @Nullable CabHolder cabHolder) {
+    public HorizontalAlbumAdapter(@NonNull AppCompatActivity activity, List<Album> dataSet, boolean usePalette, @Nullable CabHolder cabHolder) {
         super(activity, dataSet, HorizontalAdapterHelper.LAYOUT_RES, usePalette, cabHolder);
     }
 

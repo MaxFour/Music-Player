@@ -3,9 +3,10 @@ package com.maxfour.music.model.lyrics;
 import com.maxfour.music.model.Song;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Lyrics {
-    private static final ArrayList<Class<? extends Lyrics>> FORMATS = new ArrayList<>();
+    private static final List<Class<? extends Lyrics>> FORMATS = new ArrayList<>();
 
     public Song song;
     public String data;

@@ -19,6 +19,7 @@ import com.maxfour.music.model.Song;
 import com.maxfour.music.util.ViewUtil;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class PlayingQueueAdapter extends SongAdapter implements DraggableItemAdapter<PlayingQueueAdapter.ViewHolder> {
 
@@ -28,7 +29,7 @@ public class PlayingQueueAdapter extends SongAdapter implements DraggableItemAda
 
     private int current;
 
-    public PlayingQueueAdapter(AppCompatActivity activity, ArrayList<Song> dataSet, int current, @LayoutRes int itemLayoutRes, boolean usePalette, @Nullable CabHolder cabHolder) {
+    public PlayingQueueAdapter(AppCompatActivity activity, List<Song> dataSet, int current, @LayoutRes int itemLayoutRes, boolean usePalette, @Nullable CabHolder cabHolder) {
         super(activity, dataSet, itemLayoutRes, usePalette, cabHolder);
         this.current = current;
     }
@@ -64,7 +65,7 @@ public class PlayingQueueAdapter extends SongAdapter implements DraggableItemAda
         // We don't want to load it in this adapter
     }
 
-    public void swapDataSet(ArrayList<Song> dataSet, int position) {
+    public void swapDataSet(List<Song> dataSet, int position) {
         this.dataSet = dataSet;
         current = position;
         notifyDataSetChanged();

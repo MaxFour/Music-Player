@@ -152,7 +152,7 @@ public class SongFileAdapter extends AbsMultiSelectAdapter<SongFileAdapter.ViewH
     }
 
     @Override
-    protected void onMultipleItemAction(MenuItem menuItem, ArrayList<File> selection) {
+    protected void onMultipleItemAction(MenuItem menuItem, List<File> selection) {
         if (callbacks == null) return;
         callbacks.onMultipleItemAction(menuItem, selection);
     }
@@ -207,6 +207,6 @@ public class SongFileAdapter extends AbsMultiSelectAdapter<SongFileAdapter.ViewH
 
         void onFileMenuClicked(File file, View view);
 
-        void onMultipleItemAction(MenuItem item, ArrayList<File> files);
+        void onMultipleItemAction(MenuItem item, List<File> files);
     }
 }

@@ -13,12 +13,13 @@ import com.maxfour.music.R;
 import com.maxfour.music.interfaces.CabHolder;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public abstract class AbsMultiSelectAdapter<VH extends RecyclerView.ViewHolder, I> extends RecyclerView.Adapter<VH> implements MaterialCab.Callback {
     @Nullable
     private final CabHolder cabHolder;
     private MaterialCab cab;
-    private ArrayList<I> checked;
+    private List<I> checked;
     private int menuRes;
     private final Context context;
 
@@ -116,5 +117,5 @@ public abstract class AbsMultiSelectAdapter<VH extends RecyclerView.ViewHolder, 
     @Nullable
     protected abstract I getIdentifier(int position);
 
-    protected abstract void onMultipleItemAction(MenuItem menuItem, ArrayList<I> selection);
+    protected abstract void onMultipleItemAction(MenuItem menuItem, List<I> selection);
 }

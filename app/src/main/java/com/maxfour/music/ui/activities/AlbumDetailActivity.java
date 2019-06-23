@@ -55,6 +55,7 @@ import com.maxfour.music.util.NavigationUtil;
 import com.maxfour.music.util.PreferenceUtil;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
 import butterknife.BindView;
@@ -293,7 +294,7 @@ public class AlbumDetailActivity extends AbsSlidingMusicPanelActivity implements
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
-        final ArrayList<Song> songs = adapter.getDataSet();
+        final List<Song> songs = adapter.getDataSet();
         switch (id) {
             case R.id.action_sleep_timer:
                 new SleepTimerDialog().show(getSupportFragmentManager(), "SET_SLEEP_TIMER");

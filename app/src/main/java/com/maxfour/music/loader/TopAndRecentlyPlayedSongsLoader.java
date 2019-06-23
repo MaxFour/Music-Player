@@ -28,17 +28,18 @@ import com.maxfour.music.provider.HistoryStore;
 import com.maxfour.music.provider.SongPlayCountStore;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class TopAndRecentlyPlayedSongsLoader {
     public static final int NUMBER_OF_TOP_SONGS = 100;
 
     @NonNull
-    public static ArrayList<Song> getRecentlyPlayedSongs(@NonNull Context context) {
+    public static List<Song> getRecentlyPlayedSongs(@NonNull Context context) {
         return SongLoader.getSongs(makeRecentSongsCursorAndClearUpDatabase(context));
     }
 
     @NonNull
-    public static ArrayList<Song> getTopSongs(@NonNull Context context) {
+    public static List<Song> getTopSongs(@NonNull Context context) {
         return SongLoader.getSongs(makeTopSongsCursorAndClearUpDatabase(context));
     }
 
@@ -48,7 +49,7 @@ public class TopAndRecentlyPlayedSongsLoader {
 
         // clean up the databases with any ids not found
         if (retCursor != null) {
-            ArrayList<Long> missingIds = retCursor.getMissingIds();
+            List<Long> missingIds = retCursor.getMissingIds();
             if (missingIds != null && missingIds.size() > 0) {
                 for (long id : missingIds) {
                     HistoryStore.getInstance(context).removeSongId(id);
@@ -64,7 +65,7 @@ public class TopAndRecentlyPlayedSongsLoader {
 
         // clean up the databases with any ids not found
         if (retCursor != null) {
-            ArrayList<Long> missingIds = retCursor.getMissingIds();
+            List<Long> missingIds = retCursor.getMissingIds();
             if (missingIds != null && missingIds.size() > 0) {
                 for (long id : missingIds) {
                     SongPlayCountStore.getInstance(context).removeItem(id);

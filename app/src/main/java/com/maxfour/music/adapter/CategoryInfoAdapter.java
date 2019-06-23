@@ -18,12 +18,13 @@ import com.maxfour.music.model.CategoryInfo;
 import com.maxfour.music.util.SwipeAndDragHelper;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class CategoryInfoAdapter extends RecyclerView.Adapter<CategoryInfoAdapter.ViewHolder> implements SwipeAndDragHelper.ActionCompletionContract {
-    private ArrayList<CategoryInfo> categoryInfos;
+    private List<CategoryInfo> categoryInfos;
     private ItemTouchHelper touchHelper;
 
-    public CategoryInfoAdapter(ArrayList<CategoryInfo> categoryInfos) {
+    public CategoryInfoAdapter(List<CategoryInfo> categoryInfos) {
         this.categoryInfos = categoryInfos;
         SwipeAndDragHelper swipeAndDragHelper = new SwipeAndDragHelper(this);
         touchHelper = new ItemTouchHelper(swipeAndDragHelper);
@@ -67,7 +68,7 @@ public class CategoryInfoAdapter extends RecyclerView.Adapter<CategoryInfoAdapte
         return categoryInfos.size();
     }
 
-    public void setCategoryInfos(ArrayList<CategoryInfo> categoryInfos) {
+    public void setCategoryInfos(List<CategoryInfo> categoryInfos) {
         this.categoryInfos = categoryInfos;
         notifyDataSetChanged();
     }
@@ -84,7 +85,7 @@ public class CategoryInfoAdapter extends RecyclerView.Adapter<CategoryInfoAdapte
         touchHelper.attachToRecyclerView(recyclerView);
     }
 
-    public ArrayList<CategoryInfo> getCategoryInfos() {
+    public List<CategoryInfo> getCategoryInfos() {
         return categoryInfos;
     }
 

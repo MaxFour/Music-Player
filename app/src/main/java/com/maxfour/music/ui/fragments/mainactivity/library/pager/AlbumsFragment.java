@@ -17,8 +17,9 @@ import com.maxfour.music.model.Album;
 import com.maxfour.music.util.PreferenceUtil;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class AlbumsFragment extends AbsLibraryPagerRecyclerViewCustomGridSizeFragment<AlbumAdapter, GridLayoutManager> implements LoaderManager.LoaderCallbacks<ArrayList<Album>> {
+public class AlbumsFragment extends AbsLibraryPagerRecyclerViewCustomGridSizeFragment<AlbumAdapter, GridLayoutManager> implements LoaderManager.LoaderCallbacks<List<Album>> {
 
     private static final int LOADER_ID = LoaderIds.ALBUMS_FRAGMENT;
 
@@ -38,7 +39,7 @@ public class AlbumsFragment extends AbsLibraryPagerRecyclerViewCustomGridSizeFra
     protected AlbumAdapter createAdapter() {
         int itemLayoutRes = getItemLayoutRes();
         notifyLayoutResChanged(itemLayoutRes);
-        ArrayList<Album> dataSet = getAdapter() == null ? new ArrayList<>() : getAdapter().getDataSet();
+        List<Album> dataSet = getAdapter() == null ? new ArrayList<>() : getAdapter().getDataSet();
         return new AlbumAdapter(
                 getLibraryFragment().getMainActivity(),
                 dataSet,
@@ -114,27 +115,27 @@ public class AlbumsFragment extends AbsLibraryPagerRecyclerViewCustomGridSizeFra
     }
 
     @Override
-    public Loader<ArrayList<Album>> onCreateLoader(int id, Bundle args) {
+    public Loader<List<Album>> onCreateLoader(int id, Bundle args) {
         return new AsyncAlbumLoader(getActivity());
     }
 
     @Override
-    public void onLoadFinished(Loader<ArrayList<Album>> loader, ArrayList<Album> data) {
+    public void onLoadFinished(Loader<List<Album>> loader, List<Album> data) {
         getAdapter().swapDataSet(data);
     }
 
     @Override
-    public void onLoaderReset(Loader<ArrayList<Album>> loader) {
+    public void onLoaderReset(Loader<List<Album>> loader) {
         getAdapter().swapDataSet(new ArrayList<>());
     }
 
-    private static class AsyncAlbumLoader extends WrappedAsyncTaskLoader<ArrayList<Album>> {
+    private static class AsyncAlbumLoader extends WrappedAsyncTaskLoader<List<Album>> {
         public AsyncAlbumLoader(Context context) {
             super(context);
         }
 
         @Override
-        public ArrayList<Album> loadInBackground() {
+        public List<Album> loadInBackground() {
             return AlbumLoader.getAllAlbums(getContext());
         }
     }

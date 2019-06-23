@@ -27,18 +27,19 @@ import com.maxfour.music.model.Song;
 import com.maxfour.music.util.NavigationUtil;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ArtistSongAdapter extends ArrayAdapter<Song> implements MaterialCab.Callback {
     @Nullable
     private final CabHolder cabHolder;
     private MaterialCab cab;
-    private ArrayList<Song> dataSet;
-    private ArrayList<Song> checked;
+    private List<Song> dataSet;
+    private List<Song> checked;
 
     @NonNull
     private final AppCompatActivity activity;
 
-    public ArtistSongAdapter(@NonNull AppCompatActivity activity, @NonNull ArrayList<Song> dataSet, @Nullable CabHolder cabHolder) {
+    public ArtistSongAdapter(@NonNull AppCompatActivity activity, @NonNull List<Song> dataSet, @Nullable CabHolder cabHolder) {
         super(activity, R.layout.item_list, dataSet);
         this.activity = activity;
         this.cabHolder = cabHolder;
@@ -46,11 +47,11 @@ public class ArtistSongAdapter extends ArrayAdapter<Song> implements MaterialCab
         checked = new ArrayList<>();
     }
 
-    public ArrayList<Song> getDataSet() {
+    public List<Song> getDataSet() {
         return dataSet;
     }
 
-    public void swapDataSet(ArrayList<Song> dataSet) {
+    public void swapDataSet(List<Song> dataSet) {
         this.dataSet = dataSet;
         clear();
         addAll(dataSet);
@@ -127,7 +128,7 @@ public class ArtistSongAdapter extends ArrayAdapter<Song> implements MaterialCab
         return convertView;
     }
 
-    private void onMultipleItemAction(@NonNull MenuItem menuItem, @NonNull ArrayList<Song> selection) {
+    private void onMultipleItemAction(@NonNull MenuItem menuItem, @NonNull List<Song> selection) {
         SongsMenuHelper.handleMenuClick(activity, selection, menuItem.getItemId());
     }
 
