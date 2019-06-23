@@ -108,8 +108,8 @@
         <item quantity="one"><xliff:g id="count">%1$d</xliff:g> şarkı silindi</item>
         <item quantity="other"><xliff:g id="count">%1$d</xliff:g> şarkı silindi</item>
     </plurals>
-    <string name="dialog_message_set_ringtone">\"Müzik\" uygulaması zil sesinizi ayarlamak için \"ayarları yaz\" iznine ihtiyaç duyar. Bu izni verdikten sonra, tekrar ayarlamayı deneyin.</string>
-    <string name="dialog_title_set_ringtone">Zilsesi ayarla</string>
+    <string name="dialog_ringtone_message">\"Müzik\" uygulaması zil sesinizi ayarlamak için \"ayarları yaz\" iznine ihtiyaç duyar. Bu izni verdikten sonra, tekrar ayarlamayı deneyin.</string>
+    <string name="dialog_ringtone_title">Zilsesi ayarla</string>
     <string name="do_you_want_to_clear_the_blacklist">Kara listeyi temizlemek istiyor musunuz?</string>
     <string name="do_you_want_to_remove_from_the_blacklist"><![CDATA[<b>%1$s</b> kara listeden kaldırılsın mı?]]></string>
     <string name="download_from_last_fm">Last.fm\'den indirin</string>

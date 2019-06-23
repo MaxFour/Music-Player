@@ -108,10 +108,10 @@
         <item quantity="one"><xliff:g id="count">%1$d</xliff:g> chanson supprimée</item>
         <item quantity="other"><xliff:g id="count">%1$d</xliff:g> chansons supprimées</item>
     </plurals>
-    <string name="dialog_message_set_ringtone">L\'application \"Music\" a besoin de l\'autorisation \"modifier les paramètres\" afin de régler votre sonnerie. Après avoir accordé la permission, essayez de régler votre sonnerie à nouveau.</string>
-    <string name="dialog_title_set_ringtone">Définir sonnerie</string>
     <string name="do_you_want_to_clear_the_blacklist">Voulez-vous vider la liste noire?</string>
     <string name="do_you_want_to_remove_from_the_blacklist"><![CDATA[Voulez-vous supprimer <b>%1$s</b> de la liste noire?]]></string>
+    <string name="dialog_ringtone_message">L\'application \"Music\" a besoin de l\'autorisation \"modifier les paramètres\" afin de régler votre sonnerie. Après avoir accordé la permission, essayez de régler votre sonnerie à nouveau.</string>
+    <string name="dialog_ringtone_title">Définir sonnerie</string>
     <string name="download_from_last_fm">Télécharger depuis Last.fm</string>
     <string name="empty">Vide</string>
     <string name="equalizer">Egaliseur</string>

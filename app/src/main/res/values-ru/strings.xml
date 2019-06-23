@@ -118,8 +118,8 @@
         <item quantity="few"><xliff:g id="count">%1$d</xliff:g> песни удалены</item>
         <item quantity="many"><xliff:g id="count">%1$d</xliff:g> песен удалено</item>
     </plurals>
-    <string name="dialog_message_set_ringtone">Приложение \"Музыка\" требует разрешение на \'запись настроек\', чтобы установить рингтон. После предоставления разрешения, попробуйте установить рингтон снова.</string>
-    <string name="dialog_title_set_ringtone">Установка рингтона</string>
+    <string name="dialog_ringtone_message">Разрешить приложению \"Музыка\" изменять настройки аудио</string>
+    <string name="dialog_ringtone_title">Установка рингтона</string>
     <string name="do_you_want_to_clear_the_blacklist">Вы хотите очистить чёрный список?</string>
     <string name="do_you_want_to_remove_from_the_blacklist"><![CDATA[Убрать <b>%1$s</b> из чёрного списка?]]></string>
     <string name="download_from_last_fm">Загрузить из Last.fm</string>

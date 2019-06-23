@@ -108,8 +108,8 @@
         <item quantity="one">Tog bort <xliff:g id="count">%1$d</xliff:g> låt</item>
         <item quantity="other">Tog bort <xliff:g id="count">%1$d</xliff:g> låtar</item>
     </plurals>
-    <string name="dialog_message_set_ringtone">Appen \"Musik\" kräver tillstånd att \"skriva inställningar\" för att ställa in din ringsignal. Efter att ha beviljat tillstånd, försök att ställa in din ringsignal igen.</string>
-    <string name="dialog_title_set_ringtone">Ställ in rington</string>
+    <string name="dialog_ringtone_message">Appen \"Musik\" kräver tillstånd att \"skriva inställningar\" för att ställa in din ringsignal. Efter att ha beviljat tillstånd, försök att ställa in din ringsignal igen.</string>
+    <string name="dialog_ringtone_title">Ställ in rington</string>
     <string name="do_you_want_to_clear_the_blacklist">Vill du rensa svartlistan?</string>
     <string name="do_you_want_to_remove_from_the_blacklist"><![CDATA[Vill du ta bort <b>%1$s</b> från svartlistan?]]></string>
     <string name="download_from_last_fm">Hämta från Last.fm</string>

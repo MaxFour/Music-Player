@@ -20,6 +20,7 @@ import com.maxfour.music.ui.activities.tageditor.AbsTagEditorActivity;
 import com.maxfour.music.ui.activities.tageditor.SongTagEditorActivity;
 import com.maxfour.music.util.MusicUtil;
 import com.maxfour.music.util.NavigationUtil;
+import com.maxfour.music.util.RingtoneManager;
 
 public class SongMenuHelper {
     public static final int MENU_RES = R.menu.menu_item_song;
@@ -27,7 +28,12 @@ public class SongMenuHelper {
     public static boolean handleMenuClick(@NonNull FragmentActivity activity, @NonNull Song song, int menuItemId) {
         switch (menuItemId) {
             case R.id.action_set_as_ringtone:
-                MusicUtil.setRingtone(activity, song.id);
+                if (RingtoneManager.requiresDialog(activity)) {
+                    RingtoneManager.showDialog(activity);
+                } else {
+                    RingtoneManager ringtoneManager = new RingtoneManager();
+                    ringtoneManager.setRingtone(activity, song.id);
+                }
                 return true;
             case R.id.action_share:
                 activity.startActivity(Intent.createChooser(MusicUtil.createShareSongFileIntent(song, activity), null));

@@ -109,8 +109,8 @@
         <item quantity="one">Deleted <xliff:g id="count">%1$d</xliff:g> song</item>
         <item quantity="other">Deleted <xliff:g id="count">%1$d</xliff:g> songs</item>
     </plurals>
-    <string name="dialog_message_set_ringtone">\"Music\" application requires permission to \'write settings\' in order to set your ringtone. After granting permission, try setting your ringtone again.</string>
-    <string name="dialog_title_set_ringtone">Set ringtone</string>
+    <string name="dialog_ringtone_message">Allow \"Music\" application to modify audio settings</string>
+    <string name="dialog_ringtone_title">Set ringtone</string>
     <string name="do_you_want_to_clear_the_blacklist">Do you want to clear the blacklist?</string>
     <string name="do_you_want_to_remove_from_the_blacklist"><![CDATA[Do you want to remove <b>%1$s</b> from the blacklist?]]></string>
     <string name="download_from_last_fm">Download from Last.fm</string>

@@ -108,8 +108,8 @@
         <item quantity="one"><xliff:g id="count">%1$d</xliff:g> brano cancellato</item>
         <item quantity="other"><xliff:g id="count">%1$d</xliff:g> brani cancellati</item>
     </plurals>
-    <string name="dialog_message_set_ringtone">Quest\'app richiede i permessi di \"cambiare le impostazioni\" per impostare la suoneria. Dopo averli concessi, riprova.</string>
-    <string name="dialog_title_set_ringtone">Imposta suoneria</string>
+    <string name="dialog_ringtone_message">Quest\'app richiede i permessi di \"cambiare le impostazioni\" per impostare la suoneria. Dopo averli concessi, riprova.</string>
+    <string name="dialog_ringtone_title">Imposta suoneria</string>
     <string name="do_you_want_to_clear_the_blacklist">Vuoi svuotare la blacklist?</string>
     <string name="do_you_want_to_remove_from_the_blacklist"><![CDATA[Vuoi rimuovere <b>%1$s</b> dalla blacklist?]]></string>
     <string name="download_from_last_fm">Scarica da Last.fm</string>
