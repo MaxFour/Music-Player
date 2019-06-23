@@ -114,7 +114,6 @@ public class ArtistDetailActivity extends AbsSlidingMusicPanelActivity implement
 
     private LastFMRestClient lastFMRestClient;
 
-    private boolean forceDownload;
     private final SimpleObservableScrollViewCallbacks observableScrollViewCallbacks = new SimpleObservableScrollViewCallbacks() {
         @Override
         public void onScrollChanged(int scrollY, boolean b, boolean b2) {
@@ -255,7 +254,6 @@ public class ArtistDetailActivity extends AbsSlidingMusicPanelActivity implement
 
     private void loadArtistImage() {
         ArtistGlideRequest.Builder.from(Glide.with(this), artist)
-                .forceDownload(forceDownload)
                 .generatePalette(this).build()
                 .dontAnimate()
                 .into(new MusicColoredTarget(artistImage) {
@@ -264,7 +262,6 @@ public class ArtistDetailActivity extends AbsSlidingMusicPanelActivity implement
                         setColors(color);
                     }
                 });
-        forceDownload = false;
     }
 
     @Override
@@ -377,7 +374,6 @@ public class ArtistDetailActivity extends AbsSlidingMusicPanelActivity implement
             case R.id.action_reset_artist_image:
                 Toast.makeText(ArtistDetailActivity.this, getResources().getString(R.string.updating), Toast.LENGTH_SHORT).show();
                 CustomArtistImageUtil.getInstance(ArtistDetailActivity.this).resetCustomArtistImage(artist);
-                forceDownload = true;
                 return true;
             case R.id.action_colored_footers:
                 item.setChecked(!item.isChecked());
