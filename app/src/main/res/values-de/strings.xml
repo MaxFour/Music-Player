@@ -113,7 +113,7 @@
         <item quantity="one"><xliff:g id="count">%1$d</xliff:g> Lied gelöscht</item>
         <item quantity="other"><xliff:g id="count">%1$d</xliff:g> Lieder gelöscht</item>
     </plurals>
-    <string name="dialog_ringtone_message">Die \"Music\" App benötigt die Berechtigung zum \'Systemeinstellungen ändern\', um den Klingelton festzulegen. Versuche den Klingelton nach Erteilen der Berechtigung erneut festzulegen.</string>
+    <string name="dialog_ringtone_message">Die \"Musik\" App benötigt die Berechtigung zum \'Systemeinstellungen ändern\', um den Klingelton festzulegen. Versuche den Klingelton nach dem Erteilen der Berechtigung erneut festzulegen.</string>
     <string name="dialog_ringtone_title">Als Klingelton festlegen</string>
     <string name="do_you_want_to_clear_the_blacklist">Möchtest Du die Blacklist leeren?</string>
     <string name="do_you_want_to_remove_from_the_blacklist"><![CDATA[Möchstest Du <b>%1$s</b> von der Blacklist entfernen?]]></string>
@@ -145,15 +145,15 @@
     <string name="label_view_playing_queue">Zeige Abspielwarteschlange</string>
     <string name="last_added">Zuletzt hinzugefügt</string>
     <string name="library">Bibliothek</string>
-    <string name="library_categories">Bibliothekskategorien</string>
+    <string name="library_categories">Bibliothek-Kategorien</string>
     <string name="light_theme_name">Hell</string>
     <string name="listing_files">Liste Dateien auf</string>
     <string name="lyrics">Lyrics</string>
     <string name="md_back_label">Zurück</string>
     <string name="md_cancel_label">Abbrechen</string>
-    <string name="md_choose_label">Wähle</string>
+    <string name="md_choose_label">Auswählen</string>
     <string name="md_custom_label">Benutzerdefiniert</string>
-    <string name="md_done_label">Erledigt</string>
+    <string name="md_done_label">Fertig</string>
     <string name="md_error_label">Fehler</string>
     <string name="md_presets_label">Voreinstellungen</string>
     <string name="mi_label_button_cta">Loslegen</string>
@@ -199,14 +199,14 @@
     <string name="pref_summary_album_art_on_lockscreen">Verwendet das Albumcover des aktuellen Songs als Hintergrundbild für den Sperrbildschirm</string>
     <string name="pref_summary_audio_ducking">Benachrichtigungen, Navigation usw.</string>
     <string name="pref_summary_blacklist">Der Inhalt von Ordnern auf der Blacklist wird aus der Bibliothek ausgeblendet</string>
-    <string name="pref_summary_blurred_album_art">Verschwommenes Albumcover auf dem Sperrbildschirm. Kann Probleme mit Apps und Widgets von Drittanbietern verursachen.</string>
+    <string name="pref_summary_blurred_album_art">Albumcover auf dem Sperrbildschirm unscharf machen. Kann Probleme mit Apps und Widgets von Drittanbietern verursachen.</string>
     <string name="pref_summary_classic_notification">Verwende das klassische Benachrichtigungsdesign</string>
     <string name="pref_summary_colored_app_shortcuts">Färbt die App-Verknüpfungen in der Primärfarbe</string>
     <string name="pref_summary_colored_navigation_bar">Färbt die Navigationsleiste in der Primärfarbe</string>
     <string name="pref_summary_colored_notification">Färbt die Benachrichtigung in der kräftigsten Farbe des Albumcovers</string>
     <string name="pref_summary_gapless_playback">Kann auf manchen Geräten Probleme bei der Wiedergabe verursachen</string>
     <string name="pref_summary_ignore_media_store_artwork">Kann die Albumcover-Qualität erhöhen, führt jedoch zu langsameren Bilder-Ladezeiten. Aktiviere diese Option nur, wenn du Probleme mit Covern in niedriger Auflösung hast.</string>
-    <string name="pref_summary_library_categories">Sichtbarkeit und Reihenfolge der Bibliothekskategorien konfigurieren</string>
+    <string name="pref_summary_library_categories">Sichtbarkeit und Reihenfolge der Bibliothek-Kategorien konfigurieren</string>
     <string name="pref_summary_remember_last_tab">Im zuletzt geöffneten Tab starten</string>
     <string name="pref_summary_remember_shuffle">Zufallswiedergabe bleibt beim Abspielen einer neuen Liste von Songs aktiviert</string>
     <string name="pref_summary_synchronized_lyrics_show">Derzeit werden nur synchronisierte Lyrics im LRC-Format unterstützt. Entweder eingebettet oder als separate Datei.</string>
@@ -214,15 +214,15 @@
     <string name="pref_title_app_shortcuts">Farbige App-Verknüpfungen</string>
     <string name="pref_title_audio_ducking">Lautstärke bei Fokus-Verlust verringern</string>
     <string name="pref_title_auto_download_metadata">Metadaten automatisch herunterladen</string>
-    <string name="pref_title_blurred_album_art">Albumcover verwischen</string>
+    <string name="pref_title_blurred_album_art">Albumcover weichzeichnen</string>
     <string name="pref_title_classic_notification">Klassisches Benachrichtigungsdesign</string>
     <string name="pref_title_colored_notification">Farbige Benachrichtigung</string>
     <string name="pref_title_gapless_playback">Lückenlose Wiedergabe</string>
-    <string name="pref_title_general_theme">Allgemeines Design</string>
+    <string name="pref_title_general_theme">Grundlegendes Design</string>
     <string name="pref_title_ignore_media_store_artwork">Ignoriere Medienspeicher-Covers</string>
-    <string name="pref_title_last_added_interval">Zuletzt hinzugefügt Playlist Intervall</string>
+    <string name="pref_title_last_added_interval">Zeitspanne für \'Zuletzt hinzugefügt\'-Playlist</string>
     <string name="pref_title_navigation_bar">Farbige Navigationsleiste</string>
-    <string name="pref_title_now_playing_screen_appearance">Aussehen</string>
+    <string name="pref_title_now_playing_screen_appearance">Design</string>
     <string name="pref_title_remember_last_tab">Letzten Tab merken</string>
     <string name="pref_title_remember_shuffle">Zufallswiedergabe merken</string>
     <string name="pref_title_synchronized_lyrics_show">Synchronisierte Lyrics anzeigen</string>
@@ -252,7 +252,7 @@
     <string name="saving_changes">Änderungen speichern</string>
     <string name="scan_media">Medien scannen</string>
     <string name="scanned_files">Gescannte Dateien: %1$d von %2$d</string>
-    <string name="search_hint">Durchsuche die Bibliothek…</string>
+    <string name="search_hint">Durchsuche deine Bibliothek…</string>
     <string name="select_all_title">Alle auswählen</string>
     <string name="set_artist_image">Künstlerbild festlegen</string>
     <string name="sleep_timer_canceled">Schlaftimer abgebrochen</string>
@@ -286,7 +286,7 @@
     <string name="updating">Aktualisieren…</string>
     <string name="version">Version</string>
     <string name="web_search">Websuche</string>
-    <string name="welcome_to_music_app">Willkommen in der \"Music\" App, einem schönen und schlichten Musikplayer!</string>
+    <string name="welcome_to_music_app">Willkommen in der \"Musik\" App, einem schönen und schlichten Musikplayer!</string>
     <string name="what_do_you_want_to_share">Was möchtest Du teilen?</string>
     <string name="wiki">Wiki</string>
     <string name="wiki_unavailable">Konnte keinen Wikieintrag für dieses Album finden</string>

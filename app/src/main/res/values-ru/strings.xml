@@ -85,7 +85,7 @@
     <string name="clear_action">Очистить</string>
     <string name="clear_blacklist">Очистить чёрный список</string>
     <string name="clear_playlist_title">Очистка плейлиста</string>
-    <string name="clear_playlist_x"><![CDATA[Очистить плейлист \"<b>%1$s</b>\"?  Эта операция необратима!]]></string>
+    <string name="clear_playlist_x"><![CDATA[Очистить плейлист \"<b>%1$s</b>\"? Эта операция необратима!]]></string>
     <string name="clipboard_wallets_numbers_copied">Номера кошельков были скопированы в буфер обмена</string>
     <string name="colored_footers">Окрашенные нижние колонтитулы</string>
     <string name="could_not_create_playlist">Невозможно создать плейлист</string>
