@@ -41,7 +41,7 @@
     <string name="action_shuffle_all">Alle zufällig wiedergeben</string>
     <string name="action_shuffle_artist">Künstler Zufallswiedergabe</string>
     <string name="action_shuffle_playlist">Playlist Zufallswiedergabe</string>
-    <string name="action_sleep_timer">Schlaftimer</string>
+    <string name="action_sleep_timer">Sleep-Timer</string>
     <string name="action_sort_order">Sortierung</string>
     <string name="action_tag_editor">Tag-Editor</string>
     <string name="add_action">Hinzufügen</string>
@@ -135,14 +135,14 @@
     <string name="intro_label">Einführung</string>
     <string name="label_bit_rate">Bitrate</string>
     <string name="label_details">Details</string>
-    <string name="label_edit_playing_queue">Bearbeite Wiedergabeliste</string>
+    <string name="label_edit_playing_queue">Abspielwarteschlange bearbeiten</string>
     <string name="label_file_format">Format</string>
     <string name="label_file_name">Dateiname</string>
     <string name="label_file_path">Dateipfad</string>
     <string name="label_file_size">Größe</string>
     <string name="label_sampling_rate">Samplingrate</string>
     <string name="label_song_length">Länge</string>
-    <string name="label_view_playing_queue">Zeige Abspielwarteschlange</string>
+    <string name="label_view_playing_queue">Abspielwarteschlange anzeigen</string>
     <string name="last_added">Zuletzt hinzugefügt</string>
     <string name="library">Bibliothek</string>
     <string name="library_categories">Bibliothek-Kategorien</string>
@@ -255,10 +255,10 @@
     <string name="search_hint">Durchsuche deine Bibliothek…</string>
     <string name="select_all_title">Alle auswählen</string>
     <string name="set_artist_image">Künstlerbild festlegen</string>
-    <string name="sleep_timer_canceled">Schlaftimer abgebrochen</string>
+    <string name="sleep_timer_canceled">Sleep-Timer abgebrochen</string>
     <plurals name="sleep_timer_set">
-        <item quantity="one">Schlaftimer auf <xliff:g id="count">%1$d</xliff:g> Minute ab jetzt gestellt</item>
-        <item quantity="other">Schlaftimer auf <xliff:g id="count">%1$d</xliff:g> Minuten ab jetzt gestellt</item>
+        <item quantity="one">Sleep-Timer auf <xliff:g id="count">%1$d</xliff:g> Minute ab jetzt gestellt</item>
+        <item quantity="other">Sleep-Timer auf <xliff:g id="count">%1$d</xliff:g> Minuten ab jetzt gestellt</item>
     </plurals>
     <string name="some_files_are_not_listed_in_the_media_store">Einige Dateien sind im Medienspeicher nicht aufgeführt</string>
     <string name="song">Lied</string>
