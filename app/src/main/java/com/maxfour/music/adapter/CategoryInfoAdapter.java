@@ -111,4 +111,3 @@ public class CategoryInfoAdapter extends RecyclerView.Adapter<CategoryInfoAdapte
         }
     }
 }
-
