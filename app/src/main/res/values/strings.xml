@@ -82,7 +82,8 @@
     <string name="clear_blacklist">Clear blacklist</string>
     <string name="clear_playlist_title">Clear playlist</string>
     <string name="clear_playlist_x"><![CDATA[Clear the playlist \"<b>%1$s</b>\"? This can’t be undone!]]></string>
-    <string name="clipboard_wallets_numbers_copied">Wallets numbers has been copied to clipboard</string>
+    <string name="clipboard_dollar_wallet_number_copied">Dollar wallet number has been copied to clipboard</string>
+    <string name="clipboard_ruble_wallet_number_copied">Ruble wallet number has been copied to clipboard</string>
     <string name="colored_footers">Colored footers</string>
     <string name="could_not_create_playlist">Couldn’t create playlist</string>
     <string name="could_not_download_album_cover">Couldn’t download a matching album cover</string>

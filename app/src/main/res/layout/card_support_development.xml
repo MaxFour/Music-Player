@@ -52,7 +52,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="32dp"
                 android:layout_marginStart="32dp"
-                android:orientation="vertical"
+                android:orientation="horizontal"
                 android:paddingBottom="8dp"
                 android:paddingTop="8dp">
 
@@ -60,20 +60,32 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/webmoney"
+                    android:layout_marginEnd="110dp"
+                    android:layout_marginRight="110dp"
                     android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/webmoney_account"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+                <Button
+                    android:id="@+id/ruble_button"
+                    android:backgroundTint="#036CB5"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:text="@string/ruble_sign"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/dollar_button"
+                    android:backgroundTint="#036CB5"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:text="@string/dollar_sign"
+                    android:textColor="@android:color/white" />
 
             </LinearLayout>
 
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/ym"
+            android:id="@+id/yandex_money"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="?attr/rectSelector"
