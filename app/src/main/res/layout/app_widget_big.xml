@@ -78,6 +78,7 @@
             android:layout_weight="1"
             android:gravity="center_vertical"
             android:singleLine="true"
+            android:fontFamily="@font/product_sans_regular"
             android:textAppearance="@style/TextAppearance.AppCompat.Headline"
             android:textColor="@color/ate_primary_text_dark"
             tools:text="Title" />

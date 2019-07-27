@@ -79,6 +79,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:singleLine="true"
+                android:fontFamily="@font/product_sans_regular"
                 android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
                 android:textColor="@color/ate_primary_text_light"
                 tools:text="Title" />
