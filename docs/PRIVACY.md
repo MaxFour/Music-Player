@@ -99,7 +99,7 @@ Donations are also welcomed for further development of this project.
 
 WebMoney: <br>
 $: Z776114750889 <br>
-₽: R662315834876
+₽: R282056119931
 
 Yandex.Money:
 - 4100 1537 2205 898

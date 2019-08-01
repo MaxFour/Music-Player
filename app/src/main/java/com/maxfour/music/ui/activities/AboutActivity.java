@@ -129,7 +129,7 @@ public class AboutActivity extends AbsBaseActivity implements View.OnClickListen
             openUrl(WebMoney);
         } else if (v == rubleButton) {
             ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
-            ClipData clipData = ClipData.newPlainText("WMR", "R662315834876");
+            ClipData clipData = ClipData.newPlainText("WMR", "R282056119931");
             clipboard.setPrimaryClip(clipData);
             Toast.makeText(getApplicationContext(), R.string.clipboard_ruble_wallet_number_copied, Toast.LENGTH_LONG).show();
         } else if (v == dollarButton) {

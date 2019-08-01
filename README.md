@@ -71,7 +71,7 @@ Easy starting points are also reviewing [pull requests](https://github.com/MaxFo
 
 WebMoney:<br>
 $: Z776114750889<br>
-₽: R662315834876
+₽: R282056119931
 
 Yandex.Money:
 - 4100 1537 2205 898
