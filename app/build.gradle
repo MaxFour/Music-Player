@@ -1,5 +1,3 @@
-import javax.annotation.Nullable
-
 apply plugin: 'com.android.application'
 
 android {
