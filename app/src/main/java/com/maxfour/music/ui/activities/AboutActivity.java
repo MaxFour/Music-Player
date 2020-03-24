@@ -39,12 +39,12 @@ public class AboutActivity extends AbsBaseActivity implements View.OnClickListen
     TextView appVersion;
     @BindView(R.id.intro)
     LinearLayout intro;
-    @BindView(R.id.write_an_email)
-    LinearLayout writeAnEmail;
     @BindView(R.id.fork_on_github)
     LinearLayout forkOnGitHub;
+    @BindView(R.id.write_an_email)
+    LinearLayout writeAnEmail;
     @BindView(R.id.webmoney)
-    LinearLayout webmoney;
+    LinearLayout webMoney;
     @BindView(R.id.ruble_button)
     Button rubleButton;
     @BindView(R.id.dollar_button)
@@ -89,7 +89,7 @@ public class AboutActivity extends AbsBaseActivity implements View.OnClickListen
         intro.setOnClickListener(this);
         forkOnGitHub.setOnClickListener(this);
         writeAnEmail.setOnClickListener(this);
-        webmoney.setOnClickListener(this);
+        webMoney.setOnClickListener(this);
         rubleButton.setOnClickListener(this);
         dollarButton.setOnClickListener(this);
         yandexMoney.setOnClickListener(this);
@@ -125,7 +125,7 @@ public class AboutActivity extends AbsBaseActivity implements View.OnClickListen
             intent.putExtra(Intent.EXTRA_EMAIL, "mansurov.maksud@gmail.com");
             intent.putExtra(Intent.EXTRA_SUBJECT, "Music");
             startActivity(Intent.createChooser(intent, "E-Mail"));
-        } else if (v == webmoney) {
+        } else if (v == webMoney) {
             openUrl(WebMoney);
         } else if (v == rubleButton) {
             ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
