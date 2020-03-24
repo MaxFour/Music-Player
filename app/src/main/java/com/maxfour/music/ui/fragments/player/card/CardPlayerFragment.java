@@ -203,6 +203,7 @@ public class CardPlayerFragment extends AbsPlayerFragment implements PlayerAlbum
     @Override
     public void onMediaStoreChanged() {
         updateQueue();
+        updateIsFavorite();
     }
 
     private void updateQueue() {
