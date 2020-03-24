@@ -12,8 +12,8 @@ The [Android SDK][3] is necessary to build the app. There are different options 
 Open a terminal and type 'android' to start the Android SDK Manager. To build the Music-Player for Android app you will need to install at least the next SDK packages:
 
 * Android SDK Tools and Android SDK Platform-tools (already installed); upgrade to their last versions is usually a good idea.
-* Android SDK Build-Tools 24.0.2.
-* Android 7.0 (API 24), SDK Platform; needed to build the Music-Player app.
+* Android SDK Build-Tools 29.0.3.
+* Android 10 (API 29), SDK Platform; needed to build the Music-Player app.
 
 Install any other package you consider interesting, such as emulators.
 
