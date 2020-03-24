@@ -29,7 +29,7 @@
 
     <style name="ProductSansTextAppearace">
         <item name="android:fontFamily">@font/product_sans</item>
-        <item name="android:textSize">19sp</item>
+        <item name="android:textSize">20sp</item>
     </style>
 
     <style name="Toolbar">
