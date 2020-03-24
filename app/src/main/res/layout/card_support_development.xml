@@ -59,16 +59,16 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:text="@string/webmoney"
-                    android:layout_marginEnd="112dp"
-                    android:layout_marginRight="112dp"
+                    android:layout_gravity="center|right"
                     android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
 
                 <Button
                     android:id="@+id/ruble_button"
                     android:backgroundTint="#036CB5"
                     android:layout_width="45dp"
-                    android:layout_height="45dp"
+                    android:layout_height="wrap_content"
                     android:text="@string/ruble_sign"
                     android:textColor="@android:color/white" />
 
@@ -76,7 +76,7 @@
                     android:id="@+id/dollar_button"
                     android:backgroundTint="#036CB5"
                     android:layout_width="45dp"
-                    android:layout_height="45dp"
+                    android:layout_height="wrap_content"
                     android:text="@string/dollar_sign"
                     android:textColor="@android:color/white" />
 
