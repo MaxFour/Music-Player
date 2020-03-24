@@ -192,12 +192,14 @@ public class MusicUtil {
         values.put("_data", path);
 
         contentResolver.insert(artworkUri, values);
+        contentResolver.notifyChange(artworkUri, null);
     }
 
     public static void deleteAlbumArt(@NonNull Context context, int albumId) {
         ContentResolver contentResolver = context.getContentResolver();
         Uri localUri = Uri.parse("content://media/external/audio/albumart");
         contentResolver.delete(ContentUris.withAppendedId(localUri, albumId), null, null);
+        contentResolver.notifyChange(localUri, null);
     }
 
     @NonNull
@@ -234,6 +236,8 @@ public class MusicUtil {
         }
         selection.append(")");
 
+        int deletedCount = 0;
+
         try {
             final Cursor cursor = context.getContentResolver().query(
                     MediaStore.Audio.Media.EXTERNAL_CONTENT_URI, projection, selection.toString(),
@@ -249,21 +253,23 @@ public class MusicUtil {
                     cursor.moveToNext();
                 }
 
-                // Step 2: Remove selected songs from the database
-                context.getContentResolver().delete(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI,
-                        selection.toString(), null);
-
-                // Step 3: Remove files from card
+                // Step 2: Remove files from card
                 cursor.moveToFirst();
                 while (!cursor.isAfterLast()) {
+                    final int id = cursor.getInt(0);
                     final String name = cursor.getString(1);
                     try { // File.delete can throw a security exception
                         final File f = new File(name);
-                        if (!f.delete()) {
+                        if (f.delete()) {
+                            // Step 3: Remove selected track from the database
+                            context.getContentResolver().delete(ContentUris.withAppendedId(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI, id),null, null);
+                            deletedCount++;
+                        } else {
                             // I'm not sure if we'd ever get here (deletion would
                             // have to fail, but no exception thrown)
                             Log.e("MusicUtils", "Failed to delete file " + name);
                         }
+
                         cursor.moveToNext();
                     } catch (@NonNull final SecurityException ex) {
                         cursor.moveToNext();
@@ -273,8 +279,7 @@ public class MusicUtil {
                 }
                 cursor.close();
             }
-            context.getContentResolver().notifyChange(Uri.parse("content://media"), null);
-      		Toast.makeText(context, context.getResources().getQuantityString(R.plurals.deleted_x_songs, songs.size(), songs.size()), Toast.LENGTH_SHORT).show();
+      		Toast.makeText(context, context.getResources().getQuantityString(R.plurals.deleted_x_songs, deletedCount, deletedCount), Toast.LENGTH_SHORT).show();
         } catch (SecurityException ignored) {
         }
     }

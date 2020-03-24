@@ -55,8 +55,6 @@ public class PlaylistsUtil {
                             EXTERNAL_CONTENT_URI,
                             values);
                     if (uri != null) {
-                        // Necessary because somehow the MediaStoreObserver is not notified when adding a playlist
-                        context.getContentResolver().notifyChange(Uri.parse("content://media"), null);
                         Toast.makeText(context, context.getResources().getString(
                                 R.string.created_playlist_x, name), Toast.LENGTH_SHORT).show();
                         id = Integer.parseInt(uri.getLastPathSegment());
@@ -92,7 +90,6 @@ public class PlaylistsUtil {
         selection.append(")");
         try {
             context.getContentResolver().delete(EXTERNAL_CONTENT_URI, selection.toString(), null);
-            context.getContentResolver().notifyChange(Uri.parse("content://media"), null);
         } catch (SecurityException ignored) {
         }
     }
@@ -216,7 +213,6 @@ public class PlaylistsUtil {
                     contentValues,
                     MediaStore.Audio.Playlists._ID + "=?",
                     new String[]{String.valueOf(id)});
-            context.getContentResolver().notifyChange(Uri.parse("content://media"), null);
         } catch (SecurityException ignored) {
         }
     }
