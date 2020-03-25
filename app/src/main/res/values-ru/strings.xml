@@ -208,7 +208,7 @@
     <string name="pref_summary_blacklist">Занесённые в чёрный список папки, скрыты из Вашей библиотеки</string>
     <string name="pref_summary_blurred_album_art">Сделать размытую обложку фоном экрана блокировки. Могут быть проблемы с другими приложениями и виджетами.</string>
     <string name="pref_summary_classic_notification">Использовать классический дизайн уведомления</string>
-    <string name="pref_summary_colored_app_shortcuts">Окрасить шорткаты в основной цвет</string>
+    <string name="pref_summary_colored_app_shortcuts">Окрасить шорткаты в цвет акцента</string>
     <string name="pref_summary_colored_navigation_bar">Окрасить панель навигации в основной цвет</string>
     <string name="pref_summary_colored_notification">Окрасить уведомление в тон обложки альбома</string>
     <string name="pref_summary_gapless_playback">Может вызвать проблемы с воспроизведением на некоторых устройствах</string>

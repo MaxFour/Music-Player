@@ -84,7 +84,6 @@
     <string name="clear_blacklist">Zwarte lijst leegmaken</string>
     <string name="clear_playlist_title">Afspeellijst wissen</string>
     <string name="clear_playlist_x"><![CDATA[Wil je de afspeellijst \'<b>%1$s</b>\' wissen? Dit kan niet ongedaan worden gemaakt!]]></string>
-    <string name="clipboard_wallets_numbers_copied">De getallen zijn gekopieerd naar het klembord</string>
     <string name="colored_footers">Gekleurde voetnoten</string>
     <string name="could_not_create_playlist">De afspeellijst kan niet worden gecreëerd</string>
     <string name="could_not_download_album_cover">Kan geen bijbehorende albumhoes downloaden</string>

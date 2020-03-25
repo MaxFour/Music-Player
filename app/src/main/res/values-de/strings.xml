@@ -84,7 +84,6 @@
     <string name="clear_blacklist">Blacklist leeren</string>
     <string name="clear_playlist_title">Playlist leeren</string>
     <string name="clear_playlist_x"><![CDATA[Die Playlist \"<b>%1$s</b>\" löschen? Das kann nicht rückgängig gemacht werden!]]></string>
-    <string name="clipboard_wallets_numbers_copied">Wallets-Nummern wurden in die Zwischenlage kopiert</string>
     <string name="colored_footers">Farbige Kacheln</string>
     <string name="could_not_create_playlist">Playlist konnte nicht erstellt werden</string>
     <string name="could_not_download_album_cover">Konnte kein passendes Album-Cover herunterladen</string>
