@@ -83,7 +83,6 @@ public class SettingsActivity extends AbsBaseActivity implements ColorChooserDia
                     Arrays.sort(NonProAllowedColors.ACCENT_COLORS);
                     if (Arrays.binarySearch(NonProAllowedColors.ACCENT_COLORS, selectedColor) < 0) {
                     }
-                
                 ThemeStore.editTheme(this)
                         .accentColor(selectedColor)
                         .commit();
