@@ -33,7 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="?attr/rectSelector"
-            android:clickable="true"
+            android:focusable="true"
             android:gravity="center_vertical"
             android:minHeight="@dimen/md_listitem_height"
             android:orientation="horizontal"
@@ -57,11 +57,11 @@
                 android:paddingTop="8dp">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/webmoney"
-                    android:layout_gravity="center|right"
+                    android:layout_gravity="start|center"
                     android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
 
                 <Button
@@ -89,7 +89,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="?attr/rectSelector"
-            android:clickable="true"
+            android:focusable="true"
             android:gravity="center_vertical"
             android:minHeight="@dimen/md_listitem_height"
             android:orientation="horizontal"
