@@ -5,9 +5,6 @@ import android.graphics.Bitmap;
 
 import androidx.annotation.NonNull;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.bumptech.glide.BitmapRequestBuilder;
 import com.bumptech.glide.DrawableRequestBuilder;
 import com.bumptech.glide.DrawableTypeRequest;
@@ -28,6 +25,9 @@ import com.maxfour.music.model.Artist;
 import com.maxfour.music.model.Song;
 import com.maxfour.music.util.ArtistSignatureUtil;
 import com.maxfour.music.util.CustomArtistImageUtil;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ArtistGlideRequest {
 

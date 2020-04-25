@@ -19,7 +19,6 @@ import com.maxfour.music.misc.CustomFragmentStatePagerAdapter;
 import com.maxfour.music.model.Song;
 import com.maxfour.music.util.PreferenceUtil;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;

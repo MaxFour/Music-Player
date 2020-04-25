@@ -19,7 +19,6 @@ import com.maxfour.music.interfaces.CabHolder;
 import com.maxfour.music.model.Album;
 import com.maxfour.music.util.MusicUtil;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class HorizontalAlbumAdapter extends AlbumAdapter {

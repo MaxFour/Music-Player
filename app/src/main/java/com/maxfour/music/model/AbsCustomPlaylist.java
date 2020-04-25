@@ -5,7 +5,6 @@ import android.os.Parcel;
 
 import androidx.annotation.NonNull;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public abstract class AbsCustomPlaylist extends Playlist {

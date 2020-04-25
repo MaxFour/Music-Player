@@ -22,7 +22,6 @@ import com.maxfour.music.glide.palette.BitmapPaletteWrapper;
 import com.maxfour.music.model.Song;
 import com.maxfour.music.service.MusicService;
 import com.maxfour.music.ui.activities.MainActivity;
-import com.maxfour.music.util.MusicUtil;
 import com.maxfour.music.util.PreferenceUtil;
 
 import static com.maxfour.music.service.MusicService.ACTION_REWIND;

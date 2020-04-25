@@ -54,7 +54,6 @@ import com.maxfour.music.util.MusicUtil;
 import com.maxfour.music.util.NavigationUtil;
 import com.maxfour.music.util.PreferenceUtil;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 

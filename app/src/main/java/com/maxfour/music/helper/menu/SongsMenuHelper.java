@@ -9,7 +9,6 @@ import com.maxfour.music.dialogs.DeleteSongsDialog;
 import com.maxfour.music.helper.MusicPlayerRemote;
 import com.maxfour.music.model.Song;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class SongsMenuHelper {

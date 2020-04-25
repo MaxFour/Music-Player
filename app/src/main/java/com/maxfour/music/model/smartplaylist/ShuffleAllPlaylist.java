@@ -9,7 +9,6 @@ import com.maxfour.music.R;
 import com.maxfour.music.loader.SongLoader;
 import com.maxfour.music.model.Song;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ShuffleAllPlaylist extends AbsSmartPlaylist {

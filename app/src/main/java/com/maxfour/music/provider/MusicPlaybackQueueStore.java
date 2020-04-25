@@ -29,7 +29,6 @@ import androidx.annotation.Nullable;
 import com.maxfour.music.loader.SongLoader;
 import com.maxfour.music.model.Song;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class MusicPlaybackQueueStore extends SQLiteOpenHelper {

@@ -16,7 +16,6 @@ import com.maxfour.music.model.Song;
 import com.maxfour.music.util.MusicUtil;
 import com.maxfour.music.util.NavigationUtil;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class PlaylistSongAdapter extends AbsOffsetSongAdapter {

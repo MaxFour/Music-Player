@@ -27,7 +27,6 @@ import com.maxfour.music.model.Song;
 import com.maxfour.music.provider.HistoryStore;
 import com.maxfour.music.provider.SongPlayCountStore;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class TopAndRecentlyPlayedSongsLoader {

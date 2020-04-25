@@ -16,9 +16,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.vectordrawable.graphics.drawable.VectorDrawableCompat;
 
-import java.io.InputStream;
-
 import com.kabouzeid.appthemehelper.util.TintHelper;
+
+import java.io.InputStream;
 
 public class ImageUtil {
 

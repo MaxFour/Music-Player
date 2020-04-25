@@ -22,9 +22,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * This cursor basically wraps a song cursor and is given a list of the order of the ids of the

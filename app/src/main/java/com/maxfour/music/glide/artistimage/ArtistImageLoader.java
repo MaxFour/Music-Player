@@ -2,14 +2,14 @@ package com.maxfour.music.glide.artistimage;
 
 import android.content.Context;
 
-import java.io.InputStream;
-
 import com.bumptech.glide.load.data.DataFetcher;
 import com.bumptech.glide.load.model.GenericLoaderFactory;
 import com.bumptech.glide.load.model.ModelLoader;
 import com.bumptech.glide.load.model.ModelLoaderFactory;
 import com.bumptech.glide.load.model.stream.StreamModelLoader;
 import com.maxfour.music.util.PreferenceUtil;
+
+import java.io.InputStream;
 
 public class ArtistImageLoader implements StreamModelLoader<ArtistImage> {
     private Context context;

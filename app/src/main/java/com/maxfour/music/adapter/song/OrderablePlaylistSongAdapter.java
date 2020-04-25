@@ -19,7 +19,6 @@ import com.maxfour.music.model.PlaylistSong;
 import com.maxfour.music.model.Song;
 import com.maxfour.music.util.ViewUtil;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @SuppressWarnings("unchecked")

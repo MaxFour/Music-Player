@@ -14,9 +14,9 @@ import com.maxfour.music.interfaces.LoaderIds;
 import com.maxfour.music.loader.PlaylistLoader;
 import com.maxfour.music.misc.WrappedAsyncTaskLoader;
 import com.maxfour.music.model.Playlist;
-import com.maxfour.music.model.smartplaylist.RecentlyPlayedPlaylist;
 import com.maxfour.music.model.smartplaylist.LastAddedPlaylist;
 import com.maxfour.music.model.smartplaylist.MyTopSongsPlaylist;
+import com.maxfour.music.model.smartplaylist.RecentlyPlayedPlaylist;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -10,7 +10,6 @@ import com.maxfour.music.loader.TopAndRecentlyPlayedSongsLoader;
 import com.maxfour.music.model.Song;
 import com.maxfour.music.provider.SongPlayCountStore;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class MyTopSongsPlaylist extends AbsSmartPlaylist {

@@ -13,7 +13,6 @@ import com.maxfour.music.dialogs.BlacklistFolderChooserDialog;
 import com.maxfour.music.provider.BlacklistStore;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.List;
 
 public class BlacklistPreferenceDialog extends DialogFragment implements BlacklistFolderChooserDialog.FolderCallback {

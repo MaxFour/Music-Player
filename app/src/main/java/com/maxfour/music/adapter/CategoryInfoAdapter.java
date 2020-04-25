@@ -17,7 +17,6 @@ import com.maxfour.music.R;
 import com.maxfour.music.model.CategoryInfo;
 import com.maxfour.music.util.SwipeAndDragHelper;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class CategoryInfoAdapter extends RecyclerView.Adapter<CategoryInfoAdapter.ViewHolder> implements SwipeAndDragHelper.ActionCompletionContract {

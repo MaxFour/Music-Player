@@ -9,7 +9,6 @@ import com.maxfour.music.R;
 import com.maxfour.music.loader.LastAddedLoader;
 import com.maxfour.music.model.Song;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class LastAddedPlaylist extends AbsSmartPlaylist {
