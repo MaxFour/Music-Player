@@ -224,7 +224,7 @@
     <string name="pref_title_blurred_album_art">Размытая обложка альбома</string>
     <string name="pref_title_classic_notification">Классический дизайн уведомления</string>
     <string name="pref_title_colored_notification">Окрашенное уведомление</string>
-    <string name="pref_title_gapless_playback">Воспроизведение без пауз</string>
+    <string name="pref_title_gapless_playback">Непрерывное воспроизведение</string>
     <string name="pref_title_general_theme">Главная тема</string>
     <string name="pref_title_ignore_media_store_artwork">Игнорировать хранилище обложек</string>
     <string name="pref_title_last_added_interval">Интервал последнего добавленного плейлиста</string>
