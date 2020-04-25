@@ -30,7 +30,7 @@ Based on [Phonograph](https://github.com/kabouzeid/Phonograph)
 - **Now playing screen**:
   - Two appearance for now playing screen: **Card** & **Flat**
   - Classical media controls: seek bar, repeat (1x, loop), skip, play/pause, shuffle
-  - On the top: **lyrics** view & **Favorite song** buttons
+  - On the top: **Lyrics** view & **Favorite song** buttons
   - At the bottom: name of the currently **playing song** & **queue**
 - Simple **queue** management
   > Tip: to move in queue long tap on the number of the song
