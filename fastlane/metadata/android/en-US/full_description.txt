@@ -1,0 +1,13 @@
+Listen to your music in your library or folders. Experiment with design by changing the primary color and accent color. Set ringtones and easily share your music.
+
+Features include:
+
+• Auto download artist and album art
+• Blacklist
+• Folder browser
+• Now playing themes
+• Sleep timer
+• Show internal lyric
+• Tag editor
+• Theming and color changing
+• Widgets

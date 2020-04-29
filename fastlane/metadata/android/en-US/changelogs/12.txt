@@ -1,0 +1,4 @@
+* Added Korean strings
+* Accent & primary colors are changed
+* Fixed incorrect view in landscape mode in AboutActivity
+* New app icon
