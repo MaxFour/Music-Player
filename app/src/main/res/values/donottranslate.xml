@@ -17,4 +17,19 @@
     <string name="grid_size_6" translatable="false">6</string>
     <string name="grid_size_7" translatable="false">7</string>
     <string name="grid_size_8" translatable="false">8</string>
+
+    <string name="license_dialog_style" translatable="false">
+        body {
+            background-color: #{bg-color};
+            color: #{text-color};
+            font-family: sans-serif;
+            overflow-wrap: break-word;
+        }
+        pre {
+            background-color: #{license-bg-color};
+            padding: 1em;
+            white-space: pre-wrap;
+        }
+    </string>
+
 </resources>
