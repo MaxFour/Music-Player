@@ -28,6 +28,7 @@ import com.maxfour.music.model.Genre;
 import com.maxfour.music.model.Playlist;
 import com.maxfour.music.model.Song;
 import com.maxfour.music.model.lyrics.AbsSynchronizedLyrics;
+import com.maxfour.music.service.MusicService;
 
 import org.jaudiotagger.audio.AudioFileIO;
 import org.jaudiotagger.tag.FieldKey;
@@ -302,6 +303,8 @@ public class MusicUtil {
         } else {
             PlaylistsUtil.addToPlaylist(context, song, getOrCreateFavoritesPlaylist(context).id, false);
         }
+
+        context.sendBroadcast(new Intent(MusicService.FAVORITE_STATE_CHANGED));
     }
 
     public static boolean isArtistNameUnknown(@Nullable String artistName) {

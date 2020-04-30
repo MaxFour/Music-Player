@@ -79,6 +79,7 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
     public static final String ACTION_STOP = MUSIC_PACKAGE_NAME + ".stop";
     public static final String ACTION_SKIP = MUSIC_PACKAGE_NAME + ".skip";
     public static final String ACTION_REWIND = MUSIC_PACKAGE_NAME + ".rewind";
+    public static final String ACTION_TOGGLE_FAVORITE = MUSIC_PACKAGE_NAME + ".togglefavorite";
     public static final String ACTION_QUIT = MUSIC_PACKAGE_NAME + ".quitservice";
     public static final String ACTION_PENDING_QUIT = MUSIC_PACKAGE_NAME + ".pendingquitservice";
     public static final String INTENT_EXTRA_PLAYLIST = MUSIC_PACKAGE_NAME + "intentextra.playlist";
@@ -91,6 +92,8 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
     public static final String META_CHANGED = MUSIC_PACKAGE_NAME + ".metachanged";
     public static final String QUEUE_CHANGED = MUSIC_PACKAGE_NAME + ".queuechanged";
     public static final String PLAY_STATE_CHANGED = MUSIC_PACKAGE_NAME + ".playstatechanged";
+
+    public static final String FAVORITE_STATE_CHANGED = MUSIC_PACKAGE_NAME + ".favoritestatechanged";
 
     public static final String REPEAT_MODE_CHANGED = MUSIC_PACKAGE_NAME + ".repeatmodechanged";
     public static final String SHUFFLE_MODE_CHANGED = MUSIC_PACKAGE_NAME + ".shufflemodechanged";
@@ -200,6 +203,7 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
         uiThreadHandler = new Handler();
 
         registerReceiver(widgetIntentReceiver, new IntentFilter(APP_WIDGET_UPDATE));
+        registerReceiver(updateFavoriteReceiver, new IntentFilter(FAVORITE_STATE_CHANGED));
 
         initNotification();
 
@@ -341,6 +345,9 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
                         break;
                     case ACTION_SKIP:
                         playNextSong(true);
+                        break;
+                    case ACTION_TOGGLE_FAVORITE:
+                        MusicUtil.toggleFavorite(getApplicationContext(), getCurrentSong());
                         break;
                     case ACTION_STOP:
                     case ACTION_QUIT:
@@ -560,6 +567,13 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
             playingNotification.update();
         }
     }
+
+    private final BroadcastReceiver updateFavoriteReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(final Context context, final Intent intent) {
+            updateNotification();
+        }
+    };
 
     private void updateMediaSessionPlaybackState() {
         mediaSession.setPlaybackState(
@@ -1071,6 +1085,7 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
                 }
                 songPlayCountHelper.notifyPlayStateChanged(isPlaying);
                 break;
+            case FAVORITE_STATE_CHANGED:
             case META_CHANGED:
                 updateNotification();
                 updateMediaSessionMetaData();

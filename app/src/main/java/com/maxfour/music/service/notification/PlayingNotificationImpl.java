@@ -28,6 +28,7 @@ import com.maxfour.music.model.Song;
 import com.maxfour.music.service.MusicService;
 import com.maxfour.music.ui.activities.MainActivity;
 import com.maxfour.music.util.ImageUtil;
+import com.maxfour.music.util.MusicUtil;
 import com.maxfour.music.util.MusicColorUtil;
 import com.maxfour.music.util.PreferenceUtil;
 
@@ -42,6 +43,8 @@ public class PlayingNotificationImpl extends PlayingNotification {
         final Song song = service.getCurrentSong();
 
         final boolean isPlaying = service.isPlaying();
+
+        final boolean isFavorite = MusicUtil.isFavorite(service, song);
 
         final RemoteViews notificationLayout = new RemoteViews(service.getPackageName(), R.layout.notification);
         final RemoteViews notificationLayoutBig = new RemoteViews(service.getPackageName(), R.layout.notification_big);
@@ -136,12 +139,14 @@ public class PlayingNotificationImpl extends PlayingNotification {
                                 Bitmap prev = ImageUtil.createBitmap(ImageUtil.getTintedVectorDrawable(service, R.drawable.ic_skip_previous_white_24dp, primary), 1.5f);
                                 Bitmap next = ImageUtil.createBitmap(ImageUtil.getTintedVectorDrawable(service, R.drawable.ic_skip_next_white_24dp, primary), 1.5f);
                                 Bitmap playPause = ImageUtil.createBitmap(ImageUtil.getTintedVectorDrawable(service, isPlaying ? R.drawable.ic_pause_white_24dp : R.drawable.ic_play_arrow_white_24dp, primary), 1.5f);
+                                Bitmap fav = ImageUtil.createBitmap(ImageUtil.getTintedVectorDrawable(service, isFavorite ? R.drawable.ic_favorite_white_24dp : R.drawable.ic_favorite_border_white_24dp, primary), 1.5f);
 
                                 notificationLayout.setTextColor(R.id.title, primary);
                                 notificationLayout.setTextColor(R.id.text, secondary);
                                 notificationLayout.setImageViewBitmap(R.id.action_prev, prev);
                                 notificationLayout.setImageViewBitmap(R.id.action_next, next);
                                 notificationLayout.setImageViewBitmap(R.id.action_play_pause, playPause);
+                                notificationLayout.setImageViewBitmap(R.id.action_add_to_favorites, fav);
 
                                 notificationLayoutBig.setTextColor(R.id.title, primary);
                                 notificationLayoutBig.setTextColor(R.id.text, secondary);
@@ -149,6 +154,7 @@ public class PlayingNotificationImpl extends PlayingNotification {
                                 notificationLayoutBig.setImageViewBitmap(R.id.action_prev, prev);
                                 notificationLayoutBig.setImageViewBitmap(R.id.action_next, next);
                                 notificationLayoutBig.setImageViewBitmap(R.id.action_play_pause, playPause);
+                                notificationLayoutBig.setImageViewBitmap(R.id.action_add_to_favorites, fav);
                             }
                         });
             }
@@ -174,6 +180,11 @@ public class PlayingNotificationImpl extends PlayingNotification {
         pendingIntent = buildPendingIntent(service, MusicService.ACTION_SKIP, serviceName);
         notificationLayout.setOnClickPendingIntent(R.id.action_next, pendingIntent);
         notificationLayoutBig.setOnClickPendingIntent(R.id.action_next, pendingIntent);
+
+        // Favorite
+        pendingIntent = buildPendingIntent(service, MusicService.ACTION_TOGGLE_FAVORITE, serviceName);
+        notificationLayout.setOnClickPendingIntent(R.id.action_add_to_favorites, pendingIntent);
+        notificationLayoutBig.setOnClickPendingIntent(R.id.action_add_to_favorites, pendingIntent);
     }
 
     private PendingIntent buildPendingIntent(Context context, final String action, final ComponentName serviceName) {
