@@ -1,5 +1,18 @@
 apply plugin: 'com.android.application'
 
+def getProperties(String fileName) {
+    final Properties properties = new Properties()
+    def file = file(fileName)
+    if (file.exists()) {
+        file.withInputStream { stream -> properties.load(stream) }
+    }
+    return properties
+}
+
+static def getProperty(@Nullable Properties properties, String name) {
+    return properties.getProperty(name) ?: "$name missing"
+}
+
 android {
     compileSdkVersion 29
     buildToolsVersion '29.0.3'
@@ -16,10 +29,11 @@ android {
     }
     signingConfigs {
         release {
-            keyAlias 'keyAlias'
-            keyPassword 'keyPassword'
-            storeFile file('storeFile')
-            storePassword 'storePassword'
+            Properties properties = getProperties('*directory*')
+            keyAlias getProperty(properties, 'keyAlias')
+            keyPassword getProperty(properties, 'storePassword')
+            storeFile file(getProperty(properties, 'storeFile'))
+            storePassword getProperty(properties, 'keyPassword')
         }
     }
     buildTypes {
@@ -27,7 +41,10 @@ android {
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
+        debug {
+            applicationIdSuffix '.debug'
     }
     packagingOptions {
         exclude 'META-INF/LICENSE'
