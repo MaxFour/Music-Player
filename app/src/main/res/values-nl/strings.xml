@@ -84,6 +84,8 @@
     <string name="clear_blacklist">Zwarte lijst leegmaken</string>
     <string name="clear_playlist_title">Afspeellijst wissen</string>
     <string name="clear_playlist_x"><![CDATA[Wil je de afspeellijst \'<b>%1$s</b>\' wissen? Dit kan niet ongedaan worden gemaakt!]]></string>
+    <string name="clipboard_dollar_wallet_number_copied">Dollar portemonnee nummer is gekopieerd naar klembord</string>
+    <string name="clipboard_ruble_wallet_number_copied">Ruble wallet nummer is gekopieerd naar klembord</string>
     <string name="colored_footers">Gekleurde voetnoten</string>
     <string name="could_not_create_playlist">De afspeellijst kan niet worden gecreëerd</string>
     <string name="could_not_download_album_cover">Kan geen bijbehorende albumhoes downloaden</string>
@@ -112,7 +114,7 @@
         <item quantity="one"><xliff:g id="count">%1$d</xliff:g> nummer verwijderd</item>
         <item quantity="other"><xliff:g id="count">%1$d</xliff:g> nummers verwijderd</item>
     </plurals>
-    <string name="dialog_ringtone_message">De app \'Muziek\' moet worden gemachtigd om instellingen te kunnen wegschrijven zodat je beltoon kan worden ingesteld. Verleen de machtiging en probeer het opnieuw.</string>
+    <string name="dialog_ringtone_message">Laat de \"Muziek\"-toepassing toe om de geluidsinstellingen te wijzigen</string>
     <string name="dialog_ringtone_title">Beltoon instellen</string>
     <string name="do_you_want_to_clear_the_blacklist">Wil je de zwarte lijst leegmaken?</string>
     <string name="do_you_want_to_remove_from_the_blacklist"><![CDATA[Wil je <b>%1$s</b> verwijderen van de zwarte lijst?]]></string>
@@ -145,6 +147,7 @@
     <string name="last_added">Laatst toegevoegd</string>
     <string name="library">Verzameling</string>
     <string name="library_categories">Verzamelingscategorieën</string>
+    <string name="licenses">Licenties</string>
     <string name="light_theme_name">Licht</string>
     <string name="listing_files">Bestandsopsomming</string>
     <string name="lyrics">Songtekst</string>
@@ -200,7 +203,6 @@
     <string name="pref_summary_blacklist">De inhoud van mappen op de zwarte lijst is verborgen in je bibliotheek</string>
     <string name="pref_summary_blurred_album_art">Vervaagt de albumhoes op het vergrendelscherm. Dit kan problemen veroorzaken met externe apps en widgets.</string>
     <string name="pref_summary_classic_notification">Gebruik het klassieke meldingsontwerp</string>
-    <string name="pref_summary_colored_app_shortcuts">Kleurt de appsnelkoppelingen in met de primaire kleur</string>
     <string name="pref_summary_colored_navigation_bar">Kleurt de navigatiebalk in met de primaire kleur</string>
     <string name="pref_summary_colored_notification">Kleurt de melding in met de opvallendste kleur van de albumhoes</string>
     <string name="pref_summary_gapless_playback">Dit kan problemen veroorzaken op sommige apparaten</string>

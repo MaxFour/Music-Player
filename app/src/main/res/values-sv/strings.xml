@@ -57,6 +57,7 @@
     <string name="albums">Album</string>
     <plurals name="albums_x" tools:ignore="MissingQuantity">
         <item quantity="other">album</item>
+
     </plurals>
     <string name="always">Alltid</string>
     <string name="app_name">Musik</string>
@@ -82,6 +83,8 @@
     <string name="clear_blacklist">Rensa svartlistan</string>
     <string name="clear_playlist_title">Rensa spellistan</string>
     <string name="clear_playlist_x"><![CDATA[Rensa spellistan \"<b>%1$s</b>\"? Detta går inte att ångra!]]></string>
+    <string name="clipboard_dollar_wallet_number_copied">Dollarn plånbok nummer har kopierats till Urklipp</string>
+    <string name="clipboard_ruble_wallet_number_copied">Rubel plånbok nummer har kopierats till Urklipp</string>
     <string name="colored_footers">Färgad sidfot</string>
     <string name="could_not_create_playlist">Det gick inte att skapa en spellista</string>
     <string name="could_not_download_album_cover">Det gick inte att hämta ett matchande albumomslag</string>
@@ -91,7 +94,10 @@
     <string name="currently_listening_to_x_by_x">Lyssnar nu på %1$s av %2$s</string>
     <string name="dark_theme_name">Mörk</string>
     <string name="delete_action">Ta bort</string>
+    <string name="delete_playlist_dialog_title">Radera spellista</string>
+    <string name="delete_playlist_s_title">Ta bort spellistor (er)</string>
     <string name="delete_playlist_x"><![CDATA[Ta bort spellistan \"<b>%1$s</b>\"?]]></string>
+    <string name="delete_playlists_dialog_title">Ta bort spellistor</string>
     <string name="delete_song_title">Ta bort låten</string>
     <string name="delete_song_x"><![CDATA[Ta bort låten \"<b>%1$s</b>\"?]]></string>
     <string name="delete_songs_title">Ta bort låtar</string>
@@ -105,7 +111,7 @@
         <item quantity="one">Tog bort <xliff:g id="count">%1$d</xliff:g> låt</item>
         <item quantity="other">Tog bort <xliff:g id="count">%1$d</xliff:g> låtar</item>
     </plurals>
-    <string name="dialog_ringtone_message">Appen \"Musik\" kräver tillstånd att \"skriva inställningar\" för att ställa in din ringsignal. Efter att ha beviljat tillstånd, försök att ställa in din ringsignal igen.</string>
+    <string name="dialog_ringtone_message">Låt applikationen \"Musik\" ändra ljudinställningarna</string>
     <string name="dialog_ringtone_title">Ställ in rington</string>
     <string name="do_you_want_to_clear_the_blacklist">Vill du rensa svartlistan?</string>
     <string name="do_you_want_to_remove_from_the_blacklist"><![CDATA[Vill du ta bort <b>%1$s</b> från svartlistan?]]></string>
@@ -114,6 +120,7 @@
     <string name="equalizer">Equalizer</string>
     <string name="failed_to_save_playlist">Misslyckades med att spara spellistan (%s)</string>
     <string name="favorites">Favoriter</string>
+    <string name="finish_current_music_sleep_timer">Slutför sista låten</string>
     <string name="flat">Platt</string>
     <string name="folders">Mappar</string>
     <string name="fork_on_github">Gaffel på github</string>
@@ -137,6 +144,7 @@
     <string name="last_added">Senast tillagda</string>
     <string name="library">Bibliotek</string>
     <string name="library_categories">Bibliotekskategorier</string>
+    <string name="licenses">licenser</string>
     <string name="light_theme_name">Ljus</string>
     <string name="listing_files">Listar filer</string>
     <string name="lyrics">Låttexter</string>
@@ -167,6 +175,7 @@
     <string name="ok">OK</string>
     <string name="only_on_wifi">Endast på Wi-Fi</string>
     <string name="open_playing_queue_instruction">Dra kortet i den nu spelande skärmen för att avslöja hela spelkön</string>
+    <string name="past_seven_days">De senaste sju dagarna</string>
     <string name="past_three_months">Senaste 3 månaderna</string>
     <string name="permission_external_storage_denied">Tillstånd att få tillgång till externt lagringsutrymme nekas</string>
     <string name="permissions_denied">Tillstånd nekade</string>
@@ -191,13 +200,13 @@
     <string name="pref_summary_blacklist">Innehållet i svartlistade mappar är dolt från ditt bibliotek</string>
     <string name="pref_summary_blurred_album_art">Suddar albumsomslaget på låsskärmen. Kan orsaka problem med tredjeparts appar och gränssnittskomponenter.</string>
     <string name="pref_summary_classic_notification">Använd den klassiska aviseringsdesignen</string>
-    <string name="pref_summary_colored_app_shortcuts">Färger appgenvägarna i primärfärgen</string>
     <string name="pref_summary_colored_navigation_bar">Färger navigeringsfältet i primärfärgen</string>
     <string name="pref_summary_colored_notification">Färger aviseringen i albumsomslagets färg</string>
     <string name="pref_summary_gapless_playback">Kan orsaka uppspelningsproblem på vissa enheter</string>
     <string name="pref_summary_ignore_media_store_artwork">Kan öka kvaliteten på albumsomslaget men orsakar långsammare bildladdningstider. Aktivera bara detta om du har problem med bilder med låg upplösning.</string>
     <string name="pref_summary_library_categories">Konfigurera synlighet och ordning för bibliotekskategorier</string>
     <string name="pref_summary_remember_last_tab">Gå till den senaste öppnade fliken vid uppstart</string>
+    <string name="pref_summary_remember_shuffle">Blandningsläget förblir på när du väljer en ny lista med låtar</string>
     <string name="pref_summary_synchronized_lyrics_show">För närvarande stöds endast synkroniserade låttexter i LRC-format. Antingen inbäddade eller som en separat fil.</string>
     <string name="pref_title_album_art_on_lockscreen">Visa albumomslaget</string>
     <string name="pref_title_app_shortcuts">Färgade appgenvägar</string>
@@ -213,10 +222,12 @@
     <string name="pref_title_navigation_bar">Färgat navigeringsfält</string>
     <string name="pref_title_now_playing_screen_appearance">Utseende</string>
     <string name="pref_title_remember_last_tab">Kom ihåg senaste fliken</string>
+    <string name="pref_title_remember_shuffle">Kom ihåg blandning</string>
     <string name="pref_title_synchronized_lyrics_show">Visa synkroniserade låttexter</string>
     <string name="primary_color">Primärfärg</string>
     <string name="primary_color_desc">Den primära temafärgen</string>
     <string name="rearrange_playing_queue_instruction">Omordna spelkön genom att dra en låt från dess låtnummer</string>
+    <string name="recently_played">Nyligen spelat</string>
     <string name="remove_action">Ta bort</string>
     <string name="remove_cover">Ta bort omslag</string>
     <string name="remove_from_blacklist">Ta bort från svartlistan</string>
@@ -231,6 +242,7 @@
     <string name="reset_action">Återställ</string>
     <string name="reset_artist_image">Återställ artistbild</string>
     <string name="save_playlist_title">Spara som fil</string>
+    <string name="save_playlists_title">Spara som filer</string>
     <string name="saved_playlist_to">Sparade spellistan till %s</string>
     <string name="saved_x_playlists_to_x">Sparade %1$d spellistor till %2$s</string>
     <string name="saved_x_playlists_to_x_failed_to_save_x">Sparade %1$d spellistor till %2$s, misslyckades att spara %3$d</string>
@@ -277,6 +289,7 @@
     <string name="write_an_email">Skriv ett e-postmeddelande</string>
     <string name="x_has_been_set_as_ringtone">Ställ in \"%1$s\" som din rington</string>
     <string name="x_selected">%1$d valda</string>
+    <string name="yandex_money">Yandex.Money</string>
     <string name="year">År</string>
     <string name="you_have_to_select_at_least_one_category">Du måste välja minst en kategori</string>
 </resources>

@@ -81,9 +81,11 @@
     <string name="cancel_current_timer">Cancelar temporizador actual</string>
     <string name="card">Tarjeta</string>
     <string name="clear_action">Limpiar</string>
-    <string name="clear_blacklist">Limpiar lista negra</string>
+    <string name="clear_blacklist">Vaciar la lista negra</string>
     <string name="clear_playlist_title">Limpiar lista de reproducción</string>
     <string name="clear_playlist_x"><![CDATA[¿Limpiar la lista de reproducción \"<b>%1$s</b>\"? ¡Esto no se puede deshacer!]]></string>
+    <string name="clipboard_dollar_wallet_number_copied">El número de la billetera del dólar ha sido copiado al portapapeles</string>
+    <string name="clipboard_ruble_wallet_number_copied">El número de la billetera del rublo ha sido copiado al portapapeles</string>
     <string name="colored_footers">Pies de página coloreados</string>
     <string name="could_not_create_playlist">No se pudo crear la lista de reproducción</string>
     <string name="could_not_download_album_cover">No se ha podido descargar una caratula coincidente</string>
@@ -93,7 +95,10 @@
     <string name="currently_listening_to_x_by_x">Actualmente escuchando a %1$s de %2$s</string>
     <string name="dark_theme_name">Oscuro</string>
     <string name="delete_action">Eliminar</string>
+    <string name="delete_playlist_dialog_title">Eliminar la lista de reproducción</string>
+    <string name="delete_playlist_s_title">Eliminar la(s) lista(s) de reproducción</string>
     <string name="delete_playlist_x"><![CDATA[¿Eliminar la lista de reproducción \"<b>%1$s</b>\"?]]></string>
+    <string name="delete_playlists_dialog_title">Eliminar las listas de reproducción</string>
     <string name="delete_song_title">Eliminar canción</string>
     <string name="delete_song_x"><![CDATA[¿Eliminar la canción \"<b>%1$s</b>\"?]]></string>
     <string name="delete_songs_title">Eliminar canciones</string>
@@ -109,8 +114,8 @@
         <item quantity="one">Eliminada <xliff:g id="count">%1$d</xliff:g> canción</item>
         <item quantity="other">Eliminadas <xliff:g id="count">%1$d</xliff:g> canciones</item>
     </plurals>
-    <string name="dialog_ringtone_message">La aplicación \"Music\" requiere permiso para \"escribir configuraciones\" para establecer su tono de llamada. Después de conceder el permiso, intente establecer su tono de llamada de nuevo.</string>
-    <string name="dialog_ringtone_title">Establecer tono de llamada</string>
+    <string name="dialog_ringtone_message">Permitir que la aplicación \"Música\" modifique los ajustes de audio</string>
+    <string name="dialog_ringtone_title">Definir como tono de llamada</string>
     <string name="do_you_want_to_clear_the_blacklist">¿Deseas limpiar la lista negra?</string>
     <string name="do_you_want_to_remove_from_the_blacklist"><![CDATA[¿Deseas eliminar <b>%1$s</b> de la lista negra?]]></string>
     <string name="download_from_last_fm">Descargar desde Last.fm</string>
@@ -118,6 +123,7 @@
     <string name="equalizer">Ecualizador</string>
     <string name="failed_to_save_playlist">Error al guardar la lista de reproducción (%s)</string>
     <string name="favorites">Favoritos</string>
+    <string name="finish_current_music_sleep_timer">Termina la última canción</string>
     <string name="flat">Plano</string>
     <string name="folders">Carpetas</string>
     <string name="fork_on_github">Fork en GitHub</string>
@@ -141,14 +147,15 @@
     <string name="last_added">Últimas añadidas</string>
     <string name="library">Librería</string>
     <string name="library_categories">Categorías</string>
+    <string name="licenses">Licencias</string>
     <string name="light_theme_name">Claro</string>
-    <string name="listing_files">Listando archivos</string>
+    <string name="listing_files">Lista de archivos</string>
     <string name="lyrics">Letra</string>
     <string name="md_back_label">Atrás</string>
     <string name="md_cancel_label">Cancelar</string>
     <string name="md_choose_label">Escoger</string>
     <string name="md_custom_label">Personalizar</string>
-    <string name="md_done_label">Hecho</string>
+    <string name="md_done_label">Listo</string>
     <string name="md_error_label">Error</string>
     <string name="md_presets_label">Configuraciones</string>
     <string name="mi_label_button_cta">Introducción</string>
@@ -159,15 +166,15 @@
     <string name="new_playlist_title">Nueva lista</string>
     <string name="new_start_directory">%s es el nuevo directorio principal</string>
     <string name="no_albums">No álbumes</string>
-    <string name="no_artists">No artistas</string>
-    <string name="no_audio_ID">Reproduce una canción primero, intenta de nuevo</string>
+    <string name="no_artists">No hay artistas</string>
+    <string name="no_audio_ID">Reproduce una canción primero, e intenta de nuevo</string>
     <string name="no_equalizer">Ecualizador no encontrado</string>
-    <string name="no_genres">No géneros</string>
-    <string name="no_playlists">No listas de reproducción</string>
+    <string name="no_genres">No hay géneros</string>
+    <string name="no_playlists">No hay listas de reproducción</string>
     <string name="no_results">No se encontraron resultados</string>
     <string name="no_songs">No se encontraron canciones</string>
     <string name="not_listed_in_media_store"><![CDATA[<b>%s</b> no está listado en la tienda de medios]]></string>
-    <string name="nothing_to_scan">Nada para buscar</string>
+    <string name="nothing_to_scan">Nada que buscar</string>
     <string name="ok">OK</string>
     <string name="only_on_wifi">Sólo en Wi-Fi</string>
     <string name="open_playing_queue_instruction">Desliza la tarjeta en la pantalla de reproducción actual para revelar la cola de reproducción</string>
@@ -196,13 +203,13 @@
     <string name="pref_summary_blacklist">El contenido de la lista negra está escondida de tu librería</string>
     <string name="pref_summary_blurred_album_art">Desenfocar imagen de álbum en pantalla de bloqueo. Puede causar problemas con aplicaciones de terceros y widgets.</string>
     <string name="pref_summary_classic_notification">Usar el diseño clásico para notificaciones</string>
-    <string name="pref_summary_colored_app_shortcuts">Colorear el acceso directo de la app en el color primario.</string>
     <string name="pref_summary_colored_navigation_bar">Colorear la barra de navegación con el color primario</string>
     <string name="pref_summary_colored_notification">Colorear las notificaciones con el color del álbum</string>
     <string name="pref_summary_gapless_playback">Puede causar problemas de reproducción en algunos dispositivos</string>
     <string name="pref_summary_ignore_media_store_artwork">Puede aumentar la calidad de la portada del álbum, pero causa tiempos de carga de imagen más lentos. Solo habilitarlo si tienes problemas con caratulas de baja resolución.</string>
     <string name="pref_summary_library_categories">Configurar la visibilidad y el orden de las categorías de la biblioteca</string>
     <string name="pref_summary_remember_last_tab">Iniciar en la última pestaña abierta</string>
+    <string name="pref_summary_remember_shuffle">El modo aleatorio permanecerá activado cuando se seleccione una nueva lista de canciones</string>
     <string name="pref_summary_synchronized_lyrics_show">Actualmente solo se admiten letras sincronizadas en formato LRC. Tanto insertadas como en archivo externo.</string>
     <string name="pref_title_album_art_on_lockscreen">Mostrar la caratula del álbum</string>
     <string name="pref_title_app_shortcuts">Colorear accesos directos de la aplicación</string>
@@ -218,10 +225,12 @@
     <string name="pref_title_navigation_bar">Colorear barra de navegación</string>
     <string name="pref_title_now_playing_screen_appearance">Apariencia</string>
     <string name="pref_title_remember_last_tab">Recordar última pestaña</string>
+    <string name="pref_title_remember_shuffle">Recuerde la barajadura</string>
     <string name="pref_title_synchronized_lyrics_show">Mostrar letras sincronizadas</string>
     <string name="primary_color">Color primario</string>
     <string name="primary_color_desc">Color primario del tema</string>
     <string name="rearrange_playing_queue_instruction">Reorganizar la cola de reproducción arrastrando la canción desde su número</string>
+    <string name="recently_played">Recientemente jugado</string>
     <string name="remove_action">Eliminar</string>
     <string name="remove_cover">Eliminar caratula</string>
     <string name="remove_from_blacklist">Eliminar de la lista negra</string>
@@ -237,6 +246,7 @@
     <string name="reset_action">Restablecer</string>
     <string name="reset_artist_image">Restablecer imagen de artista</string>
     <string name="save_playlist_title">Guardar como archivo</string>
+    <string name="save_playlists_title">Guardar como archivos</string>
     <string name="saved_playlist_to">Guardada lista de reproducción en %s</string>
     <string name="saved_x_playlists_to_x">Guardadas %1$d listas de reproducción en %2$s</string>
     <string name="saved_x_playlists_to_x_failed_to_save_x">Guardadas %1$d listas de reproducción en %2$s, error al guardar %3$d</string>
@@ -284,6 +294,7 @@
     <string name="write_an_email">Escribir un email</string>
     <string name="x_has_been_set_as_ringtone">Establecer \"%1$s\" como tono de llamada</string>
     <string name="x_selected">%1$d seleccionado(s)</string>
+    <string name="yandex_money">Yandex.Dinero</string>
     <string name="year">Año</string>
     <string name="you_have_to_select_at_least_one_category">Debes seleccionar al menos una categoría</string>
 </resources>

@@ -84,6 +84,8 @@
     <string name="clear_blacklist">Vider la liste noire</string>
     <string name="clear_playlist_title">Vider la liste de lecture</string>
     <string name="clear_playlist_x"><![CDATA[Vider la liste de lecture \"<b>%1$s</b>\" ? Cela ne peut pas être annulé !]]></string>
+    <string name="clipboard_dollar_wallet_number_copied">Le numéro du portefeuille en dollars a été copié dans le presse-papiers</string>
+    <string name="clipboard_ruble_wallet_number_copied">Le numéro du portefeuille rouble a été copié dans le presse-papiers</string>
     <string name="colored_footers">Pieds de page colorés</string>
     <string name="could_not_create_playlist">Impossible de créer la liste de lecture</string>
     <string name="could_not_download_album_cover">Impossible de télécharger une couverture d\'album correspondante</string>
@@ -93,7 +95,10 @@
     <string name="currently_listening_to_x_by_x">%1$s par %2$s en cours de lecture</string>
     <string name="dark_theme_name">Sombre</string>
     <string name="delete_action">Supprimer</string>
+    <string name="delete_playlist_dialog_title">Supprimer la playlist</string>
+    <string name="delete_playlist_s_title">Supprimer la ou les playlists</string>
     <string name="delete_playlist_x"><![CDATA[Supprimer la liste de lecture \"<b>%1$s</b>\" ?]]></string>
+    <string name="delete_playlists_dialog_title">Supprimer les playlists</string>
     <string name="delete_song_title">Supprimer la chanson</string>
     <string name="delete_song_x"><![CDATA[Supprimer la chanson  \"<b>%1$s</b>\" ?]]></string>
     <string name="delete_songs_title">Supprimer les chansons</string>
@@ -109,7 +114,7 @@
         <item quantity="one"><xliff:g id="count">%1$d</xliff:g> chanson supprimée</item>
         <item quantity="other"><xliff:g id="count">%1$d</xliff:g> chansons supprimées</item>
     </plurals>
-    <string name="dialog_ringtone_message">L\'application \"Music\" a besoin de l\'autorisation \"modifier les paramètres\" afin de régler votre sonnerie. Après avoir accordé la permission, essayez de régler votre sonnerie à nouveau.</string>
+    <string name="dialog_ringtone_message">Autoriser l\'application \"Musique\" à modifier les paramètres audio</string>
     <string name="dialog_ringtone_title">Définir sonnerie</string>
     <string name="do_you_want_to_clear_the_blacklist">Voulez-vous vider la liste noire ?</string>
     <string name="do_you_want_to_remove_from_the_blacklist"><![CDATA[Voulez-vous supprimer <b>%1$s</b> de la liste noire ?]]></string>
@@ -118,6 +123,7 @@
     <string name="equalizer">Egaliseur</string>
     <string name="failed_to_save_playlist">Échec de l\'enregistrement de la liste de lecture (%s)</string>
     <string name="favorites">Favoris</string>
+    <string name="finish_current_music_sleep_timer">Terminer la dernière chanson</string>
     <string name="flat">Plat</string>
     <string name="folders">Fichiers</string>
     <string name="fork_on_github">Forker sur GitHub</string>
@@ -141,6 +147,7 @@
     <string name="last_added">Derniers ajouts</string>
     <string name="library">Bibliothèque</string>
     <string name="library_categories">Catégories de la bibliothèque</string>
+    <string name="licenses">Licenses</string>
     <string name="light_theme_name">Clair</string>
     <string name="listing_files">Liste des fichiers</string>
     <string name="lyrics">Paroles</string>
@@ -196,13 +203,13 @@
     <string name="pref_summary_blacklist">Le contenu des dossiers sur liste noire est masqué dans votre bibliothèque</string>
     <string name="pref_summary_blurred_album_art">Floute la pochette d\'album sur l\'écran de verouillage. Peut causer des problèmes avec des applications tierses et widgets.</string>
     <string name="pref_summary_classic_notification">Utiliser le style de notification classique</string>
-    <string name="pref_summary_colored_app_shortcuts">Colore les raccourcis de l\'application dans la couleur primaire</string>
     <string name="pref_summary_colored_navigation_bar">Colore la barre de navigation dans la couleur primaire</string>
     <string name="pref_summary_colored_notification">Colore la notification dans la couleur de la pochette de l\'album</string>
     <string name="pref_summary_gapless_playback">Peut causer des problèmes de lecture sur certains appareils</string>
     <string name="pref_summary_ignore_media_store_artwork">Peut augmenter la qualité de la pochette de l\'album mais ralentit le chargement des images. Activez cette option uniquement si vous rencontrez des problèmes avec les pochettes en faible résolution.</string>
     <string name="pref_summary_library_categories">Configurer la visibilité et l\'ordre des catégories de la bibliothèque</string>
     <string name="pref_summary_remember_last_tab">Aller à la dernière catégorie ouverte au lancement</string>
+    <string name="pref_summary_remember_shuffle">Le mode \"Shuffle\" reste activé lors de la sélection d\'une nouvelle liste de chansons</string>
     <string name="pref_summary_synchronized_lyrics_show">Actuellement, seules les paroles synchronisées au format LRC sont prises en charge. Intégrées ou en tant que fichier séparé.</string>
     <string name="pref_title_album_art_on_lockscreen">Afficher la pochette de l\'album</string>
     <string name="pref_title_app_shortcuts">Raccourcis d\'application colorés</string>
@@ -218,10 +225,12 @@
     <string name="pref_title_navigation_bar">Barre de navigation colorée</string>
     <string name="pref_title_now_playing_screen_appearance">Apparence</string>
     <string name="pref_title_remember_last_tab">Se souvenir de la dernière catégorie</string>
+    <string name="pref_title_remember_shuffle">Remember shuffle</string>
     <string name="pref_title_synchronized_lyrics_show">Afficher les paroles synchronisées</string>
     <string name="primary_color">Couleur principale</string>
     <string name="primary_color_desc">La couleur principale du thème</string>
     <string name="rearrange_playing_queue_instruction">Réorganiser la file d\'attente en faisant glisser une chanson à partir de son numéro</string>
+    <string name="recently_played">Récemment diffusé</string>
     <string name="remove_action">Enlever</string>
     <string name="remove_cover">Enlever la pochette</string>
     <string name="remove_from_blacklist">Enlever de la liste noire</string>
@@ -237,6 +246,7 @@
     <string name="reset_action">Réinitialiser</string>
     <string name="reset_artist_image">Réinitialiser l\'image de l\'artiste</string>
     <string name="save_playlist_title">Enregistrer sous forme de fichier</string>
+    <string name="save_playlists_title">Enregistrer sous forme de fichiers</string>
     <string name="saved_playlist_to">Liste de lecture enregistrée vers %s</string>
     <string name="saved_x_playlists_to_x">%1$d listes de lecture enregistrées vers %2$s</string>
     <string name="saved_x_playlists_to_x_failed_to_save_x">%1$d listes de lecture enregistrées vers %2$s, échec de la sauvegarde de %3$d</string>
@@ -284,6 +294,7 @@
     <string name="write_an_email">Ecrire un courriel</string>
     <string name="x_has_been_set_as_ringtone">Définir \"%1$s\" comme sonnerie</string>
     <string name="x_selected">%1$d sélectionné</string>
+    <string name="yandex_money">Yandex.Money</string>
     <string name="year">Année</string>
     <string name="you_have_to_select_at_least_one_category">Vous devez sélectionner au moins une catégorie</string>
 </resources>
