@@ -65,8 +65,11 @@
     <string name="app_shortcut_top_songs_short">Top songs</string>
     <string name="app_widget_big_name">Music - Big</string>
     <string name="app_widget_card_name">Music - Card</string>
+    <string name="app_widget_card_dark_name">Music - Card Dark</string>
     <string name="app_widget_classic_name">Music - Classic</string>
+    <string name="app_widget_classic_dark_name">Music - Classic Dark</string>
     <string name="app_widget_small_name">Music - Small</string>
+    <string name="app_widget_small_dark_name">Music - Small Dark</string>
     <string name="artist">Artist</string>
     <string name="artists">Artists</string>
     <string name="audio_focus_denied">Audio focus denied</string>

@@ -42,8 +42,11 @@ import com.bumptech.glide.request.target.SimpleTarget;
 import com.maxfour.music.R;
 import com.maxfour.music.appwidgets.AppWidgetBig;
 import com.maxfour.music.appwidgets.AppWidgetCard;
+import com.maxfour.music.appwidgets.AppWidgetCardDark;
 import com.maxfour.music.appwidgets.AppWidgetClassic;
+import com.maxfour.music.appwidgets.AppWidgetClassicDark;
 import com.maxfour.music.appwidgets.AppWidgetSmall;
+import com.maxfour.music.appwidgets.AppWidgetSmallDark;
 import com.maxfour.music.glide.BlurTransformation;
 import com.maxfour.music.glide.SongGlideRequest;
 import com.maxfour.music.helper.ShuffleHelper;
@@ -130,8 +133,11 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
 
     private AppWidgetBig appWidgetBig = AppWidgetBig.getInstance();
     private AppWidgetClassic appWidgetClassic = AppWidgetClassic.getInstance();
+    private AppWidgetClassicDark appWidgetClassicDark = AppWidgetClassicDark.getInstance();
     private AppWidgetSmall appWidgetSmall = AppWidgetSmall.getInstance();
+    private AppWidgetSmallDark appWidgetSmallDark = AppWidgetSmallDark.getInstance();
     private AppWidgetCard appWidgetCard = AppWidgetCard.getInstance();
+    private AppWidgetCardDark appWidgetCardDark = AppWidgetCardDark.getInstance();
 
     private Playback playback;
     private List<Song> playingQueue = new ArrayList<>();
@@ -1062,8 +1068,11 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
         sendBroadcast(new Intent(what));
         appWidgetBig.notifyChange(this, what);
         appWidgetClassic.notifyChange(this, what);
+        appWidgetClassicDark.notifyChange(this, what);
         appWidgetSmall.notifyChange(this, what);
+        appWidgetSmallDark.notifyChange(this, what);
         appWidgetCard.notifyChange(this, what);
+        appWidgetCardDark.notifyChange(this, what);
     }
 
     private static final long MEDIA_SESSION_ACTIONS = PlaybackStateCompat.ACTION_PLAY
@@ -1318,8 +1327,16 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
                     appWidgetClassic.performUpdate(MusicService.this, ids);
                     break;
                 }
+                case AppWidgetClassicDark.NAME: {
+                    appWidgetClassicDark.performUpdate(MusicService.this, ids);
+                    break;
+                }
                 case AppWidgetSmall.NAME: {
                     appWidgetSmall.performUpdate(MusicService.this, ids);
+                    break;
+                }
+                case AppWidgetSmallDark.NAME: {
+                    appWidgetSmallDark.performUpdate(MusicService.this, ids);
                     break;
                 }
                 case AppWidgetBig.NAME: {
@@ -1329,6 +1346,10 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
                 case AppWidgetCard.NAME: {
                     appWidgetCard.performUpdate(MusicService.this, ids);
                     break;
+                }
+                    case AppWidgetCardDark.NAME: {
+                        appWidgetCardDark.performUpdate(MusicService.this, ids);
+                        break;
                 }
             }
         }
