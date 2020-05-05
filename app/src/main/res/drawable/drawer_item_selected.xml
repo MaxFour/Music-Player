@@ -1,0 +1,7 @@
+<animated-selector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:enterFadeDuration="@android:integer/config_shortAnimTime"
+    android:exitFadeDuration="@android:integer/config_shortAnimTime">
+
+    <item android:state_checked="true" android:drawable="@drawable/item_rounded_right" />
+    <item android:drawable="@android:color/transparent"/>
+</animated-selector>
