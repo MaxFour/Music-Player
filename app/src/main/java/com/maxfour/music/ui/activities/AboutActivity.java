@@ -4,7 +4,6 @@ import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -86,7 +85,7 @@ public class AboutActivity extends AbsBaseActivity implements View.OnClickListen
     }
 
     private void setUpAppVersion() {
-        appVersion.setText(getCurrentVersionName(this));
+        appVersion.setText(R.string.app_version);
     }
 
     private void setUpOnClickListeners() {
@@ -107,15 +106,6 @@ public class AboutActivity extends AbsBaseActivity implements View.OnClickListen
             return true;
         }
         return super.onOptionsItemSelected(item);
-    }
-
-    private static String getCurrentVersionName(@NonNull final Context context) {
-        try {
-            return context.getPackageManager().getPackageInfo(context.getPackageName(), 0).versionName;
-        } catch (PackageManager.NameNotFoundException e) {
-            e.printStackTrace();
-        }
-        return "Unknown";
     }
 
     @Override

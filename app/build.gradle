@@ -31,7 +31,7 @@ android {
     }
     signingConfigs {
         release {
-            Properties properties = getProperties('*directory*')
+            Properties properties = getProperties('D:/Android Development/keystore.properties')
             keyAlias getProperty(properties, 'keyAlias')
             keyPassword getProperty(properties, 'storePassword')
             storeFile file(getProperty(properties, 'storeFile'))
