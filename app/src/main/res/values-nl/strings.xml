@@ -67,8 +67,11 @@
     <string name="app_shortcut_top_songs_short">Topnummers</string>
     <string name="app_widget_big_name">Muziek - Groot</string>
     <string name="app_widget_card_name">Muziek - Kaart</string>
+    <string name="app_widget_card_dark_name">Muziek - Kaart Donker</string>
     <string name="app_widget_classic_name">Muziek - Klassiek</string>
+    <string name="app_widget_classic_dark_name">Muziek - Klassiek donker</string>
     <string name="app_widget_small_name">Muziek - Klein</string>
+    <string name="app_widget_small_dark_name">Muziek - Klein Donker</string>
     <string name="artist">Artiest</string>
     <string name="artists">Artiesten</string>
     <string name="audio_focus_denied">Audiofocus geweigerd</string>
@@ -203,6 +206,7 @@
     <string name="pref_summary_blacklist">De inhoud van mappen op de zwarte lijst is verborgen in je bibliotheek</string>
     <string name="pref_summary_blurred_album_art">Vervaagt de albumhoes op het vergrendelscherm. Dit kan problemen veroorzaken met externe apps en widgets.</string>
     <string name="pref_summary_classic_notification">Gebruik het klassieke meldingsontwerp</string>
+    <string name="pref_summary_colored_app_shortcuts">Kleurt de app snelkoppelingen in de accentkleur</string>
     <string name="pref_summary_colored_navigation_bar">Kleurt de navigatiebalk in met de primaire kleur</string>
     <string name="pref_summary_colored_notification">Kleurt de melding in met de opvallendste kleur van de albumhoes</string>
     <string name="pref_summary_gapless_playback">Dit kan problemen veroorzaken op sommige apparaten</string>

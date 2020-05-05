@@ -65,8 +65,11 @@
     <string name="app_shortcut_top_songs_short">En çok çalan şarkılar</string>
     <string name="app_widget_big_name">Müzik - Büyük</string>
     <string name="app_widget_card_name">Müzik - Kart</string>
+    <string name="app_widget_card_dark_name">Müzik - Card Dark</string>
     <string name="app_widget_classic_name">Müzik - Klasik</string>
+    <string name="app_widget_classic_dark_name">Müzik - Classic Dark</string>
     <string name="app_widget_small_name">Müzik - Küçük</string>
+    <string name="app_widget_small_dark_name">Müzik - Small Dark</string>
     <string name="artist">Sanatçı</string>
     <string name="artists">Sanatçılar</string>
     <string name="audio_focus_denied">Ses odağı reddedildi</string>
@@ -199,6 +202,7 @@
     <string name="pref_summary_blacklist">Kara listeye alınan klasörler kütüphanenizde gizlenir</string>
     <string name="pref_summary_blurred_album_art">Kilit ekranında albüm kapağını bulanıklaştırır. Üçüncül taraf uygulamalarda ve widgetlarda sorun oluşturabilir.</string>
     <string name="pref_summary_classic_notification">Klasik bildirim tasarımını kullan</string>
+    <string name="pref_summary_colored_app_shortcuts">Vurgu renginde uygulama kısayollarını renklendirir</string>
     <string name="pref_summary_colored_navigation_bar">Gezinti çubuğunda birincil rengi kullanır</string>
     <string name="pref_summary_colored_notification">Bildirimde albüm kapağının canlı rengini kullanır</string>
     <string name="pref_summary_gapless_playback">Bazı cihazlarda yürütme sorununa yol açabilir</string>

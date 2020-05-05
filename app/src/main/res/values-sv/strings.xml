@@ -66,8 +66,11 @@
     <string name="app_shortcut_top_songs_short">Favorit låtar</string>
     <string name="app_widget_big_name">Musik - Stor</string>
     <string name="app_widget_card_name">Musik - Kort</string>
+    <string name="app_widget_card_dark_name">Musik - Card Dark</string>
     <string name="app_widget_classic_name">Musik - Klassisk</string>
+    <string name="app_widget_classic_dark_name">Musik - Classic Dark</string>
     <string name="app_widget_small_name">Musik - Liten</string>
+    <string name="app_widget_small_dark_name">Musik - Small Dark</string>
     <string name="artist">Artist</string>
     <string name="artists">Artister</string>
     <string name="audio_focus_denied">Ljudfokus nekad</string>
@@ -200,6 +203,7 @@
     <string name="pref_summary_blacklist">Innehållet i svartlistade mappar är dolt från ditt bibliotek</string>
     <string name="pref_summary_blurred_album_art">Suddar albumsomslaget på låsskärmen. Kan orsaka problem med tredjeparts appar och gränssnittskomponenter.</string>
     <string name="pref_summary_classic_notification">Använd den klassiska aviseringsdesignen</string>
+    <string name="pref_summary_colored_app_shortcuts">Färger appens genvägar i accentfärgen</string>
     <string name="pref_summary_colored_navigation_bar">Färger navigeringsfältet i primärfärgen</string>
     <string name="pref_summary_colored_notification">Färger aviseringen i albumsomslagets färg</string>
     <string name="pref_summary_gapless_playback">Kan orsaka uppspelningsproblem på vissa enheter</string>

@@ -67,8 +67,11 @@
     <string name="app_shortcut_top_songs_short">Top Songs</string>
     <string name="app_widget_big_name">Musik - Groß</string>
     <string name="app_widget_card_name">Musik - Karte</string>
+    <string name="app_widget_card_dark_name">Musik - Karte Dunkel</string>
     <string name="app_widget_classic_name">Musik - Klassisch</string>
+    <string name="app_widget_classic_dark_name">Musik - Klassisch dunkel</string>
     <string name="app_widget_small_name">Musik - Klein</string>
+    <string name="app_widget_small_dark_name">Musik - Etwas Dunkler</string>
     <string name="artist">Künstler</string>
     <string name="artists">Künstler</string>
     <string name="audio_focus_denied">Audio-Fokus verweigert</string>
@@ -203,6 +206,7 @@
     <string name="pref_summary_blacklist">Der Inhalt von Ordnern auf der Blacklist wird aus der Bibliothek ausgeblendet</string>
     <string name="pref_summary_blurred_album_art">Albumcover auf dem Sperrbildschirm unscharf machen. Kann Probleme mit Apps und Widgets von Drittanbietern verursachen.</string>
     <string name="pref_summary_classic_notification">Verwende das klassische Benachrichtigungsdesign</string>
+    <string name="pref_summary_colored_app_shortcuts">Färbt die App-Shortcuts in der Akzentfarbe</string>
     <string name="pref_summary_colored_navigation_bar">Färbt die Navigationsleiste in der Primärfarbe</string>
     <string name="pref_summary_colored_notification">Färbt die Benachrichtigung in der kräftigsten Farbe des Albumcovers</string>
     <string name="pref_summary_gapless_playback">Kann auf manchen Geräten Probleme bei der Wiedergabe verursachen</string>

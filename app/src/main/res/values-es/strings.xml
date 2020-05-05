@@ -67,8 +67,11 @@
     <string name="app_shortcut_top_songs_short">Mejores canciones</string>
     <string name="app_widget_big_name">Music - Grande</string>
     <string name="app_widget_card_name">Music - Tarjeta</string>
+    <string name="app_widget_card_dark_name">Música - Card Dark</string>
     <string name="app_widget_classic_name">Music - Clásico</string>
+    <string name="app_widget_classic_dark_name">Música - Classic Dark</string>
     <string name="app_widget_small_name">Music - Pequeño</string>
+    <string name="app_widget_small_dark_name">Música - Small Dark</string>
     <string name="artist">Artista</string>
     <string name="artists">Artistas</string>
     <string name="audio_focus_denied">Enfoque de audio denegado</string>
@@ -203,6 +206,7 @@
     <string name="pref_summary_blacklist">El contenido de la lista negra está escondida de tu librería</string>
     <string name="pref_summary_blurred_album_art">Desenfocar imagen de álbum en pantalla de bloqueo. Puede causar problemas con aplicaciones de terceros y widgets.</string>
     <string name="pref_summary_classic_notification">Usar el diseño clásico para notificaciones</string>
+    <string name="pref_summary_colored_app_shortcuts">Coloca los atajos de la aplicación en el color de acento</string>
     <string name="pref_summary_colored_navigation_bar">Colorear la barra de navegación con el color primario</string>
     <string name="pref_summary_colored_notification">Colorear las notificaciones con el color del álbum</string>
     <string name="pref_summary_gapless_playback">Puede causar problemas de reproducción en algunos dispositivos</string>

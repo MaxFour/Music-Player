@@ -62,8 +62,11 @@
     <string name="app_shortcut_top_songs_short">Parimad laulud</string>
     <string name="app_widget_big_name">Muusika - suur</string>
     <string name="app_widget_card_name">Muusika - kaart</string>
+    <string name="app_widget_card_dark_name">Muusika - Card Dark</string>
     <string name="app_widget_classic_name">Muusika - klassikaline</string>
+    <string name="app_widget_classic_dark_name">Muusika - klassikaline tume</string>
     <string name="app_widget_small_name">Muusika - väike</string>
+    <string name="app_widget_small_dark_name">Muusika - väike tume</string>
     <string name="artist">Kunstnik</string>
     <string name="artists">Kunstnikud</string>
     <string name="audio_focus_denied">Helifookus on keelatud</string>

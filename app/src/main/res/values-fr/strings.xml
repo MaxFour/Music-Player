@@ -67,8 +67,11 @@
     <string name="app_shortcut_top_songs_short">Chansons préférées</string>
     <string name="app_widget_big_name">Music - Grand</string>
     <string name="app_widget_card_name">Music - Carte</string>
+    <string name="app_widget_card_dark_name">Musique - Card Dark</string>
     <string name="app_widget_classic_name">Music - Classique</string>
+    <string name="app_widget_classic_dark_name">Musique - Classic Dark</string>
     <string name="app_widget_small_name">Music - Petit</string>
+    <string name="app_widget_small_dark_name">Musique - Small Dark</string>
     <string name="artist">Artiste</string>
     <string name="artists">Artistes</string>
     <string name="audio_focus_denied">Mise au point audio refusée</string>
@@ -203,6 +206,7 @@
     <string name="pref_summary_blacklist">Le contenu des dossiers sur liste noire est masqué dans votre bibliothèque</string>
     <string name="pref_summary_blurred_album_art">Floute la pochette d\'album sur l\'écran de verouillage. Peut causer des problèmes avec des applications tierses et widgets.</string>
     <string name="pref_summary_classic_notification">Utiliser le style de notification classique</string>
+    <string name="pref_summary_colored_app_shortcuts">Colorie les raccourcis de l\'application dans la couleur de l\'accent</string>
     <string name="pref_summary_colored_navigation_bar">Colore la barre de navigation dans la couleur primaire</string>
     <string name="pref_summary_colored_notification">Colore la notification dans la couleur de la pochette de l\'album</string>
     <string name="pref_summary_gapless_playback">Peut causer des problèmes de lecture sur certains appareils</string>
