@@ -30,7 +30,7 @@
         android:gravity="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
         tools:ignore="UnusedAttribute"
-        tools:text="@string/app_name" />
+        tools:text="@string/main_activity_name" />
 
     <TextView
         android:id="@id/mi_description"

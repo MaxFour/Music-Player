@@ -19,7 +19,7 @@ public class AppIntroActivity extends IntroActivity {
         setButtonCtaTintMode(BUTTON_CTA_TINT_MODE_TEXT);
 
         addSlide(new SimpleSlide.Builder()
-                .title(R.string.app_name)
+                .title(R.string.main_activity_name)
                 .description(R.string.welcome_to_music_app)
                 .image(R.drawable.icon_web)
                 .background(R.color.md_grey_300)

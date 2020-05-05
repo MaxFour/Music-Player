@@ -181,7 +181,7 @@ public class FoldersFragment extends AbsMainActivityFragment implements MainActi
     private void setUpToolbar() {
         toolbar.setNavigationIcon(R.drawable.ic_menu_white_24dp);
         toolbar.setTitleTextAppearance(getActivity().getApplicationContext(), R.style.ProductSansTextAppearace);
-        getActivity().setTitle(R.string.app_name);
+        getActivity().setTitle(R.string.main_activity_name);
         getMainActivity().setSupportActionBar(toolbar);
     }
 

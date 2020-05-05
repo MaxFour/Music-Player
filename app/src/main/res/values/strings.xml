@@ -59,7 +59,7 @@
         <item quantity="other">albums</item>
     </plurals>
     <string name="always">Always</string>
-    <string name="app_name">Music</string>
+    <string name="app_name">Music Player</string>
     <string name="app_shortcut_last_added_short">Last added</string>
     <string name="app_shortcut_shuffle_all_short">Shuffle</string>
     <string name="app_shortcut_top_songs_short">Top songs</string>
@@ -150,6 +150,7 @@
     <string name="light_theme_name">Light</string>
     <string name="listing_files">Listing files</string>
     <string name="lyrics">Lyrics</string>
+    <string name="main_activity_name">Music</string>
     <string name="md_back_label">Back</string>
     <string name="md_cancel_label">Cancel</string>
     <string name="md_choose_label">Choose</string>
