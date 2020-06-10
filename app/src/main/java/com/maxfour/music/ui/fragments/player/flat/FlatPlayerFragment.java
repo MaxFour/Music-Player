@@ -241,7 +241,7 @@ public class FlatPlayerFragment extends AbsPlayerFragment implements PlayerAlbum
         switch (item.getItemId()) {
             case R.id.action_show_lyrics:
                 if (lyrics != null)
-                    LyricsDialog.create(lyrics).show(getFragmentManager(), "LYRICS");
+                    LyricsDialog.create(lyrics).show(getParentFragmentManager(), "LYRICS");
                 return true;
         }
         return super.onMenuItemClick(item);
@@ -523,7 +523,7 @@ public class FlatPlayerFragment extends AbsPlayerFragment implements PlayerAlbum
                             MusicPlayerRemote.removeFromQueue(MusicPlayerRemote.getPosition());
                             return true;
                         case R.id.action_share:
-                            SongShareDialog.create(getSong()).show(fragment.getFragmentManager(), "SONG_SHARE_DIALOG");
+                            SongShareDialog.create(getSong()).show(fragment.getParentFragmentManager(), "SONG_SHARE_DIALOG");
                             return true;
                     }
                     return super.onMenuItemClick(item);
