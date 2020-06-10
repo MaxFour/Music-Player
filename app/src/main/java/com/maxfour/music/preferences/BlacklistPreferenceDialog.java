@@ -75,7 +75,7 @@ public class BlacklistPreferenceDialog extends DialogFragment implements Blackli
         if (dialog != null) {
             String[] pathArray = new String[paths.size()];
             pathArray = paths.toArray(pathArray);
-            dialog.setItems((CharSequence[]) pathArray);
+            dialog.setItems(pathArray);
         }
     }
 

@@ -77,7 +77,7 @@ public class ScanMediaFolderChooserDialog extends DialogFragment implements Mate
                 }
             }
             Collections.sort(results, new FolderSorter());
-            return results.toArray(new File[results.size()]);
+            return results.toArray(new File[0]);
         }
         return null;
     }
@@ -107,7 +107,7 @@ public class ScanMediaFolderChooserDialog extends DialogFragment implements Mate
         MaterialDialog.Builder builder =
                 new MaterialDialog.Builder(getActivity())
                         .title(parentFolder.getAbsolutePath())
-                        .items((CharSequence[]) getContentsArray())
+                        .items(getContentsArray())
                         .itemsCallback(this)
                         .autoDismiss(false)
                         .onPositive((dialog, which) -> {
@@ -148,7 +148,7 @@ public class ScanMediaFolderChooserDialog extends DialogFragment implements Mate
         parentContents = listFiles();
         MaterialDialog dialog = (MaterialDialog) getDialog();
         dialog.setTitle(parentFolder.getAbsolutePath());
-        dialog.setItems((CharSequence[]) getContentsArray());
+        dialog.setItems(getContentsArray());
     }
 
     @Override

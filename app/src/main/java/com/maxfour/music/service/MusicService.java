@@ -404,10 +404,8 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
         @Override
         public void handleMessage(@NonNull Message msg) {
             final MusicService service = mService.get();
-            switch (msg.what) {
-                case SAVE_QUEUES:
-                    service.saveQueuesImpl();
-                    break;
+            if (msg.what == SAVE_QUEUES) {
+                service.saveQueuesImpl();
             }
         }
     }

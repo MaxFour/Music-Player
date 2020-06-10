@@ -77,30 +77,20 @@ public class TopAndRecentlyPlayedSongsLoader {
     @Nullable
     private static SortedLongCursor makeRecentSongsCursorImpl(@NonNull final Context context) {
         // first get the top results ids from the internal database
-        Cursor songs = HistoryStore.getInstance(context).queryRecentIds();
 
-        try {
+        try (Cursor songs = HistoryStore.getInstance(context).queryRecentIds()) {
             return makeSortedCursor(context, songs,
                     songs.getColumnIndex(HistoryStore.RecentStoreColumns.ID));
-        } finally {
-            if (songs != null) {
-                songs.close();
-            }
         }
     }
 
     @Nullable
     private static SortedLongCursor makeTopSongsCursorImpl(@NonNull final Context context) {
         // first get the top results ids from the internal database
-        Cursor songs = SongPlayCountStore.getInstance(context).getTopPlayedResults(NUMBER_OF_TOP_SONGS);
 
-        try {
+        try (Cursor songs = SongPlayCountStore.getInstance(context).getTopPlayedResults(NUMBER_OF_TOP_SONGS)) {
             return makeSortedCursor(context, songs,
                     songs.getColumnIndex(SongPlayCountStore.SongPlayCountColumns.ID));
-        } finally {
-            if (songs != null) {
-                songs.close();
-            }
         }
     }
 
@@ -124,7 +114,7 @@ public class TopAndRecentlyPlayedSongsLoader {
 
                 id = cursor.getLong(idColumn);
                 order[cursor.getPosition()] = id;
-                selection.append(String.valueOf(id));
+                selection.append(id);
             }
 
             selection.append(")");

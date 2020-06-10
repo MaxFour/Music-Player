@@ -9,6 +9,7 @@ import com.maxfour.music.util.MusicUtil;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Artist implements Parcelable {
     public static final String UNKNOWN_ARTIST_DISPLAY_NAME = "Unknown Artist";
@@ -67,7 +68,7 @@ public class Artist implements Parcelable {
 
         Artist artist = (Artist) o;
 
-        return albums != null ? albums.equals(artist.albums) : artist.albums == null;
+        return Objects.equals(albums, artist.albums);
 
     }
 

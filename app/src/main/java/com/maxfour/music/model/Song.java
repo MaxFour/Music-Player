@@ -3,6 +3,8 @@ package com.maxfour.music.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.util.Objects;
+
 public class Song implements Parcelable {
     public static final Song EMPTY_SONG = new Song(-1, "", -1, -1, -1, "", -1, -1, "", -1, "");
 
@@ -46,11 +48,11 @@ public class Song implements Parcelable {
         if (dateModified != song.dateModified) return false;
         if (albumId != song.albumId) return false;
         if (artistId != song.artistId) return false;
-        if (title != null ? !title.equals(song.title) : song.title != null) return false;
-        if (data != null ? !data.equals(song.data) : song.data != null) return false;
-        if (albumName != null ? !albumName.equals(song.albumName) : song.albumName != null)
+        if (!Objects.equals(title, song.title)) return false;
+        if (!Objects.equals(data, song.data)) return false;
+        if (!Objects.equals(albumName, song.albumName))
             return false;
-        return artistName != null ? artistName.equals(song.artistName) : song.artistName == null;
+        return Objects.equals(artistName, song.artistName);
 
     }
 

@@ -124,12 +124,12 @@ public class SongLoader {
     }
 
     private static String generateBlacklistSelection(String selection, int pathCount) {
-        String newSelection = selection != null && !selection.trim().equals("") ? selection + " AND " : "";
-        newSelection += AudioColumns.DATA + " NOT LIKE ?";
+        StringBuilder newSelection = new StringBuilder(selection != null && !selection.trim().equals("") ? selection + " AND " : "");
+        newSelection.append(AudioColumns.DATA + " NOT LIKE ?");
         for (int i = 0; i < pathCount - 1; i++) {
-            newSelection += " AND " + AudioColumns.DATA + " NOT LIKE ?";
+            newSelection.append(" AND " + AudioColumns.DATA + " NOT LIKE ?");
         }
-        return newSelection;
+        return newSelection.toString();
     }
 
     private static String[] addBlacklistSelectionValues(String[] selectionValues, List<String> paths) {

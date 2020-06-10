@@ -41,8 +41,8 @@ public class SongAdapter extends AbsMultiSelectAdapter<SongAdapter.ViewHolder, S
 
     protected int itemLayoutRes;
 
-    protected boolean usePalette = false;
-    protected boolean showSectionName = true;
+    protected boolean usePalette;
+    protected boolean showSectionName;
 
     public SongAdapter(AppCompatActivity activity, List<Song> dataSet, @LayoutRes int itemLayoutRes, boolean usePalette, @Nullable CabHolder cabHolder) {
         this(activity, dataSet, itemLayoutRes, usePalette, cabHolder, true);
@@ -243,13 +243,12 @@ public class SongAdapter extends AbsMultiSelectAdapter<SongAdapter.ViewHolder, S
 
         protected boolean onSongMenuItemClick(MenuItem item) {
             if (image != null && image.getVisibility() == View.VISIBLE) {
-                switch (item.getItemId()) {
-                    case R.id.action_go_to_album:
-                        Pair[] albumPairs = new Pair[]{
-                                Pair.create(image, activity.getResources().getString(R.string.transition_album_art))
-                        };
-                        NavigationUtil.goToAlbum(activity, getSong().albumId, albumPairs);
-                        return true;
+                if (item.getItemId() == R.id.action_go_to_album) {
+                    Pair[] albumPairs = new Pair[]{
+                            Pair.create(image, activity.getResources().getString(R.string.transition_album_art))
+                    };
+                    NavigationUtil.goToAlbum(activity, getSong().albumId, albumPairs);
+                    return true;
                 }
             }
             return false;

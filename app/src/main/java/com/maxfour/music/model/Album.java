@@ -7,6 +7,7 @@ import androidx.annotation.NonNull;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Album implements Parcelable {
     public final List<Song> songs;
@@ -59,7 +60,7 @@ public class Album implements Parcelable {
 
         Album that = (Album) o;
 
-        return songs != null ? songs.equals(that.songs) : that.songs == null;
+        return Objects.equals(songs, that.songs);
 
     }
 

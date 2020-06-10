@@ -3,6 +3,8 @@ package com.maxfour.music.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.util.Objects;
+
 public class Playlist implements Parcelable {
     public final int id;
     public final String name;
@@ -25,7 +27,7 @@ public class Playlist implements Parcelable {
         Playlist playlist = (Playlist) o;
 
         if (id != playlist.id) return false;
-        return name != null ? name.equals(playlist.name) : playlist.name == null;
+        return Objects.equals(name, playlist.name);
 
     }
 

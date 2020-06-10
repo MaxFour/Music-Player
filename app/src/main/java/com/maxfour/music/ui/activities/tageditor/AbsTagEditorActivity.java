@@ -210,10 +210,9 @@ public abstract class AbsTagEditorActivity extends AbsBaseActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
-        switch (id) {
-            case android.R.id.home:
-                super.onBackPressed();
-                return true;
+        if (id == android.R.id.home) {
+            super.onBackPressed();
+            return true;
         }
         return super.onOptionsItemSelected(item);
     }
@@ -337,7 +336,7 @@ public abstract class AbsTagEditorActivity extends AbsBaseActivity {
                     }
                 }
 
-                return info.filePaths.toArray(new String[info.filePaths.size()]);
+                return info.filePaths.toArray(new String[0]);
             } catch (Exception e) {
                 e.printStackTrace();
                 return null;
@@ -409,13 +408,11 @@ public abstract class AbsTagEditorActivity extends AbsBaseActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @NonNull Intent imageReturnedIntent) {
         super.onActivityResult(requestCode, resultCode, imageReturnedIntent);
-        switch (requestCode) {
-            case REQUEST_CODE_SELECT_IMAGE:
-                if (resultCode == RESULT_OK) {
-                    Uri selectedImage = imageReturnedIntent.getData();
-                    loadImageFromFile(selectedImage);
-                }
-                break;
+        if (requestCode == REQUEST_CODE_SELECT_IMAGE) {
+            if (resultCode == RESULT_OK) {
+                Uri selectedImage = imageReturnedIntent.getData();
+                loadImageFromFile(selectedImage);
+            }
         }
     }
 
