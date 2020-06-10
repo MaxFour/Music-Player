@@ -227,18 +227,14 @@ public class SettingsActivity extends AbsBaseActivity implements ColorChooserDia
             });
 
             TwoStatePreference colorNavBar = (TwoStatePreference) findPreference("should_color_navigation_bar");
-            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
-                colorNavBar.setVisible(false);
-            } else {
-                colorNavBar.setChecked(ThemeStore.coloredNavigationBar(getActivity()));
-                colorNavBar.setOnPreferenceChangeListener((preference, newValue) -> {
-                    ThemeStore.editTheme(getActivity())
-                            .coloredNavigationBar((Boolean) newValue)
-                            .commit();
-                    getActivity().recreate();
-                    return true;
-                });
-            }
+            colorNavBar.setChecked(ThemeStore.coloredNavigationBar(getActivity()));
+            colorNavBar.setOnPreferenceChangeListener((preference, newValue) -> {
+                ThemeStore.editTheme(getActivity())
+                        .coloredNavigationBar((Boolean) newValue)
+                        .commit();
+                getActivity().recreate();
+                return true;
+            });
 
             final TwoStatePreference classicNotification = (TwoStatePreference) findPreference("classic_notification");
             if (Build.VERSION.SDK_INT < Build.VERSION_CODES.N) {
