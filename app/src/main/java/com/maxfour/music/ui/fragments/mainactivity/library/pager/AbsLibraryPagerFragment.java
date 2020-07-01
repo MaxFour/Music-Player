@@ -12,7 +12,7 @@ public class AbsLibraryPagerFragment extends AbsMusicServiceFragment {
     /* http://stackoverflow.com/a/2888433 */
     @Override
     public LoaderManager getLoaderManager() {
-        return getParentFragment().getLoaderManager();
+        return LoaderManager.getInstance(this);
     }
 
     public LibraryFragment getLibraryFragment() {

@@ -73,7 +73,7 @@ public class GenreDetailActivity extends AbsSlidingMusicPanelActivity implements
 
         setUpToolBar();
 
-        getSupportLoaderManager().initLoader(LOADER_ID, null, this);
+        LoaderManager.getInstance(this).initLoader(LOADER_ID, null, this);
     }
 
     @Override
@@ -150,7 +150,7 @@ public class GenreDetailActivity extends AbsSlidingMusicPanelActivity implements
     @Override
     public void onMediaStoreChanged() {
         super.onMediaStoreChanged();
-        getSupportLoaderManager().restartLoader(LOADER_ID, null, this);
+        LoaderManager.getInstance(this).restartLoader(LOADER_ID, null, this);
     }
 
     private void checkIsEmpty() {
