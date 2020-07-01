@@ -26,10 +26,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.card.MaterialCardView;
 import com.h6ah4i.android.widget.advrecyclerview.animator.GeneralItemAnimator;
 import com.h6ah4i.android.widget.advrecyclerview.animator.RefactoredDefaultItemAnimator;
 import com.h6ah4i.android.widget.advrecyclerview.draggable.RecyclerViewDragDropManager;
@@ -75,7 +75,7 @@ public class CardPlayerFragment extends AbsPlayerFragment implements PlayerAlbum
     @BindView(R.id.player_recycler_view)
     RecyclerView recyclerView;
     @BindView(R.id.playing_queue_card)
-    CardView playingQueueCard;
+    MaterialCardView playingQueueCard;
     @BindView(R.id.color_background)
     View colorBackground;
     @BindView(R.id.player_queue_sub_header)
