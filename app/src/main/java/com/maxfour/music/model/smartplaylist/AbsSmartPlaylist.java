@@ -23,6 +23,11 @@ public abstract class AbsSmartPlaylist extends AbsCustomPlaylist {
         this.iconRes = R.drawable.ic_queue_music_white_24dp;
     }
 
+    protected AbsSmartPlaylist(Parcel in) {
+        super(in);
+        this.iconRes = in.readInt();
+    }
+
     public abstract void clear(Context context);
 
     @Override
@@ -45,7 +50,6 @@ public abstract class AbsSmartPlaylist extends AbsCustomPlaylist {
         return false;
     }
 
-
     @Override
     public int describeContents() {
         return 0;
@@ -55,10 +59,5 @@ public abstract class AbsSmartPlaylist extends AbsCustomPlaylist {
     public void writeToParcel(Parcel dest, int flags) {
         super.writeToParcel(dest, flags);
         dest.writeInt(this.iconRes);
-    }
-
-    protected AbsSmartPlaylist(Parcel in) {
-        super(in);
-        this.iconRes = in.readInt();
     }
 }

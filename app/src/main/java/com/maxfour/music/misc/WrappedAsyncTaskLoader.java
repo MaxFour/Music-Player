@@ -1,4 +1,3 @@
-
 package com.maxfour.music.misc;
 
 import android.content.Context;

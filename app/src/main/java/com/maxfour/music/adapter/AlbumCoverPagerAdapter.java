@@ -74,12 +74,9 @@ public class AlbumCoverPagerAdapter extends CustomFragmentStatePagerAdapter {
 
     public static class AlbumCoverFragment extends Fragment implements SharedPreferences.OnSharedPreferenceChangeListener {
         private static final String SONG_ARG = "song";
-
-        private Unbinder unbinder;
-
         @BindView(R.id.player_image)
         ImageView albumCover;
-
+        private Unbinder unbinder;
         private boolean isColorReady;
         private int color;
         private Song song;

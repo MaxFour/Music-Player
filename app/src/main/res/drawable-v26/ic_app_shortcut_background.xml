@@ -4,7 +4,7 @@
     android:viewportWidth="108.0"
     android:viewportHeight="108.0">
     <path
-      android:name="ic_app_shortcut_background"
-      android:fillColor="#000000"
-      android:pathData="M0,0 108,0 108,108 0,108" />
+        android:name="ic_app_shortcut_background"
+        android:fillColor="#000000"
+        android:pathData="M0,0 108,0 108,108 0,108" />
 </vector>

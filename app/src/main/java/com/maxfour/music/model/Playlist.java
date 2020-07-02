@@ -6,6 +6,15 @@ import android.os.Parcelable;
 import java.util.Objects;
 
 public class Playlist implements Parcelable {
+    public static final Creator<Playlist> CREATOR = new Creator<Playlist>() {
+        public Playlist createFromParcel(Parcel source) {
+            return new Playlist(source);
+        }
+
+        public Playlist[] newArray(int size) {
+            return new Playlist[size];
+        }
+    };
     public final int id;
     public final String name;
 
@@ -17,6 +26,11 @@ public class Playlist implements Parcelable {
     public Playlist() {
         this.id = -1;
         this.name = "";
+    }
+
+    protected Playlist(Parcel in) {
+        this.id = in.readInt();
+        this.name = in.readString();
     }
 
     @Override
@@ -46,7 +60,6 @@ public class Playlist implements Parcelable {
                 '}';
     }
 
-
     @Override
     public int describeContents() {
         return 0;
@@ -57,19 +70,4 @@ public class Playlist implements Parcelable {
         dest.writeInt(this.id);
         dest.writeString(this.name);
     }
-
-    protected Playlist(Parcel in) {
-        this.id = in.readInt();
-        this.name = in.readString();
-    }
-
-    public static final Creator<Playlist> CREATOR = new Creator<Playlist>() {
-        public Playlist createFromParcel(Parcel source) {
-            return new Playlist(source);
-        }
-
-        public Playlist[] newArray(int size) {
-            return new Playlist[size];
-        }
-    };
 }

@@ -60,8 +60,6 @@ import butterknife.Unbinder;
 
 public class FlatPlayerFragment extends AbsPlayerFragment implements PlayerAlbumCoverFragment.Callbacks, SlidingUpPanelLayout.PanelSlideListener {
 
-    private Unbinder unbinder;
-
     @BindView(R.id.player_status_bar)
     View playerStatusBar;
     @Nullable
@@ -76,7 +74,7 @@ public class FlatPlayerFragment extends AbsPlayerFragment implements PlayerAlbum
     RecyclerView recyclerView;
     @BindView(R.id.player_queue_sub_header)
     TextView playerQueueSubHeader;
-
+    private Unbinder unbinder;
     private int lastColor;
 
     private FlatPlayerPlaybackControlsFragment playbackControlsFragment;

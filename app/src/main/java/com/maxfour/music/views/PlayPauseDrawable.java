@@ -62,6 +62,13 @@ public class PlayPauseDrawable extends Drawable {
         pauseBarDistance = res.getDimensionPixelSize(R.dimen.pause_bar_distance);
     }
 
+    /**
+     * Linear interpolate between a and b with parameter t.
+     */
+    private static float lerp(float a, float b, float t) {
+        return a + (b - a) * t;
+    }
+
     @Override
     protected void onBoundsChange(@NonNull final Rect bounds) {
         super.onBoundsChange(bounds);
@@ -140,13 +147,13 @@ public class PlayPauseDrawable extends Drawable {
         return anim;
     }
 
+    private float getProgress() {
+        return progress;
+    }
+
     private void setProgress(float progress) {
         this.progress = progress;
         invalidateSelf();
-    }
-
-    private float getProgress() {
-        return progress;
     }
 
     @Override
@@ -164,13 +171,6 @@ public class PlayPauseDrawable extends Drawable {
     @Override
     public int getOpacity() {
         return PixelFormat.TRANSLUCENT;
-    }
-
-    /**
-     * Linear interpolate between a and b with parameter t.
-     */
-    private static float lerp(float a, float b, float t) {
-        return a + (b - a) * t;
     }
 
     public void setPlay(boolean animate) {

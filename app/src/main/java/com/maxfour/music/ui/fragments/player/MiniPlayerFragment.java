@@ -31,15 +31,13 @@ import me.zhanghai.android.materialprogressbar.MaterialProgressBar;
 
 public class MiniPlayerFragment extends AbsMusicServiceFragment implements MusicProgressViewUpdateHelper.Callback {
 
-    private Unbinder unbinder;
-
     @BindView(R.id.mini_player_title)
     TextView miniPlayerTitle;
     @BindView(R.id.mini_player_play_pause_button)
     ImageView miniPlayerPlayPauseButton;
     @BindView(R.id.progress_bar)
     MaterialProgressBar progressBar;
-
+    private Unbinder unbinder;
     private PlayPauseDrawable miniPlayerPlayPauseDrawable;
 
     private MusicProgressViewUpdateHelper progressViewUpdateHelper;
@@ -121,6 +119,14 @@ public class MiniPlayerFragment extends AbsMusicServiceFragment implements Music
         progressViewUpdateHelper.stop();
     }
 
+    protected void updatePlayPauseDrawableState(boolean animate) {
+        if (MusicPlayerRemote.isPlaying()) {
+            miniPlayerPlayPauseDrawable.setPause(animate);
+        } else {
+            miniPlayerPlayPauseDrawable.setPlay(animate);
+        }
+    }
+
     private static class FlingPlayBackController implements View.OnTouchListener {
 
         GestureDetector flingPlayBackController;
@@ -146,14 +152,6 @@ public class MiniPlayerFragment extends AbsMusicServiceFragment implements Music
         @Override
         public boolean onTouch(View v, MotionEvent event) {
             return flingPlayBackController.onTouchEvent(event);
-        }
-    }
-
-    protected void updatePlayPauseDrawableState(boolean animate) {
-        if (MusicPlayerRemote.isPlaying()) {
-            miniPlayerPlayPauseDrawable.setPause(animate);
-        } else {
-            miniPlayerPlayPauseDrawable.setPlay(animate);
         }
     }
 }

@@ -27,18 +27,30 @@ public class SongGlideRequest {
     public static final int DEFAULT_ERROR_IMAGE = R.drawable.default_album_art;
     public static final int DEFAULT_ANIMATION = android.R.anim.fade_in;
 
+    public static DrawableTypeRequest createBaseRequest(RequestManager requestManager, Song song, boolean ignoreMediaStore) {
+        if (ignoreMediaStore) {
+            return requestManager.load(new AudioFileCover(song.data));
+        } else {
+            return requestManager.loadFromMediaStore(MusicUtil.getMediaStoreAlbumCoverUri(song.albumId));
+        }
+    }
+
+    public static Key createSignature(Song song) {
+        return new MediaStoreSignature("", song.dateModified, 0);
+    }
+
     public static class Builder {
         final RequestManager requestManager;
         final Song song;
         boolean ignoreMediaStore;
 
-        public static Builder from(@NonNull RequestManager requestManager, Song song) {
-            return new Builder(requestManager, song);
-        }
-
         private Builder(@NonNull RequestManager requestManager, Song song) {
             this.requestManager = requestManager;
             this.song = song;
+        }
+
+        public static Builder from(@NonNull RequestManager requestManager, Song song) {
+            return new Builder(requestManager, song);
         }
 
         public PaletteBuilder generatePalette(Context context) {
@@ -105,17 +117,5 @@ public class SongGlideRequest {
                     .animate(DEFAULT_ANIMATION)
                     .signature(createSignature(builder.song));
         }
-    }
-
-    public static DrawableTypeRequest createBaseRequest(RequestManager requestManager, Song song, boolean ignoreMediaStore) {
-        if (ignoreMediaStore) {
-            return requestManager.load(new AudioFileCover(song.data));
-        } else {
-            return requestManager.loadFromMediaStore(MusicUtil.getMediaStoreAlbumCoverUri(song.albumId));
-        }
-    }
-
-    public static Key createSignature(Song song) {
-        return new MediaStoreSignature("", song.dateModified, 0);
     }
 }

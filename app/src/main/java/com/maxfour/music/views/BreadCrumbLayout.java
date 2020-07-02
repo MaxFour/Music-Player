@@ -31,84 +31,19 @@ public class BreadCrumbLayout extends HorizontalScrollView implements View.OnCli
     private int contentColorActivated;
     @ColorInt
     private int contentColorDeactivated;
-
-    public static class Crumb implements Parcelable {
-
-        public Crumb(File file) {
-            this.file = file;
-        }
-
-        private final File file;
-        private int scrollPos;
-
-        public int getScrollPosition() {
-            return scrollPos;
-        }
-
-        public void setScrollPosition(int scrollY) {
-            this.scrollPos = scrollY;
-        }
-
-        public String getTitle() {
-            return file.getPath().equals("/") ? "root" : file.getName();
-        }
-
-        public File getFile() {
-            return file;
-        }
-
-        @Override
-        public boolean equals(Object o) {
-            return (o instanceof Crumb) && ((Crumb) o).getFile() != null &&
-                    ((Crumb) o).getFile().equals(getFile());
-        }
-
-        @Override
-        public String toString() {
-            return "Crumb{" +
-                    "file=" + file +
-                    ", scrollPos=" + scrollPos +
-                    '}';
-        }
-
-        @Override
-        public int describeContents() {
-            return 0;
-        }
-
-        @Override
-        public void writeToParcel(Parcel dest, int flags) {
-            dest.writeSerializable(this.file);
-            dest.writeInt(this.scrollPos);
-        }
-
-        protected Crumb(Parcel in) {
-            this.file = (File) in.readSerializable();
-            this.scrollPos = in.readInt();
-        }
-
-        public static final Creator<Crumb> CREATOR = new Creator<Crumb>() {
-            @Override
-            public Crumb createFromParcel(Parcel source) {
-                return new Crumb(source);
-            }
-
-            @Override
-            public Crumb[] newArray(int size) {
-                return new Crumb[size];
-            }
-        };
-    }
-
-    public interface SelectionCallback {
-        void onCrumbSelection(Crumb crumb, int index);
-    }
-
+    // Stores currently visible crumbs
+    private List<Crumb> mCrumbs;
+    // Used in setActiveOrAdd() between clearing crumbs and adding the new set, nullified afterwards
+    private List<Crumb> mOldCrumbs;
+    // Stores user's navigation history, like a fragment back stack
+    private List<Crumb> mHistory;
+    private LinearLayout mChildFrame;
+    private int mActive;
+    private SelectionCallback mCallback;
     public BreadCrumbLayout(Context context) {
         super(context);
         init();
     }
-
     public BreadCrumbLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
         init();
@@ -118,17 +53,6 @@ public class BreadCrumbLayout extends HorizontalScrollView implements View.OnCli
         super(context, attrs, defStyleAttr);
         init();
     }
-
-    // Stores currently visible crumbs
-    private List<Crumb> mCrumbs;
-    // Used in setActiveOrAdd() between clearing crumbs and adding the new set, nullified afterwards
-    private List<Crumb> mOldCrumbs;
-    // Stores user's navigation history, like a fragment back stack
-    private List<Crumb> mHistory;
-
-    private LinearLayout mChildFrame;
-    private int mActive;
-    private SelectionCallback mCallback;
 
     private void init() {
         contentColorActivated = ThemeStore.textColorPrimary(getContext());
@@ -355,47 +279,6 @@ public class BreadCrumbLayout extends HorizontalScrollView implements View.OnCli
         }
     }
 
-    public static class SavedStateWrapper implements Parcelable {
-
-        public final int mActive;
-        public final List<Crumb> mCrumbs;
-        public final int mVisibility;
-
-        public SavedStateWrapper(BreadCrumbLayout view) {
-            mActive = view.mActive;
-            mCrumbs = view.mCrumbs;
-            mVisibility = view.getVisibility();
-        }
-
-        @Override
-        public int describeContents() {
-            return 0;
-        }
-
-        @Override
-        public void writeToParcel(Parcel dest, int flags) {
-            dest.writeInt(this.mActive);
-            dest.writeTypedList(mCrumbs);
-            dest.writeInt(this.mVisibility);
-        }
-
-        protected SavedStateWrapper(Parcel in) {
-            this.mActive = in.readInt();
-            this.mCrumbs = in.createTypedArrayList(Crumb.CREATOR);
-            this.mVisibility = in.readInt();
-        }
-
-        public static final Creator<SavedStateWrapper> CREATOR = new Creator<SavedStateWrapper>() {
-            public SavedStateWrapper createFromParcel(Parcel source) {
-                return new SavedStateWrapper(source);
-            }
-
-            public SavedStateWrapper[] newArray(int size) {
-                return new SavedStateWrapper[size];
-            }
-        };
-    }
-
     public SavedStateWrapper getStateWrapper() {
         return new SavedStateWrapper(this);
     }
@@ -408,6 +291,117 @@ public class BreadCrumbLayout extends HorizontalScrollView implements View.OnCli
             }
             requestLayout();
             setVisibility(mSavedState.mVisibility);
+        }
+    }
+
+    public interface SelectionCallback {
+        void onCrumbSelection(Crumb crumb, int index);
+    }
+
+    public static class Crumb implements Parcelable {
+
+        public static final Creator<Crumb> CREATOR = new Creator<Crumb>() {
+            @Override
+            public Crumb createFromParcel(Parcel source) {
+                return new Crumb(source);
+            }
+
+            @Override
+            public Crumb[] newArray(int size) {
+                return new Crumb[size];
+            }
+        };
+        private final File file;
+        private int scrollPos;
+
+        public Crumb(File file) {
+            this.file = file;
+        }
+
+        protected Crumb(Parcel in) {
+            this.file = (File) in.readSerializable();
+            this.scrollPos = in.readInt();
+        }
+
+        public int getScrollPosition() {
+            return scrollPos;
+        }
+
+        public void setScrollPosition(int scrollY) {
+            this.scrollPos = scrollY;
+        }
+
+        public String getTitle() {
+            return file.getPath().equals("/") ? "root" : file.getName();
+        }
+
+        public File getFile() {
+            return file;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            return (o instanceof Crumb) && ((Crumb) o).getFile() != null &&
+                    ((Crumb) o).getFile().equals(getFile());
+        }
+
+        @Override
+        public String toString() {
+            return "Crumb{" +
+                    "file=" + file +
+                    ", scrollPos=" + scrollPos +
+                    '}';
+        }
+
+        @Override
+        public int describeContents() {
+            return 0;
+        }
+
+        @Override
+        public void writeToParcel(Parcel dest, int flags) {
+            dest.writeSerializable(this.file);
+            dest.writeInt(this.scrollPos);
+        }
+    }
+
+    public static class SavedStateWrapper implements Parcelable {
+
+        public static final Creator<SavedStateWrapper> CREATOR = new Creator<SavedStateWrapper>() {
+            public SavedStateWrapper createFromParcel(Parcel source) {
+                return new SavedStateWrapper(source);
+            }
+
+            public SavedStateWrapper[] newArray(int size) {
+                return new SavedStateWrapper[size];
+            }
+        };
+        public final int mActive;
+        public final List<Crumb> mCrumbs;
+        public final int mVisibility;
+
+        public SavedStateWrapper(BreadCrumbLayout view) {
+            mActive = view.mActive;
+            mCrumbs = view.mCrumbs;
+            mVisibility = view.getVisibility();
+        }
+
+        protected SavedStateWrapper(Parcel in) {
+            this.mActive = in.readInt();
+            this.mCrumbs = in.createTypedArrayList(Crumb.CREATOR);
+            this.mVisibility = in.readInt();
+        }
+
+        @Override
+        public int describeContents() {
+            return 0;
+        }
+
+        @Override
+        public void writeToParcel(Parcel dest, int flags) {
+            dest.writeInt(this.mActive);
+            dest.writeTypedList(mCrumbs);
+            dest.writeInt(this.mVisibility);
         }
     }
 }

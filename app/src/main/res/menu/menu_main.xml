@@ -53,8 +53,7 @@
     <item
         android:id="@+id/action_sort_order"
         android:title="@string/action_sort_order">
-        <menu>
-        </menu>
+        <menu></menu>
     </item>
 
     <item

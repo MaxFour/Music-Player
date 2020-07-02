@@ -42,6 +42,11 @@ public class AlbumSongAdapter extends SongAdapter {
         return MusicUtil.getReadableDurationString(song.duration);
     }
 
+    @Override
+    protected void loadAlbumCover(Song song, SongAdapter.ViewHolder holder) {
+        // We don't want to load it in this adapter
+    }
+
     public class ViewHolder extends SongAdapter.ViewHolder {
 
         public ViewHolder(@NonNull View itemView) {
@@ -54,10 +59,5 @@ public class AlbumSongAdapter extends SongAdapter {
                 image.setVisibility(View.GONE);
             }
         }
-    }
-
-    @Override
-    protected void loadAlbumCover(Song song, SongAdapter.ViewHolder holder) {
-        // We don't want to load it in this adapter
     }
 }

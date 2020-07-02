@@ -37,8 +37,6 @@ import butterknife.Unbinder;
 
 public class FlatPlayerPlaybackControlsFragment extends AbsMusicServiceFragment implements MusicProgressViewUpdateHelper.Callback {
 
-    private Unbinder unbinder;
-
     @BindView(R.id.player_play_pause__button)
     ImageButton playPauseButton;
     @BindView(R.id.player_prev_button)
@@ -49,14 +47,13 @@ public class FlatPlayerPlaybackControlsFragment extends AbsMusicServiceFragment 
     ImageButton repeatButton;
     @BindView(R.id.player_shuffle_button)
     ImageButton shuffleButton;
-
     @BindView(R.id.player_progress_slider)
     SeekBar progressSlider;
     @BindView(R.id.player_song_total_time)
     TextView songTotalTime;
     @BindView(R.id.player_song_current_progress)
     TextView songCurrentProgress;
-
+    private Unbinder unbinder;
     private PlayPauseDrawable playPauseDrawable;
 
     private int lastPlaybackControlsColor;
@@ -67,6 +64,27 @@ public class FlatPlayerPlaybackControlsFragment extends AbsMusicServiceFragment 
     private AnimatorSet musicControllerAnimationSet;
 
     private boolean hidden = false;
+
+    private static void addAnimation(Collection<Animator> animators, View view, TimeInterpolator interpolator, int duration, int delay) {
+        Animator scaleX = ObjectAnimator.ofFloat(view, View.SCALE_X, 0f, 1f);
+        scaleX.setInterpolator(interpolator);
+        scaleX.setDuration(duration);
+        scaleX.setStartDelay(delay);
+        animators.add(scaleX);
+
+        Animator scaleY = ObjectAnimator.ofFloat(view, View.SCALE_Y, 0f, 1f);
+        scaleY.setInterpolator(interpolator);
+        scaleY.setDuration(duration);
+        scaleY.setStartDelay(delay);
+        animators.add(scaleY);
+    }
+
+    private static void prepareForAnimation(View view) {
+        if (view != null) {
+            view.setScaleX(0f);
+            view.setScaleY(0f);
+        }
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -262,27 +280,6 @@ public class FlatPlayerPlaybackControlsFragment extends AbsMusicServiceFragment 
         prepareForAnimation(repeatButton);
 
         hidden = true;
-    }
-
-    private static void addAnimation(Collection<Animator> animators, View view, TimeInterpolator interpolator, int duration, int delay) {
-        Animator scaleX = ObjectAnimator.ofFloat(view, View.SCALE_X, 0f, 1f);
-        scaleX.setInterpolator(interpolator);
-        scaleX.setDuration(duration);
-        scaleX.setStartDelay(delay);
-        animators.add(scaleX);
-
-        Animator scaleY = ObjectAnimator.ofFloat(view, View.SCALE_Y, 0f, 1f);
-        scaleY.setInterpolator(interpolator);
-        scaleY.setDuration(duration);
-        scaleY.setStartDelay(delay);
-        animators.add(scaleY);
-    }
-
-    private static void prepareForAnimation(View view) {
-        if (view != null) {
-            view.setScaleX(0f);
-            view.setScaleY(0f);
-        }
     }
 
     private void setUpProgressSlider() {

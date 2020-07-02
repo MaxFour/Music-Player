@@ -160,10 +160,6 @@ public class MusicLibraryPagerAdapter extends FragmentPagerAdapter {
             mFragmentClass = fragmentClass;
         }
 
-        public Class<? extends Fragment> getFragmentClass() {
-            return mFragmentClass;
-        }
-
         public static MusicFragments of(Class<?> cl) {
             MusicFragments[] fragments = All.FRAGMENTS;
             for (MusicFragments fragment : fragments) {
@@ -172,6 +168,10 @@ public class MusicLibraryPagerAdapter extends FragmentPagerAdapter {
             }
 
             throw new IllegalArgumentException("Unknown music fragment " + cl);
+        }
+
+        public Class<? extends Fragment> getFragmentClass() {
+            return mFragmentClass;
         }
 
         private static class All {

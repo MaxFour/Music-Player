@@ -11,16 +11,13 @@ import com.maxfour.music.R;
 import java.lang.ref.WeakReference;
 
 public class UpdateToastMediaScannerCompletionListener implements MediaScannerConnection.OnScanCompletedListener {
-    private int scanned = 0;
-    private int failed = 0;
-
     private final String[] toBeScanned;
-
     private final String scannedFiles;
     private final String couldNotScanFiles;
-
-    private Toast toast;
     private final WeakReference<Activity> activityWeakReference;
+    private int scanned = 0;
+    private int failed = 0;
+    private Toast toast;
 
     @SuppressLint("ShowToast")
     public UpdateToastMediaScannerCompletionListener(Activity activity, String[] toBeScanned) {

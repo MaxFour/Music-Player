@@ -19,14 +19,30 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BlacklistStore extends SQLiteOpenHelper {
-    private static BlacklistStore sInstance = null;
     public static final String DATABASE_NAME = "blacklist.db";
     private static final int VERSION = 1;
+    private static BlacklistStore sInstance = null;
     private Context context;
 
     public BlacklistStore(final Context context) {
         super(context, DATABASE_NAME, null, VERSION);
         this.context = context;
+    }
+
+    @NonNull
+    public static synchronized BlacklistStore getInstance(@NonNull final Context context) {
+        if (sInstance == null) {
+            sInstance = new BlacklistStore(context.getApplicationContext());
+            if (!PreferenceUtil.getInstance(context).initializedBlacklist()) {
+                // blacklisted by default
+                sInstance.addPathImpl(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_ALARMS));
+                sInstance.addPathImpl(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_NOTIFICATIONS));
+                sInstance.addPathImpl(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_RINGTONES));
+
+                PreferenceUtil.getInstance(context).setInitializedBlacklist();
+            }
+        }
+        return sInstance;
     }
 
     @Override
@@ -45,22 +61,6 @@ public class BlacklistStore extends SQLiteOpenHelper {
     public void onDowngrade(@NonNull SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + BlacklistStoreColumns.NAME);
         onCreate(db);
-    }
-
-    @NonNull
-    public static synchronized BlacklistStore getInstance(@NonNull final Context context) {
-        if (sInstance == null) {
-            sInstance = new BlacklistStore(context.getApplicationContext());
-            if (!PreferenceUtil.getInstance(context).initializedBlacklist()) {
-                // blacklisted by default
-                sInstance.addPathImpl(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_ALARMS));
-                sInstance.addPathImpl(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_NOTIFICATIONS));
-                sInstance.addPathImpl(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_RINGTONES));
-
-                PreferenceUtil.getInstance(context).setInitializedBlacklist();
-            }
-        }
-        return sInstance;
     }
 
     public void addPath(File file) {

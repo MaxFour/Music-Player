@@ -113,24 +113,25 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
     public static final int PLAY_SONG = 3;
     public static final int PREPARE_NEXT = 4;
     public static final int SET_POSITION = 5;
-    private static final int FOCUS_CHANGE = 6;
-    private static final int DUCK = 7;
-    private static final int UNDUCK = 8;
     public static final int RESTORE_QUEUES = 9;
-
     public static final int SHUFFLE_MODE_NONE = 0;
     public static final int SHUFFLE_MODE_SHUFFLE = 1;
-
     public static final int REPEAT_MODE_NONE = 0;
     public static final int REPEAT_MODE_ALL = 1;
     public static final int REPEAT_MODE_THIS = 2;
-
     public static final int SAVE_QUEUES = 0;
-
+    private static final int FOCUS_CHANGE = 6;
+    private static final int DUCK = 7;
+    private static final int UNDUCK = 8;
+    private static final long MEDIA_SESSION_ACTIONS = PlaybackStateCompat.ACTION_PLAY
+            | PlaybackStateCompat.ACTION_PAUSE
+            | PlaybackStateCompat.ACTION_PLAY_PAUSE
+            | PlaybackStateCompat.ACTION_SKIP_TO_NEXT
+            | PlaybackStateCompat.ACTION_SKIP_TO_PREVIOUS
+            | PlaybackStateCompat.ACTION_STOP
+            | PlaybackStateCompat.ACTION_SEEK_TO;
     private final IBinder musicBind = new MusicBinder();
-
     public boolean pendingQuit = false;
-
     private AppWidgetBig appWidgetBig = AppWidgetBig.getInstance();
     private AppWidgetClassic appWidgetClassic = AppWidgetClassic.getInstance();
     private AppWidgetClassicDark appWidgetClassicDark = AppWidgetClassicDark.getInstance();
@@ -138,7 +139,6 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
     private AppWidgetSmallDark appWidgetSmallDark = AppWidgetSmallDark.getInstance();
     private AppWidgetCard appWidgetCard = AppWidgetCard.getInstance();
     private AppWidgetCardDark appWidgetCardDark = AppWidgetCardDark.getInstance();
-
     private Playback playback;
     private List<Song> playingQueue = new ArrayList<>();
     private List<Song> originalPlayingQueue = new ArrayList<>();
@@ -148,7 +148,21 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
     private int repeatMode;
     private boolean queuesRestored;
     private boolean pausedByTransientLossOfFocus;
+    private final BroadcastReceiver becomingNoisyReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, @NonNull Intent intent) {
+            if (intent.getAction().equals(AudioManager.ACTION_AUDIO_BECOMING_NOISY)) {
+                pause();
+            }
+        }
+    };
     private PlayingNotification playingNotification;
+    private final BroadcastReceiver updateFavoriteReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(final Context context, final Intent intent) {
+            updateNotification();
+        }
+    };
     private AudioManager audioManager;
     @SuppressWarnings("deprecation")
     private MediaSessionCompat mediaSession;
@@ -167,21 +181,63 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
     private ThrottledSeekHandler throttledSeekHandler;
     private boolean becomingNoisyReceiverRegistered;
     private IntentFilter becomingNoisyReceiverIntentFilter = new IntentFilter(AudioManager.ACTION_AUDIO_BECOMING_NOISY);
-    private final BroadcastReceiver becomingNoisyReceiver = new BroadcastReceiver() {
+    private ContentObserver mediaStoreObserver;
+    private boolean notHandledMetaChangedForCurrentSong;
+    private Handler uiThreadHandler;
+    private final BroadcastReceiver widgetIntentReceiver = new BroadcastReceiver() {
         @Override
-        public void onReceive(Context context, @NonNull Intent intent) {
-            if (intent.getAction().equals(AudioManager.ACTION_AUDIO_BECOMING_NOISY)) {
-                pause();
+        public void onReceive(final Context context, final Intent intent) {
+            final String command = intent.getStringExtra(EXTRA_APP_WIDGET_NAME);
+
+            final int[] ids = intent.getIntArrayExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS);
+            switch (command) {
+                case AppWidgetClassic.NAME: {
+                    appWidgetClassic.performUpdate(MusicService.this, ids);
+                    break;
+                }
+                case AppWidgetClassicDark.NAME: {
+                    appWidgetClassicDark.performUpdate(MusicService.this, ids);
+                    break;
+                }
+                case AppWidgetSmall.NAME: {
+                    appWidgetSmall.performUpdate(MusicService.this, ids);
+                    break;
+                }
+                case AppWidgetSmallDark.NAME: {
+                    appWidgetSmallDark.performUpdate(MusicService.this, ids);
+                    break;
+                }
+                case AppWidgetBig.NAME: {
+                    appWidgetBig.performUpdate(MusicService.this, ids);
+                    break;
+                }
+                case AppWidgetCard.NAME: {
+                    appWidgetCard.performUpdate(MusicService.this, ids);
+                    break;
+                }
+                case AppWidgetCardDark.NAME: {
+                    appWidgetCardDark.performUpdate(MusicService.this, ids);
+                    break;
+                }
             }
         }
     };
-    private ContentObserver mediaStoreObserver;
-    private boolean notHandledMetaChangedForCurrentSong;
-
-    private Handler uiThreadHandler;
 
     private static String getSongUri(@NonNull Song song) {
         return MusicUtil.getSongFileUri(song.id).toString();
+    }
+
+    private static Bitmap copy(Bitmap bitmap) {
+        Bitmap.Config config = bitmap.getConfig();
+        if (config == null) {
+            config = Bitmap.Config.RGB_565;
+        }
+        try {
+            return bitmap.copy(config, false);
+        } catch (OutOfMemoryError e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
     @Override
@@ -227,7 +283,7 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
         getContentResolver().registerContentObserver(MediaStore.Audio.Artists.INTERNAL_CONTENT_URI, true, mediaStoreObserver);
         getContentResolver().registerContentObserver(MediaStore.Audio.Genres.INTERNAL_CONTENT_URI, true, mediaStoreObserver);
         getContentResolver().registerContentObserver(MediaStore.Audio.Playlists.INTERNAL_CONTENT_URI, true, mediaStoreObserver);
-        
+
 
         PreferenceUtil.getInstance(this).registerOnSharedPreferenceChangedListener(this);
 
@@ -392,24 +448,6 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
         return musicBind;
     }
 
-    private static final class QueueSaveHandler extends Handler {
-        @NonNull
-        private final WeakReference<MusicService> mService;
-
-        public QueueSaveHandler(final MusicService service, @NonNull final Looper looper) {
-            super(looper);
-            mService = new WeakReference<>(service);
-        }
-
-        @Override
-        public void handleMessage(@NonNull Message msg) {
-            final MusicService service = mService.get();
-            if (msg.what == SAVE_QUEUES) {
-                service.saveQueuesImpl();
-            }
-        }
-    }
-
     private void saveQueuesImpl() {
         MusicPlaybackQueueStore.getInstance(this).saveQueues(playingQueue, originalPlayingQueue);
     }
@@ -495,6 +533,12 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
         return position;
     }
 
+    public void setPosition(final int position) {
+        // handle this on the handlers thread to avoid blocking the ui thread
+        playerHandler.removeMessages(SET_POSITION);
+        playerHandler.obtainMessage(SET_POSITION, position, 0).sendToTarget();
+    }
+
     public void playNextSong(boolean force) {
         playSongAt(getNextPosition(force));
     }
@@ -564,13 +608,6 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
         }
     }
 
-    private final BroadcastReceiver updateFavoriteReceiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(final Context context, final Intent intent) {
-            updateNotification();
-        }
-    };
-
     private void updateMediaSessionPlaybackState() {
         mediaSession.setPlaybackState(
                 new PlaybackStateCompat.Builder()
@@ -630,19 +667,6 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
             });
         } else {
             mediaSession.setMetadata(metaData.build());
-        }
-    }
-
-    private static Bitmap copy(Bitmap bitmap) {
-        Bitmap.Config config = bitmap.getConfig();
-        if (config == null) {
-            config = Bitmap.Config.RGB_565;
-        }
-        try {
-            return bitmap.copy(config, false);
-        } catch (OutOfMemoryError e) {
-            e.printStackTrace();
-            return null;
         }
     }
 
@@ -832,12 +856,6 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
         // handle this on the handlers thread to avoid blocking the ui thread
         playerHandler.removeMessages(PLAY_SONG);
         playerHandler.obtainMessage(PLAY_SONG, position, 0).sendToTarget();
-    }
-
-    public void setPosition(final int position) {
-        // handle this on the handlers thread to avoid blocking the ui thread
-        playerHandler.removeMessages(SET_POSITION);
-        playerHandler.obtainMessage(SET_POSITION, position, 0).sendToTarget();
     }
 
     private void playSongAtImpl(int position) {
@@ -1034,7 +1052,7 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
 
     // to let other apps know whats playing. i.E. last.fm (scrobbling) or musixmatch
     private void sendPublicIntent(@NonNull final String what) {
-        final Intent intent = new Intent (MUSIC_PACKAGE_NAME);
+        final Intent intent = new Intent(MUSIC_PACKAGE_NAME);
 
         final Song song = getCurrentSong();
 
@@ -1064,14 +1082,6 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
         appWidgetCard.notifyChange(this, what);
         appWidgetCardDark.notifyChange(this, what);
     }
-
-    private static final long MEDIA_SESSION_ACTIONS = PlaybackStateCompat.ACTION_PLAY
-            | PlaybackStateCompat.ACTION_PAUSE
-            | PlaybackStateCompat.ACTION_PLAY_PAUSE
-            | PlaybackStateCompat.ACTION_SKIP_TO_NEXT
-            | PlaybackStateCompat.ACTION_SKIP_TO_PREVIOUS
-            | PlaybackStateCompat.ACTION_STOP
-            | PlaybackStateCompat.ACTION_SEEK_TO;
 
     private void handleChangeInternal(@NonNull final String what) {
         switch (what) {
@@ -1160,6 +1170,24 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
     public void onSongEnded() {
         acquireWakeLock(30000);
         playerHandler.sendEmptyMessage(SONG_ENDED);
+    }
+
+    private static final class QueueSaveHandler extends Handler {
+        @NonNull
+        private final WeakReference<MusicService> mService;
+
+        public QueueSaveHandler(final MusicService service, @NonNull final Looper looper) {
+            super(looper);
+            mService = new WeakReference<>(service);
+        }
+
+        @Override
+        public void handleMessage(@NonNull Message msg) {
+            final MusicService service = mService.get();
+            if (msg.what == SAVE_QUEUES) {
+                service.saveQueuesImpl();
+            }
+        }
     }
 
     private static final class PlaybackHandler extends Handler {
@@ -1299,51 +1327,44 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
         }
     }
 
+    private static class SongPlayCountHelper {
+        public static final String TAG = SongPlayCountHelper.class.getSimpleName();
+
+        private StopWatch stopWatch = new StopWatch();
+        private Song song = Song.EMPTY_SONG;
+
+        public Song getSong() {
+            return song;
+        }
+
+        boolean shouldBumpPlayCount() {
+            return song.duration * 0.5d < stopWatch.getElapsedTime();
+        }
+
+        void notifySongChanged(Song song) {
+            synchronized (this) {
+                stopWatch.reset();
+                this.song = song;
+            }
+        }
+
+        void notifyPlayStateChanged(boolean isPlaying) {
+            synchronized (this) {
+                if (isPlaying) {
+                    stopWatch.start();
+                } else {
+                    stopWatch.pause();
+                }
+            }
+        }
+    }
+
     public class MusicBinder extends Binder {
         @NonNull
         public MusicService getService() {
             return MusicService.this;
         }
     }
-
-    private final BroadcastReceiver widgetIntentReceiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(final Context context, final Intent intent) {
-            final String command = intent.getStringExtra(EXTRA_APP_WIDGET_NAME);
-
-            final int[] ids = intent.getIntArrayExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS);
-            switch (command) {
-                case AppWidgetClassic.NAME: {
-                    appWidgetClassic.performUpdate(MusicService.this, ids);
-                    break;
-                }
-                case AppWidgetClassicDark.NAME: {
-                    appWidgetClassicDark.performUpdate(MusicService.this, ids);
-                    break;
-                }
-                case AppWidgetSmall.NAME: {
-                    appWidgetSmall.performUpdate(MusicService.this, ids);
-                    break;
-                }
-                case AppWidgetSmallDark.NAME: {
-                    appWidgetSmallDark.performUpdate(MusicService.this, ids);
-                    break;
-                }
-                case AppWidgetBig.NAME: {
-                    appWidgetBig.performUpdate(MusicService.this, ids);
-                    break;
-                }
-                case AppWidgetCard.NAME: {
-                    appWidgetCard.performUpdate(MusicService.this, ids);
-                    break;
-                }
-                    case AppWidgetCardDark.NAME: {
-                        appWidgetCardDark.performUpdate(MusicService.this, ids);
-                        break;
-                }
-            }
-        }
-    };
 
     private class MediaStoreObserver extends ContentObserver implements Runnable {
         // milliseconds to delay before calling refresh to aggregate events
@@ -1392,38 +1413,6 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
         public void run() {
             savePositionInSong();
             sendPublicIntent(PLAY_STATE_CHANGED); // for musixmatch synced lyrics
-        }
-    }
-
-    private static class SongPlayCountHelper {
-        public static final String TAG = SongPlayCountHelper.class.getSimpleName();
-
-        private StopWatch stopWatch = new StopWatch();
-        private Song song = Song.EMPTY_SONG;
-
-        public Song getSong() {
-            return song;
-        }
-
-        boolean shouldBumpPlayCount() {
-            return song.duration * 0.5d < stopWatch.getElapsedTime();
-        }
-
-        void notifySongChanged(Song song) {
-            synchronized (this) {
-                stopWatch.reset();
-                this.song = song;
-            }
-        }
-
-        void notifyPlayStateChanged(boolean isPlaying) {
-            synchronized (this) {
-                if (isPlaying) {
-                    stopWatch.start();
-                } else {
-                    stopWatch.pause();
-                }
-            }
         }
     }
 }

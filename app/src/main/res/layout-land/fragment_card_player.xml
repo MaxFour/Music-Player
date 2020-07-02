@@ -69,19 +69,19 @@
                 </FrameLayout>
 
                 <FrameLayout
-                    android:layout_marginTop="24dp"
                     android:id="@+id/player_panel"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp">
 
                     <com.google.android.material.card.MaterialCardView
                         android:id="@+id/playing_queue_card"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="-8dp"
                         android:layout_marginLeft="16dp"
-                        android:layout_marginRight="16dp"
                         android:layout_marginTop="0dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="-8dp"
                         app:cardBackgroundColor="?cardBackgroundColor"
                         app:cardElevation="@dimen/card_elevation"
                         app:cardUseCompatPadding="false">
@@ -95,8 +95,8 @@
                                 android:id="@+id/draggable_area"
                                 android:layout_width="72dp"
                                 android:layout_height="wrap_content"
-                                android:layout_alignBottom="@+id/card_content"
                                 android:layout_alignTop="@+id/card_content"
+                                android:layout_alignBottom="@+id/card_content"
                                 android:layout_marginTop="48dp" />
 
                             <LinearLayout

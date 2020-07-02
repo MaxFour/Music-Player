@@ -120,14 +120,14 @@ public class OrderablePlaylistSongAdapter extends PlaylistSongAdapter implements
         }
 
         @Override
-        public void setDragStateFlags(@DraggableItemStateFlags int flags) {
-            mDragStateFlags = flags;
-        }
-
-        @Override
         @DraggableItemStateFlags
         public int getDragStateFlags() {
             return mDragStateFlags;
+        }
+
+        @Override
+        public void setDragStateFlags(@DraggableItemStateFlags int flags) {
+            mDragStateFlags = flags;
         }
     }
 }

@@ -34,9 +34,9 @@
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabs"
+            style="@style/TabLayoutStyle"
             android:layout_width="match_parent"
             android:layout_height="@dimen/tab_height"
-            style="@style/TabLayoutStyle"
             app:tabContentStart="72dp"
             app:tabMode="scrollable" />
 

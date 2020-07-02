@@ -34,26 +34,30 @@ import butterknife.Unbinder;
 public class PlayerAlbumCoverFragment extends AbsMusicServiceFragment implements ViewPager.OnPageChangeListener, MusicProgressViewUpdateHelper.Callback {
 
     public static final int VISIBILITY_ANIM_DURATION = 300;
-
-    private Unbinder unbinder;
-
     @BindView(R.id.player_album_cover_viewpager)
     ViewPager viewPager;
     @BindView(R.id.player_favorite_icon)
     ImageView favoriteIcon;
-
     @BindView(R.id.player_lyrics)
     FrameLayout lyricsLayout;
     @BindView(R.id.player_lyrics_line1)
     TextView lyricsLine1;
     @BindView(R.id.player_lyrics_line2)
     TextView lyricsLine2;
-
+    private Unbinder unbinder;
     private Callbacks callbacks;
     private int currentPosition;
 
     private Lyrics lyrics;
     private MusicProgressViewUpdateHelper progressViewUpdateHelper;
+    private AlbumCoverPagerAdapter.AlbumCoverFragment.ColorReceiver colorReceiver = new AlbumCoverPagerAdapter.AlbumCoverFragment.ColorReceiver() {
+        @Override
+        public void onColorReady(int color, int requestCode) {
+            if (currentPosition == requestCode) {
+                notifyColorChange(color);
+            }
+        }
+    };
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -128,15 +132,6 @@ public class PlayerAlbumCoverFragment extends AbsMusicServiceFragment implements
             MusicPlayerRemote.playSongAt(position);
         }
     }
-
-    private AlbumCoverPagerAdapter.AlbumCoverFragment.ColorReceiver colorReceiver = new AlbumCoverPagerAdapter.AlbumCoverFragment.ColorReceiver() {
-        @Override
-        public void onColorReady(int color, int requestCode) {
-            if (currentPosition == requestCode) {
-                notifyColorChange(color);
-            }
-        }
-    };
 
     @Override
     public void onPageScrollStateChanged(int state) {

@@ -128,8 +128,8 @@ public class PlaylistsUtil {
                 numInserted += resolver.bulkInsert(uri, makeInsertItems(songs, offSet, 1000, base));
 
             if (showToastOnFinish) {
-        		Toast.makeText(context, context.getResources().getQuantityString(
-                		R.plurals.inserted_x_songs_into_playlist_x, numInserted, numInserted, getNameForPlaylist(context, playlistId)), Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, context.getResources().getQuantityString(
+                        R.plurals.inserted_x_songs_into_playlist_x, numInserted, numInserted, getNameForPlaylist(context, playlistId)), Toast.LENGTH_SHORT).show();
             }
         } catch (SecurityException ignored) {
         }

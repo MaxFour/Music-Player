@@ -33,10 +33,10 @@
                 android:elevation="@dimen/toolbar_elevation"
                 android:minHeight="@dimen/title_view_height"
                 android:orientation="vertical"
-                android:paddingBottom="8dp"
                 android:paddingLeft="16dp"
-                android:paddingRight="16dp"
                 android:paddingTop="8dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="8dp"
                 tools:ignore="UnusedAttribute">
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -184,8 +184,8 @@
         android:id="@+id/toolbar"
         style="@style/Toolbar"
         android:layout_gravity="start|left"
-        android:elevation="0dp"
         android:background="#00000000"
+        android:elevation="0dp"
         tools:ignore="RtlHardcoded" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

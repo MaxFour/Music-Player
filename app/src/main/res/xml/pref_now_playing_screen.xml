@@ -5,16 +5,16 @@
     <com.kabouzeid.appthemehelper.common.prefs.supportv7.ATEPreferenceCategory android:title="@string/pref_header_now_playing_screen">
 
         <com.maxfour.music.preferences.NowPlayingScreenPreference
-            app:iconSpaceReserved="false"
             android:key="now_playing_screen_id"
-            android:title="@string/pref_title_now_playing_screen_appearance" />
+            android:title="@string/pref_title_now_playing_screen_appearance"
+            app:iconSpaceReserved="false" />
 
         <com.kabouzeid.appthemehelper.common.prefs.supportv7.ATESwitchPreference
-            app:iconSpaceReserved="false"
             android:defaultValue="false"
             android:key="synchronized_lyrics_show"
             android:summary="@string/pref_summary_synchronized_lyrics_show"
-            android:title="@string/pref_title_synchronized_lyrics_show" />
+            android:title="@string/pref_title_synchronized_lyrics_show"
+            app:iconSpaceReserved="false" />
 
     </com.kabouzeid.appthemehelper.common.prefs.supportv7.ATEPreferenceCategory>
 

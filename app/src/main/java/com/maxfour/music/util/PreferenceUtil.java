@@ -117,6 +117,19 @@ public final class PreferenceUtil {
         }
     }
 
+    @StyleRes
+    public static int getThemeResFromPrefValue(String themePrefValue) {
+        switch (themePrefValue) {
+            case "dark":
+                return R.style.Theme_Music;
+            case "black":
+                return R.style.Theme_Music_Black;
+            case "light":
+            default:
+                return R.style.Theme_Music_Light;
+        }
+    }
+
     public void registerOnSharedPreferenceChangedListener(SharedPreferences.OnSharedPreferenceChangeListener sharedPreferenceChangeListener) {
         mPreferences.registerOnSharedPreferenceChangeListener(sharedPreferenceChangeListener);
     }
@@ -136,21 +149,12 @@ public final class PreferenceUtil {
         editor.commit();
     }
 
-    @StyleRes
-    public static int getThemeResFromPrefValue(String themePrefValue) {
-        switch (themePrefValue) {
-            case "dark":
-                return R.style.Theme_Music;
-            case "black":
-                return R.style.Theme_Music_Black;
-            case "light":
-            default:
-                return R.style.Theme_Music_Light;
-        }
-    }
-
     public final boolean rememberLastTab() {
         return mPreferences.getBoolean(REMEMBER_LAST_TAB, true);
+    }
+
+    public final int getLastPage() {
+        return mPreferences.getInt(LAST_PAGE, 0);
     }
 
     public void setLastPage(final int value) {
@@ -159,18 +163,14 @@ public final class PreferenceUtil {
         editor.apply();
     }
 
-    public final int getLastPage() {
-        return mPreferences.getInt(LAST_PAGE, 0);
+    public final int getLastMusicChooser() {
+        return mPreferences.getInt(LAST_MUSIC_CHOOSER, 0);
     }
 
     public void setLastMusicChooser(final int value) {
         final SharedPreferences.Editor editor = mPreferences.edit();
         editor.putInt(LAST_MUSIC_CHOOSER, value);
         editor.apply();
-    }
-
-    public final int getLastMusicChooser() {
-        return mPreferences.getInt(LAST_MUSIC_CHOOSER, 0);
     }
 
     public final NowPlayingScreen getNowPlayingScreen() {
@@ -297,7 +297,7 @@ public final class PreferenceUtil {
                 interval = calendarUtil.getElapsedWeek();
                 break;
 
-             case "past_seven_days":
+            case "past_seven_days":
                 interval = calendarUtil.getElapsedDays(7);
                 break;
 
@@ -490,16 +490,6 @@ public final class PreferenceUtil {
         return mPreferences.getBoolean(INITIALIZED_BLACKLIST, false);
     }
 
-    public void setLibraryCategoryInfos(List<CategoryInfo> categories) {
-        Gson gson = new Gson();
-        Type collectionType = new TypeToken<List<CategoryInfo>>() {
-        }.getType();
-
-        final SharedPreferences.Editor editor = mPreferences.edit();
-        editor.putString(LIBRARY_CATEGORIES, gson.toJson(categories, collectionType));
-        editor.apply();
-    }
-
     public List<CategoryInfo> getLibraryCategoryInfos() {
         String data = mPreferences.getString(LIBRARY_CATEGORIES, null);
         if (data != null) {
@@ -515,6 +505,16 @@ public final class PreferenceUtil {
         }
 
         return getDefaultLibraryCategoryInfos();
+    }
+
+    public void setLibraryCategoryInfos(List<CategoryInfo> categories) {
+        Gson gson = new Gson();
+        Type collectionType = new TypeToken<List<CategoryInfo>>() {
+        }.getType();
+
+        final SharedPreferences.Editor editor = mPreferences.edit();
+        editor.putString(LIBRARY_CATEGORIES, gson.toJson(categories, collectionType));
+        editor.apply();
     }
 
     public List<CategoryInfo> getDefaultLibraryCategoryInfos() {

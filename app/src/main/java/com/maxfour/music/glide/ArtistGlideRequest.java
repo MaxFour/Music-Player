@@ -31,22 +31,40 @@ import java.util.List;
 
 public class ArtistGlideRequest {
 
+    public static final int DEFAULT_ANIMATION = android.R.anim.fade_in;
     private static final DiskCacheStrategy DEFAULT_DISK_CACHE_STRATEGY = DiskCacheStrategy.ALL;
     private static final int DEFAULT_ERROR_IMAGE = R.drawable.default_artist_image;
-    public static final int DEFAULT_ANIMATION = android.R.anim.fade_in;
+
+    public static DrawableTypeRequest createBaseRequest(RequestManager requestManager, Artist artist, boolean noCustomImage) {
+        boolean hasCustomImage = CustomArtistImageUtil.getInstance(App.getInstance()).hasCustomArtistImage(artist);
+        if (noCustomImage || !hasCustomImage) {
+            final List<AlbumCover> songs = new ArrayList<>();
+            for (final Album album : artist.albums) {
+                final Song song = album.safeGetFirstSong();
+                songs.add(new AlbumCover(album.getYear(), song.data));
+            }
+            return requestManager.load(new ArtistImage(artist.getName(), songs));
+        } else {
+            return requestManager.load(CustomArtistImageUtil.getFile(artist));
+        }
+    }
+
+    private static Key createSignature(Artist artist) {
+        return ArtistSignatureUtil.getInstance(App.getInstance()).getArtistSignature(artist.getName());
+    }
 
     public static class Builder {
         final RequestManager requestManager;
         final Artist artist;
         boolean noCustomImage;
 
-        public static Builder from(@NonNull RequestManager requestManager, Artist artist) {
-            return new Builder(requestManager, artist);
-        }
-
         private Builder(@NonNull RequestManager requestManager, Artist artist) {
             this.requestManager = requestManager;
             this.artist = artist;
+        }
+
+        public static Builder from(@NonNull RequestManager requestManager, Artist artist) {
+            return new Builder(requestManager, artist);
         }
 
         public PaletteBuilder generatePalette(Context context) {
@@ -115,22 +133,5 @@ public class ArtistGlideRequest {
                     .override(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL)
                     .signature(createSignature(builder.artist));
         }
-    }
-
-    public static DrawableTypeRequest createBaseRequest(RequestManager requestManager, Artist artist, boolean noCustomImage) {
-        boolean hasCustomImage = CustomArtistImageUtil.getInstance(App.getInstance()).hasCustomArtistImage(artist);
-        if (noCustomImage || !hasCustomImage) {
-            final List<AlbumCover> songs = new ArrayList<>();
-            for (final Album album : artist.albums) {
-                final Song song = album.safeGetFirstSong();
-                songs.add(new AlbumCover(album.getYear(), song.data));
-            }
-            return requestManager.load(new ArtistImage(artist.getName(), songs));        } else {
-            return requestManager.load(CustomArtistImageUtil.getFile(artist));
-        }
-    }
-
-    private static Key createSignature(Artist artist) {
-        return ArtistSignatureUtil.getInstance(App.getInstance()).getArtistSignature(artist.getName());
     }
 }

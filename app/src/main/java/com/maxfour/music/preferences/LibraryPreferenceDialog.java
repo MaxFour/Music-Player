@@ -20,11 +20,11 @@ import java.util.List;
 
 
 public class LibraryPreferenceDialog extends DialogFragment {
+    private CategoryInfoAdapter adapter;
+
     public static LibraryPreferenceDialog newInstance() {
         return new LibraryPreferenceDialog();
     }
-
-    private CategoryInfoAdapter adapter;
 
     @NonNull
     @Override

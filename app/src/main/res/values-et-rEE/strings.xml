@@ -245,7 +245,7 @@
     <string name="sleep_timer_canceled">Unetaimer on tühistatud</string>
     <plurals name="sleep_timer_set">
         <item quantity="one">Unetaimer on seatud nullist <xliff:g id="count">%1$d</xliff:g> minut</item>
-        <item quantity="other">Unetaimer on seatud väärtusele <xliff:g id ="count">%1$d</xliff:g> minutit pärast</item>
+        <item quantity="other">Unetaimer on seatud väärtusele <xliff:g id="count">%1$d</xliff:g> minutit pärast</item>
     </plurals>
     <string name="some_files_are_not_listed_in_the_media_store">Mõnda faili pole meediumipoes loetletud</string>
     <string name="song">laul</string>

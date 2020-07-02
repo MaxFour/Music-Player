@@ -62,8 +62,8 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginBottom="16dp"
                     android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -72,15 +72,15 @@
                         android:layout_weight="1"
                         android:gravity="center_vertical"
                         android:orientation="horizontal"
-                        android:paddingEnd="16dp"
-                        android:paddingStart="0dp">
+                        android:paddingStart="0dp"
+                        android:paddingEnd="16dp">
 
                         <ImageView
                             android:id="@+id/album_count_icon"
                             android:layout_width="24dp"
                             android:layout_height="24dp"
-                            android:layout_marginEnd="8dp"
                             android:layout_marginStart="0dp"
+                            android:layout_marginEnd="8dp"
                             app:srcCompat="@drawable/ic_album_white_24dp"
                             tools:ignore="ContentDescription,UnusedAttribute" />
 
@@ -98,15 +98,15 @@
                         android:layout_weight="1"
                         android:gravity="center_vertical"
                         android:orientation="horizontal"
-                        android:paddingEnd="16dp"
-                        android:paddingStart="0dp">
+                        android:paddingStart="0dp"
+                        android:paddingEnd="16dp">
 
                         <ImageView
                             android:id="@+id/song_count_icon"
                             android:layout_width="24dp"
                             android:layout_height="24dp"
-                            android:layout_marginEnd="8dp"
                             android:layout_marginStart="0dp"
+                            android:layout_marginEnd="8dp"
                             app:srcCompat="@drawable/ic_music_note_white_24dp"
                             tools:ignore="ContentDescription,UnusedAttribute" />
 
@@ -124,15 +124,15 @@
                         android:layout_weight="1"
                         android:gravity="center_vertical"
                         android:orientation="horizontal"
-                        android:paddingEnd="16dp"
-                        android:paddingStart="0dp">
+                        android:paddingStart="0dp"
+                        android:paddingEnd="16dp">
 
                         <ImageView
                             android:id="@+id/duration_icon"
                             android:layout_width="24dp"
                             android:layout_height="24dp"
-                            android:layout_marginEnd="8dp"
                             android:layout_marginStart="0dp"
+                            android:layout_marginEnd="8dp"
                             app:srcCompat="@drawable/ic_timer_white_24dp"
                             tools:ignore="ContentDescription,UnusedAttribute" />
 

@@ -14,8 +14,8 @@ import java.io.InputStream;
 
 public class MusicGlideModule implements GlideModule {
 
-  	@Override
-  	public void applyOptions(Context context, GlideBuilder builder) {
+    @Override
+    public void applyOptions(Context context, GlideBuilder builder) {
     }
 
     @Override

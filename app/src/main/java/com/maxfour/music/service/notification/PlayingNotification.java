@@ -14,17 +14,14 @@ import static android.content.Context.NOTIFICATION_SERVICE;
 
 public abstract class PlayingNotification {
 
-    private static final int NOTIFICATION_ID = 1;
     static final String NOTIFICATION_CHANNEL_ID = "playing_notification";
-
+    private static final int NOTIFICATION_ID = 1;
     private static final int NOTIFY_MODE_FOREGROUND = 1;
     private static final int NOTIFY_MODE_BACKGROUND = 0;
-
-    private int notifyMode = NOTIFY_MODE_BACKGROUND;
-
-    private NotificationManager notificationManager;
     protected MusicService service;
     boolean stopped;
+    private int notifyMode = NOTIFY_MODE_BACKGROUND;
+    private NotificationManager notificationManager;
 
     public synchronized void init(MusicService service) {
         this.service = service;

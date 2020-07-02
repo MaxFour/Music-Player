@@ -26,12 +26,6 @@ public class BlurTransformation extends BitmapTransformation {
     private float blurRadius;
     private int sampling;
 
-    private void init(Builder builder) {
-        this.context = builder.context;
-        this.blurRadius = builder.blurRadius;
-        this.sampling = builder.sampling;
-    }
-
     private BlurTransformation(Builder builder) {
         super(builder.context);
         init(builder);
@@ -42,49 +36,10 @@ public class BlurTransformation extends BitmapTransformation {
         init(builder);
     }
 
-    public static class Builder {
-        private Context context;
-        private BitmapPool bitmapPool;
-        private float blurRadius = DEFAULT_BLUR_RADIUS;
-        private int sampling;
-
-        public Builder(@NonNull Context context) {
-            this.context = context;
-        }
-
-        /**
-         * @param blurRadius The radius to use. Must be between 0 and 25. Default is 5.
-         * @return the same Builder
-         */
-        public Builder blurRadius(@FloatRange(from = 0.0f, to = 25.0f) float blurRadius) {
-            this.blurRadius = blurRadius;
-            return this;
-        }
-
-        /**
-         * @param sampling The inSampleSize to use. Must be a power of 2, or 1 for no down sampling or 0 for auto detect sampling. Default is 0.
-         * @return the same Builder
-         */
-        public Builder sampling(int sampling) {
-            this.sampling = sampling;
-            return this;
-        }
-
-        /**
-         * @param bitmapPool The BitmapPool to use.
-         * @return the same Builder
-         */
-        public Builder bitmapPool(BitmapPool bitmapPool) {
-            this.bitmapPool = bitmapPool;
-            return this;
-        }
-
-        public BlurTransformation build() {
-            if (bitmapPool != null) {
-                return new BlurTransformation(this, bitmapPool);
-            }
-            return new BlurTransformation(this);
-        }
+    private void init(Builder builder) {
+        this.context = builder.context;
+        this.blurRadius = builder.blurRadius;
+        this.sampling = builder.sampling;
     }
 
     @Override
@@ -139,5 +94,50 @@ public class BlurTransformation extends BitmapTransformation {
     @Override
     public String getId() {
         return "BlurTransformation(radius=" + blurRadius + ", sampling=" + sampling + ")";
+    }
+
+    public static class Builder {
+        private Context context;
+        private BitmapPool bitmapPool;
+        private float blurRadius = DEFAULT_BLUR_RADIUS;
+        private int sampling;
+
+        public Builder(@NonNull Context context) {
+            this.context = context;
+        }
+
+        /**
+         * @param blurRadius The radius to use. Must be between 0 and 25. Default is 5.
+         * @return the same Builder
+         */
+        public Builder blurRadius(@FloatRange(from = 0.0f, to = 25.0f) float blurRadius) {
+            this.blurRadius = blurRadius;
+            return this;
+        }
+
+        /**
+         * @param sampling The inSampleSize to use. Must be a power of 2, or 1 for no down sampling or 0 for auto detect sampling. Default is 0.
+         * @return the same Builder
+         */
+        public Builder sampling(int sampling) {
+            this.sampling = sampling;
+            return this;
+        }
+
+        /**
+         * @param bitmapPool The BitmapPool to use.
+         * @return the same Builder
+         */
+        public Builder bitmapPool(BitmapPool bitmapPool) {
+            this.bitmapPool = bitmapPool;
+            return this;
+        }
+
+        public BlurTransformation build() {
+            if (bitmapPool != null) {
+                return new BlurTransformation(this, bitmapPool);
+            }
+            return new BlurTransformation(this);
+        }
     }
 }

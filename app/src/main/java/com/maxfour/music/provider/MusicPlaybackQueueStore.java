@@ -1,18 +1,18 @@
 /*
-* Copyright (C) 2014 The CyanogenMod Project
-*
-* Licensed under the Apache License, Version 2.0 (the "License");
-* you may not use this file except in compliance with the License.
-* You may obtain a copy of the License at
-*
-* http://www.apache.org/licenses/LICENSE-2.0
-*
-* Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-* See the License for the specific language governing permissions and
-* limitations under the License.
-*/
+ * Copyright (C) 2014 The CyanogenMod Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package com.maxfour.music.provider;
 
 import android.content.ContentValues;
@@ -32,12 +32,12 @@ import com.maxfour.music.model.Song;
 import java.util.List;
 
 public class MusicPlaybackQueueStore extends SQLiteOpenHelper {
-    @Nullable
-    private static MusicPlaybackQueueStore sInstance = null;
     public static final String DATABASE_NAME = "music_playback_state.db";
     public static final String PLAYING_QUEUE_TABLE_NAME = "playing_queue";
     public static final String ORIGINAL_PLAYING_QUEUE_TABLE_NAME = "original_playing_queue";
     private static final int VERSION = 3;
+    @Nullable
+    private static MusicPlaybackQueueStore sInstance = null;
 
     /**
      * Constructor of <code>MusicPlaybackState</code>
@@ -46,6 +46,18 @@ public class MusicPlaybackQueueStore extends SQLiteOpenHelper {
      */
     public MusicPlaybackQueueStore(final Context context) {
         super(context, DATABASE_NAME, null, VERSION);
+    }
+
+    /**
+     * @param context The {@link Context} to use
+     * @return A new instance of this class.
+     */
+    @NonNull
+    public static synchronized MusicPlaybackQueueStore getInstance(@NonNull final Context context) {
+        if (sInstance == null) {
+            sInstance = new MusicPlaybackQueueStore(context.getApplicationContext());
+        }
+        return sInstance;
     }
 
     @Override
@@ -111,18 +123,6 @@ public class MusicPlaybackQueueStore extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + PLAYING_QUEUE_TABLE_NAME);
         db.execSQL("DROP TABLE IF EXISTS " + ORIGINAL_PLAYING_QUEUE_TABLE_NAME);
         onCreate(db);
-    }
-
-    /**
-     * @param context The {@link Context} to use
-     * @return A new instance of this class.
-     */
-    @NonNull
-    public static synchronized MusicPlaybackQueueStore getInstance(@NonNull final Context context) {
-        if (sInstance == null) {
-            sInstance = new MusicPlaybackQueueStore(context.getApplicationContext());
-        }
-        return sInstance;
     }
 
     public synchronized void saveQueues(@NonNull final List<Song> playingQueue, @NonNull final List<Song> originalPlayingQueue) {

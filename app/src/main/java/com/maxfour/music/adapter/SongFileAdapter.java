@@ -34,10 +34,10 @@ public class SongFileAdapter extends AbsMultiSelectAdapter<SongFileAdapter.ViewH
     private static final int FOLDER = 1;
 
     private final AppCompatActivity activity;
-    private List<File> dataSet;
     private final int itemLayoutRes;
     @Nullable
     private final Callbacks callbacks;
+    private List<File> dataSet;
 
     public SongFileAdapter(@NonNull AppCompatActivity activity, @NonNull List<File> songFiles, @LayoutRes int itemLayoutRes, @Nullable Callbacks callback, @Nullable CabHolder cabHolder) {
         super(activity, cabHolder, R.menu.menu_media_selection);
@@ -46,6 +46,13 @@ public class SongFileAdapter extends AbsMultiSelectAdapter<SongFileAdapter.ViewH
         this.itemLayoutRes = itemLayoutRes;
         this.callbacks = callback;
         setHasStableIds(true);
+    }
+
+    public static String readableFileSize(long size) {
+        if (size <= 0) return size + " B";
+        final String[] units = new String[]{"B", "KB", "MB", "GB", "TB"};
+        int digitGroups = (int) (Math.log10(size) / Math.log10(1024));
+        return new DecimalFormat("#,##0.##").format(size / Math.pow(1024, digitGroups)) + " " + units[digitGroups];
     }
 
     @Override
@@ -128,13 +135,6 @@ public class SongFileAdapter extends AbsMultiSelectAdapter<SongFileAdapter.ViewH
         }
     }
 
-    public static String readableFileSize(long size) {
-        if (size <= 0) return size + " B";
-        final String[] units = new String[]{"B", "KB", "MB", "GB", "TB"};
-        int digitGroups = (int) (Math.log10(size) / Math.log10(1024));
-        return new DecimalFormat("#,##0.##").format(size / Math.pow(1024, digitGroups)) + " " + units[digitGroups];
-    }
-
     @Override
     public int getItemCount() {
         return dataSet.size();
@@ -160,6 +160,14 @@ public class SongFileAdapter extends AbsMultiSelectAdapter<SongFileAdapter.ViewH
     @Override
     public String getSectionName(int position) {
         return String.valueOf(dataSet.get(position).getName().charAt(0)).toUpperCase();
+    }
+
+    public interface Callbacks {
+        void onFileSelected(File file);
+
+        void onFileMenuClicked(File file, View view);
+
+        void onMultipleItemAction(MenuItem item, List<File> files);
     }
 
     public class ViewHolder extends MediaEntryViewHolder {
@@ -199,13 +207,5 @@ public class SongFileAdapter extends AbsMultiSelectAdapter<SongFileAdapter.ViewH
         private boolean isPositionInRange(int position) {
             return position >= 0 && position < dataSet.size();
         }
-    }
-
-    public interface Callbacks {
-        void onFileSelected(File file);
-
-        void onFileMenuClicked(File file, View view);
-
-        void onMultipleItemAction(MenuItem item, List<File> files);
     }
 }

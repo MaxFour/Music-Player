@@ -266,6 +266,119 @@ public abstract class AbsTagEditorActivity extends AbsBaseActivity {
         new WriteTagsAsyncTask(this).execute(new WriteTagsAsyncTask.LoadingInfo(getSongPaths(), fieldKeyValueMap, artworkInfo));
     }
 
+    protected int getId() {
+        return id;
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @NonNull Intent imageReturnedIntent) {
+        super.onActivityResult(requestCode, resultCode, imageReturnedIntent);
+        if (requestCode == REQUEST_CODE_SELECT_IMAGE) {
+            if (resultCode == RESULT_OK) {
+                Uri selectedImage = imageReturnedIntent.getData();
+                loadImageFromFile(selectedImage);
+            }
+        }
+    }
+
+    protected abstract void loadImageFromFile(Uri selectedFile);
+
+    @NonNull
+    private AudioFile getAudioFile(@NonNull String path) {
+        try {
+            return AudioFileIO.read(new File(path));
+        } catch (Exception e) {
+            Log.e(TAG, "Could not read audio file " + path, e);
+            return new AudioFile();
+        }
+    }
+
+    @Nullable
+    protected String getSongTitle() {
+        try {
+            return getAudioFile(songPaths.get(0)).getTagOrCreateAndSetDefault().getFirst(FieldKey.TITLE);
+        } catch (Exception ignored) {
+            return null;
+        }
+    }
+
+    @Nullable
+    protected String getAlbumTitle() {
+        try {
+            return getAudioFile(songPaths.get(0)).getTagOrCreateAndSetDefault().getFirst(FieldKey.ALBUM);
+        } catch (Exception ignored) {
+            return null;
+        }
+    }
+
+    @Nullable
+    protected String getArtistName() {
+        try {
+            return getAudioFile(songPaths.get(0)).getTagOrCreateAndSetDefault().getFirst(FieldKey.ARTIST);
+        } catch (Exception ignored) {
+            return null;
+        }
+    }
+
+    @Nullable
+    protected String getAlbumArtistName() {
+        try {
+            return getAudioFile(songPaths.get(0)).getTagOrCreateAndSetDefault().getFirst(FieldKey.ALBUM_ARTIST);
+        } catch (Exception ignored) {
+            return null;
+        }
+    }
+
+    @Nullable
+    protected String getGenreName() {
+        try {
+            return getAudioFile(songPaths.get(0)).getTagOrCreateAndSetDefault().getFirst(FieldKey.GENRE);
+        } catch (Exception ignored) {
+            return null;
+        }
+    }
+
+    @Nullable
+    protected String getSongYear() {
+        try {
+            return getAudioFile(songPaths.get(0)).getTagOrCreateAndSetDefault().getFirst(FieldKey.YEAR);
+        } catch (Exception ignored) {
+            return null;
+        }
+    }
+
+    @Nullable
+    protected String getSongNumber() {
+        try {
+            return getAudioFile(songPaths.get(0)).getTagOrCreateAndSetDefault().getFirst(FieldKey.TRACK);
+        } catch (Exception ignored) {
+            return null;
+        }
+    }
+
+    @Nullable
+    protected String getLyrics() {
+        try {
+            return getAudioFile(songPaths.get(0)).getTagOrCreateAndSetDefault().getFirst(FieldKey.LYRICS);
+        } catch (Exception ignored) {
+            return null;
+        }
+    }
+
+    @Nullable
+    protected Bitmap getAlbumArt() {
+        try {
+            Artwork artworkTag = getAudioFile(songPaths.get(0)).getTagOrCreateAndSetDefault().getFirstArtwork();
+            if (artworkTag != null) {
+                byte[] artworkBinaryData = artworkTag.getBinaryData();
+                return BitmapFactory.decodeByteArray(artworkBinaryData, 0, artworkBinaryData.length);
+            }
+            return null;
+        } catch (Exception ignored) {
+            return null;
+        }
+    }
+
     private static class WriteTagsAsyncTask extends DialogAsyncTask<WriteTagsAsyncTask.LoadingInfo, Integer, String[]> {
         Context applicationContext;
 
@@ -398,119 +511,6 @@ public abstract class AbsTagEditorActivity extends AbsBaseActivity {
         public ArtworkInfo(int albumId, Bitmap artwork) {
             this.albumId = albumId;
             this.artwork = artwork;
-        }
-    }
-
-    protected int getId() {
-        return id;
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @NonNull Intent imageReturnedIntent) {
-        super.onActivityResult(requestCode, resultCode, imageReturnedIntent);
-        if (requestCode == REQUEST_CODE_SELECT_IMAGE) {
-            if (resultCode == RESULT_OK) {
-                Uri selectedImage = imageReturnedIntent.getData();
-                loadImageFromFile(selectedImage);
-            }
-        }
-    }
-
-    protected abstract void loadImageFromFile(Uri selectedFile);
-
-    @NonNull
-    private AudioFile getAudioFile(@NonNull String path) {
-        try {
-            return AudioFileIO.read(new File(path));
-        } catch (Exception e) {
-            Log.e(TAG, "Could not read audio file " + path, e);
-            return new AudioFile();
-        }
-    }
-
-    @Nullable
-    protected String getSongTitle() {
-        try {
-            return getAudioFile(songPaths.get(0)).getTagOrCreateAndSetDefault().getFirst(FieldKey.TITLE);
-        } catch (Exception ignored) {
-            return null;
-        }
-    }
-
-    @Nullable
-    protected String getAlbumTitle() {
-        try {
-            return getAudioFile(songPaths.get(0)).getTagOrCreateAndSetDefault().getFirst(FieldKey.ALBUM);
-        } catch (Exception ignored) {
-            return null;
-        }
-    }
-
-    @Nullable
-    protected String getArtistName() {
-        try {
-            return getAudioFile(songPaths.get(0)).getTagOrCreateAndSetDefault().getFirst(FieldKey.ARTIST);
-        } catch (Exception ignored) {
-            return null;
-        }
-    }
-
-    @Nullable
-    protected String getAlbumArtistName() {
-        try {
-            return getAudioFile(songPaths.get(0)).getTagOrCreateAndSetDefault().getFirst(FieldKey.ALBUM_ARTIST);
-        } catch (Exception ignored) {
-            return null;
-        }
-    }
-
-    @Nullable
-    protected String getGenreName() {
-        try {
-            return getAudioFile(songPaths.get(0)).getTagOrCreateAndSetDefault().getFirst(FieldKey.GENRE);
-        } catch (Exception ignored) {
-            return null;
-        }
-    }
-
-    @Nullable
-    protected String getSongYear() {
-        try {
-            return getAudioFile(songPaths.get(0)).getTagOrCreateAndSetDefault().getFirst(FieldKey.YEAR);
-        } catch (Exception ignored) {
-            return null;
-        }
-    }
-
-    @Nullable
-    protected String getSongNumber() {
-        try {
-            return getAudioFile(songPaths.get(0)).getTagOrCreateAndSetDefault().getFirst(FieldKey.TRACK);
-        } catch (Exception ignored) {
-            return null;
-        }
-    }
-
-    @Nullable
-    protected String getLyrics() {
-        try {
-            return getAudioFile(songPaths.get(0)).getTagOrCreateAndSetDefault().getFirst(FieldKey.LYRICS);
-        } catch (Exception ignored) {
-            return null;
-        }
-    }
-
-    @Nullable
-    protected Bitmap getAlbumArt() {
-        try {
-            Artwork artworkTag = getAudioFile(songPaths.get(0)).getTagOrCreateAndSetDefault().getFirstArtwork();
-            if (artworkTag != null) {
-                byte[] artworkBinaryData = artworkTag.getBinaryData();
-                return BitmapFactory.decodeByteArray(artworkBinaryData, 0, artworkBinaryData.length);
-            }
-            return null;
-        } catch (Exception ignored) {
-            return null;
         }
     }
 }

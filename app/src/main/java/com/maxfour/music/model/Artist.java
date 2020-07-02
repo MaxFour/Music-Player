@@ -13,7 +13,17 @@ import java.util.Objects;
 
 public class Artist implements Parcelable {
     public static final String UNKNOWN_ARTIST_DISPLAY_NAME = "Unknown Artist";
+    public static final Parcelable.Creator<Artist> CREATOR = new Parcelable.Creator<Artist>() {
+        @Override
+        public Artist createFromParcel(Parcel source) {
+            return new Artist(source);
+        }
 
+        @Override
+        public Artist[] newArray(int size) {
+            return new Artist[size];
+        }
+    };
     public final List<Album> albums;
 
     public Artist(List<Album> albums) {
@@ -22,6 +32,10 @@ public class Artist implements Parcelable {
 
     public Artist() {
         this.albums = new ArrayList<>();
+    }
+
+    protected Artist(Parcel in) {
+        this.albums = in.createTypedArrayList(Album.CREATOR);
     }
 
     public int getId() {
@@ -84,7 +98,6 @@ public class Artist implements Parcelable {
                 '}';
     }
 
-
     @Override
     public int describeContents() {
         return 0;
@@ -94,20 +107,4 @@ public class Artist implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeTypedList(this.albums);
     }
-
-    protected Artist(Parcel in) {
-        this.albums = in.createTypedArrayList(Album.CREATOR);
-    }
-
-    public static final Parcelable.Creator<Artist> CREATOR = new Parcelable.Creator<Artist>() {
-        @Override
-        public Artist createFromParcel(Parcel source) {
-            return new Artist(source);
-        }
-
-        @Override
-        public Artist[] newArray(int size) {
-            return new Artist[size];
-        }
-    };
 }

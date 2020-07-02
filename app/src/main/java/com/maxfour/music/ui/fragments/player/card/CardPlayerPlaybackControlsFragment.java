@@ -34,8 +34,6 @@ import butterknife.Unbinder;
 
 public class CardPlayerPlaybackControlsFragment extends AbsMusicServiceFragment implements MusicProgressViewUpdateHelper.Callback {
 
-    private Unbinder unbinder;
-
     @BindView(R.id.player_play_pause_fab)
     FloatingActionButton playPauseFab;
     @BindView(R.id.player_prev_button)
@@ -46,14 +44,13 @@ public class CardPlayerPlaybackControlsFragment extends AbsMusicServiceFragment 
     ImageButton repeatButton;
     @BindView(R.id.player_shuffle_button)
     ImageButton shuffleButton;
-
     @BindView(R.id.player_progress_slider)
     SeekBar progressSlider;
     @BindView(R.id.player_song_total_time)
     TextView songTotalTime;
     @BindView(R.id.player_song_current_progress)
     TextView songCurrentProgress;
-
+    private Unbinder unbinder;
     private PlayPauseDrawable playerFabPlayPauseDrawable;
 
     private int lastPlaybackControlsColor;

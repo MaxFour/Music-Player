@@ -70,13 +70,12 @@ import butterknife.Unbinder;
 
 public class FoldersFragment extends AbsMainActivityFragment implements MainActivity.MainActivityFragmentCallbacks, CabHolder, BreadCrumbLayout.SelectionCallback, SongFileAdapter.Callbacks, AppBarLayout.OnOffsetChangedListener, LoaderManager.LoaderCallbacks<List<File>> {
 
-    private static final int LOADER_ID = LoaderIds.FOLDERS_FRAGMENT;
-
+    public static final FileFilter AUDIO_FILE_FILTER = file -> !file.isHidden() && (file.isDirectory() ||
+            FileUtil.fileIsMimeType(file, "audio/*", MimeTypeMap.getSingleton()) ||
+            FileUtil.fileIsMimeType(file, "application/ogg", MimeTypeMap.getSingleton()));
     protected static final String PATH = "path";
     protected static final String CRUMBS = "crumbs";
-
-    private Unbinder unbinder;
-
+    private static final int LOADER_ID = LoaderIds.FOLDERS_FRAGMENT;
     @BindView(R.id.coordinator_layout)
     CoordinatorLayout coordinatorLayout;
     @BindView(R.id.container)
@@ -91,7 +90,17 @@ public class FoldersFragment extends AbsMainActivityFragment implements MainActi
     AppBarLayout appbar;
     @BindView(R.id.recycler_view)
     FastScrollRecyclerView recyclerView;
-
+    Comparator<File> fileComparator = (lhs, rhs) -> {
+        if (lhs.isDirectory() && !rhs.isDirectory()) {
+            return -1;
+        } else if (!lhs.isDirectory() && rhs.isDirectory()) {
+            return 1;
+        } else {
+            return lhs.getName().compareToIgnoreCase
+                    (rhs.getName());
+        }
+    };
+    private Unbinder unbinder;
     private SongFileAdapter adapter;
     private MaterialCab cab;
 
@@ -108,6 +117,22 @@ public class FoldersFragment extends AbsMainActivityFragment implements MainActi
         b.putSerializable(PATH, directory);
         frag.setArguments(b);
         return frag;
+    }
+
+    public static File getDefaultStartDirectory() {
+        File musicDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC);
+        File startFolder;
+        if (musicDir.exists() && musicDir.isDirectory()) {
+            startFolder = musicDir;
+        } else {
+            File externalStorage = Environment.getExternalStorageDirectory();
+            if (externalStorage.exists() && externalStorage.isDirectory()) {
+                startFolder = externalStorage;
+            } else {
+                startFolder = new File("/"); // root
+            }
+        }
+        return startFolder;
     }
 
     public void setCrumb(BreadCrumbLayout.Crumb crumb, boolean addToHistory) {
@@ -261,29 +286,9 @@ public class FoldersFragment extends AbsMainActivityFragment implements MainActi
         ToolbarContentTintHelper.handleOnPrepareOptionsMenu(getActivity(), toolbar);
     }
 
-    public static final FileFilter AUDIO_FILE_FILTER = file -> !file.isHidden() && (file.isDirectory() ||
-            FileUtil.fileIsMimeType(file, "audio/*", MimeTypeMap.getSingleton()) ||
-            FileUtil.fileIsMimeType(file, "application/ogg", MimeTypeMap.getSingleton()));
-
     @Override
     public void onCrumbSelection(BreadCrumbLayout.Crumb crumb, int index) {
         setCrumb(crumb, true);
-    }
-
-    public static File getDefaultStartDirectory() {
-        File musicDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC);
-        File startFolder;
-        if (musicDir.exists() && musicDir.isDirectory()) {
-            startFolder = musicDir;
-        } else {
-            File externalStorage = Environment.getExternalStorageDirectory();
-            if (externalStorage.exists() && externalStorage.isDirectory()) {
-                startFolder = externalStorage;
-            } else {
-                startFolder = new File("/"); // root
-            }
-        }
-        return startFolder;
     }
 
     @Override
@@ -353,17 +358,6 @@ public class FoldersFragment extends AbsMainActivityFragment implements MainActi
         files.add(file);
         return files;
     }
-
-    Comparator<File> fileComparator = (lhs, rhs) -> {
-        if (lhs.isDirectory() && !rhs.isDirectory()) {
-            return -1;
-        } else if (!lhs.isDirectory() && rhs.isDirectory()) {
-            return 1;
-        } else {
-            return lhs.getName().compareToIgnoreCase
-                    (rhs.getName());
-        }
-    };
 
     private Comparator<File> getFileComparator() {
         return fileComparator;
@@ -505,9 +499,9 @@ public class FoldersFragment extends AbsMainActivityFragment implements MainActi
     }
 
     private static class ListSongsAsyncTask extends ListingFilesDialogAsyncTask<ListSongsAsyncTask.LoadingInfo, Void, List<Song>> {
+        private final Object extra;
         private WeakReference<Context> contextWeakReference;
         private WeakReference<OnSongsListedCallback> callbackWeakReference;
-        private final Object extra;
 
         public ListSongsAsyncTask(Context context, Object extra, OnSongsListedCallback callback) {
             super(context, 500);
@@ -570,6 +564,10 @@ public class FoldersFragment extends AbsMainActivityFragment implements MainActi
             return callback;
         }
 
+        public interface OnSongsListedCallback {
+            void onSongsListed(@NonNull List<Song> songs, Object extra);
+        }
+
         public static class LoadingInfo {
             public final Comparator<File> fileComparator;
             public final FileFilter fileFilter;
@@ -581,13 +579,9 @@ public class FoldersFragment extends AbsMainActivityFragment implements MainActi
                 this.files = files;
             }
         }
-
-        public interface OnSongsListedCallback {
-            void onSongsListed(@NonNull List<Song> songs, Object extra);
-        }
     }
 
-    public static class ArrayListPathsAsyncTask  extends ListingFilesDialogAsyncTask<ArrayListPathsAsyncTask .LoadingInfo, String, String[]> {
+    public static class ArrayListPathsAsyncTask extends ListingFilesDialogAsyncTask<ArrayListPathsAsyncTask.LoadingInfo, String, String[]> {
         private WeakReference<OnPathsListedCallback> onPathsListedCallbackWeakReference;
 
         public ArrayListPathsAsyncTask(Context context, OnPathsListedCallback callback) {
@@ -652,6 +646,10 @@ public class FoldersFragment extends AbsMainActivityFragment implements MainActi
             return callback;
         }
 
+        public interface OnPathsListedCallback {
+            void onPathsListed(@NonNull String[] paths);
+        }
+
         public static class LoadingInfo {
             public final File file;
             public final FileFilter fileFilter;
@@ -660,10 +658,6 @@ public class FoldersFragment extends AbsMainActivityFragment implements MainActi
                 this.file = file;
                 this.fileFilter = fileFilter;
             }
-        }
-
-        public interface OnPathsListedCallback {
-            void onPathsListed(@NonNull String[] paths);
         }
     }
 

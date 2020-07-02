@@ -37,7 +37,7 @@ public class CalendarUtil {
         return elapsed;
     }
 
-     /**
+    /**
      * Returns the time elapsed so far this week in milliseconds.
      *
      * @return Time elapsed this week in milliseconds.

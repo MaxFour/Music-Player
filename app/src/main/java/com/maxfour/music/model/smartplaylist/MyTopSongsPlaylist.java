@@ -14,8 +14,22 @@ import java.util.List;
 
 public class MyTopSongsPlaylist extends AbsSmartPlaylist {
 
+    public static final Creator<MyTopSongsPlaylist> CREATOR = new Creator<MyTopSongsPlaylist>() {
+        public MyTopSongsPlaylist createFromParcel(Parcel source) {
+            return new MyTopSongsPlaylist(source);
+        }
+
+        public MyTopSongsPlaylist[] newArray(int size) {
+            return new MyTopSongsPlaylist[size];
+        }
+    };
+
     public MyTopSongsPlaylist(@NonNull Context context) {
         super(context.getString(R.string.my_top_songs), R.drawable.ic_trending_up_white_24dp);
+    }
+
+    protected MyTopSongsPlaylist(Parcel in) {
+        super(in);
     }
 
     @NonNull
@@ -29,23 +43,8 @@ public class MyTopSongsPlaylist extends AbsSmartPlaylist {
         SongPlayCountStore.getInstance(context).clear();
     }
 
-
     @Override
     public int describeContents() {
         return 0;
     }
-
-    protected MyTopSongsPlaylist(Parcel in) {
-        super(in);
-    }
-
-    public static final Creator<MyTopSongsPlaylist> CREATOR = new Creator<MyTopSongsPlaylist>() {
-        public MyTopSongsPlaylist createFromParcel(Parcel source) {
-            return new MyTopSongsPlaylist(source);
-        }
-
-        public MyTopSongsPlaylist[] newArray(int size) {
-            return new MyTopSongsPlaylist[size];
-        }
-    };
 }

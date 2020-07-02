@@ -10,6 +10,15 @@ import java.util.List;
 import java.util.Objects;
 
 public class Album implements Parcelable {
+    public static final Creator<Album> CREATOR = new Creator<Album>() {
+        public Album createFromParcel(Parcel source) {
+            return new Album(source);
+        }
+
+        public Album[] newArray(int size) {
+            return new Album[size];
+        }
+    };
     public final List<Song> songs;
 
     public Album(List<Song> songs) {
@@ -18,6 +27,10 @@ public class Album implements Parcelable {
 
     public Album() {
         this.songs = new ArrayList<>();
+    }
+
+    protected Album(Parcel in) {
+        this.songs = in.createTypedArrayList(Song.CREATOR);
     }
 
     public int getId() {
@@ -85,18 +98,4 @@ public class Album implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeTypedList(songs);
     }
-
-    protected Album(Parcel in) {
-        this.songs = in.createTypedArrayList(Song.CREATOR);
-    }
-
-    public static final Creator<Album> CREATOR = new Creator<Album>() {
-        public Album createFromParcel(Parcel source) {
-            return new Album(source);
-        }
-
-        public Album[] newArray(int size) {
-            return new Album[size];
-        }
-    };
 }

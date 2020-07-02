@@ -23,6 +23,7 @@ import java.util.concurrent.Executors;
  * colors on the topmost layer of the stack are either added on
  * or reduced by one, depending on if they are on the right or
  * on the left side of the stack.
+ *
  * @license: Apache License 2.0
  */
 public class StackBlur {

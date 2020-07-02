@@ -10,6 +10,10 @@ public class App extends Application {
 
     private static App app;
 
+    public static App getInstance() {
+        return app;
+    }
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -27,9 +31,5 @@ public class App extends Application {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N_MR1) {
             new DynamicShortcutManager(this).initDynamicShortcuts();
         }
-    }
-
-    public static App getInstance() {
-        return app;
     }
 }

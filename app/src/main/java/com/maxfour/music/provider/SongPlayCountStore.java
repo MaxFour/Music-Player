@@ -1,18 +1,18 @@
 /*
-* Copyright (C) 2014 The CyanogenMod Project
-*
-* Licensed under the Apache License, Version 2.0 (the "License");
-* you may not use this file except in compliance with the License.
-* You may obtain a copy of the License at
-*
-* http://www.apache.org/licenses/LICENSE-2.0
-*
-* Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-* See the License for the specific language governing permissions and
-* limitations under the License.
-*/
+ * Copyright (C) 2014 The CyanogenMod Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 
 package com.maxfour.music.provider;
 
@@ -32,19 +32,15 @@ import androidx.annotation.Nullable;
  * the top played songs as well as the playlist images
  */
 public class SongPlayCountStore extends SQLiteOpenHelper {
-    @Nullable
-    private static SongPlayCountStore sInstance = null;
-
     public static final String DATABASE_NAME = "song_play_count.db";
     private static final int VERSION = 2;
-
+    // how many weeks worth of playback to song
+    private static final int NUM_WEEKS = 52;
+    @Nullable
+    private static SongPlayCountStore sInstance = null;
     // interpolator curve applied for measuring the curve
     @NonNull
     private static Interpolator sInterpolator = new AccelerateInterpolator(1.5f);
-
-    // how many weeks worth of playback to song
-    private static final int NUM_WEEKS = 52;
-
     // how high to multiply the interpolation curve
     @SuppressWarnings("FieldCanBeLocal")
     private static int INTERPOLATOR_HEIGHT = 50;
@@ -72,6 +68,72 @@ public class SongPlayCountStore extends SQLiteOpenHelper {
         mNumberOfWeeksSinceEpoch = (int) (msSinceEpoch / ONE_WEEK_IN_MS);
 
         mDatabaseUpdated = false;
+    }
+
+    /**
+     * @param context The {@link Context} to use
+     * @return A new instance of this class.
+     */
+    @NonNull
+    public static synchronized SongPlayCountStore getInstance(@NonNull final Context context) {
+        if (sInstance == null) {
+            sInstance = new SongPlayCountStore(context.getApplicationContext());
+        }
+        return sInstance;
+    }
+
+    /**
+     * Calculates the score of the song given the play counts
+     *
+     * @param playCounts an array of the # of times a song has been played for each week
+     *                   where playCounts[N] is the # of times it was played N weeks ago
+     * @return the score
+     */
+    private static float calculateScore(@Nullable final int[] playCounts) {
+        if (playCounts == null) {
+            return 0;
+        }
+
+        float score = 0;
+        for (int i = 0; i < Math.min(playCounts.length, NUM_WEEKS); i++) {
+            score += playCounts[i] * getScoreMultiplierForWeek(i);
+        }
+
+        return score;
+    }
+
+    /**
+     * Gets the column name for each week #
+     *
+     * @param week number
+     * @return the column name
+     */
+    @NonNull
+    private static String getColumnNameForWeek(final int week) {
+        return SongPlayCountColumns.WEEK_PLAY_COUNT + week;
+    }
+
+    /**
+     * Gets the score multiplier for each week
+     *
+     * @param week number
+     * @return the multiplier to apply
+     */
+    private static float getScoreMultiplierForWeek(final int week) {
+        return sInterpolator.getInterpolation(1 - (week / (float) NUM_WEEKS)) * INTERPOLATOR_HEIGHT
+                + INTERPOLATOR_BASE;
+    }
+
+    /**
+     * For some performance gain, return a static value for the column index for a week
+     * WARNING: This function assumes you have selected all columns for it to work
+     *
+     * @param week number
+     * @return column index of that week
+     */
+    private static int getColumnIndexForWeek(final int week) {
+        // ID, followed by the weeks columns
+        return 1 + week;
     }
 
     @Override
@@ -111,18 +173,6 @@ public class SongPlayCountStore extends SQLiteOpenHelper {
         // If we ever have downgrade, drop the table to be safe
         db.execSQL("DROP TABLE IF EXISTS " + SongPlayCountColumns.NAME);
         onCreate(db);
-    }
-
-    /**
-     * @param context The {@link Context} to use
-     * @return A new instance of this class.
-     */
-    @NonNull
-    public static synchronized SongPlayCountStore getInstance(@NonNull final Context context) {
-        if (sInstance == null) {
-            sInstance = new SongPlayCountStore(context.getApplicationContext());
-        }
-        return sInstance;
     }
 
     /**
@@ -338,60 +388,6 @@ public class SongPlayCountStore extends SQLiteOpenHelper {
      */
     private void deleteEntry(@NonNull final SQLiteDatabase database, final String stringId) {
         database.delete(SongPlayCountColumns.NAME, WHERE_ID_EQUALS, new String[]{stringId});
-    }
-
-    /**
-     * Calculates the score of the song given the play counts
-     *
-     * @param playCounts an array of the # of times a song has been played for each week
-     *                   where playCounts[N] is the # of times it was played N weeks ago
-     * @return the score
-     */
-    private static float calculateScore(@Nullable final int[] playCounts) {
-        if (playCounts == null) {
-            return 0;
-        }
-
-        float score = 0;
-        for (int i = 0; i < Math.min(playCounts.length, NUM_WEEKS); i++) {
-            score += playCounts[i] * getScoreMultiplierForWeek(i);
-        }
-
-        return score;
-    }
-
-    /**
-     * Gets the column name for each week #
-     *
-     * @param week number
-     * @return the column name
-     */
-    @NonNull
-    private static String getColumnNameForWeek(final int week) {
-        return SongPlayCountColumns.WEEK_PLAY_COUNT + week;
-    }
-
-    /**
-     * Gets the score multiplier for each week
-     *
-     * @param week number
-     * @return the multiplier to apply
-     */
-    private static float getScoreMultiplierForWeek(final int week) {
-        return sInterpolator.getInterpolation(1 - (week / (float) NUM_WEEKS)) * INTERPOLATOR_HEIGHT
-                + INTERPOLATOR_BASE;
-    }
-
-    /**
-     * For some performance gain, return a static value for the column index for a week
-     * WARNING: This function assumes you have selected all columns for it to work
-     *
-     * @param week number
-     * @return column index of that week
-     */
-    private static int getColumnIndexForWeek(final int week) {
-        // ID, followed by the weeks columns
-        return 1 + week;
     }
 
     public interface SongPlayCountColumns {

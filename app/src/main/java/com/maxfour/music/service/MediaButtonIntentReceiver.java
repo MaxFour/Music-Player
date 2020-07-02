@@ -33,9 +33,8 @@ import com.maxfour.music.BuildConfig;
  * Triple press: previous song
  */
 public class MediaButtonIntentReceiver extends BroadcastReceiver {
-    private static final boolean DEBUG = BuildConfig.DEBUG;
     public static final String TAG = MediaButtonIntentReceiver.class.getSimpleName();
-
+    private static final boolean DEBUG = BuildConfig.DEBUG;
     private static final int MSG_HEADSET_DOUBLE_CLICK_TIMEOUT = 2;
 
     private static final int DOUBLE_CLICK = 400;
@@ -77,14 +76,6 @@ public class MediaButtonIntentReceiver extends BroadcastReceiver {
             releaseWakeLockIfHandlerIdle();
         }
     };
-
-    @Override
-    public void onReceive(final Context context, final Intent intent) {
-        if (DEBUG) Log.v(TAG, "Received intent: " + intent);
-        if (handleIntent(context, intent) && isOrderedBroadcast()) {
-            abortBroadcast();
-        }
-    }
 
     public static boolean handleIntent(final Context context, final Intent intent) {
         final String intentAction = intent.getAction();
@@ -201,6 +192,14 @@ public class MediaButtonIntentReceiver extends BroadcastReceiver {
             if (DEBUG) Log.v(TAG, "Releasing wake lock");
             mWakeLock.release();
             mWakeLock = null;
+        }
+    }
+
+    @Override
+    public void onReceive(final Context context, final Intent intent) {
+        if (DEBUG) Log.v(TAG, "Received intent: " + intent);
+        if (handleIntent(context, intent) && isOrderedBroadcast()) {
+            abortBroadcast();
         }
     }
 }

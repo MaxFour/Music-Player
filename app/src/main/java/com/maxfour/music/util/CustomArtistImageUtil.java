@@ -45,6 +45,20 @@ public class CustomArtistImageUtil {
         return sInstance;
     }
 
+    private static String getFileName(Artist artist) {
+        String artistName = artist.getName();
+        if (artistName == null)
+            artistName = "";
+        // replace everything that is not a letter or a number with _
+        artistName = artistName.replaceAll("[^a-zA-Z0-9]", "_");
+        return String.format(Locale.US, "#%d#%s.jpeg", artist.getId(), artistName);
+    }
+
+    public static File getFile(Artist artist) {
+        File dir = new File(App.getInstance().getFilesDir(), FOLDER_NAME);
+        return new File(dir, getFileName(artist));
+    }
+
     public void setCustomArtistImage(final Artist artist, Uri uri) {
         Glide.with(App.getInstance())
                 .load(uri)
@@ -117,19 +131,5 @@ public class CustomArtistImageUtil {
     // shared prefs saves us many IO operations
     public boolean hasCustomArtistImage(Artist artist) {
         return mPreferences.getBoolean(getFileName(artist), false);
-    }
-
-    private static String getFileName(Artist artist) {
-        String artistName = artist.getName();
-        if (artistName == null)
-            artistName = "";
-        // replace everything that is not a letter or a number with _
-        artistName = artistName.replaceAll("[^a-zA-Z0-9]", "_");
-        return String.format(Locale.US, "#%d#%s.jpeg", artist.getId(), artistName);
-    }
-
-    public static File getFile(Artist artist) {
-        File dir = new File(App.getInstance().getFilesDir(), FOLDER_NAME);
-        return new File(dir, getFileName(artist));
     }
 }

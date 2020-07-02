@@ -68,13 +68,9 @@ import retrofit2.Response;
  */
 public class AlbumDetailActivity extends AbsSlidingMusicPanelActivity implements PaletteColorHolder, CabHolder, LoaderManager.LoaderCallbacks<Album> {
 
+    public static final String EXTRA_ALBUM_ID = "extra_album_id";
     private static final int TAG_EDITOR_REQUEST = 2001;
     private static final int LOADER_ID = LoaderIds.ALBUM_DETAIL_ACTIVITY;
-
-    public static final String EXTRA_ALBUM_ID = "extra_album_id";
-
-    private Album album;
-
     @BindView(R.id.list)
     ObservableRecyclerView recyclerView;
     @BindView(R.id.image)
@@ -85,7 +81,6 @@ public class AlbumDetailActivity extends AbsSlidingMusicPanelActivity implements
     View headerView;
     @BindView(R.id.header_overlay)
     View headerOverlay;
-
     @BindView(R.id.artist_icon)
     ImageView artistIconImageView;
     @BindView(R.id.duration_icon)
@@ -102,13 +97,27 @@ public class AlbumDetailActivity extends AbsSlidingMusicPanelActivity implements
     TextView songCountTextView;
     @BindView(R.id.album_year_text)
     TextView albumYearTextView;
-
+    private Album album;
     private AlbumSongAdapter adapter;
 
     private MaterialCab cab;
     private int headerViewHeight;
     private int toolbarColor;
+    private final SimpleObservableScrollViewCallbacks observableScrollViewCallbacks = new SimpleObservableScrollViewCallbacks() {
+        @Override
+        public void onScrollChanged(int scrollY, boolean b, boolean b2) {
+            scrollY += headerViewHeight;
 
+            // Change alpha of overlay
+            float headerAlpha = Math.max(0, Math.min(1, (float) 2 * scrollY / headerViewHeight));
+            headerOverlay.setBackgroundColor(ColorUtil.withAlpha(toolbarColor, headerAlpha));
+
+            // Translate name text
+            headerView.setTranslationY(Math.max(-scrollY, -headerViewHeight));
+            headerOverlay.setTranslationY(Math.max(-scrollY, -headerViewHeight));
+            albumArtImageView.setTranslationY(Math.max(-scrollY, -headerViewHeight));
+        }
+    };
     @Nullable
     private Spanned wiki;
     private MaterialDialog wikiDialog;
@@ -133,22 +142,6 @@ public class AlbumDetailActivity extends AbsSlidingMusicPanelActivity implements
     protected View createContentView() {
         return wrapSlidingMusicPanel(R.layout.activity_album_detail);
     }
-
-    private final SimpleObservableScrollViewCallbacks observableScrollViewCallbacks = new SimpleObservableScrollViewCallbacks() {
-        @Override
-        public void onScrollChanged(int scrollY, boolean b, boolean b2) {
-            scrollY += headerViewHeight;
-
-            // Change alpha of overlay
-            float headerAlpha = Math.max(0, Math.min(1, (float) 2 * scrollY / headerViewHeight));
-            headerOverlay.setBackgroundColor(ColorUtil.withAlpha(toolbarColor, headerAlpha));
-
-            // Translate name text
-            headerView.setTranslationY(Math.max(-scrollY, -headerViewHeight));
-            headerOverlay.setTranslationY(Math.max(-scrollY, -headerViewHeight));
-            albumArtImageView.setTranslationY(Math.max(-scrollY, -headerViewHeight));
-        }
-    };
 
     private void setUpObservableListViewParams() {
         headerViewHeight = getResources().getDimensionPixelSize(R.dimen.detail_header_height);
@@ -407,6 +400,11 @@ public class AlbumDetailActivity extends AbsSlidingMusicPanelActivity implements
         setLightStatusbar(false);
     }
 
+    private Album getAlbum() {
+        if (album == null) album = new Album();
+        return album;
+    }
+
     private void setAlbum(Album album) {
         this.album = album;
         loadAlbumCover();
@@ -422,11 +420,6 @@ public class AlbumDetailActivity extends AbsSlidingMusicPanelActivity implements
         albumYearTextView.setText(MusicUtil.getYearString(album.getYear()));
 
         adapter.swapDataSet(album.songs);
-    }
-
-    private Album getAlbum() {
-        if (album == null) album = new Album();
-        return album;
     }
 
     @Override

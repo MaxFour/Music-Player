@@ -23,13 +23,15 @@ import java.util.List;
 
 public class BlacklistFolderChooserDialog extends DialogFragment implements MaterialDialog.ListCallback {
 
+    String initialPath = Environment.getExternalStorageDirectory().getAbsolutePath();
     private File parentFolder;
     private File[] parentContents;
     private boolean canGoUp = false;
-
     private FolderCallback callback;
 
-    String initialPath = Environment.getExternalStorageDirectory().getAbsolutePath();
+    public static BlacklistFolderChooserDialog create() {
+        return new BlacklistFolderChooserDialog();
+    }
 
     private String[] getContentsArray() {
         if (parentContents == null) {
@@ -61,10 +63,6 @@ public class BlacklistFolderChooserDialog extends DialogFragment implements Mate
             return results.toArray(new File[0]);
         }
         return null;
-    }
-
-    public static BlacklistFolderChooserDialog create() {
-        return new BlacklistFolderChooserDialog();
     }
 
     @NonNull

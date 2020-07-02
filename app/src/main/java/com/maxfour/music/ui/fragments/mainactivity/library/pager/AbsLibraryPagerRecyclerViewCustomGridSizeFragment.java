@@ -29,6 +29,8 @@ public abstract class AbsLibraryPagerRecyclerViewCustomGridSizeFragment<A extend
         return gridSize;
     }
 
+    protected abstract void setGridSize(int gridSize);
+
     public int getMaxGridSize() {
         if (isLandscape()) {
             return getResources().getInteger(R.integer.max_columns_land);
@@ -54,6 +56,8 @@ public abstract class AbsLibraryPagerRecyclerViewCustomGridSizeFragment<A extend
         }
         return sortOrder;
     }
+
+    protected abstract void setSortOrder(String sortOrder);
 
     public void setAndSaveGridSize(final int gridSize) {
         int oldLayoutRes = getItemLayoutRes();
@@ -142,13 +146,9 @@ public abstract class AbsLibraryPagerRecyclerViewCustomGridSizeFragment<A extend
 
     protected abstract void setUsePalette(boolean usePalette);
 
-    protected abstract void setGridSize(int gridSize);
-
     protected abstract String loadSortOrder();
 
     protected abstract void saveSortOrder(String sortOrder);
-
-    protected abstract void setSortOrder(String sortOrder);
 
     protected int getMaxGridSizeForList() {
         if (isLandscape()) {

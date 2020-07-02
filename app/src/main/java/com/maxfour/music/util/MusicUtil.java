@@ -74,8 +74,8 @@ public class MusicUtil {
         int songCount = artist.getSongCount();
 
         return MusicUtil.buildInfoString(
-            MusicUtil.getAlbumCountString(context, albumCount),
-            MusicUtil.getSongCountString(context, songCount)
+                MusicUtil.getAlbumCountString(context, albumCount),
+                MusicUtil.getSongCountString(context, songCount)
         );
     }
 
@@ -84,16 +84,16 @@ public class MusicUtil {
         int songCount = album.getSongCount();
 
         return MusicUtil.buildInfoString(
-            album.getArtistName(),
-            MusicUtil.getSongCountString(context, songCount)
+                album.getArtistName(),
+                MusicUtil.getSongCountString(context, songCount)
         );
     }
 
     @NonNull
     public static String getSongInfoString(@NonNull final Song song) {
         return MusicUtil.buildInfoString(
-            song.artistName,
-            song.albumName
+                song.artistName,
+                song.albumName
         );
     }
 
@@ -108,8 +108,8 @@ public class MusicUtil {
         final long duration = getTotalDuration(context, songs);
 
         return MusicUtil.buildInfoString(
-            MusicUtil.getSongCountString(context, songs.size()),
-            MusicUtil.getReadableDurationString(duration)
+                MusicUtil.getSongCountString(context, songs.size()),
+                MusicUtil.getReadableDurationString(duration)
         );
     }
 
@@ -157,8 +157,7 @@ public class MusicUtil {
      * Ex: for a given album --> buildInfoString(album.artist, album.songCount)
      */
     @NonNull
-    public static String buildInfoString(@Nullable final String string1, @Nullable final String string2)
-    {
+    public static String buildInfoString(@Nullable final String string1, @Nullable final String string2) {
         // Skip empty strings
         if (TextUtils.isEmpty(string1)) {
             //noinspection ConstantConditions
@@ -259,7 +258,7 @@ public class MusicUtil {
                         final File f = new File(name);
                         if (f.delete()) {
                             // Step 3: Remove selected track from the database
-                            context.getContentResolver().delete(ContentUris.withAppendedId(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI, id),null, null);
+                            context.getContentResolver().delete(ContentUris.withAppendedId(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI, id), null, null);
                             deletedCount++;
                         } else {
                             // I'm not sure if we'd ever get here (deletion would
@@ -276,7 +275,7 @@ public class MusicUtil {
                 }
                 cursor.close();
             }
-      		Toast.makeText(context, context.getResources().getQuantityString(R.plurals.deleted_x_songs, deletedCount, deletedCount), Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, context.getResources().getQuantityString(R.plurals.deleted_x_songs, deletedCount, deletedCount), Toast.LENGTH_SHORT).show();
         } catch (SecurityException ignored) {
         }
     }

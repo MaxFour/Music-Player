@@ -39,10 +39,8 @@ import butterknife.ButterKnife;
 
 public class GenreDetailActivity extends AbsSlidingMusicPanelActivity implements CabHolder, LoaderManager.LoaderCallbacks<List<Song>> {
 
-    private static final int LOADER_ID = LoaderIds.GENRE_DETAIL_ACTIVITY;
-
     public static final String EXTRA_GENRE = "extra_genre";
-
+    private static final int LOADER_ID = LoaderIds.GENRE_DETAIL_ACTIVITY;
     @BindView(R.id.recycler_view)
     RecyclerView recyclerView;
     @BindView(R.id.toolbar)

@@ -81,9 +81,9 @@ public class PlaylistLoader {
         try {
             return context.getContentResolver().query(MediaStore.Audio.Playlists.EXTERNAL_CONTENT_URI,
                     new String[]{
-                        /* 0 */
+                            /* 0 */
                             BaseColumns._ID,
-                        /* 1 */
+                            /* 1 */
                             PlaylistsColumns.NAME
                     }, selection, values, MediaStore.Audio.Playlists.DEFAULT_SORT_ORDER);
         } catch (SecurityException e) {

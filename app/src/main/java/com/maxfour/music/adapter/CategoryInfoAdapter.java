@@ -67,11 +67,6 @@ public class CategoryInfoAdapter extends RecyclerView.Adapter<CategoryInfoAdapte
         return categoryInfos.size();
     }
 
-    public void setCategoryInfos(List<CategoryInfo> categoryInfos) {
-        this.categoryInfos = categoryInfos;
-        notifyDataSetChanged();
-    }
-
     @Override
     public void onViewMoved(int oldPosition, int newPosition) {
         CategoryInfo categoryInfo = categoryInfos.get(oldPosition);
@@ -86,6 +81,11 @@ public class CategoryInfoAdapter extends RecyclerView.Adapter<CategoryInfoAdapte
 
     public List<CategoryInfo> getCategoryInfos() {
         return categoryInfos;
+    }
+
+    public void setCategoryInfos(List<CategoryInfo> categoryInfos) {
+        this.categoryInfos = categoryInfos;
+        notifyDataSetChanged();
     }
 
     private boolean isLastCheckedCategory(CategoryInfo categoryInfo) {

@@ -164,6 +164,19 @@ public class PlaylistAdapter extends AbsMultiSelectAdapter<PlaylistAdapter.ViewH
         }
     }
 
+    @NonNull
+    private List<Song> getSongList(@NonNull List<Playlist> playlists) {
+        final List<Song> songs = new ArrayList<>();
+        for (Playlist playlist : playlists) {
+            if (playlist instanceof AbsCustomPlaylist) {
+                songs.addAll(((AbsCustomPlaylist) playlist).getSongs(activity));
+            } else {
+                songs.addAll(PlaylistSongLoader.getPlaylistSongList(activity, playlist.id));
+            }
+        }
+        return songs;
+    }
+
     private static class SavePlaylistsAsyncTask extends WeakContextAsyncTask<List<Playlist>, String, String> {
         public SavePlaylistsAsyncTask(Context context) {
             super(context);
@@ -199,19 +212,6 @@ public class PlaylistAdapter extends AbsMultiSelectAdapter<PlaylistAdapter.ViewH
                 Toast.makeText(context, string, Toast.LENGTH_LONG).show();
             }
         }
-    }
-
-    @NonNull
-    private List<Song> getSongList(@NonNull List<Playlist> playlists) {
-        final List<Song> songs = new ArrayList<>();
-        for (Playlist playlist : playlists) {
-            if (playlist instanceof AbsCustomPlaylist) {
-                songs.addAll(((AbsCustomPlaylist) playlist).getSongs(activity));
-            } else {
-                songs.addAll(PlaylistSongLoader.getPlaylistSongList(activity, playlist.id));
-            }
-        }
-        return songs;
     }
 
     public class ViewHolder extends MediaEntryViewHolder {

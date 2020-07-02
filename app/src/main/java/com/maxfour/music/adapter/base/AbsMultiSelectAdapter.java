@@ -18,10 +18,10 @@ import java.util.List;
 public abstract class AbsMultiSelectAdapter<VH extends RecyclerView.ViewHolder, I> extends RecyclerView.Adapter<VH> implements MaterialCab.Callback {
     @Nullable
     private final CabHolder cabHolder;
+    private final Context context;
     private MaterialCab cab;
     private List<I> checked;
     private int menuRes;
-    private final Context context;
 
     public AbsMultiSelectAdapter(Context context, @Nullable CabHolder cabHolder, @MenuRes int menuRes) {
         this.cabHolder = cabHolder;

@@ -18,26 +18,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start|center_vertical"
-            android:paddingBottom="14dp"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:paddingTop="12dp"
             android:fontFamily="@font/product_sans"
-            android:textStyle="bold"
+            android:paddingLeft="16dp"
+            android:paddingTop="12dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="14dp"
             android:text="@string/author"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-            android:textColor="?android:textColorSecondary" />
+            android:textColor="?android:textColorSecondary"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="?attr/rectSelector"
             android:clickable="true"
+            android:focusable="true"
             android:gravity="center_vertical"
             android:minHeight="@dimen/md_listitem_height"
             android:orientation="horizontal"
             android:paddingLeft="16dp"
-            android:focusable="true"
             android:paddingRight="16dp">
 
             <com.maxfour.music.views.IconImageView
@@ -52,8 +52,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:orientation="vertical"
-                android:paddingBottom="8dp"
-                android:paddingTop="8dp">
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -77,11 +77,11 @@
             android:layout_height="wrap_content"
             android:background="?attr/rectSelector"
             android:clickable="true"
+            android:focusable="true"
             android:gravity="center_vertical"
             android:minHeight="@dimen/md_listitem_height"
             android:orientation="horizontal"
             android:paddingLeft="16dp"
-            android:focusable="true"
             android:paddingRight="16dp">
 
             <com.maxfour.music.views.IconImageView
@@ -95,8 +95,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
-                android:paddingBottom="8dp"
                 android:paddingTop="8dp"
+                android:paddingBottom="8dp"
                 android:text="@string/write_an_email"
                 android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
 

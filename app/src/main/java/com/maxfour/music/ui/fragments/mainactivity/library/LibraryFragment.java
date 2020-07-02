@@ -51,8 +51,6 @@ import butterknife.Unbinder;
 
 public class LibraryFragment extends AbsMainActivityFragment implements CabHolder, MainActivity.MainActivityFragmentCallbacks, ViewPager.OnPageChangeListener, SharedPreferences.OnSharedPreferenceChangeListener {
 
-    private Unbinder unbinder;
-
     @BindView(R.id.toolbar)
     Toolbar toolbar;
     @BindView(R.id.tabs)
@@ -61,15 +59,15 @@ public class LibraryFragment extends AbsMainActivityFragment implements CabHolde
     AppBarLayout appbar;
     @BindView(R.id.pager)
     ViewPager pager;
-
+    private Unbinder unbinder;
     private MusicLibraryPagerAdapter pagerAdapter;
     private MaterialCab cab;
 
-    public static LibraryFragment newInstance() {
-        return new LibraryFragment();
+    public LibraryFragment() {
     }
 
-    public LibraryFragment() {
+    public static LibraryFragment newInstance() {
+        return new LibraryFragment();
     }
 
     @Override

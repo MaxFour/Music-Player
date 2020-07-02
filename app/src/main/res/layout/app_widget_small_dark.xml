@@ -79,9 +79,9 @@
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/product_sans_regular"
             android:gravity="center_vertical"
             android:singleLine="true"
-            android:fontFamily="@font/product_sans_regular"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
             android:textColor="@color/ate_primary_text_dark"
             tools:text="Title" />

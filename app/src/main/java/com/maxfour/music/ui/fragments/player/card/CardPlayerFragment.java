@@ -63,8 +63,6 @@ import butterknife.Unbinder;
 
 public class CardPlayerFragment extends AbsPlayerFragment implements PlayerAlbumCoverFragment.Callbacks, SlidingUpPanelLayout.PanelSlideListener {
 
-    private Unbinder unbinder;
-
     @Nullable
     @BindView(R.id.toolbar_container)
     FrameLayout toolbarContainer;
@@ -80,7 +78,7 @@ public class CardPlayerFragment extends AbsPlayerFragment implements PlayerAlbum
     View colorBackground;
     @BindView(R.id.player_queue_sub_header)
     TextView playerQueueSubHeader;
-
+    private Unbinder unbinder;
     private int lastColor;
 
     private CardPlayerPlaybackControlsFragment playbackControlsFragment;
@@ -421,7 +419,8 @@ public class CardPlayerFragment extends AbsPlayerFragment implements PlayerAlbum
             float density = getResources().getDisplayMetrics().density;
 
             float cardElevation = (6 * slide + 2) * density;
-            if (!isValidElevation(cardElevation)) return; // we have received some crash reports in setCardElevation()
+            if (!isValidElevation(cardElevation))
+                return; // we have received some crash reports in setCardElevation()
             playingQueueCard.setCardElevation(cardElevation);
 
             float buttonElevation = (2 * Math.max(0, (1 - (slide * 16))) + 2) * density;

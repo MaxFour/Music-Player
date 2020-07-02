@@ -41,22 +41,6 @@ public class MusicColorUtil {
         return fallback;
     }
 
-    private static class SwatchComparator implements Comparator<Palette.Swatch> {
-        private static SwatchComparator sInstance;
-
-        static SwatchComparator getInstance() {
-            if (sInstance == null) {
-                sInstance = new SwatchComparator();
-            }
-            return sInstance;
-        }
-
-        @Override
-        public int compare(Palette.Swatch lhs, Palette.Swatch rhs) {
-            return lhs.getPopulation() - rhs.getPopulation();
-        }
-    }
-
     @ColorInt
     public static int shiftBackgroundColorForLightText(@ColorInt int backgroundColor) {
         while (ColorUtil.isColorLight(backgroundColor)) {
@@ -71,5 +55,21 @@ public class MusicColorUtil {
             backgroundColor = ColorUtil.lightenColor(backgroundColor);
         }
         return backgroundColor;
+    }
+
+    private static class SwatchComparator implements Comparator<Palette.Swatch> {
+        private static SwatchComparator sInstance;
+
+        static SwatchComparator getInstance() {
+            if (sInstance == null) {
+                sInstance = new SwatchComparator();
+            }
+            return sInstance;
+        }
+
+        @Override
+        public int compare(Palette.Swatch lhs, Palette.Swatch rhs) {
+            return lhs.getPopulation() - rhs.getPopulation();
+        }
     }
 }

@@ -31,8 +31,8 @@ public class AboutActivity extends AbsBaseActivity implements View.OnClickListen
 
     private static String GITHUB = "https://github.com/MaxFour/Music-Player";
 
-    private static String WebMoney="https://www.webmoney.ru/eng/";
-    private static String YandexMoney="https://money.yandex.ru/to/410015372205898";
+    private static String WebMoney = "https://www.webmoney.ru/eng/";
+    private static String YandexMoney = "https://money.yandex.ru/to/410015372205898";
 
     @BindView(R.id.toolbar)
     Toolbar toolbar;
@@ -110,7 +110,7 @@ public class AboutActivity extends AbsBaseActivity implements View.OnClickListen
 
     @Override
     public void onClick(View v) {
-        if (v== licenses) {
+        if (v == licenses) {
             showLicenseDialog();
         } else if (v == intro) {
             startActivity(new Intent(this, AppIntroActivity.class));

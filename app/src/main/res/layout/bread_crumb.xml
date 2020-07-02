@@ -8,8 +8,8 @@
     android:gravity="center_vertical|start"
     android:minHeight="@dimen/tab_height"
     android:orientation="horizontal"
-    android:paddingEnd="4dp"
-    android:paddingStart="12dp">
+    android:paddingStart="12dp"
+    android:paddingEnd="4dp">
 
     <TextView
         android:layout_width="wrap_content"

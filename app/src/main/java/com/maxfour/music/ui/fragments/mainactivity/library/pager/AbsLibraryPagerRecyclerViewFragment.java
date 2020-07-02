@@ -25,8 +25,6 @@ import butterknife.Unbinder;
 
 public abstract class AbsLibraryPagerRecyclerViewFragment<A extends RecyclerView.Adapter, LM extends RecyclerView.LayoutManager> extends AbsLibraryPagerFragment implements OnOffsetChangedListener {
 
-    private Unbinder unbinder;
-
     @BindView(R.id.container)
     View container;
     @BindView(R.id.recycler_view)
@@ -34,7 +32,7 @@ public abstract class AbsLibraryPagerRecyclerViewFragment<A extends RecyclerView
     @Nullable
     @BindView(android.R.id.empty)
     TextView empty;
-
+    private Unbinder unbinder;
     private A adapter;
     private LM layoutManager;
 

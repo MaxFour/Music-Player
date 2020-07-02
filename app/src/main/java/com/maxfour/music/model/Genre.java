@@ -4,6 +4,15 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class Genre implements Parcelable {
+    public static final Creator<Genre> CREATOR = new Creator<Genre>() {
+        public Genre createFromParcel(Parcel source) {
+            return new Genre(source);
+        }
+
+        public Genre[] newArray(int size) {
+            return new Genre[size];
+        }
+    };
     public final int id;
     public final String name;
     public final int songCount;
@@ -12,6 +21,12 @@ public class Genre implements Parcelable {
         this.id = id;
         this.name = name;
         this.songCount = songCount;
+    }
+
+    protected Genre(Parcel in) {
+        this.id = in.readInt();
+        this.name = in.readString();
+        this.songCount = in.readInt();
     }
 
     @Override
@@ -54,20 +69,4 @@ public class Genre implements Parcelable {
         dest.writeString(this.name);
         dest.writeInt(this.songCount);
     }
-
-    protected Genre(Parcel in) {
-        this.id = in.readInt();
-        this.name = in.readString();
-        this.songCount = in.readInt();
-    }
-
-    public static final Creator<Genre> CREATOR = new Creator<Genre>() {
-        public Genre createFromParcel(Parcel source) {
-            return new Genre(source);
-        }
-
-        public Genre[] newArray(int size) {
-            return new Genre[size];
-        }
-    };
 }

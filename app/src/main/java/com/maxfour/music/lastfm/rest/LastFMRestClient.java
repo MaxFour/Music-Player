@@ -37,10 +37,6 @@ public class LastFMRestClient {
         apiService = restAdapter.create(LastFMService.class);
     }
 
-    public LastFMService getApiService() {
-        return apiService;
-    }
-
     @Nullable
     public static Cache createDefaultCache(Context context) {
         File cacheDir = new File(context.getCacheDir().getAbsolutePath(), "/okhttp-lastfm/");
@@ -63,5 +59,9 @@ public class LastFMRestClient {
         return new OkHttpClient.Builder()
                 .cache(createDefaultCache(context))
                 .addInterceptor(createCacheControlInterceptor());
+    }
+
+    public LastFMService getApiService() {
+        return apiService;
     }
 }

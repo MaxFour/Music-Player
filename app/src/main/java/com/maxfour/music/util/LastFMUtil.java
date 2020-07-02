@@ -9,10 +9,6 @@ import java.util.Locale;
 import java.util.Map;
 
 public class LastFMUtil {
-    public enum ImageSize {
-        SMALL, MEDIUM, LARGE, EXTRALARGE, MEGA, UNKNOWN
-    }
-
     public static String getLargestArtistImageUrl(List<Artist.Image> images) {
         Map<ImageSize, String> imageUrls = new HashMap<>();
         for (Artist.Image image : images) {
@@ -75,5 +71,9 @@ public class LastFMUtil {
             return imageUrls.get(ImageSize.UNKNOWN);
         }
         return null;
+    }
+
+    public enum ImageSize {
+        SMALL, MEDIUM, LARGE, EXTRALARGE, MEGA, UNKNOWN
     }
 }

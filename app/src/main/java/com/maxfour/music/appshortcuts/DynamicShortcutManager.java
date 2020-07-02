@@ -35,6 +35,10 @@ public class DynamicShortcutManager {
                 .build();
     }
 
+    public static void reportShortcutUsed(Context context, String shortcutId) {
+        context.getSystemService(ShortcutManager.class).reportShortcutUsed(shortcutId);
+    }
+
     public void initDynamicShortcuts() {
         if (shortcutManager.getDynamicShortcuts().size() == 0) {
             shortcutManager.setDynamicShortcuts(getDefaultShortcuts());
@@ -51,9 +55,5 @@ public class DynamicShortcutManager {
                 new TopSongsShortcutType(context).getShortcutInfo(),
                 new LastAddedShortcutType(context).getShortcutInfo()
         ));
-    }
-
-    public static void reportShortcutUsed(Context context, String shortcutId){
-        context.getSystemService(ShortcutManager.class).reportShortcutUsed(shortcutId);
     }
 }

@@ -7,7 +7,15 @@ import java.util.Objects;
 
 public class Song implements Parcelable {
     public static final Song EMPTY_SONG = new Song(-1, "", -1, -1, -1, "", -1, -1, "", -1, "");
+    public static final Creator<Song> CREATOR = new Creator<Song>() {
+        public Song createFromParcel(Parcel source) {
+            return new Song(source);
+        }
 
+        public Song[] newArray(int size) {
+            return new Song[size];
+        }
+    };
     public final int id;
     public final String title;
     public final int songNumber;
@@ -32,6 +40,20 @@ public class Song implements Parcelable {
         this.albumName = albumName;
         this.artistId = artistId;
         this.artistName = artistName;
+    }
+
+    protected Song(Parcel in) {
+        this.id = in.readInt();
+        this.title = in.readString();
+        this.songNumber = in.readInt();
+        this.year = in.readInt();
+        this.duration = in.readLong();
+        this.data = in.readString();
+        this.dateModified = in.readLong();
+        this.albumId = in.readInt();
+        this.albumName = in.readString();
+        this.artistId = in.readInt();
+        this.artistName = in.readString();
     }
 
     @Override
@@ -89,7 +111,6 @@ public class Song implements Parcelable {
                 '}';
     }
 
-
     @Override
     public int describeContents() {
         return 0;
@@ -109,28 +130,4 @@ public class Song implements Parcelable {
         dest.writeInt(this.artistId);
         dest.writeString(this.artistName);
     }
-
-    protected Song(Parcel in) {
-        this.id = in.readInt();
-        this.title = in.readString();
-        this.songNumber = in.readInt();
-        this.year = in.readInt();
-        this.duration = in.readLong();
-        this.data = in.readString();
-        this.dateModified = in.readLong();
-        this.albumId = in.readInt();
-        this.albumName = in.readString();
-        this.artistId = in.readInt();
-        this.artistName = in.readString();
-    }
-
-    public static final Creator<Song> CREATOR = new Creator<Song>() {
-        public Song createFromParcel(Parcel source) {
-            return new Song(source);
-        }
-
-        public Song[] newArray(int size) {
-            return new Song[size];
-        }
-    };
 }

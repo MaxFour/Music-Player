@@ -37,8 +37,8 @@
             android:id="@+id/bread_crumbs"
             android:layout_width="match_parent"
             android:layout_height="@dimen/tab_height"
-            android:paddingEnd="8dp"
-            android:paddingStart="60dp" />
+            android:paddingStart="60dp"
+            android:paddingEnd="8dp" />
 
     </com.google.android.material.appbar.AppBarLayout>
 

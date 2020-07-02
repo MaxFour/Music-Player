@@ -32,12 +32,11 @@ import java.util.List;
 public class ArtistSongAdapter extends ArrayAdapter<Song> implements MaterialCab.Callback {
     @Nullable
     private final CabHolder cabHolder;
+    @NonNull
+    private final AppCompatActivity activity;
     private MaterialCab cab;
     private List<Song> dataSet;
     private List<Song> checked;
-
-    @NonNull
-    private final AppCompatActivity activity;
 
     public ArtistSongAdapter(@NonNull AppCompatActivity activity, @NonNull List<Song> dataSet, @Nullable CabHolder cabHolder) {
         super(activity, R.layout.item_list, dataSet);

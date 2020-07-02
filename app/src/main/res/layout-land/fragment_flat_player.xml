@@ -67,8 +67,8 @@
                     android:id="@+id/draggable_area"
                     android:layout_width="72dp"
                     android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/player_panel_content"
                     android:layout_alignTop="@+id/player_panel_content"
+                    android:layout_alignBottom="@+id/player_panel_content"
                     android:layout_marginTop="8dp" />
 
                 <LinearLayout

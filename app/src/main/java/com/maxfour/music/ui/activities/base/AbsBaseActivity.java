@@ -83,12 +83,12 @@ public abstract class AbsBaseActivity extends AbsThemeActivity {
         return getWindow().getDecorView();
     }
 
-    protected void setPermissionDeniedMessage(String message) {
-        permissionDeniedMessage = message;
-    }
-
     private String getPermissionDeniedMessage() {
         return permissionDeniedMessage == null ? getString(R.string.permissions_denied) : permissionDeniedMessage;
+    }
+
+    protected void setPermissionDeniedMessage(String message) {
+        permissionDeniedMessage = message;
     }
 
     protected void requestPermissions() {

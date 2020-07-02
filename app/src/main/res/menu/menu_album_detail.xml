@@ -8,8 +8,8 @@
         android:icon="@drawable/ic_shuffle_white_24dp"
         android:title="@string/action_shuffle_album"
         app:showAsAction="ifRoom" />
-  
-    <item  
+
+    <item
         android:id="@+id/action_wiki"
         android:title="@string/wiki"
         app:showAsAction="never" />

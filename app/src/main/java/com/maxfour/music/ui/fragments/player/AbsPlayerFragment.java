@@ -25,8 +25,8 @@ import com.maxfour.music.util.NavigationUtil;
 
 public abstract class AbsPlayerFragment extends AbsMusicServiceFragment implements Toolbar.OnMenuItemClickListener, PaletteColorHolder {
 
-    private Callbacks callbacks;
     private static boolean isToolbarShown = true;
+    private Callbacks callbacks;
 
     @Override
     public void onAttach(Context context) {
@@ -136,8 +136,8 @@ public abstract class AbsPlayerFragment extends AbsMusicServiceFragment implemen
         final long duration = MusicPlayerRemote.getQueueDurationMillis(MusicPlayerRemote.getPosition());
 
         return MusicUtil.buildInfoString(
-            getResources().getString(R.string.up_next),
-            MusicUtil.getReadableDurationString(duration)
+                getResources().getString(R.string.up_next),
+                MusicUtil.getReadableDurationString(duration)
         );
     }
 

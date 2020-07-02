@@ -164,6 +164,20 @@ public abstract class AbsMusicServiceActivity extends AbsBaseActivity implements
         }
     }
 
+    @Override
+    protected void onHasPermissionsChanged(boolean hasPermissions) {
+        super.onHasPermissionsChanged(hasPermissions);
+        Intent intent = new Intent(MusicService.MEDIA_STORE_CHANGED);
+        intent.putExtra("from_permissions_changed", true); // just in case we need to know this at some point
+        sendBroadcast(intent);
+    }
+
+    @Nullable
+    @Override
+    protected String[] getPermissionsToRequest() {
+        return new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE};
+    }
+
     private static final class MusicStateReceiver extends BroadcastReceiver {
 
         private final WeakReference<AbsMusicServiceActivity> reference;
@@ -200,19 +214,5 @@ public abstract class AbsMusicServiceActivity extends AbsBaseActivity implements
                 }
             }
         }
-    }
-
-    @Override
-    protected void onHasPermissionsChanged(boolean hasPermissions) {
-        super.onHasPermissionsChanged(hasPermissions);
-        Intent intent = new Intent(MusicService.MEDIA_STORE_CHANGED);
-        intent.putExtra("from_permissions_changed", true); // just in case we need to know this at some point
-        sendBroadcast(intent);
-    }
-
-    @Nullable
-    @Override
-    protected String[] getPermissionsToRequest() {
-        return new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE};
     }
 }

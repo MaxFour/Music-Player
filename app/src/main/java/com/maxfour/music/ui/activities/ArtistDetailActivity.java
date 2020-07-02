@@ -68,11 +68,9 @@ import retrofit2.Response;
  */
 public class ArtistDetailActivity extends AbsSlidingMusicPanelActivity implements PaletteColorHolder, CabHolder, LoaderManager.LoaderCallbacks<Artist> {
 
+    public static final String EXTRA_ARTIST_ID = "extra_artist_id";
     private static final int LOADER_ID = LoaderIds.ARTIST_DETAIL_ACTIVITY;
     private static final int REQUEST_CODE_SELECT_IMAGE = 1000;
-
-    public static final String EXTRA_ARTIST_ID = "extra_artist_id";
-
     @BindView(R.id.list)
     ObservableListView songListView;
     @BindView(R.id.image)
@@ -103,16 +101,6 @@ public class ArtistDetailActivity extends AbsSlidingMusicPanelActivity implement
     private MaterialCab cab;
     private int headerViewHeight;
     private int toolbarColor;
-
-    private Artist artist;
-    @Nullable
-    private Spanned biography;
-    private MaterialDialog biographyDialog;
-    private HorizontalAlbumAdapter albumAdapter;
-    private ArtistSongAdapter songAdapter;
-
-    private LastFMRestClient lastFMRestClient;
-
     private final SimpleObservableScrollViewCallbacks observableScrollViewCallbacks = new SimpleObservableScrollViewCallbacks() {
         @Override
         public void onScrollChanged(int scrollY, boolean b, boolean b2) {
@@ -128,6 +116,14 @@ public class ArtistDetailActivity extends AbsSlidingMusicPanelActivity implement
             artistImage.setTranslationY(Math.max(-scrollY, -headerViewHeight));
         }
     };
+    private Artist artist;
+    @Nullable
+    private Spanned biography;
+    private MaterialDialog biographyDialog;
+    private HorizontalAlbumAdapter albumAdapter;
+    private ArtistSongAdapter songAdapter;
+    private LastFMRestClient lastFMRestClient;
+    private boolean usePalette;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -150,8 +146,6 @@ public class ArtistDetailActivity extends AbsSlidingMusicPanelActivity implement
     protected View createContentView() {
         return wrapSlidingMusicPanel(R.layout.activity_artist_detail);
     }
-
-    private boolean usePalette;
 
     private void setUpObservableListViewParams() {
         headerViewHeight = getResources().getDimensionPixelSize(R.dimen.detail_header_height);
@@ -427,6 +421,11 @@ public class ArtistDetailActivity extends AbsSlidingMusicPanelActivity implement
         setLightStatusbar(false);
     }
 
+    private Artist getArtist() {
+        if (artist == null) artist = new Artist();
+        return artist;
+    }
+
     private void setArtist(Artist artist) {
         this.artist = artist;
         loadArtistImage();
@@ -442,11 +441,6 @@ public class ArtistDetailActivity extends AbsSlidingMusicPanelActivity implement
 
         songAdapter.swapDataSet(artist.getSongs());
         albumAdapter.swapDataSet(artist.albums);
-    }
-
-    private Artist getArtist() {
-        if (artist == null) artist = new Artist();
-        return artist;
     }
 
     @Override
