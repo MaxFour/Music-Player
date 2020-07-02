@@ -1,5 +1,6 @@
 package com.maxfour.music.adapter;
 
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -82,6 +83,7 @@ public class AlbumCoverPagerAdapter extends CustomFragmentStatePagerAdapter {
         private Song song;
         private ColorReceiver colorReceiver;
         private int request;
+        private Context context;
 
         public static AlbumCoverFragment newInstance(final Song song) {
             AlbumCoverFragment frag = new AlbumCoverFragment();
@@ -123,7 +125,7 @@ public class AlbumCoverPagerAdapter extends CustomFragmentStatePagerAdapter {
         }
 
         private void loadAlbumCover() {
-            SongGlideRequest.Builder.from(Glide.with(this), song)
+            SongGlideRequest.Builder.from(Glide.with(context), song)
                     .checkIgnoreMediaStore(getActivity())
                     .generatePalette(getActivity()).build()
                     .into(new MusicColoredTarget(albumCover) {
@@ -164,6 +166,10 @@ public class AlbumCoverPagerAdapter extends CustomFragmentStatePagerAdapter {
                 this.colorReceiver = colorReceiver;
                 this.request = request;
             }
+        }
+
+        public void setContext(Context context) {
+            this.context = context;
         }
 
         public interface ColorReceiver {
