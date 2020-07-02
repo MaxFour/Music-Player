@@ -81,7 +81,6 @@
         android:layout_height="match_parent"
         android:layout_gravity="center_vertical|end"
         android:layout_marginEnd="6dp"
-        android:layout_marginRight="2dp"
         android:layoutDirection="ltr"
         android:orientation="horizontal"
         tools:ignore="UnusedAttribute">

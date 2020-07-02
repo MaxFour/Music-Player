@@ -9,8 +9,6 @@
     android:minHeight="@dimen/tab_height"
     android:orientation="horizontal"
     android:paddingEnd="4dp"
-    android:paddingLeft="12dp"
-    android:paddingRight="4dp"
     android:paddingStart="12dp">
 
     <TextView
@@ -18,7 +16,6 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-medium"
         android:paddingEnd="8dp"
-        android:paddingRight="8dp"
         android:textAllCaps="true"
         android:textColor="#fff"
         android:textSize="14sp"

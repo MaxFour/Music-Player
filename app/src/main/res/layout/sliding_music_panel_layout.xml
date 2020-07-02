@@ -25,9 +25,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-        <fragment
+        <androidx.fragment.app.FragmentContainerView
             android:id="@+id/mini_player_fragment"
-            class="com.maxfour.music.ui.fragments.player.MiniPlayerFragment"
+            android:name="com.maxfour.music.ui.fragments.player.MiniPlayerFragment"
             android:layout_width="match_parent"
             android:layout_height="@dimen/mini_player_height" />
 

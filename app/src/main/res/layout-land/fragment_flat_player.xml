@@ -37,9 +37,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <fragment
+            <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/player_album_cover_fragment"
-                class="com.maxfour.music.ui.fragments.player.PlayerAlbumCoverFragment"
+                android:name="com.maxfour.music.ui.fragments.player.PlayerAlbumCoverFragment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
@@ -49,12 +49,11 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_toEndOf="@+id/cover_container"
-            android:layout_toRightOf="@+id/cover_container"
             android:orientation="vertical">
 
-            <fragment
+            <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/playback_controls_fragment"
-                class="com.maxfour.music.ui.fragments.player.flat.FlatPlayerPlaybackControlsFragment"
+                android:name="com.maxfour.music.ui.fragments.player.flat.FlatPlayerPlaybackControlsFragment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 

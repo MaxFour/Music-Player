@@ -49,6 +49,7 @@
             android:minHeight="@dimen/md_listitem_height"
             android:orientation="horizontal"
             android:paddingLeft="16dp"
+            android:focusable="true"
             android:paddingRight="16dp">
 
             <com.maxfour.music.views.IconImageView
@@ -61,7 +62,6 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="32dp"
                 android:layout_marginStart="32dp"
                 android:orientation="vertical"
                 android:paddingBottom="8dp"
@@ -94,6 +94,7 @@
             android:minHeight="@dimen/md_listitem_height"
             android:orientation="horizontal"
             android:paddingLeft="16dp"
+            android:focusable="true"
             android:paddingRight="16dp">
 
             <com.maxfour.music.views.IconImageView
@@ -106,7 +107,6 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="32dp"
                 android:layout_marginStart="32dp"
                 android:paddingBottom="8dp"
                 android:paddingTop="8dp"
@@ -125,6 +125,7 @@
             android:minHeight="@dimen/md_listitem_height"
             android:orientation="horizontal"
             android:paddingLeft="16dp"
+            android:focusable="true"
             android:paddingRight="16dp">
 
             <com.maxfour.music.views.IconImageView
@@ -137,7 +138,6 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="32dp"
                 android:layout_marginStart="32dp"
                 android:paddingBottom="8dp"
                 android:paddingTop="8dp"
@@ -156,6 +156,7 @@
             android:minHeight="@dimen/md_listitem_height"
             android:orientation="horizontal"
             android:paddingLeft="16dp"
+            android:focusable="true"
             android:paddingRight="16dp">
 
             <com.maxfour.music.views.IconImageView
@@ -168,7 +169,6 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="32dp"
                 android:layout_marginStart="32dp"
                 android:paddingBottom="8dp"
                 android:paddingTop="8dp"

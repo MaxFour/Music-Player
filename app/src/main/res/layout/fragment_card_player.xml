@@ -40,17 +40,17 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true">
 
-                    <fragment
+                    <androidx.fragment.app.FragmentContainerView
                         android:id="@+id/player_album_cover_fragment"
-                        class="com.maxfour.music.ui.fragments.player.PlayerAlbumCoverFragment"
+                        android:name="com.maxfour.music.ui.fragments.player.PlayerAlbumCoverFragment"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
 
                 </com.maxfour.music.views.WidthFitSquareLayout>
 
-                <fragment
+                <androidx.fragment.app.FragmentContainerView
                     android:id="@+id/playback_controls_fragment"
-                    class="com.maxfour.music.ui.fragments.player.card.CardPlayerPlaybackControlsFragment"
+                    android:name="com.maxfour.music.ui.fragments.player.card.CardPlayerPlaybackControlsFragment"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/album_cover_container" />
