@@ -16,13 +16,13 @@ static def getProperty(@Nullable Properties properties, String name) {
 }
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion '29.0.3'
+    compileSdkVersion 30
+    buildToolsVersion '30.0.2'
     defaultConfig {
         minSdkVersion 21
-        targetSdkVersion 29
+        targetSdkVersion 30
 
-        renderscriptTargetApi 29
+        renderscriptTargetApi 30
         vectorDrawables.useSupportLibrary = true
 
         applicationId 'com.maxfour.music'
