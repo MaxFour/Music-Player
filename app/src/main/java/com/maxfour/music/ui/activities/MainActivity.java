@@ -76,10 +76,6 @@ public class MainActivity extends AbsSlidingMusicPanelActivity {
         setDrawUnderStatusbar();
         ButterKnife.bind(this);
 
-        if (Build.VERSION.SDK_INT == Build.VERSION_CODES.KITKAT) {
-            navigationView.setFitsSystemWindows(false); // for header to go below statusbar
-        }
-
         setUpDrawerLayout();
 
         if (savedInstanceState == null) {
