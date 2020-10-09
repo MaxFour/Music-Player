@@ -66,19 +66,25 @@
 
                 <Button
                     android:id="@+id/ruble_button"
-                    android:backgroundTint="#036CB5"
-                    android:layout_width="45dp"
+                    android:layout_width="40dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="2dp"
                     android:text="@string/ruble_sign"
-                    android:textColor="@android:color/white" />
+                    android:textColor="#036CB5"
+                    app:strokeColor="#036CB5"
+                    app:strokeWidth="2dp"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
 
                 <Button
                     android:id="@+id/dollar_button"
-                    android:backgroundTint="#036CB5"
-                    android:layout_width="45dp"
+                    android:layout_width="40dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
                     android:text="@string/dollar_sign"
-                    android:textColor="@android:color/white" />
+                    android:textColor="#036CB5"
+                    app:strokeColor="#036CB5"
+                    app:strokeWidth="2dp"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
 
             </LinearLayout>
 

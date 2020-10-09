@@ -61,12 +61,6 @@
                     android:text="@string/max_four"
                     android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/navoi_uzbekistan"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
             </LinearLayout>
 
         </LinearLayout>

@@ -113,7 +113,8 @@
             android:label="@string/action_settings" />
         <activity
             android:name=".ui.activities.AboutActivity"
-            android:label="@string/action_about" />
+            android:label="@string/action_about"
+            android:theme="@style/AboutActivityTheme" />
         <activity
             android:name=".ui.activities.intro.AppIntroActivity"
             android:label="@string/intro_label"
