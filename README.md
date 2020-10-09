@@ -3,7 +3,7 @@
 ### Lightweight and Material designed Music Player
 
 [![Privacy Policy](https://img.shields.io/static/v1?label=Privacy%20Policy&message=read&color=blueviolet&style=flat-square)](https://github.com/MaxFour/Music-Player/blob/master/docs/PRIVACY.md)
-[![API](https://img.shields.io/badge/API-16%2B-orange.svg?logo=android&style=flat-square)](https://android-arsenal.com/api?level=16)
+[![API](https://img.shields.io/badge/API-21%2B-orange.svg?logo=android&style=flat-square)](https://android-arsenal.com/api?level=21)
 [![Telegram](https://img.shields.io/badge/Telegram-2CA5E0.svg?logo=telegram&style=flat-square)](https://t.me/max_four "Contact me in Telegram")
 [![Gmail](https://img.shields.io/badge/Gmail-666666.svg?logo=gmail&logoColor=D14836&style=flat-square)](mailto:mansurov.maksud@gmail.com "Write an email")
 
