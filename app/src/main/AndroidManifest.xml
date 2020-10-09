@@ -25,7 +25,8 @@
         tools:ignore="UnusedAttribute">
         <activity
             android:name=".ui.activities.MainActivity"
-            android:label="@string/main_activity_name">
+            android:label="@string/main_activity_name"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.MUSIC_PLAYER" />
