@@ -53,4 +53,8 @@
         <item name="android:layout_height">wrap_content</item>
     </style>
 
+    <style name="NavigationViewStyle">
+        <item name="itemBackground">@drawable/drawer_item_selected</item>
+        <item name="android:colorControlHighlight">@android:color/transparent</item>
+    </style>
 </resources>
