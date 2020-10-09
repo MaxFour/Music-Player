@@ -45,7 +45,7 @@ public class SongLoader {
     }
 
     @NonNull
-    public static Song getSong(@NonNull final Context context, final int queryId) {
+    public static Song getSong(@NonNull final Context context, final long queryId) {
         Cursor cursor = makeSongCursor(context, AudioColumns._ID + "=?", new String[]{String.valueOf(queryId)});
         return getSong(cursor);
     }
@@ -80,16 +80,16 @@ public class SongLoader {
 
     @NonNull
     private static Song getSongFromCursorImpl(@NonNull Cursor cursor) {
-        final int id = cursor.getInt(0);
+        final long id = cursor.getLong(0);
         final String title = cursor.getString(1);
         final int songNumber = cursor.getInt(2);
         final int year = cursor.getInt(3);
         final long duration = cursor.getLong(4);
         final String data = cursor.getString(5);
         final long dateModified = cursor.getLong(6);
-        final int albumId = cursor.getInt(7);
+        final long albumId = cursor.getLong(7);
         final String albumName = cursor.getString(8);
-        final int artistId = cursor.getInt(9);
+        final long artistId = cursor.getLong(9);
         final String artistName = cursor.getString(10);
 
         return new Song(id, title, songNumber, year, duration, data, dateModified, albumId, albumName, artistId, artistName);

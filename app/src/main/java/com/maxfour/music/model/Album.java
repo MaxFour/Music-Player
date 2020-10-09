@@ -19,7 +19,7 @@ public class Album implements Parcelable {
         this.songs = new ArrayList<>();
     }
 
-    public int getId() {
+    public long getId() {
         return safeGetFirstSong().albumId;
     }
 
@@ -27,7 +27,7 @@ public class Album implements Parcelable {
         return safeGetFirstSong().albumName;
     }
 
-    public int getArtistId() {
+    public long getArtistId() {
         return safeGetFirstSong().artistId;
     }
 

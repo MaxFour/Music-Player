@@ -22,7 +22,7 @@ public class PlaylistLoader {
     }
 
     @NonNull
-    public static Playlist getPlaylist(@NonNull final Context context, final int playlistId) {
+    public static Playlist getPlaylist(@NonNull final Context context, final long playlistId) {
         return getPlaylist(makePlaylistCursor(
                 context,
                 BaseColumns._ID + "=?",
@@ -71,7 +71,7 @@ public class PlaylistLoader {
 
     @NonNull
     private static Playlist getPlaylistFromCursorImpl(@NonNull final Cursor cursor) {
-        final int id = cursor.getInt(0);
+        final long id = cursor.getLong(0);
         final String name = cursor.getString(1);
         return new Playlist(id, name);
     }

@@ -8,7 +8,7 @@ import androidx.annotation.NonNull;
 import java.util.List;
 
 public abstract class AbsCustomPlaylist extends Playlist {
-    public AbsCustomPlaylist(int id, String name) {
+    public AbsCustomPlaylist(long id, String name) {
         super(id, name);
     }
 

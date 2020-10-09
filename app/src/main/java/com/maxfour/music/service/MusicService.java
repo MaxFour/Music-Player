@@ -227,7 +227,6 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
         getContentResolver().registerContentObserver(MediaStore.Audio.Artists.INTERNAL_CONTENT_URI, true, mediaStoreObserver);
         getContentResolver().registerContentObserver(MediaStore.Audio.Genres.INTERNAL_CONTENT_URI, true, mediaStoreObserver);
         getContentResolver().registerContentObserver(MediaStore.Audio.Playlists.INTERNAL_CONTENT_URI, true, mediaStoreObserver);
-        
 
         PreferenceUtil.getInstance(this).registerOnSharedPreferenceChangedListener(this);
 
@@ -1017,7 +1016,7 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
                 break;
             case SHUFFLE_MODE_NONE:
                 this.shuffleMode = shuffleMode;
-                int currentSongId = getCurrentSong().id;
+                long currentSongId = getCurrentSong().id;
                 playingQueue = new ArrayList<>(originalPlayingQueue);
                 int newPosition = 0;
                 for (Song song : getPlayingQueue()) {

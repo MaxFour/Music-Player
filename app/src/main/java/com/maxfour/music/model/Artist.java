@@ -23,7 +23,7 @@ public class Artist implements Parcelable {
         this.albums = new ArrayList<>();
     }
 
-    public int getId() {
+    public long getId() {
         return safeGetFirstAlbum().getArtistId();
     }
 
