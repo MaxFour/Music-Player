@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.kabouzeid.appthemehelper.ThemeStore;
 import com.maxfour.music.R;
 import com.maxfour.music.helper.MusicPlayerRemote;
 import com.maxfour.music.interfaces.CabHolder;
@@ -103,6 +104,7 @@ public abstract class AbsOffsetSongAdapter extends SongAdapter {
         @Override
         public boolean onLongClick(View view) {
             if (getItemViewType() == OFFSET_ITEM) return false;
+            setColor(ThemeStore.primaryColor(activity));
             toggleChecked(getAdapterPosition());
             return true;
         }

@@ -1,5 +1,6 @@
 package com.maxfour.music.adapter.base;
 
+import android.app.Activity;
 import android.content.Context;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -11,6 +12,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.afollestad.materialcab.MaterialCab;
 import com.maxfour.music.R;
 import com.maxfour.music.interfaces.CabHolder;
+import com.maxfour.music.ui.activities.base.AbsThemeActivity;
+import com.maxfour.music.util.MusicColorUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +25,8 @@ public abstract class AbsMultiSelectAdapter<VH extends RecyclerView.ViewHolder, 
     private List<I> checked;
     private int menuRes;
     private final Context context;
+
+    private int color;
 
     public AbsMultiSelectAdapter(Context context, @Nullable CabHolder cabHolder, @MenuRes int menuRes) {
         this.cabHolder = cabHolder;
@@ -87,8 +92,13 @@ public abstract class AbsMultiSelectAdapter<VH extends RecyclerView.ViewHolder, 
         return cab != null && cab.isActive();
     }
 
+    public void setColor(int color) {
+        this.color = color;
+    }
+
     @Override
     public boolean onCabCreated(MaterialCab materialCab, Menu menu) {
+        AbsThemeActivity.Static_setStatusbarColor((Activity) context, MusicColorUtil.shiftBackgroundColorForLightText(color));
         return true;
     }
 
@@ -106,6 +116,7 @@ public abstract class AbsMultiSelectAdapter<VH extends RecyclerView.ViewHolder, 
 
     @Override
     public boolean onCabFinished(MaterialCab materialCab) {
+        AbsThemeActivity.Static_setStatusbarColor((Activity) context, color);
         clearChecked();
         return true;
     }

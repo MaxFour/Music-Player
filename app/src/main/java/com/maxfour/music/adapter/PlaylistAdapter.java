@@ -15,6 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.kabouzeid.appthemehelper.ThemeStore;
 import com.kabouzeid.appthemehelper.util.ATHUtil;
 import com.maxfour.music.App;
 import com.maxfour.music.R;
@@ -270,6 +271,7 @@ public class PlaylistAdapter extends AbsMultiSelectAdapter<PlaylistAdapter.ViewH
 
         @Override
         public boolean onLongClick(View view) {
+            setColor(ThemeStore.primaryColor(activity));
             toggleChecked(getAdapterPosition());
             return true;
         }
