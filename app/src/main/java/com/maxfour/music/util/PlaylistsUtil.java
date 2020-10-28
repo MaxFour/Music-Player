@@ -139,6 +139,7 @@ public class PlaylistsUtil {
                 		R.plurals.inserted_x_songs_into_playlist_x, numInserted, numInserted, getNameForPlaylist(context, playlistId)), Toast.LENGTH_SHORT).show();
             }
         } catch (SecurityException ignored) {
+            ignored.printStackTrace();
         }
     }
 
