@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.ContextThemeWrapper;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -78,7 +79,7 @@ public class AboutActivity extends AbsBaseActivity implements View.OnClickListen
 
     private void setUpToolbar() {
         toolbar.setBackgroundColor(ThemeStore.primaryColor(this));
-        toolbar.setTitleTextAppearance(this, R.style.ProductSansTextAppearace);
+        toolbar.setTitleTextAppearance(this, R.style.ProductSansTextAppearance);
         setSupportActionBar(toolbar);
         //noinspection ConstantConditions
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -147,7 +148,7 @@ public class AboutActivity extends AbsBaseActivity implements View.OnClickListen
     }
 
     private void showLicenseDialog() {
-        new LicensesDialog.Builder(this)
+        new LicensesDialog.Builder(new ContextThemeWrapper(this, R.style.LicenseDialogStyle))
                 .setNotices(R.raw.notices)
                 .setTitle(R.string.licenses)
                 .setNoticesCssStyle(getString(R.string.license_dialog_style)

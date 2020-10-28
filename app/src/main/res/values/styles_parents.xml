@@ -39,7 +39,14 @@
         <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
     </style>
 
-    <style name="AboutActivityTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar" />
+    <style name="AboutActivityTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:colorEdgeEffect">#ffffff</item>
+    </style>
+
+    <style name="LicenseDialogStyle" parent="ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="colorPrimary">@color/md_red_600</item>
+        <item name="android:colorEdgeEffect">#ffffff</item>
+    </style>
 
     <style name="Theme.Music.Base.Black" parent="@style/Theme.Music.Base">
         <item name="android:windowBackground">@android:color/black</item>
