@@ -26,14 +26,11 @@ public abstract class AbsThemeActivity extends ATHToolbarActivity {
     }
 
     protected void setDrawUnderStatusbar() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
-            Util.setAllowDrawUnderStatusBar(getWindow());
-        else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT)
-            Util.setStatusBarTranslucent(getWindow());
+        Util.setAllowDrawUnderStatusBar(getWindow());
     }
 
     /**
-     * This will set the color of the view with the id "status_bar" on KitKat and Lollipop.
+     * This will set the color of the view with the id "status_bar" on Lollipop.
      * On Lollipop if no such view is found it will set the statusbar color using the native method.
      *
      * @param color the new statusbar color (will be shifted down on Lollipop and above)
@@ -56,7 +53,6 @@ public abstract class AbsThemeActivity extends ATHToolbarActivity {
     }
 
     public void setStatusbarColorAuto() {
-        // we don't want to use statusbar color because we are doing the color darkening on our own to support KitKat
         setStatusbarColor(ThemeStore.primaryColor(this));
     }
 

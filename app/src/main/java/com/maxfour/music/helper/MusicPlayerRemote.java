@@ -1,7 +1,6 @@
 package com.maxfour.music.helper;
 
 import android.annotation.SuppressLint;
-import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.ComponentName;
 import android.content.ContentResolver;
@@ -11,10 +10,8 @@ import android.content.Intent;
 import android.content.ServiceConnection;
 import android.database.Cursor;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Environment;
 import android.os.IBinder;
-import android.provider.DocumentsContract;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.widget.Toast;
@@ -401,7 +398,7 @@ public class MusicPlayerRemote {
                 if (uri.getScheme().equals(ContentResolver.SCHEME_CONTENT)) {
                     String songId = null;
                     if (uri.getAuthority().equals("com.android.providers.media.documents")) {
-                        songId = getSongIdFromMediaProvider(uri);
+
                     } else if (uri.getAuthority().equals("media")) {
                         songId = uri.getLastPathSegment();
                     }
@@ -465,11 +462,6 @@ public class MusicPlayerRemote {
                 cursor.close();
         }
         return null;
-    }
-
-    @TargetApi(Build.VERSION_CODES.KITKAT)
-    private static String getSongIdFromMediaProvider(Uri uri) {
-        return DocumentsContract.getDocumentId(uri).split(":")[1];
     }
 
     public static boolean isServiceConnected() {
