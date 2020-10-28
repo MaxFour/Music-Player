@@ -27,7 +27,7 @@
         <item name="android:thumbOffset">0dp</item>
     </style>
 
-    <style name="ProductSansTextAppearace">
+    <style name="ProductSansTextAppearance">
         <item name="android:fontFamily">@font/product_sans</item>
         <item name="android:textSize">20sp</item>
     </style>
