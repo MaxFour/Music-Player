@@ -41,9 +41,11 @@ import org.jaudiotagger.audio.exceptions.CannotReadException;
 import org.jaudiotagger.audio.exceptions.CannotWriteException;
 import org.jaudiotagger.audio.exceptions.InvalidAudioFrameException;
 import org.jaudiotagger.audio.exceptions.ReadOnlyFileException;
+import org.jaudiotagger.audio.flac.metadatablock.MetadataBlockDataPicture;
 import org.jaudiotagger.tag.FieldKey;
 import org.jaudiotagger.tag.Tag;
 import org.jaudiotagger.tag.TagException;
+import org.jaudiotagger.tag.flac.FlacTag;
 import org.jaudiotagger.tag.images.Artwork;
 import org.jaudiotagger.tag.images.ArtworkFactory;
 
@@ -317,7 +319,22 @@ public abstract class AbsTagEditorActivity extends AbsBaseActivity {
                                 deletedArtwork = true;
                             } else if (artwork != null) {
                                 tag.deleteArtworkField();
-                                tag.setField(artwork);
+                                if (tag instanceof FlacTag && !artwork.isLinked()) {
+                                    // Workaround for a JAudioTagger bug
+                                    MetadataBlockDataPicture field = new MetadataBlockDataPicture(
+                                            artwork.getBinaryData(),
+                                            artwork.getPictureType(),
+                                            artwork.getMimeType(),
+                                            artwork.getDescription(),
+                                            artwork.getWidth(),
+                                            artwork.getHeight(),
+                                            0,
+                                            0
+                                    );
+                                    tag.setField(field);
+                                } else {
+                                    tag.setField(artwork);
+                                }
                                 wroteArtwork = true;
                             }
                         }
